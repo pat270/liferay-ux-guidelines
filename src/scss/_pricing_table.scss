@@ -1,0 +1,177 @@
+$outside-bg-color: $well-bg;
+$tier-bg-color: $body-bg;
+
+$preferred-bg: $btn-danger-bg;
+$preferred-text-color: $btn-danger-color;
+$preferred-border: $btn-danger-border;
+
+$dark-header-bg: #434A54;
+$dark-header-text-color: #F5F7FA;
+
+$transparent: rgba(255,255,255,0);
+
+.pricing-table {
+	margin: 40px;
+
+	&.size-promotion {
+		.pricing-tier {
+			background: $tier-bg-color;
+			box-shadow: inset 0px 0px 0px 3px $outside-bg-color;
+			display: inline-block;
+			float: left;
+			margin: 20px 0;
+			padding: 0 0 30px 0;
+			position: relative;
+			width: 33.33333333%;
+		}
+
+		.tier-heading {
+			border-bottom: 1px solid $outside-bg-color;
+			padding: 15px 0;
+		}
+
+		.tier-body {
+			padding: 20px 0;
+		}
+
+		.price-list {
+			margin: 20px 0;
+
+			li {
+				padding: 5px 10px;
+			}
+		}
+
+		.best-option-badge {
+			background-color: $preferred-bg;
+			border-radius: 50%;
+			color: $preferred-text-color;
+			display: none;
+			font-size: 1em;
+			padding-top: 11px;
+			position: absolute;
+			right: 10px;
+
+			@include size(60px);
+
+			top: -35px;
+		}
+
+		.preferred {
+			margin: 0 -3px;
+
+			.price-list li {
+				padding: 10px;
+			}
+
+			.btn-dynamic {
+				@include button-variant($preferred-text-color, $preferred-bg, $preferred-border);
+			}
+
+			.best-option-badge {
+				display: block;
+			}
+		}
+
+		@media (max-width: $screen-md) {
+			.pricing-tier {
+				width: 100%;
+
+				margin-bottom: 40px;
+			}
+
+			.best-option-badge {
+				@include scale(0.8);
+			}
+		}
+	}
+
+	&.prominent-price {
+		.pricing-tier {
+			margin-bottom: 40px;
+			position: relative;
+		}
+
+		.tier-heading {
+			background: $dark-header-bg;
+			color: $dark-header-text-color;
+			overflow: hidden;
+			padding: 20px;
+
+			h1 {
+				font-size: 80px;
+				font-weight: 700;
+				margin-bottom: 30px;
+
+				sup, sub {
+					color: darken($dark-header-text-color, 20%);
+					font-size: 14px;
+					font-weight: 400;
+					top: -50px;
+				}
+
+				sub {
+					bottom: -50px;
+					top: 0;
+				}
+			}
+		}
+
+		.tier-body {
+			background: $tier-bg-color;
+			padding: 20px;
+		}
+
+		.price-list {
+			margin: 20px 0;
+
+			li {
+				padding: 10px 0;
+
+				@extend .text-muted;
+
+				@include text-overflow;
+
+				i {
+					padding-right: 10px;
+				}
+			}
+
+			li+li {
+				border-top: 1px solid $outside-bg-color;
+			}
+		}
+
+		.best-option {
+			border-color: $transparent $preferred-bg $transparent $transparent;
+			border-style: solid;
+			border-width: 0 55px 55px 0;
+			display: none;
+			position: absolute;
+			right: 0;
+
+			@include size(0);
+
+			top: 0;
+
+			.text {
+				color: $tier-bg-color;
+				letter-spacing: 1px;
+				position: relative;
+				right: -22px;
+
+				@include rotate(46deg);
+
+				top: -3px;
+			}
+		}
+
+		.preferred .best-option {
+			display: block;
+		}
+	}
+
+	@media (max-width: $screen-md) {
+		margin: 0;
+	}
+}
