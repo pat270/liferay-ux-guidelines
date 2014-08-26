@@ -1,0 +1,156 @@
+---
+title: Nexus-Style Navbar
+section: Templates
+---
+
+
+<div class="main-wrapper">
+	<ul class="top-bar">
+		<li class="menu-trigger top-item">
+			<a href="#"><span class="glyphicon glyphicon-list"></span></a>
+			<nav class="side-bar">
+				<ul class="side-menu">
+					<li class="side-item main">
+						<a href="#">
+							<div class="side-icon-wrapper">
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+							<input placeholder="Search" type="search" class="form-control">
+						</a>
+					</li>
+					<li class="side-item main">
+						<a href="#">
+							<div class="side-icon-wrapper">
+								<span class="glyphicon glyphicon-download"></span>
+							</div>Downloads
+						</a>
+						<ul class="side-menu sub">
+							<li class="side-item sub">
+								<a href="#">
+									<div class="side-icon-wrapper">
+										<span class="glyphicon glyphicon-gift"></span>
+									</div>Vector Illustrations
+								</a>
+							</li>
+							<li class="side-item sub">
+								<a href="#">
+									<div class="side-icon-wrapper">
+										<span class="glyphicon glyphicon-leaf"></span>
+									</div>Photoshop Files
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="side-item main">
+						<a href="#">
+							<div class="side-icon-wrapper">
+								<span class="glyphicon glyphicon-cog"></span>
+							</div>Settings
+						</a>
+					</li>
+					<li class="side-item main">
+						<a href="#">
+							<div class="side-icon-wrapper">
+								<span class="glyphicon glyphicon-question-sign"></span>
+							</div>Help
+						</a>
+					</li>
+					<li class="side-item main">
+						<a href="#">
+							<div class="side-icon-wrapper">
+								<span class="glyphicon glyphicon-hdd"></span>
+							</div>Archives
+						</a>
+						<ul class="side-menu sub">
+							<li class="side-item sub">
+								<a href="#">
+									<div class="side-icon-wrapper">
+										<span class="glyphicon glyphicon-bookmark"></span>
+									</div>Articles
+								</a>
+							</li>
+							<li class="side-item sub">
+								<a href="#">
+									<div class="side-icon-wrapper">
+										<span class="glyphicon glyphicon-picture"></span>
+									</div>Images
+								</a>
+							</li>
+							<li class="side-item sub">
+								<a href="#">
+									<div class="side-icon-wrapper">
+										<span class="glyphicon glyphicon-film"></span>
+									</div>Videos
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</li>
+		<li class="top-item">
+			<a href="#"><span class="glyphicon glyphicon-th"></span><span> Liferay</span></a>
+		</li>
+		<li class="top-item">
+			<a href="#"><span class="glyphicon glyphicon-arrow-left"></span><span> Previous Demo</span></a>
+		</li>
+		<li class="top-item">
+			<a href="#"><span class="glyphicon glyphicon-home"></span><span> Back to Main</span></a>
+		</li>
+	</ul>
+	<header>
+		<h1>Liferay UX Guidelines<small>Nexus-Style Menu</small></h1>
+	</header>
+</div>
+
+<script>
+	YUI().use(
+		'aui-node',
+		'event',
+		function(Y) {
+			var trigger = Y.one('.menu-trigger');
+			var triggerLink = trigger.one('> a');
+			var menu = Y.one('.side-bar');
+
+			var handleMouseEnter = function() {
+				if(!menu.hasClass('part')) {
+					menu.addClass('part');
+				}
+			}
+
+			var handleMouseLeave = function() {
+				menu.removeClass('part');
+			}
+
+			var toggleMenu = function() {
+				if(menu.hasClass('full')) {
+					menu.removeClass('full');
+					menu.removeClass('part');
+				}
+				else {
+					menu.addClass('full');
+				}
+			}
+
+			var expandMenu = function() {
+				if(!menu.hasClass('full')) {
+					menu.addClass('full');
+				}
+			}
+
+			var collapseMenu = function() {
+				if(menu.hasClass('full')) {
+					menu.removeClass('full');
+				}
+			}
+
+			triggerLink.on('mouseenter', handleMouseEnter);
+			triggerLink.on('mouseleave', handleMouseLeave);
+			triggerLink.on('click', toggleMenu);
+
+			trigger.on('clickoutside', collapseMenu);
+
+			menu.on('mouseenter', expandMenu);
+		}
+	)
+</script>

@@ -1,0 +1,232 @@
+//Variables
+
+$content-bg: $body-bg;
+$menu-bg: darken($body-bg, 5%);
+$menu-border: $body-bg;
+
+$menu-dimension: 60px;
+$wrapper-height: $menu-dimension * 12;
+$sidebar-full-width: $menu-dimension * 6;
+
+$menu-z-index: 20;
+
+// Main Styles
+
+.main-wrapper {
+	border: 1px solid $menu-bg;
+	background-color: $content-bg;
+	height: $wrapper-height;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.main-wrapper header {
+	margin: 0;
+	padding: 12em 2em;
+	padding-left: $sidebar-full-width + 10;
+	background: $body-bg;
+
+	small {
+		display: block;
+	}
+
+}
+
+@media(max-width: $screen-md) {
+	.main-wrapper header {
+		padding-left: 2em;
+		margin: 0 auto;
+	}
+}
+
+.main-wrapper ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.top-bar {
+	background-color: $menu-bg;
+	height: $menu-dimension;
+	margin-bottom: 0;
+	padding-left: 0;
+	width: 100%;
+}
+
+.top-bar a {
+	display: block;
+	height: 100%;
+	color: $brand-primary;
+	line-height: $menu-dimension;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.top-bar a:hover {
+	background-color: $brand-primary;
+	color: $menu-bg;
+}
+
+.top-item {
+	border: 1px solid $menu-border;
+	border-width: 0 1px 0 0;
+	display: block;
+	float: left;
+	height: 100%;
+	text-align: center;
+	z-index: $menu-z-index - 1;
+}
+
+.top-item > a {
+	padding: 0 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+.top-item:last-child {
+	border-right: none;
+	border-left: 1px solid $menu-border;
+	float: right;
+}
+
+@media (max-width: $screen-xs) {
+	.top-item {
+		width: $menu-dimension;
+
+		> a {
+			padding: 0;
+		}
+
+		.glyphicon ~ span {
+			display: none;
+		}
+	}
+}
+
+.menu-trigger {
+	font-size: 18px;
+	font-weight: 300;
+
+	width: $menu-dimension;
+}
+
+.menu-trigger > a {
+	padding: 0;
+}
+
+.side-bar {
+	background-color: $menu-bg;
+	border: 1px solid $menu-border;
+	border-width: 1px 1px 0 0;
+	bottom: 0;
+	left: -$menu-dimension;
+	position: absolute;
+	top: $menu-dimension;
+	width: $menu-dimension;
+	transition: width, 0.3s;
+	z-index: $menu-z-index;
+}
+
+.side-bar.part, .side-bar.full {
+	left: 0;
+}
+
+.side-bar.full {
+	width: $sidebar-full-width;
+
+	.side-item.sub {
+		height: $menu-dimension;
+	}
+}
+
+.side-menu {
+	text-align: left;
+}
+
+.side-item {
+	@include text-overflow;
+
+	width: 100%;
+}
+
+.side-item a {
+	border-bottom: 1px solid $menu-border;
+}
+
+.side-item.main {
+	min-height: $menu-dimension;
+}
+
+.side-item.sub {
+	height: 0;
+	overflow: hidden;
+	transition: height, 0.3s;
+
+	.side-icon-wrapper {
+		margin-left: $menu-dimension;
+	}
+}
+
+@media (max-width: $screen-xs) {
+	.side-item.sub {
+		a {
+			color: lighten($brand-primary, 20%);
+		}
+
+		.side-icon-wrapper {
+			margin-left: inherit;
+		}
+	}
+}
+
+.side-icon-wrapper {
+	display: inline-block;
+	text-align: center;
+	width: $menu-dimension;
+	height: 100%;
+}
+
+// Inline search input styling
+
+.side-item input[type=search] {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	color: inherit;
+	cursor: pointer;
+	display: inline-block;
+	font-size: inherit;
+	margin-left: -5px;
+	padding-left: 0;
+}
+
+@mixin placeholder-style($color) {
+	&::-webkit-input-placeholder {
+		color: $color
+	}
+
+	&:-moz-placeholder { /* Firefox 18- */
+		color: $color
+	}
+
+	&::-moz-placeholder {  /* Firefox 19+ */
+		color: $color
+	}
+
+	&:-ms-input-placeholder {
+		color: $color
+	}
+}
+
+.side-item input[type=search] {
+	@include placeholder-style($brand-primary);
+}
+
+.side-item:hover input[type=search] {
+	@include placeholder-style($menu-bg);
+}
+
+.side-item input[type=search]:focus {
+	@include placeholder-style(transparent);
+}
