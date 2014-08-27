@@ -1,0 +1,178 @@
+//Variables
+
+$list-item-height: 50px;
+$trigger-zindex: $zindex-navbar;
+$menu-item-color: $brand-primary;
+$menu-item-hover-color: darken($brand-primary, 30%);
+$transition-time: 0.2s;
+
+//Main Styles
+
+.header-wrapper .page-header {
+	text-align: center;
+
+	small {
+		display: block;
+		margin-top: 10px;
+	}
+}
+
+.content-wrapper a {
+	color: $menu-item-color;
+	display: block;
+	height: $list-item-height;
+	line-height: $list-item-height;
+	text-decoration: none;
+
+	&:hover {
+		color: $menu-item-hover-color;
+	}
+}
+
+.main-paragraph p {
+	font-size: 2em;
+	font-weight: 200;
+	line-height: 1.5;
+}
+
+@media (min-width: $screen-lg){
+	.main-paragraph {
+		float: right;
+	}
+
+	.menu-wrapper {
+		border-right: 1px solid $gray-lighter;
+		float: left;
+	}
+}
+
+@media (max-width: $screen-lg) {
+	.main-paragraph p {
+		font-size: 130%;
+	}
+}
+
+//Nav Closed Styles
+
+.fm-nav {
+	font-size: 150%;
+	line-height: 100%;
+	max-width: 400px;
+	min-width: 215px;
+	padding-top: 2em;
+	position: relative;
+}
+
+.fm-trigger {
+	position: absolute;
+	width: 100%;
+}
+
+.fm-trigger span {
+	height: $list-item-height;
+	line-height: $list-item-height;
+}
+
+.fm-main-icon {
+	left: 0;
+	padding: 0 10px;
+	position: absolute;
+
+	@include size($list-item-height);
+	@include transition(all $transition-time);
+
+	z-index: $trigger-zindex;
+}
+
+.fm-main-icon span {
+	font-size: 50%;
+	left: -10%;
+
+	@include opacity(0);
+
+	position: absolute;
+}
+
+.fm-label {
+	cursor: default;
+	margin-left: $list-item-height;
+	position: absolute;
+
+	@extend strong;
+
+	top: 0;
+
+	@include transition(all $transition-time);
+}
+
+.fm-list {
+	list-style: none;
+
+	padding-left: 10px;
+	pointer-events: none;
+}
+
+.fm-list span ~ span {
+	margin-left: 12px;
+}
+
+.fm-item {
+	min-height: $list-item-height;
+
+	@include opacity(0);
+
+	@include transition(opacity $transition-time);
+
+	&:nth-child(2) {
+		@include transition-delay(35ms);
+	}
+
+	&:nth-child(3) {
+		@include transition-delay(70ms);
+	}
+
+	&:nth-child(4) {
+		@include transition-delay(105ms);
+	}
+
+	&:nth-child(5) {
+		@include transition-delay(140ms);
+	}
+
+	&:nth-child(6) {
+		@include transition-delay(175ms);
+	}
+
+	&:nth-child(7) {
+		@include transition-delay(205ms);
+	}
+
+}
+
+.fm-item-link {
+	font-weight: 200;
+}
+
+//Nav Open Styles
+
+.fm-nav.open {
+	.fm-main-icon {
+		left: 85%;
+
+		span {
+			@include opacity(1);
+		}
+	}
+
+	.fm-label {
+		top: -$list-item-height;
+	}
+
+	.fm-list {
+		pointer-events: auto;
+	}
+
+	.fm-item {
+		@include opacity(1);
+	}
+}
