@@ -4759,6 +4759,54 @@ button.close {
   color: #333;
   cursor: default; }
 
+.tab-content {
+  overflow: hidden;
+  padding: 10px; }
+
+.tab-wrapper-bottom > .nav-tabs, .tab-wrapper-left > .nav-tabs, .tab-wrapper-right > .nav-tabs {
+  border-bottom: 0; }
+
+.tab-wrapper-bottom {
+  margin-bottom: 10px; }
+  .tab-wrapper-bottom .nav-tabs {
+    border-top: 1px solid #DDD; }
+    .tab-wrapper-bottom .nav-tabs .active > a, .tab-wrapper-bottom .nav-tabs .active > a:focus, .tab-wrapper-bottom .nav-tabs .active > a:hover {
+      border-color: transparent #DDD #DDD #DDD; }
+    .tab-wrapper-bottom .nav-tabs > li {
+      margin-top: -1px; }
+      .tab-wrapper-bottom .nav-tabs > li > a {
+        border-radius: 0 0 4px 4px; }
+        .tab-wrapper-bottom .nav-tabs > li > a:focus, .tab-wrapper-bottom .nav-tabs > li > a:hover {
+          border-color: #DDD #EEE #EEE; }
+
+.tab-wrapper-left .nav-tabs {
+  border-right: 1px solid #DDD;
+  float: left;
+  margin-right: 20px; }
+  .tab-wrapper-left .nav-tabs .active > a, .tab-wrapper-left .nav-tabs .active > a:focus, .tab-wrapper-left .nav-tabs .active > a:hover {
+    border-color: #DDD transparent #DDD #DDD; }
+  .tab-wrapper-left .nav-tabs > li {
+    float: none;
+    margin-right: -2px; }
+    .tab-wrapper-left .nav-tabs > li > a {
+      border-radius: 4px 0 0 4px; }
+      .tab-wrapper-left .nav-tabs > li > a:focus, .tab-wrapper-left .nav-tabs > li > a:hover {
+        border-color: #EEE #DDD #EEE #EEE; }
+
+.tab-wrapper-right .nav-tabs {
+  border-left: 1px solid #DDD;
+  float: right;
+  margin-left: 20px; }
+  .tab-wrapper-right .nav-tabs .active > a, .tab-wrapper-right .nav-tabs .active > a:focus, .tab-wrapper-right .nav-tabs .active > a:hover {
+    border-color: #DDD #DDD #DDD transparent; }
+  .tab-wrapper-right .nav-tabs > li {
+    float: none;
+    margin-left: -1px; }
+    .tab-wrapper-right .nav-tabs > li > a {
+      border-radius: 0 4px 4px 0; }
+      .tab-wrapper-right .nav-tabs > li > a:focus, .tab-wrapper-right .nav-tabs > li > a:hover {
+        border-color: #EEE #EEE #EEE #DDD; }
+
 /* -------- Navbars -------- */
 .navbar-danger .nav > li > a:hover {
   background-color: transparent;
