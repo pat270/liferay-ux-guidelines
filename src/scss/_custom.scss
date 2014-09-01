@@ -223,6 +223,58 @@
 	}
 }
 
+.nav.nav-tabs > li {
+	&.tab-danger > a {
+		&, &:focus, &:hover {
+			background-color: #FDB4B4;
+			border: 1px solid #FDB4B4;
+			border-bottom-color: #DDD;
+			color: #333;
+			cursor: default;
+		}
+	}
+
+	&.tab-info > a {
+		&, &:focus, &:hover {
+			background-color: #C3E4F5;
+			border: 1px solid #C3E4F5;
+			border-bottom-color: #DDD;
+			color: #333;
+			cursor: default;
+		}
+	}
+
+	&.tab-primary > a {
+		&, &:focus, &:hover {
+			background-color: #6CB0EB;
+			border: 1px solid #6CB0EB;
+			border-bottom-color: #DDD;
+			color: #333;
+			cursor: default;
+		}
+	}
+
+	&.tab-success > a {
+		&, &:focus, &:hover {
+			background-color: #BDEEA9;
+			border: 1px solid #BDEEA9;
+			border-bottom-color: #DDD;
+			color: #333;
+			cursor: default;
+		}
+	}
+
+	&.tab-warning > a {
+		&, &:focus, &:hover {
+			background-color: #FFF4B9;
+			border: 1px solid #FFF4B9;
+			border-bottom-color: #DDD;
+			color: #333;
+			cursor: default;
+		}
+	}
+}
+
 /* -------- Navbars -------- */
 
 .navbar-danger {
