@@ -223,6 +223,149 @@
 	}
 }
 
+.nav.nav-tabs > li {
+	&.tab-danger > a {
+		&, &:focus, &:hover {
+			background-color: #FDB4B4;
+			border: 1px solid #FDB4B4;
+			border-bottom-color: #DDD;
+			color: #333;
+			cursor: default;
+		}
+	}
+
+	&.tab-info > a {
+		&, &:focus, &:hover {
+			background-color: #C3E4F5;
+			border: 1px solid #C3E4F5;
+			border-bottom-color: #DDD;
+			color: #333;
+			cursor: default;
+		}
+	}
+
+	&.tab-primary > a {
+		&, &:focus, &:hover {
+			background-color: #6CB0EB;
+			border: 1px solid #6CB0EB;
+			border-bottom-color: #DDD;
+			color: #333;
+			cursor: default;
+		}
+	}
+
+	&.tab-success > a {
+		&, &:focus, &:hover {
+			background-color: #BDEEA9;
+			border: 1px solid #BDEEA9;
+			border-bottom-color: #DDD;
+			color: #333;
+			cursor: default;
+		}
+	}
+
+	&.tab-warning > a {
+		&, &:focus, &:hover {
+			background-color: #FFF4B9;
+			border: 1px solid #FFF4B9;
+			border-bottom-color: #DDD;
+			color: #333;
+			cursor: default;
+		}
+	}
+}
+
+.tab-content {
+	overflow: hidden;
+	padding: 10px;
+}
+
+.tab-wrapper-bottom > .nav-tabs,
+.tab-wrapper-left > .nav-tabs,
+.tab-wrapper-right > .nav-tabs {
+	border-bottom: 0;
+}
+
+.tab-wrapper-bottom {
+	margin-bottom: 10px;
+
+	.nav-tabs {
+		border-top: 1px solid #DDD;
+
+		.active > a {
+			&, &:focus, &:hover {
+				border-color: transparent #DDD #DDD #DDD;
+			}
+		}
+
+		> li {
+			margin-top: -1px;
+
+			> a {
+			border-radius: 0 0 4px 4px;
+
+				&:focus, &:hover {
+					border-color: #DDD #EEE #EEE;
+				}
+			}
+		}
+	}
+}
+
+.tab-wrapper-left {
+	.nav-tabs {
+		border-right: 1px solid #DDD;
+		float: left;
+		margin-right: 20px;
+
+		.active > a {
+			&, &:focus, &:hover {
+				border-color: #DDD transparent #DDD #DDD;
+			}
+		}
+
+		> li {
+			float: none;
+			margin-right: -2px;
+
+			> a {
+				border-radius: 4px 0 0 4px;
+
+				&:focus, &:hover {
+					border-color: #EEE #DDD #EEE #EEE;
+				}
+			}
+		}
+	}
+}
+
+.tab-wrapper-right {
+	.nav-tabs {
+		border-left: 1px solid #DDD;
+		float: right;
+		margin-left: 20px;
+
+		.active > a {
+			&, &:focus, &:hover {
+				border-color: #DDD #DDD #DDD transparent;
+			}
+		}
+
+		> li {
+			float: none;
+			margin-left: -1px;
+
+			> a {
+				border-radius: 0 4px 4px 0;
+
+				&:focus, &:hover {
+					border-color: #EEE #EEE #EEE #DDD;
+				}
+			}
+		}
+	}
+}
+
 /* -------- Navbars -------- */
 
 .navbar-danger {
