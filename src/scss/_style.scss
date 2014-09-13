@@ -408,6 +408,32 @@ header.row {
 	padding-top: 15px;
 }
 
+/* -------- Nav -------- */
+
+#default-nav-tabs {
+	margin-bottom: 10px;
+
+	.tab-content {
+		padding: 10px;
+	}
+}
+
+#rental {
+	.details {
+		margin-top: 15px;
+	}
+
+	h5 {
+		font-weight: bold;
+	}
+
+	img {
+		float: none;
+		padding: 0;
+	}
+}
+
+
 /* -------- Media Page -------- */
 
 #mediaPage img {
@@ -475,6 +501,13 @@ header.row {
 }
 
 /* -------- Timeline -------- */
+
+.item-center.timeline-item {
+	img {
+		float: none;
+		padding: 0;
+	}
+}
 
 .timestamp-icon {
 	color: #999;
