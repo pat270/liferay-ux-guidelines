@@ -4639,6 +4639,36 @@ button.close {
   .image-gallery .row:last-child {
     margin-bottom: 0; }
 
+/* -------- Invoice -------- */
+.invoice {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  padding: 20px; }
+  .invoice .heading {
+    background-color: #EEE;
+    height: 140px;
+    padding: 20px; }
+  .invoice .invoice-info {
+    margin: 30px 20px;
+    text-align: right; }
+    .invoice .invoice-info p {
+      margin: 0; }
+  .invoice .contact-info {
+    margin: 40px 0; }
+    .invoice .contact-info.buyer-contact-info {
+      padding-right: 20px;
+      text-align: right; }
+    .invoice .contact-info.company-contact-info {
+      padding-left: 20px; }
+    .invoice .contact-info h4 {
+      font-weight: bold; }
+    .invoice .contact-info ul {
+      list-style: none;
+      padding-left: 0; }
+  .invoice .table td:last-child, .invoice .table .total {
+    text-align: right; }
+  .invoice .table .table-heading, .invoice .table .total {
+    font-weight: bold; }
+
 /* -------- Mega Menu -------- */
 .link-list {
   list-style: none;

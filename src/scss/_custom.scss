@@ -85,6 +85,61 @@
 	}
 }
 
+/* -------- Invoice -------- */
+
+.invoice {
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+	padding: 20px;
+
+	.heading {
+		background-color: #EEE;
+		height: 140px;
+		padding: 20px;
+	}
+
+	.invoice-info {
+		margin: 30px 20px;
+		text-align: right;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.contact-info {
+		margin: 40px 0;
+
+		&.buyer-contact-info {
+			padding-right: 20px;
+			text-align: right;
+		}
+
+		&.company-contact-info {
+			padding-left: 20px;
+		}
+
+		h4 {
+			font-weight: bold;
+		}
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+		}
+	}
+
+	.table {
+		td:last-child, .total {
+			text-align: right;
+		}
+
+		.table-heading, .total {
+			font-weight: bold;
+		}
+	}
+
+}
+
 /* -------- Mega Menu -------- */
 
 .link-list {
