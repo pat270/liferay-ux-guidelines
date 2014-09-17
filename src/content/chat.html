@@ -1,0 +1,208 @@
+---
+title: Chat
+---
+
+<div class="panel panel-default chat-container">
+	<div class="panel-heading chat-title">
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle chat-dropdown" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span class="current-username">Mike Bloggington</span><span class="caret"></span></button>
+			<span class="label label-success user-status">Online</span>
+			<ul id="chatSelect" class="dropdown-menu" role="menu">
+				<li role="menuitem">
+					<a href="#" data-target="chat0"><span class="label label-success user-status">Online</span><span class="username">Mike Bloggington</span></a>
+				</li>
+				<li role="menuitem">
+					<a href="#" data-target="chat1"><span class="label label-success user-status">Online</span><span class="username">Ben Blogman</span><span class="badge">3</span></a>
+				</li>
+				<li role="menuitem">
+					<a href="#" data-target="chat2"><span class="label label-danger user-status">Offline</span><span class="username">Lisa Blogsley</span></a>
+				</li>
+				<li role="menuitem">
+					<a href="#" data-target="chat3"><span class="label label-danger user-status">Offline</span><span class="username">Sarah Blogston</span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="chat0" class="panel-body chat-body chat-active">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="box panel panel-default chat-msg outgoing-msg">
+						<p class="chat-msg-content">Hey What's up?</p>
+						<div class="chat-timestamp"><small><span class="glyphicon glyphicon-time"></span>45 minutes ago</small></div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="box panel panel-default chat-msg incoming-msg">
+						<p class="chat-msg-content">Not much, how about you?</p>
+						<div class="chat-timestamp"><small><span class="glyphicon glyphicon-time"></span>43 minutes ago</small></div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="box panel panel-default chat-msg outgoing-msg">
+						<p class="chat-msg-content">Just chillin like a villain</p>
+						<div class="chat-timestamp"><small><span class="glyphicon glyphicon-time"></span>a few seconds ago</small></div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div id= "chat1" class="panel-body chat-body chat-inactive">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box panel panel-default chat-msg incoming-msg">
+					<p class="chat-msg-content">Hey.</p>
+					<div class="chat-timestamp"><small><span class="glyphicon glyphicon-time"></span>22 minutes ago</small></div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="box panel panel-default chat-msg incoming-msg">
+					<p class="chat-msg-content">Hey!</p>
+					<div class="chat-timestamp"><small><span class="glyphicon glyphicon-time"></span>21 minutes ago</small></div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="box panel panel-default chat-msg incoming-msg">
+					<p class="chat-msg-content">Hey man, you there?</p>
+					<div class="chat-timestamp"><small><span class="glyphicon glyphicon-time"></span>30 seconds ago</small></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id= "chat2" class="panel-body chat-body chat-inactive">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box panel panel-default chat-msg outgoing-msg">
+					<p class="chat-msg-content">See ya later, have a good weekend!</p>
+					<div class="chat-timestamp"><small><span class="glyphicon glyphicon-time"></span>3 days ago</small></div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="box panel panel-default chat-msg incoming-msg">
+					<p class="chat-msg-content">You too.</p>
+					<div class="chat-timestamp"><small><span class="glyphicon glyphicon-time"></span>3 days ago</small></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id= "chat3" class="panel-body chat-body chat-inactive">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box panel panel-default chat-msg outgoing-msg">
+					<p class="chat-msg-content">So do you like the new chat?</p>
+					<div class="chat-timestamp"><small><span class="glyphicon glyphicon-time"></span>20 days ago</small></div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="box panel panel-default chat-msg incoming-msg">
+					<p class="chat-msg-content">It's ok. Could be better</p>
+					<div class="chat-timestamp"><small><span class="glyphicon glyphicon-time"></span>20 days ago</small></div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="box panel panel-default chat-msg outgoing-msg">
+					<p class="chat-msg-content">I guess we will just have to work harder!</p>
+					<div class="chat-timestamp"><small><span class="glyphicon glyphicon-time"></span>20 days ago</small></div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="box panel panel-default chat-msg incoming-msg">
+					<p class="chat-msg-content">I guess so.</p>
+					<div class="chat-timestamp"><small><span class="glyphicon glyphicon-time"></span>20 days ago</small></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel-footer">
+		<form id='chatForm' class="form-horizontal">
+			<div class="form-group">
+				<div class="col-xs-9">
+					<input id="chatInput" type="text" class="form-control chat-input" placeholder="Type your message...">
+				</div>
+				<div class="col-xs-3">
+					<div class="btn-group dropdown">
+						<button id="sendButton" type="submit" class="btn btn-success btn-send">Send</button>
+						<button class="btn btn-success dropdown-toggle" data-toggle="dropdown" type="button"><span class="dropup"><span class="caret"></span></span></button>
+						<ul class="dropdown-menu dropdown-menu-top" role="menu">
+							<li><a href="#"><span class="glyphicon glyphicon-heart"></span>Emote</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-camera"></span>Picture</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-facetime-video"></span>Video</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-paperclip"></span>File</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<script>
+	YUI().use('aui-node', function(A) {
+		var mainContent = A.one('#mainContent');
+
+		mainContent.delegate('click', function(event) {
+			var currentTarget = event.currentTarget,
+				dropdown = currentTarget.ancestor('.dropdown');
+
+			dropdown.toggleClass('open');
+
+			if (dropdown.hasClass('open')) {
+				currentTarget.on('clickoutside', function(event) {
+					var _this = this;
+
+					_this.ancestor('.dropdown').removeClass('open');
+					_this.detach('clickoutside');
+				});
+			}
+			else {
+				currentTarget.detach('clickoutside');
+			}
+		}, '.dropdown-toggle');
+
+		var chatSelect = A.one('#chatSelect');
+
+		chatSelect.delegate('click', function(event) {
+			var currentTarget = event.currentTarget,
+				currentChat = A.one('.chat-active'),
+				dropdown = A.one('.dropdown'),
+				dropdownUser = A.one('.dropdown-toggle .current-username'),
+				newChat = A.one('#' + currentTarget.getData('target')),
+				newChatUser = currentTarget.one('.username'),
+				newUserStatus = currentTarget.one('.user-status'),
+				userStatus = A.one('.user-status');
+
+			currentChat.replaceClass('chat-active', 'chat-inactive');
+			newChat.replaceClass('chat-inactive', 'chat-active');
+
+			dropdownUser.text(newChatUser.text());
+
+			userStatus.placeAfter(newUserStatus.cloneNode(true));
+			userStatus.remove(true);
+
+			if (dropdown.hasClass('open')) {
+				dropdown.removeClass('open');
+			}
+
+		}, 'a');
+
+		var chatForm = A.one('#chatForm');
+
+		chatForm.on('submit', function(event) {
+			var chatInput = A.one('#chatInput'),
+				chatVal = chatInput.val();
+
+			if (chatVal) {
+				MSG_TMPL = '<div class="col-md-12">' +
+					'<div class="box panel panel-default chat-msg outgoing-msg">' +
+						'<p class="chat-msg-content">' + chatVal + '</p>' +
+						'<div class="chat-timestamp"><small><span class="glyphicon  glyphicon-time"></span>Now</small></div>' +
+						'</div>' +
+					'</div>';
+
+				var newMsg = A.Node.create(MSG_TMPL);
+				A.one('.chat-body.chat-active').append(newMsg);
+
+				newMsg.scrollIntoView(true);
+				chatInput.val('');
+			}
+		});
+	});
+</script>

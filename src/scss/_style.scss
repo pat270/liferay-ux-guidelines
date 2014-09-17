@@ -340,6 +340,64 @@ header.row {
 	}
 }
 
+/* ---------- Chat --------- */
+
+.chat-container {
+	max-width: 500px;
+
+	.chat-body {
+		height: 300px;
+		overflow-y: auto;
+
+		&.chat-active {
+			display: block;
+		}
+
+		&.chat-inactive {
+			display: none
+		}
+	}
+
+	.chat-dropdown {
+		margin-right: 10px;
+	}
+
+	.chat-title h4 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.chat-msg {
+		max-width: 75%;
+		padding: 10px;
+	}
+
+	.glyphicon {
+		font-size: inherit;
+		margin-right: 5px;
+	}
+
+	.incoming-msg {
+		background-color: #E1F1FC;
+		clear: both;
+		float: left;
+	}
+
+	.label {
+		margin-right: 5px;
+	}
+
+	.outgoing-msg {
+		background-color: #ECFFF0;
+		clear: both;
+		float: right;
+	}
+
+	.username, .current-username {
+		margin-right: 5px;
+	}
+}
+
 /* -------- Dropdowns ------- */
 
 #dropdownDisplay {
