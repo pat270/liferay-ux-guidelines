@@ -4642,32 +4642,37 @@ button.close {
 /* -------- Invoice -------- */
 .invoice {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-  padding: 20px; }
+  padding: 10px; }
+  .invoice h4 {
+    font-weight: bold; }
+  .invoice p {
+    margin: 0; }
+  .invoice table td:last-child, .invoice table th:last-child {
+    text-align: right; }
+  .invoice .address, .invoice .invoice-details {
+    margin-left: 10px;
+    margin-top: 30px; }
   .invoice .heading {
     background-color: #EEE;
-    height: 140px;
-    padding: 20px; }
-  .invoice .invoice-info {
-    margin: 30px 20px;
-    text-align: right; }
-    .invoice .invoice-info p {
-      margin: 0; }
-  .invoice .contact-info {
-    margin: 40px 0; }
-    .invoice .contact-info.buyer-contact-info {
-      padding-right: 20px;
+    padding: 10px; }
+    .invoice .heading h4 {
+      font-weight: normal; }
+
+@media (min-width: 768px) {
+  .invoice {
+    padding: 30px; }
+    .invoice .address {
+      margin-left: 0; }
+      .invoice .address.buyer-address {
+        text-align: right; }
+    .invoice .heading {
+      margin: -20px;
+      margin-bottom: 0;
+      padding: 10px 20px 20px; }
+    .invoice .invoice-details {
       text-align: right; }
-    .invoice .contact-info.company-contact-info {
-      padding-left: 20px; }
-    .invoice .contact-info h4 {
-      font-weight: bold; }
-    .invoice .contact-info ul {
-      list-style: none;
-      padding-left: 0; }
-  .invoice .table td:last-child, .invoice .table .total {
-    text-align: right; }
-  .invoice .table .table-heading, .invoice .table .total {
-    font-weight: bold; }
+    .invoice .table-responsive {
+      margin: 0 -20px; } }
 
 /* -------- Mega Menu -------- */
 .link-list {
