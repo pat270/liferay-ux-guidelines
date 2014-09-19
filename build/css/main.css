@@ -4674,6 +4674,31 @@ button.close {
     .invoice .table-responsive {
       margin: 0 -20px; } }
 
+/* -------- Invoice -------- */
+.invoice-email {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  padding: 10px; }
+  .invoice-email h4 {
+    font-weight: bold; }
+  .invoice-email p {
+    margin: 0; }
+  .invoice-email table {
+    width: 100%; }
+    .invoice-email table.table td:last-child, .invoice-email table.table th:last-child {
+      text-align: right; }
+  .invoice-email .heading {
+    background-color: #EEE;
+    padding: 0 10px 10px; }
+    .invoice-email .heading h4 {
+      font-weight: normal; }
+  @media (min-width: 768px) {
+    .invoice-email {
+      width: 100%; }
+      .invoice-email .heading {
+        padding: 10px 20px 20px; }
+      .invoice-email .invoice-details td:last-child {
+        text-align: right; } }
+
 /* -------- Mega Menu -------- */
 .link-list {
   list-style: none;
