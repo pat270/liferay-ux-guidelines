@@ -4894,6 +4894,15 @@ button.close {
   border-color: #FAEBCC;
   color: #8A6D3B; }
 
+/* -------- Products Page ------- */
+.product-page .container-fluid ul li {
+  padding: 8px 12px; }
+.product-page .filter h3 {
+  margin-top: 0; }
+.product-page .price {
+  font-weight: bold;
+  text-align: right; }
+
 /* -------- Thumbnails ------- */
 .drop-shadow .thumbnail, .drop-shadow.thumbnail {
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
