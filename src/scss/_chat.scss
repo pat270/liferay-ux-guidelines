@@ -1,0 +1,193 @@
+$transition-time: 0.2s;
+$chat-item-height: 30px;
+$contacts-gutter: 200px;
+$contacts-list-height: 115px;
+
+.application {
+	.outline {
+		border: 1px solid $gray-lighter;
+	}
+
+	.btn {
+		@extend .square-borders;
+	}
+
+	.chat-wrapper {
+		display: none;
+	}
+}
+
+.chat-open {
+	.chat-wrapper {
+		display: block;
+	}
+
+	.toggle-chat-button.on {
+		display: none;
+	}
+}
+
+.chat-wrapper {
+	max-width: 600px;
+	padding: 0 20px;
+	position: relative;
+}
+
+.chat-title-wrapper {
+	padding: 0;
+	text-align: center;
+
+	@media (min-width: $screen-sm) {
+		padding-right: 0;
+		text-align: right;
+	}
+}
+
+.toolbar-wrapper {
+	padding-left: 0;
+}
+
+.dropdown-toggle.open ~ .dropdown-menu {
+	display: block;
+}
+
+.chat {
+	@include transition(padding, $transition-time);
+}
+
+// Contacts Area
+.toggle-contacts-button {
+	@include transition(background-color, $transition-time);
+}
+
+.contacts-list-wrapper {
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	@include transition(all, $transition-time);
+
+	@media (min-width: $screen-sm) {
+		bottom: 0;
+		width: 0;
+	}
+
+	@media (max-width: $screen-sm) {
+		height: 0;
+		left: 0;
+	}
+}
+
+.chat-user {
+	border: none;
+}
+
+.contacts-open {
+	@media (min-width: $screen-sm) {
+		.chat {
+			padding-right: $contacts-gutter;
+		}
+
+		.contacts-list-wrapper {
+			border-left: 1px solid $body-bg;
+			padding: 0 5px;
+			width: $contacts-gutter - 15;
+		}
+	}
+
+	@media (max-width: $screen-sm) {
+		.chat {
+			padding-top: $contacts-list-height;
+		}
+
+		.contacts-list-wrapper {
+			height: $contacts-list-height;
+		}
+
+		.toggle-contacts-button {
+			@extend .btn-primary;
+		}
+	}
+}
+
+.message-view-wrapper {
+	overflow-y: auto;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	position: relative;
+
+	@media (min-width: $screen-sm) {
+		height: 600px;
+	}
+}
+
+// Messages
+.message {
+	min-height: $chat-item-height;
+	position: relative;
+}
+
+.message-text {
+	@extend .bg-info;
+
+	border-radius: 0 6px 6px 6px;
+	margin-left: $chat-item-height;
+	max-width: 60%;
+	min-height: $chat-item-height;
+	padding: 1px 5px 2px;
+
+	@media (max-width: $screen-sm) {
+		max-width: 80%;
+	}
+}
+
+.user-image {
+	border-radius: 50%;
+	left: 5px;
+	position: absolute;
+
+	@include square($chat-item-height);
+}
+
+.message.yours {
+	.user-image {
+		left: initial;
+		right: 5px;
+	}
+
+	.message-text {
+		border-radius: 6px 0 6px 6px;
+		margin-left: auto;
+		margin-right: $chat-item-height;
+		position: relative;
+	}
+}
+
+.message.theirs .message-text{
+	@extend .bg-danger;
+}
+
+// Message Input
+.message-input {
+	border-width: 0;
+	box-shadow: none;
+	margin: 0 0 0 -15px;
+	padding-right: 55px;
+	resize: none;
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.message-input {
+	font-size: 16px;
+}
+
+.submit-message-button {
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}

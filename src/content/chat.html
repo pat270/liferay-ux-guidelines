@@ -1,0 +1,510 @@
+---
+title: Chat
+section: Templates
+---
+
+<div class="application">
+<button class="btn btn-default btn-lg toggle-chat-button on"><span class="glyphicon glyphicon-off"></span> Turn on Chat</button>
+<div class="chat-wrapper">
+	<div class="row chat-header">
+		<div class="toolbar-wrapper col-sm-6">
+			<div class="btn-toolbar chat-toolbar">
+				<div class="btn-group">
+					<button class="btn btn-default btn-lg toggle-chat-button off">
+						<span class="glyphicon glyphicon-off"></span>
+					</button>
+					<div class="btn-group">
+						<button id="status-chooser" type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
+							<span id="status"><span class="text-success"><span class="glyphicon glyphicon-ok-circle"></span> Available</span></span>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a class="status-option" href="#"><span class="text-success"><span class="glyphicon glyphicon-ok-circle"></span> Available</span></a></li>
+							<li><a class="status-option" href="#"><span class="text-primary"><span class="glyphicon glyphicon-dashboard"></span> Busy</span></a></li>
+							<li><a class="status-option" href="#"><span class="text-warning"><span class="glyphicon glyphicon-time"></span> Away</span></a></li>
+							<li><a class="status-option" href="#"><span class="text-danger"><span class="glyphicon glyphicon-remove-circle"></span> Offline</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="chat-title-wrapper col-sm-6">
+			<button id="toggle-contacts-button" class="btn btn-default btn-lg btn-block toggle-contacts-button">Chat with <span id="chat-title"></span></button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 chat">
+			<div class="row message-view-wrapper outline">
+				<div id="message-area" class="col-sm-12 message-area">
+					<!-- Chats go here (message-template) -->
+				</div>
+			</div>
+			<div class="row message-input-wrapper outline">
+				<div class="col-sm-12 square-borders">
+					<input id="message-input" class="form-control input-lg message-input" name="" id="" placeholder="Message...">
+					<button id="submit-message-button" class="btn btn-primary btn-lg submit-message-button">Send</button>
+				</div>
+			</div>
+			<div class="contacts-list-wrapper">
+				<div id="contacts-list" class="contacts-list list-group square-borders">
+					<!-- Contacts go here (contacts-template) -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Templates -->
+	<script id="message-template" type="text/x-handlebars-template">
+		<div class="row">
+			{{#items}}
+			<div class="col-sm-12 message {{owner}}">
+				<img src="{{image}}" alt="" class="user-image" />
+				<p class="message-text" tabindex="0">{{text}}</p>
+			</div>
+			{{/items}}
+		</div>
+	</script>
+
+	<script id="contacts-template" type="text/x-handlebars-template">
+		{{#items}}
+		<a class="list-group-item chat-user {{active}}" index="{{index}}">{{name}}<span class="badge pull-right">{{newMessageCount}}</span></a>
+		{{/items}}
+	</script>
+</div>
+</div>
+
+
+<!-- Javascript -->
+<script>
+	YUI().use(
+		'aui-base',
+		'handlebars',
+		function(A) {
+			var chatWrapper = A.one('.chat-wrapper');
+
+			// Chat "configuration" object
+			var config = {
+				chatTitle: chatWrapper.one('#chat-title'),
+				chatUserSelector: '.chat-user',
+				chatWrapper: chatWrapper,
+				contactsArea: chatWrapper.one('#contacts-list'),
+				contactsTemplate: chatWrapper.one('#contacts-template'),
+				messageArea: chatWrapper.one('#message-area'),
+				messageInput: chatWrapper.one('#message-input'),
+				messagesSelector: '.message-text',
+				messageTemplate: chatWrapper.one('#message-template'),
+				statusChooser: chatWrapper.one('#status-chooser'),
+				statusOptionSelector: '.status-option',
+				submitMessageButton: chatWrapper.one('#submit-message-button'),
+				toggleUsersButton: chatWrapper.one('#toggle-contacts-button'),
+				userImage: '../../images/user_image_placeholder.png'
+			};
+
+			// The chat object
+			var chat = {
+				chatTitle: config.chatTitle,
+				chatUserSelector: config.chatUserSelector,
+				contactsArea: config.contactsArea,
+				contactsTemplate: config.contactsTemplate,
+				messageArea: config.messageArea,
+				messageInput: config.messageInput,
+				messagesSelector: config.messagesSelector,
+				messageTemplate: config.messageTemplate,
+				statusChooser: config.statusChooser,
+				statusOptionSelector: config.statusOptionSelector,
+				submitMessageButton: config.submitMessageButton,
+				toggleUsersButton: config.toggleUsersButton,
+				wrapper: config.chatWrapper,
+				yourAvatar: config.userImage,
+
+				initialize: function() {
+					this.setActiveChat(this.chats[0]);
+
+					this.indexArray(this.chats);
+					this.renderMessages(this.activeChat.messages);
+					this.renderContacts();
+					this.delegateClicks();
+					this.focusLastMessage();
+
+					chat.initialized = true;
+				},
+
+				changeChat: function(event) {
+					var target = event.target;
+
+					target.radioClass('active');
+
+					if (A.UA.mobile) {
+						this.toggleContacts();
+					}
+
+					this.setActiveChat(this.chats[target.attr('index')]);
+					this.messageArea.html('');
+					this.renderMessages(this.activeChat.messages);
+				},
+
+				delegateClicks: function() {
+					this.toggleUsersButton.on('click', this.toggleContacts, this);
+					this.submitMessageButton.on('click', this.submitMessage, this);
+					this.statusChooser.on('click', this.toggleDropdown, this);
+
+					this.wrapper.delegate('click', this.changeChat, this.chatUserSelector, this);
+					this.wrapper.delegate('click', this.setStatus, this.statusOptionSelector, this);
+				},
+
+				focusLastMessage: function() {
+					var lastMessage = A.all(this.messagesSelector).last();
+
+					lastMessage.focus();
+				},
+
+				indexArray: function(array) {
+					A.Array.each(array, function(item, index) {
+						item.index = index;
+					})
+				},
+
+				renderContacts: function() {
+					var contacts = [];
+
+					A.Object.each(this.chats, function(chat) {
+						contacts.push(chat);
+					});
+
+					this.renderTemplate(this.contactsTemplate, contacts, this.contactsArea);
+				},
+
+				renderMessages: function(messages) {
+					this.chatTitle.text(this.activeChat.name);
+					this.renderTemplate(this.messageTemplate, messages, this.messageArea);
+				},
+
+				renderTemplate: function(sourceNode, items, targetNode) {
+					var source = A.one(sourceNode).getHTML(),
+						template = A.Handlebars.compile(source),
+						html;
+
+					html = template({
+						items: items
+					});
+
+					A.one(targetNode).append(html);
+				},
+
+				setActiveChat: function(chat) {
+					if (this.activeChat) {
+						this.activeChat.active = '';
+					}
+
+					this.activeChat = chat;
+					this.activeChat.active = 'active';
+				},
+
+				setStatus: function(event) {
+					var target = event.target.ancestor(this.statusOptionSelector, true);
+					var html = target.html();
+
+					A.one('#status').html(html);
+					this.statusChooser.removeClass('open');
+				},
+
+				submitMessage: function() {
+					var newMessage = {
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: this.messageInput.val()
+						};
+
+					if (newMessage.text) {
+						this.activeChat.messages.push(newMessage);
+						this.renderMessages(newMessage);
+						this.messageInput.val('');
+					}
+
+					this.focusLastMessage();
+					this.messageInput.focus()
+				},
+
+				toggleContacts: function() {
+					this.wrapper.toggleClass('contacts-open');
+				},
+
+				toggleDropdown: function(event) {
+					event.target.ancestor('.dropdown-toggle', true).toggleClass('open');
+				}
+			};
+
+			// Dummy chat data
+			var chatData = [
+				{
+					messages: [
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Curabitur sodales ligula in libero. Sed dignissim lacinia nunc'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Mauris massa.'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Curabitur sodales ligula in libero. Sed dignissim lacinia nunc'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Mauris massa.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Vestibulum lacinia arcu eget nulla'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Vestibulum lacinia arcu eget nulla'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Mauris massa.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Vestibulum lacinia arcu eget nulla'
+						}
+					],
+					name: 'John Smith',
+					newMessageCount: '3'
+				},
+				{
+					messages: [
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Mauris massa.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Vestibulum lacinia arcu eget nulla'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Curabitur sodales ligula in libero. Sed dignissim lacinia nunc'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Mauris massa.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Vestibulum lacinia arcu eget nulla'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Curabitur sodales ligula in libero. Sed dignissim lacinia nunc'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Mauris massa.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Vestibulum lacinia arcu eget nulla'
+						}
+					],
+					name: 'Ralph Wagner',
+					newMessageCount: '6'
+				},
+				{
+					messages: [
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Curabitur sodales ligula in libero. Sed dignissim lacinia nunc'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Mauris massa.'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Curabitur sodales ligula in libero. Sed dignissim lacinia nunc'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Mauris massa.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Vestibulum lacinia arcu eget nulla'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Vestibulum lacinia arcu eget nulla'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.'
+						},
+						{
+							owner: 'yours',
+							image: chat.yourAvatar,
+							text: 'Mauris massa.'
+						},
+						{
+							owner: 'theirs',
+							image: config.userImage,
+							text: 'Vestibulum lacinia arcu eget nulla'
+						}
+					],
+					name: 'Harry Potts',
+					newMessageCount: '1'
+				}
+			]
+
+			chat.chats = chatData;
+
+			A.all('.toggle-chat-button').on('click', function() {
+				if (!chat.initialized) {
+					chat.initialize();
+				}
+
+				A.one('.application').toggleClass('chat-open')
+			});
+		}
+	);
+</script>
