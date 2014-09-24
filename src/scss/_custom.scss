@@ -539,6 +539,23 @@
 	color: #8A6D3B;
 }
 
+/* -------- Products Page ------- */
+
+.product-page {
+	.container-fluid ul li {
+		padding: 8px 12px;
+	}
+
+	.filter h3 {
+		margin-top: 0;
+	}
+
+	.price {
+		font-weight: bold;
+		text-align: right;
+	}
+}
+
 /* -------- Thumbnails ------- */
 
 .drop-shadow .thumbnail, .drop-shadow.thumbnail {
