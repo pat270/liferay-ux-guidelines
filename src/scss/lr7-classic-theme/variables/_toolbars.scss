@@ -1,0 +1,14 @@
+// Basics of a toolbar
+$toolbar-height: $navbar-height;
+
+//== Toolbar Default
+$toolbar-default-bg: #F5F8FA;
+$toolbar-bottom-border: darken(#F5F8FA, 4);
+
+$toolbar-group-default-padding: 6px;
+
+$toolbar-default-link-color: $navbar-default-link-color;
+$toolbar-default-link-active-color: $navbar-default-link-active-color;
+$toolbar-default-link-hover-color: $navbar-default-link-hover-color;
+
+$toolbar-dropdown-margin-top: ($toolbar-height - ($toolbar-group-default-padding * 2 + $line-height-base * $input-font-size-base))/2;
