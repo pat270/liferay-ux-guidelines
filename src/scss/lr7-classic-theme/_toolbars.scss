@@ -141,8 +141,8 @@
 	}
 }
 
-.toolbar-group, .toolbar-group-right {
-	a {
+.toolbar-group, .toolbar-group-right, .toolbar-group-expand {
+	a, .btn, .btn-primary {
 		color: $toolbar-default-link-color;
 		display: block;
 		padding: 6px;
@@ -153,7 +153,8 @@
 		}
 	}
 
-	.active > a {
+	.active
+	& > a, & > .btn {
 		color: $toolbar-default-link-hover-color;
 	}
 }
