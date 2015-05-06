@@ -1,10 +1,18 @@
 .toolbar, .toolbar-no-break, .header-toolbar {
 	@include clearfix-hack();
+	background: $toolbar-default-bg;
+	border-bottom: 1px solid $toolbar-bottom-border;
+	padding: 0 12px;
 
 	.btn {
-		border-radius: 2px;
-		border-width: 1px;
+		background: transparent;
+		border: 0;
 		line-height: 1px;
+		padding: 5px
+	}
+
+	.dropdown-menu {
+		margin-top: $toolbar-dropdown-margin-top;
 	}
 
 	.nameplate-content, .nameplate-field {
@@ -13,11 +21,11 @@
 }
 
 .toolbar-group, .toolbar-group-expand, .toolbar-group-right {
+	height: $toolbar-height;
 	display: table;
 }
 
 .toolbar-group, .toolbar-group-right {
-	height: $input-height-base;
 	margin-bottom: 0;
 }
 
@@ -48,7 +56,7 @@
 }
 
 .toolbar-group-expand-text {
-	line-height: $input-height-base;
+	line-height: $toolbar-height;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -133,20 +141,21 @@
 	}
 }
 
-.toolbar-group, .toolbar-group-right {
-	a {
-		color: $navbar-default-link-color;
+.toolbar-group, .toolbar-group-right, .toolbar-group-expand {
+	a, .btn, .btn-primary {
+		color: $toolbar-default-link-color;
 		display: block;
 		padding: 6px;
 
 		&:focus, &:hover {
-			color: $navbar-default-link-active-color;
+			color: $toolbar-default-link-active-color;
 			text-decoration: none;
 		}
 	}
 
-	.active > a {
-		color: $navbar-default-link-hover-color;
+	.active
+	& > a, & > .btn {
+		color: $toolbar-default-link-hover-color;
 	}
 }
 
@@ -225,10 +234,6 @@
 .header-toolbar {
 	margin-bottom: 0;
 	padding: 5px;
-
-	.dropdown-menu {
-		margin-top: 5px;
-	}
 
 	.toolbar-group-content, .toolbar-group-expand, .toolbar-group-field {
 		padding: 0 2px;

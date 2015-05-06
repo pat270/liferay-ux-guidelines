@@ -1,0 +1,20 @@
+// Basics of a toolbar
+$toolbar-height: $navbar-height;
+
+//== Toolbar Default
+$toolbar-bottom-border: darken(#F5F8FA, 4);
+$toolbar-default-bg: #F5F8FA;
+
+$toolbar-group-default-padding: 6px;
+
+$toolbar-default-link-active-color: $brand-primary;
+$toolbar-default-link-color: $brand-default;
+$toolbar-default-link-hover-color: $navbar-default-link-hover-color;
+
+$toolbar-default-btn-active-color: $brand-primary;
+$toolbar-default-btn-color: $brand-default;
+$toolbar-default-btn-hover-color: $navbar-default-link-hover-color;
+
+$toolbar-content-height: (($toolbar-group-default-padding * 2) + ($line-height-base * $input-font-size-base));
+//** Align dropdown with bottom of toolbar
+$toolbar-dropdown-margin-top: ceil($toolbar-height - $toolbar-content-height) / 2;
