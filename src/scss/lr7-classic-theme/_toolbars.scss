@@ -1,15 +1,5 @@
-.toolbar, .toolbar-no-break, .header-toolbar {
+.toolbar {
 	@include clearfix-hack();
-	background: $toolbar-default-bg;
-	border-bottom: 1px solid $toolbar-bottom-border;
-	padding: 0 12px;
-
-	.btn {
-		background: transparent;
-		border: 0;
-		line-height: 1px;
-		padding: 5px
-	}
 
 	.dropdown-menu {
 		margin-top: $toolbar-dropdown-margin-top;
@@ -143,19 +133,18 @@
 
 .toolbar-group, .toolbar-group-right, .toolbar-group-expand {
 	a, .btn, .btn-primary {
-		color: $toolbar-default-link-color;
-		display: block;
-		padding: 6px;
+		// color: $toolbar-default-link-color;
+		// display: block;
 
 		&:focus, &:hover {
-			color: $toolbar-default-link-active-color;
-			text-decoration: none;
+			// color: $toolbar-default-link-active-color;
+			// text-decoration: none;
 		}
 	}
 
 	.active
 	& > a, & > .btn {
-		color: $toolbar-default-link-hover-color;
+		// color: $toolbar-default-link-hover-color;
 	}
 }
 
@@ -268,6 +257,36 @@
 
 	.toolbar-group-expand-text {
 		line-height: 38px;
+	}
+}
+
+// Default Toolbar Skin
+
+.toolbar-default {
+	background: $toolbar-default-bg;
+	border-bottom: 1px solid $toolbar-bottom-border;
+
+	.btn {
+		background: transparent;
+		border: 0;
+		line-height: 1px;
+		padding: 5px
+	}
+}
+
+// Management Toolbar Skin
+
+.management-toolbar-default {
+	background: $toolbar-default-bg;
+	border-bottom: 1px solid $toolbar-bottom-border;
+	padding: 0 24px;
+	height: 60px;
+
+	.btn {
+		background: transparent;
+		border: 0;
+		line-height: 1px;
+		padding: 5px
 	}
 }
 
