@@ -13,8 +13,8 @@
 }
 
 .toolbar-group, .toolbar-group-expand, .toolbar-group-right {
-	height: $toolbar-height;
 	display: table;
+	height: $toolbar-height;
 }
 
 .toolbar-group, .toolbar-group-right {
@@ -85,8 +85,8 @@
 	}
 
 	.toolbar-no-break, .header-toolbar {
-		@include clearfix-hack();
 		@include clearfix();
+		@include clearfix-hack();
 
 		.toolbar-group {
 			display: table;
@@ -255,7 +255,7 @@
 
 	.btn {
 		background: transparent;
-		border: 0;
+		border-width: 0;
 		padding: 0;
 	}
 
