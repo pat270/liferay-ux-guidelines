@@ -1,8 +1,10 @@
 .toolbar {
 	@include clearfix-hack();
 
-	.dropdown-menu {
-		margin-top: $toolbar-dropdown-margin-top;
+	.btn {
+		border-radius: 2px;
+		border-width: 1px;
+		line-height: 1px;
 	}
 
 	.nameplate-content, .nameplate-field {
@@ -243,33 +245,40 @@
 	}
 }
 
-// Default Toolbar Skin
-
-.toolbar-default {
-	background: $toolbar-default-bg;
-	border-bottom: 1px solid $toolbar-bottom-border;
-
-	.btn {
-		background: transparent;
-		border: 0;
-		line-height: 1px;
-		padding: 5px
-	}
-}
-
 // Management Toolbar Skin
 
 .management-toolbar-default {
 	background: $toolbar-default-bg;
 	border-bottom: 1px solid $toolbar-bottom-border;
+	height: $management-toolbar-height;
 	padding: 0 24px;
-	height: 60px;
 
 	.btn {
 		background: transparent;
 		border: 0;
-		line-height: 1px;
-		padding: 5px
+		padding: 0;
+	}
+
+	.dropdown-menu {
+		margin-top: $toolbar-dropdown-margin-top;
+	}
+
+	.toolbar-group, .toolbar-group-right, .toolbar-group-expand {
+		height: $management-toolbar-height;
+
+		a, .btn, .btn-primary {
+			color: $toolbar-default-link-color;
+			display: block;
+
+			&:hover {
+				color: $toolbar-default-link-hover-color;
+				text-decoration: none;
+			}
+		}
+
+		.active.btn {
+			background: $btn-default-active-bg;
+		}
 	}
 }
 
