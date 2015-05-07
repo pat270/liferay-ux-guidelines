@@ -1,4 +1,4 @@
-.toolbar, .toolbar-no-break, .header-toolbar {
+.toolbar {
 	@include clearfix-hack();
 
 	.btn {
@@ -14,10 +14,10 @@
 
 .toolbar-group, .toolbar-group-expand, .toolbar-group-right {
 	display: table;
+	height: $toolbar-height;
 }
 
 .toolbar-group, .toolbar-group-right {
-	height: $input-height-base;
 	margin-bottom: 0;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .toolbar-group-expand-text {
-	line-height: $input-height-base;
+	line-height: $toolbar-height;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -85,8 +85,8 @@
 	}
 
 	.toolbar-no-break, .header-toolbar {
-		@include clearfix-hack();
 		@include clearfix();
+		@include clearfix-hack();
 
 		.toolbar-group {
 			display: table;
@@ -130,23 +130,6 @@
 	&.disabled > a {
 		color: $gray-lighter;
 		cursor: not-allowed;
-	}
-}
-
-.toolbar-group, .toolbar-group-right {
-	a {
-		color: $navbar-default-link-color;
-		display: block;
-		padding: 6px;
-
-		&:focus, &:hover {
-			color: $navbar-default-link-active-color;
-			text-decoration: none;
-		}
-	}
-
-	.active > a {
-		color: $navbar-default-link-hover-color;
 	}
 }
 
@@ -226,10 +209,6 @@
 	margin-bottom: 0;
 	padding: 5px;
 
-	.dropdown-menu {
-		margin-top: 5px;
-	}
-
 	.toolbar-group-content, .toolbar-group-expand, .toolbar-group-field {
 		padding: 0 2px;
 	}
@@ -263,6 +242,43 @@
 
 	.toolbar-group-expand-text {
 		line-height: 38px;
+	}
+}
+
+// Management Toolbar Skin
+
+.management-toolbar-default {
+	background: $toolbar-default-bg;
+	border-bottom: 1px solid $toolbar-bottom-border;
+	height: $management-toolbar-height;
+	padding: 0 24px;
+
+	.btn {
+		background: transparent;
+		border-width: 0;
+		padding: 0;
+	}
+
+	.dropdown-menu {
+		margin-top: $toolbar-dropdown-margin-top;
+	}
+
+	.toolbar-group, .toolbar-group-right, .toolbar-group-expand {
+		height: $management-toolbar-height;
+
+		a, .btn, .btn-primary {
+			color: $toolbar-default-link-color;
+			display: block;
+
+			&:hover {
+				color: $toolbar-default-link-hover-color;
+				text-decoration: none;
+			}
+		}
+
+		.active.btn {
+			background: $btn-default-active-bg;
+		}
 	}
 }
 
