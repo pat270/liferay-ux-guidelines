@@ -18,3 +18,5 @@ $toolbar-default-btn-hover-color: $navbar-default-link-hover-color;
 $toolbar-content-height: (($toolbar-group-default-padding * 2) + ($line-height-base * $input-font-size-base));
 //** Align dropdown with bottom of toolbar
 $toolbar-dropdown-margin-top: ceil($toolbar-height - $toolbar-content-height) / 2;
+
+$management-toolbar-height: 56px;
