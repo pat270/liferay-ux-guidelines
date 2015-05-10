@@ -1,13 +1,3 @@
-.input-group {
-	label {
-		margin-bottom: 2px;
-
-		input[type="radio"] {
-			margin-top: 2px;
-		}
-	}
-}
-
 .input-group-addon {
 	color: #FFF;
 }
@@ -25,13 +15,5 @@
 		> .btn-group {
 			margin-left: 0px;
 		}
-	}
-}
-
-.input-group-input {
-	display: table-cell;
-
-	.form-control {
-		display: block;
 	}
 }
