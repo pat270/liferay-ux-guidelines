@@ -5,7 +5,8 @@ $btn-sm-border-radius: round($btn-border-radius * 0.75);
 $btn-xs-border-radius: round($btn-border-radius * 0.5);
 
 // Button Sizes
-/* When changing any settings below, make sure to match the corresponding input-height to the button height. */
+/* When changing any settings below, make sure to match the corresponding
+		input-height to the button height. */
 $btn-border-width: 2px;
 
 $btn-font-size: 14px;
@@ -48,7 +49,7 @@ $btn-default-hover-color: $btn-default-color;
 $btn-default-hover-bg: $btn-default-bg;
 $btn-default-hover-border: $brand-primary;
 $btn-default-active-color: $btn-default-color;
-$btn-default-active-bg: $btn-default-bg;
+$btn-default-active-bg: #D1D6D9;
 $btn-default-active-border: darken($btn-default-hover-border, 8%);
 
 $btn-primary-color:                        #FFF;
