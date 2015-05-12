@@ -8826,6 +8826,16 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
 .pager .previous > .btn {
   float: left; }
 
+.pager-lg li > a, .pager-lg li > span {
+  font-size: 18px;
+  line-height: 40px;
+  padding: 0 48px; }
+
+.pager-sm li > a, .pager-sm li > span {
+  font-size: 12px;
+  line-height: 20px;
+  padding: 0 12px; }
+
 .pagination-bar:before, .pagination-bar:after {
   content: " ";
   display: table; }
@@ -9614,18 +9624,18 @@ a.bg-default:hover {
 a.bg-primary:hover {
   background-color: #d1e9fa; }
 
-.toolbar:after, .toolbar-no-break:after, .header-toolbar:after {
+.toolbar:after {
   clear: both;
   content: "";
   display: block;
   font-size: 0;
   height: 0;
   visibility: hidden; }
-.toolbar .btn, .toolbar-no-break .btn, .header-toolbar .btn {
+.toolbar .btn {
   border-radius: 2px;
   border-width: 1px;
   line-height: 1px; }
-.toolbar .nameplate-content, .toolbar .nameplate-field, .toolbar-no-break .nameplate-content, .toolbar-no-break .nameplate-field, .header-toolbar .nameplate-content, .header-toolbar .nameplate-field {
+.toolbar .nameplate-content, .toolbar .nameplate-field {
   vertical-align: middle; }
 
 .toolbar-group, .toolbar-group-expand, .toolbar-group-right {
@@ -9680,6 +9690,11 @@ a.bg-primary:hover {
     padding: 0 5px; }
   .toolbar-group-field {
     width: auto; }
+  .toolbar-no-break:before, .toolbar-no-break:after, .header-toolbar:before, .header-toolbar:after {
+    content: " ";
+    display: table; }
+  .toolbar-no-break:after, .header-toolbar:after {
+    clear: both; }
   .toolbar-no-break:after, .header-toolbar:after {
     clear: both;
     content: "";
@@ -9687,11 +9702,6 @@ a.bg-primary:hover {
     font-size: 0;
     height: 0;
     visibility: hidden; }
-  .toolbar-no-break:before, .toolbar-no-break:after, .header-toolbar:before, .header-toolbar:after {
-    content: " ";
-    display: table; }
-  .toolbar-no-break:after, .header-toolbar:after {
-    clear: both; }
   .toolbar-no-break .toolbar-group, .header-toolbar .toolbar-group {
     display: table;
     float: left; }
@@ -9768,8 +9778,6 @@ a.bg-primary:hover {
 .header-toolbar {
   margin-bottom: 0;
   padding: 5px; }
-  .header-toolbar .dropdown-menu {
-    margin-top: 5px; }
   .header-toolbar .toolbar-group-content, .header-toolbar .toolbar-group-expand, .header-toolbar .toolbar-group-field {
     padding: 0 2px; }
   .header-toolbar .toolbar-group-content > a, .header-toolbar .toolbar-group-content > .dropdown > a {
@@ -9788,6 +9796,41 @@ a.bg-primary:hover {
       margin-left: -18px; }
   .header-toolbar-secondary .toolbar-group-expand-text {
     line-height: 38px; }
+
+.management-toolbar-default {
+  background-color: #F5F8FA;
+  border-bottom: 1px solid #e7eef3;
+  padding: 0 24px; }
+  .management-toolbar-default .btn {
+    background-color: transparent;
+    border-width: 0;
+    padding: 0; }
+  .management-toolbar-default .dropdown-menu {
+    margin-top: 7px; }
+  .management-toolbar-default .toolbar-group, .management-toolbar-default .toolbar-group-right, .management-toolbar-default .toolbar-group-expand {
+    height: 56px; }
+    .management-toolbar-default .toolbar-group a, .management-toolbar-default .toolbar-group .btn, .management-toolbar-default .toolbar-group .btn-primary, .management-toolbar-default .toolbar-group-right a, .management-toolbar-default .toolbar-group-right .btn, .management-toolbar-default .toolbar-group-right .btn-primary, .management-toolbar-default .toolbar-group-expand a, .management-toolbar-default .toolbar-group-expand .btn, .management-toolbar-default .toolbar-group-expand .btn-primary {
+      color: #869CAD; }
+      .management-toolbar-default .toolbar-group a:hover, .management-toolbar-default .toolbar-group .btn:hover, .management-toolbar-default .toolbar-group .btn-primary:hover, .management-toolbar-default .toolbar-group-right a:hover, .management-toolbar-default .toolbar-group-right .btn:hover, .management-toolbar-default .toolbar-group-right .btn-primary:hover, .management-toolbar-default .toolbar-group-expand a:hover, .management-toolbar-default .toolbar-group-expand .btn:hover, .management-toolbar-default .toolbar-group-expand .btn-primary:hover {
+        color: #65B6F0;
+        text-decoration: none; }
+    .management-toolbar-default .toolbar-group .active.btn, .management-toolbar-default .toolbar-group-right .active.btn, .management-toolbar-default .toolbar-group-expand .active.btn {
+      background-color: #FFF; }
+    .management-toolbar-default .toolbar-group:first-child, .management-toolbar-default .toolbar-group:first-child .toolbar-group-content, .management-toolbar-default .toolbar-group:first-child .toolbar-group-content > a, .management-toolbar-default .toolbar-group-right:first-child, .management-toolbar-default .toolbar-group-right:first-child .toolbar-group-content, .management-toolbar-default .toolbar-group-right:first-child .toolbar-group-content > a, .management-toolbar-default .toolbar-group-expand:first-child, .management-toolbar-default .toolbar-group-expand:first-child .toolbar-group-content, .management-toolbar-default .toolbar-group-expand:first-child .toolbar-group-content > a {
+      padding-left: 0; }
+    .management-toolbar-default .toolbar-group:last-child, .management-toolbar-default .toolbar-group:last-child .toolbar-group-content, .management-toolbar-default .toolbar-group:last-child .toolbar-group-content > a, .management-toolbar-default .toolbar-group-right:last-child, .management-toolbar-default .toolbar-group-right:last-child .toolbar-group-content, .management-toolbar-default .toolbar-group-right:last-child .toolbar-group-content > a, .management-toolbar-default .toolbar-group-expand:last-child, .management-toolbar-default .toolbar-group-expand:last-child .toolbar-group-content, .management-toolbar-default .toolbar-group-expand:last-child .toolbar-group-content > a {
+      padding-right: 0; }
+
+@media screen and (max-width: 767px) {
+  .management-toolbar-default {
+    padding: 0 12px; }
+    .management-toolbar-default .toolbar-group, .management-toolbar-default .toolbar-group-right, .management-toolbar-default .toolbar-group-expand {
+      display: table;
+      float: left;
+      height: 48px; }
+      .management-toolbar-default .toolbar-group .toolbar-group-content, .management-toolbar-default .toolbar-group .toolbar-group-field, .management-toolbar-default .toolbar-group-right .toolbar-group-content, .management-toolbar-default .toolbar-group-right .toolbar-group-field, .management-toolbar-default .toolbar-group-expand .toolbar-group-content, .management-toolbar-default .toolbar-group-expand .toolbar-group-field {
+        display: table-cell;
+        float: none; } }
 
 .header-toolbar-default {
   background-color: #29343D; }
