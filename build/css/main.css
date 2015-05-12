@@ -1570,7 +1570,7 @@ you can use the generic selector below, but it's slower:
  * @param $on-color - Switch button on icon font color
  */
 /* When changing any settings below, make sure to match the corresponding
-		input-height to the button height. */
+	 input-height to the button height. */
 /*** When changing input, make sure to match the corresponding
 		 btn settings to the input height. ***/
 /**
@@ -4946,9 +4946,9 @@ tbody.collapse.in {
     .pager li > a, .pager li > span {
       display: inline-block;
       padding: 5px 14px;
-      background-color: #FFF;
-      border: 1px solid #D2D6DF;
-      border-radius: 20px; }
+      background-color: #fff;
+      border: 1px solid #D1D6D9;
+      border-radius: 30px; }
     .pager li > a:hover, .pager li > a:focus {
       text-decoration: none;
       background-color: #869CAD; }
@@ -4958,7 +4958,7 @@ tbody.collapse.in {
     float: left; }
   .pager .disabled > a, .pager .disabled > a:hover, .pager .disabled > a:focus, .pager .disabled > span {
     color: #869CAD;
-    background-color: #FFF;
+    background-color: #fff;
     cursor: not-allowed; }
 
 .label {
@@ -6414,7 +6414,7 @@ button.close {
   padding: 8px 24px;
   font-size: 14px;
   line-height: 1.4286;
-  border-radius: 30px;
+  border-radius: 4px;
   font-weight: 500; }
   .btn, .btn:focus, .btn:hover {
     border: 2px solid transparent; }
@@ -6427,7 +6427,7 @@ button.close {
     background-color: #FFF;
     border-color: #65B6F0; }
   .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
-    background-color: #D1D6D9;
+    background-color: #FFF;
     border-color: #40a4ec; }
 
 .btn-primary {
@@ -6478,28 +6478,29 @@ button.close {
 .btn-lg, .btn-group-lg > .btn {
   padding: 12px 36px;
   font-size: 16px;
-  line-height: 1.4286;
-  border-radius: 45px; }
+  line-height: 20px;
+  border-radius: 6px; }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 6px 18px;
   font-size: 12px;
-  line-height: 1.4286;
-  border-radius: 23px; }
+  line-height: 20px;
+  border-radius: 3px; }
 
 .btn-xs, .btn-group-xs > .btn {
   padding: 4px 12px;
   font-size: 10px;
-  line-height: 1.4286;
-  border-radius: 15px; }
+  line-height: 20px;
+  border-radius: 2px; }
 
 a.btn-action, .btn-action-secondary > a.btn {
+  border-radius: 4px;
   padding: 0; }
   a.btn-action [class*="icon-"], .btn-action-secondary > a.btn [class*="icon-"] {
     line-height: 48px; }
 
 .btn-action, .btn-action-secondary .btn {
-  border-radius: 60px;
+  border-radius: 4px;
   font-size: 12px;
   height: 52px;
   line-height: 16px;
@@ -6556,7 +6557,28 @@ a.btn-action, .btn-action-secondary > a.btn {
   top: 20px; }
 
 @media screen and (min-width: 768px) {
+  .btn {
+    padding: 12px 48px;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 4px; }
+  .btn-lg, .btn-group-lg > .btn {
+    padding: 16px 48px;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 6px; }
+  .btn-sm, .btn-group-sm > .btn {
+    padding: 8px 24px;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 3px; }
+  .btn-xs, .btn-group-xs > .btn {
+    padding: 4px 16px;
+    font-size: 10px;
+    line-height: 20px;
+    border-radius: 2px; }
   a.btn-action, .btn-action-secondary > a.btn {
+    border-radius: 4px;
     padding: 0; }
     a.btn-action [class*="icon-"], .btn-action-secondary > a.btn [class*="icon-"] {
       line-height: 60px; }
@@ -6585,27 +6607,7 @@ a.btn-action, .btn-action-secondary > a.btn {
       top: auto; }
     .btn-action-secondary .dropdown-menu-left-side-bottom:before, .btn-action-secondary .dropdown-menu-right-side-bottom:before {
       bottom: 23px;
-      top: auto; }
-  .btn {
-    padding: 12px 48px;
-    font-size: 14px;
-    line-height: 1.4286;
-    border-radius: 30px; }
-  .btn-lg, .btn-group-lg > .btn {
-    padding: 16px 64px;
-    font-size: 18px;
-    line-height: 1.4286;
-    border-radius: 45px; }
-  .btn-sm, .btn-group-sm > .btn {
-    padding: 8px 32px;
-    font-size: 12px;
-    line-height: 1.4286;
-    border-radius: 23px; }
-  .btn-xs, .btn-group-xs > .btn {
-    padding: 4px 16px;
-    font-size: 10px;
-    line-height: 1.4286;
-    border-radius: 15px; } }
+      top: auto; } }
 
 .btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
   margin-left: -2px; }
@@ -6631,15 +6633,15 @@ a.btn-action, .btn-action-secondary > a.btn {
   margin-top: -2px; }
 
 .btn-group-vertical > .btn:first-child:not(:last-child) {
-  border-top-right-radius: 30px; }
+  border-top-right-radius: 4px; }
 
 @media screen and (min-width: 768px) {
   .btn-group > .btn + .dropdown-toggle {
     padding-left: 16px;
     padding-right: 16px; }
   .btn-group > .btn-lg + .dropdown-toggle, .btn-group > .btn-lg + .btn-group-lg > .btn, .btn-group-lg > .btn-group > .btn-lg + .btn {
-    padding-left: 21.33333px;
-    padding-right: 21.33333px; } }
+    padding-left: 16px;
+    padding-right: 16px; } }
 
 .card, .card-horizontal {
   margin-bottom: 20px;
@@ -7694,7 +7696,7 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
 .non-responsive.container-fluid {
   width: 970px; }
 
-a .icon-default, .icon-default {
+.icon-monospaced {
   display: inline-block;
   height: 32px;
   line-height: 32px;
@@ -8804,56 +8806,25 @@ a .icon-default, .icon-default {
     padding: 10px; }
 
 .pager li > a, .pager li > span {
+  border: 2px solid #D1D6D9;
+  border-radius: 30px;
+  line-height: 28px;
+  padding: 0 20px; }
+.pager a {
+  color: #869CAD; }
+  .pager a:focus, .pager a:hover {
+    background-color: #869CAD;
+    border-color: #869CAD;
+    color: #FFF; }
+.pager .disabled > a, .pager .disabled > a:focus, .pager .disabled > a:hover, .pager .disabled > span {
   background-color: #FFF;
-  border-radius: 20px;
-  border: 1px solid #D2D6DF;
-  border-width: 2px;
-  color: #869CAD;
-  padding: 4px 20px; }
-.pager li > a:hover, .pager li > a:focus {
-  background-color: #869CAD;
-  border-color: #65B6F0;
-  color: #FFF; }
-.pager .disabled > a, .pager .disabled > a:hover, .pager .disabled > a:focus, .pager .disabled > span {
-  background-color: #FFF;
-  border-color: #D2D6DF;
-  color: #869CAD; }
-
-.pager-inverse li > a, .pager-inverse li > span {
-  background-color: #D2D6DF;
-  border-radius: 20px;
-  border: 1px solid #D2D6DF;
-  border-width: 2px;
-  color: #FFF;
-  padding: 4px 20px; }
-.pager-inverse li > a:hover, .pager-inverse li > a:focus {
-  background-color: #65B6F0;
-  border-color: #65B6F0;
-  color: #FFF; }
-.pager-inverse .disabled > a, .pager-inverse .disabled > a:hover, .pager-inverse .disabled > a:focus, .pager-inverse .disabled > span {
-  background-color: #EEE;
-  border-color: #FFF;
-  color: #869CAD; }
-
-.pager-borderless1 li > a, .pager-borderless1 li > span {
-  background-color: transparent;
-  border-radius: 0;
-  border: 1px solid transparent;
-  border-width: 0;
-  color: #65B6F0;
-  padding: 4px 20px; }
-.pager-borderless1 li > a:hover, .pager-borderless1 li > a:focus {
-  background-color: transparent;
-  border-color: transparent;
-  color: #D2D6DF; }
-.pager-borderless1 li.previous:first-child > a, .pager-borderless1 li.previous:first-child > span {
-  padding-left: 0; }
-.pager-borderless1 li.next:last-child > a, .pager-borderless1 li.next:last-child > span {
-  padding-right: 0; }
-.pager-borderless1 .disabled > a, .pager-borderless1 .disabled > a:hover, .pager-borderless1 .disabled > a:focus, .pager-borderless1 .disabled > span {
-  background-color: transparent;
-  border-color: transparent;
-  color: #869CAD; }
+  border-color: #D1D6D9;
+  opacity: 0.5;
+  filter: alpha(opacity=50); }
+.pager .next > .btn {
+  float: right; }
+.pager .previous > .btn {
+  float: left; }
 
 .pagination-bar:before, .pagination-bar:after {
   content: " ";
@@ -9643,25 +9614,25 @@ a.bg-default:hover {
 a.bg-primary:hover {
   background-color: #d1e9fa; }
 
-.toolbar:after {
+.toolbar:after, .toolbar-no-break:after, .header-toolbar:after {
   clear: both;
   content: "";
   display: block;
   font-size: 0;
   height: 0;
   visibility: hidden; }
-.toolbar .btn {
+.toolbar .btn, .toolbar-no-break .btn, .header-toolbar .btn {
   border-radius: 2px;
   border-width: 1px;
   line-height: 1px; }
-.toolbar .nameplate-content, .toolbar .nameplate-field {
+.toolbar .nameplate-content, .toolbar .nameplate-field, .toolbar-no-break .nameplate-content, .toolbar-no-break .nameplate-field, .header-toolbar .nameplate-content, .header-toolbar .nameplate-field {
   vertical-align: middle; }
 
 .toolbar-group, .toolbar-group-expand, .toolbar-group-right {
-  height: 60px;
   display: table; }
 
 .toolbar-group, .toolbar-group-right {
+  height: 48px;
   margin-bottom: 0; }
 
 .toolbar-group {
@@ -9682,7 +9653,7 @@ a.bg-primary:hover {
     width: 1%; }
 
 .toolbar-group-expand-text {
-  line-height: 60px;
+  line-height: 48px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -9746,6 +9717,16 @@ a.bg-primary:hover {
   color: #eeeeee;
   cursor: not-allowed; }
 
+.toolbar-group a, .toolbar-group-right a {
+  color: #2B4259;
+  display: block;
+  padding: 6px; }
+  .toolbar-group a:focus, .toolbar-group a:hover, .toolbar-group-right a:focus, .toolbar-group-right a:hover {
+    color: #2B4259;
+    text-decoration: none; }
+.toolbar-group .active > a, .toolbar-group-right .active > a {
+  color: #65B6F0; }
+
 @media screen and (max-width: 767px) {
   .tbg-xs-newline {
     clear: both;
@@ -9787,6 +9768,8 @@ a.bg-primary:hover {
 .header-toolbar {
   margin-bottom: 0;
   padding: 5px; }
+  .header-toolbar .dropdown-menu {
+    margin-top: 5px; }
   .header-toolbar .toolbar-group-content, .header-toolbar .toolbar-group-expand, .header-toolbar .toolbar-group-field {
     padding: 0 2px; }
   .header-toolbar .toolbar-group-content > a, .header-toolbar .toolbar-group-content > .dropdown > a {
@@ -9805,28 +9788,6 @@ a.bg-primary:hover {
       margin-left: -18px; }
   .header-toolbar-secondary .toolbar-group-expand-text {
     line-height: 38px; }
-
-.management-toolbar-default {
-  background: #F5F8FA;
-  border-bottom: 1px solid #e7eef3;
-  height: 56px;
-  padding: 0 24px; }
-  .management-toolbar-default .btn {
-    background: transparent;
-    border: 0;
-    padding: 0; }
-  .management-toolbar-default .dropdown-menu {
-    margin-top: 13px; }
-  .management-toolbar-default .toolbar-group, .management-toolbar-default .toolbar-group-right, .management-toolbar-default .toolbar-group-expand {
-    height: 56px; }
-    .management-toolbar-default .toolbar-group a, .management-toolbar-default .toolbar-group .btn, .management-toolbar-default .toolbar-group .btn-primary, .management-toolbar-default .toolbar-group-right a, .management-toolbar-default .toolbar-group-right .btn, .management-toolbar-default .toolbar-group-right .btn-primary, .management-toolbar-default .toolbar-group-expand a, .management-toolbar-default .toolbar-group-expand .btn, .management-toolbar-default .toolbar-group-expand .btn-primary {
-      color: #869CAD;
-      display: block; }
-      .management-toolbar-default .toolbar-group a:hover, .management-toolbar-default .toolbar-group .btn:hover, .management-toolbar-default .toolbar-group .btn-primary:hover, .management-toolbar-default .toolbar-group-right a:hover, .management-toolbar-default .toolbar-group-right .btn:hover, .management-toolbar-default .toolbar-group-right .btn-primary:hover, .management-toolbar-default .toolbar-group-expand a:hover, .management-toolbar-default .toolbar-group-expand .btn:hover, .management-toolbar-default .toolbar-group-expand .btn-primary:hover {
-        color: #65B6F0;
-        text-decoration: none; }
-    .management-toolbar-default .toolbar-group .active.btn, .management-toolbar-default .toolbar-group-right .active.btn, .management-toolbar-default .toolbar-group-expand .active.btn {
-      background: #D1D6D9; }
 
 .header-toolbar-default {
   background-color: #29343D; }
