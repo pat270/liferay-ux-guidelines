@@ -1,4 +1,4 @@
-.toolbar, .toolbar-no-break, .header-toolbar, .management-toolbar-default {
+.toolbar {
 	@include clearfix-hack();
 
 	.btn {
