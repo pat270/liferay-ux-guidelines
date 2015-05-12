@@ -1,10 +1,9 @@
 // Basics of a toolbar
-$toolbar-height: $navbar-height;
+$toolbar-height: 48px;
 
 //== Toolbar Default
 $toolbar-bottom-border: darken(#F5F8FA, 4);
 $toolbar-default-bg: #F5F8FA;
-
 $toolbar-group-default-padding: 6px;
 
 $toolbar-default-link-active-color: $brand-primary;
