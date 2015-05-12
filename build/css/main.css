@@ -7697,7 +7697,7 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
   width: 970px; }
 
 .icon-monospaced {
-  display: inline-block;
+  display: inline-block !important;
   height: 32px;
   line-height: 32px;
   text-align: center;
@@ -9815,7 +9815,7 @@ a.bg-primary:hover {
         color: #65B6F0;
         text-decoration: none; }
     .management-toolbar-default .toolbar-group .active.btn, .management-toolbar-default .toolbar-group-right .active.btn, .management-toolbar-default .toolbar-group-expand .active.btn {
-      background-color: #FFF; }
+      background-color: #D1D6D9; }
     .management-toolbar-default .toolbar-group:first-child, .management-toolbar-default .toolbar-group:first-child .toolbar-group-content, .management-toolbar-default .toolbar-group:first-child .toolbar-group-content > a, .management-toolbar-default .toolbar-group-right:first-child, .management-toolbar-default .toolbar-group-right:first-child .toolbar-group-content, .management-toolbar-default .toolbar-group-right:first-child .toolbar-group-content > a, .management-toolbar-default .toolbar-group-expand:first-child, .management-toolbar-default .toolbar-group-expand:first-child .toolbar-group-content, .management-toolbar-default .toolbar-group-expand:first-child .toolbar-group-content > a {
       padding-left: 0; }
     .management-toolbar-default .toolbar-group:last-child, .management-toolbar-default .toolbar-group:last-child .toolbar-group-content, .management-toolbar-default .toolbar-group:last-child .toolbar-group-content > a, .management-toolbar-default .toolbar-group-right:last-child, .management-toolbar-default .toolbar-group-right:last-child .toolbar-group-content, .management-toolbar-default .toolbar-group-right:last-child .toolbar-group-content > a, .management-toolbar-default .toolbar-group-expand:last-child, .management-toolbar-default .toolbar-group-expand:last-child .toolbar-group-content, .management-toolbar-default .toolbar-group-expand:last-child .toolbar-group-content > a {
