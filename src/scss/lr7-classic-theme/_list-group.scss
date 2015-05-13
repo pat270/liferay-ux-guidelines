@@ -54,6 +54,7 @@
 // Tabular List Group
 
 .tabular-list-group {
+	@include box-shadow(0 1px 4px 0 rgba(0,0,0,0.15));
 	border-collapse: separate;
 	display: table;
 	margin: 0 0 20px 0;
@@ -61,14 +62,9 @@
 
 	> li, .list-group-item {
 		border-width: 0;
+		cursor: pointer;
 		display: table-row;
 		padding: 0;
-
-		&:first-child {
-			.list-group-item-content, .list-group-item-field {
-				border-top: 1px solid #DDD;
-			}
-		}
 	}
 
 	a {
@@ -79,8 +75,22 @@
 		}
 	}
 
+	.list-group-item {
+		> div {
+			border-bottom: 2px solid $list-group-active-bg;
+		}
+
+		&:hover, &.active {
+			background-color: $list-group-border;
+		}
+
+		&.active > div {
+			border-bottom: 2px solid $list-group-active-border;
+		}
+	}
+
 	.list-group-item-content, .list-group-item-field {
-		border: 1px solid #DDD;
+		border: 1px solid $list-group-border;
 		border-top-width: 0;
 		border-left-width: 0;
 		border-right-width: 0;
@@ -88,12 +98,10 @@
 		position: relative;
 
 		&:first-child {
-			border-left-width: 1px;
 			padding-left: 1em;
 		}
 
 		&:last-child {
-			border-right-width: 1px;
 			padding-right: 1em;
 		}
 
@@ -105,6 +113,12 @@
 				text-decoration: none;
 			}
 		}
+	}
+
+	.list-group-item-top-align {
+		line-height: 0;
+		padding: 1em 0.8em;
+		vertical-align: top;
 	}
 
 	.list-group-item-content {

@@ -1,0 +1,4 @@
+$list-group-active-bg: lighten($brand-primary, 32.5);
+$list-group-active-border: $brand-primary;
+
+$list-group-border: adjust_hue(saturate(darken($list-group-bg, 6), 16), 210);
