@@ -1,9 +1,15 @@
 .list-group-heading {
 	@extend .list-group-item;
 
-	background-color: #F8F8F8;
+	background-color: $list-group-header-bg;
 	font-weight: bold;
+	margin: 0;
 }
+
+ a.list-group-heading:focus, a.list-group-heading:hover {
+ 	background-color: $list-group-header-bg;
+ 	color: $brand-default;
+ }
 
 // Collapsible List Group
 
@@ -47,6 +53,77 @@
 		&.collapsed:nth-last-child(2) {
 			border-bottom-left-radius: $border-radius-default;
 			border-bottom-right-radius: $border-radius-default;
+		}
+	}
+}
+
+// Collapsible List Group Default Skin
+
+.list-group-collapsible-default {
+	.collapse, .collapsing {
+		&:last-child {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			overflow: hidden;
+
+			.list-group-item:last-child {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		.list-group-item {
+			border-width: 0;
+			color: $brand-default;
+			padding: 8px 12px 8px 24px;
+		}
+
+		.list-group-item-text {
+			padding: 24px 24px 30px;
+
+			&:hover {
+				background-color: $list-group-bg;
+			}
+		}
+	}
+
+	.list-group-heading {
+		border-width: 0;
+		border-bottom: 2px solid $brand-primary;
+		color: $brand-default;
+		font-size: 16px;
+		line-height: 32px;
+		margin-top: 0;
+		padding: 8px 12px 8px 24px;
+
+		.icon-monospaced {
+			float: right;
+
+			&:before {
+				content: '\f107';
+				font-size: 20px;
+			}
+		}
+
+		&.collapsed {
+			border-bottom: 1px solid $list-group-subtle;
+			font-weight: normal;
+
+			.icon-monospaced:before {
+				content: '\f105';
+			}
+
+			&:nth-last-child(2) {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		.list-group-heading {
+			padding: 4px 12px 4px 24px;
+			font-size: 14px
 		}
 	}
 }
