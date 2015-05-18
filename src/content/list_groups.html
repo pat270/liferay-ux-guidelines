@@ -15,10 +15,35 @@ section: Components
 			<p>Use a combination of <code>.list-group-item-field</code> and <code>.list-group-item-content</code> to control the size of each cell. <code>.list-group-item-field</code> has width: 1% and will expand only as wide as its content as long as <code>.list-group-item-content</code> is present as a sibling.</p>
 
 			<p><code>.list-group-item-content</code> will expand to fill the remaining space.</p>
+
+			<p>Styling for the currently selected item is triggered by <code>.active</code> on <code>.list-group-item</code>.</p>
 		</blockquote>
 
 		<ul class="tabular-list-group">
 			<li class="list-group-item">
+				<div class="list-group-item-field">
+					<input type="checkbox" />
+				</div>
+
+				<div class="list-group-item-field">
+					<span class="icon-folder-close icon-xl text-default"></span>
+				</div>
+
+				<div class="list-group-item-content">
+					<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
+					<h6 class="text-default">Monica Bellucci</h6>
+					<h6 class="text-default">
+						<span>5 Folders</span>
+						<span>4 Entries</span>
+					</h6>
+				</div>
+
+				<div class="list-group-item-field">
+					<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+				</div>
+			</li>
+
+			<li class="list-group-item active">
 				<div class="list-group-item-field">
 					<input type="checkbox" />
 				</div>
@@ -75,7 +100,7 @@ section: Components
 
 		<pre><code>```<ul class="tabular-list-group">
     <li class="list-group-item">
-        <div class="list-group-item-field">
+        <div class="list-group-item-field list-group-item-field-top-align">
             <input type="checkbox" />
         </div>
 
@@ -92,13 +117,36 @@ section: Components
             </h6>
         </div>
 
+        <div class="list-group-item-field list-group-item-field-top-align">
+            <a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+        </div>
+    </li>
+
+    <li class="list-group-item active">
+        <div class="list-group-item-field list-group-item-field-top-align">
+            <input type="checkbox" />
+        </div>
+
         <div class="list-group-item-field">
+            <span class="icon-folder-close icon-xl text-default"></span>
+        </div>
+
+        <div class="list-group-item-content">
+            <h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
+            <h6 class="text-default">Monica Bellucci</h6>
+            <h6 class="text-default">
+                <span>5 Folders</span>
+                <span>4 Entries</span>
+            </h6>
+        </div>
+
+        <div class="list-group-item-field list-group-item-field-top-align">
             <a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
         </div>
     </li>
 
     <li class="list-group-item">
-        <div class="list-group-item-field">
+        <div class="list-group-item-field list-group-item-field-top-align">
             <input type="checkbox" />
         </div>
 
@@ -115,7 +163,7 @@ section: Components
             </h6>
         </div>
 
-        <div class="list-group-item-field">
+        <div class="list-group-item-field list-group-item-field-top-align">
             <a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
         </div>
     </li>
