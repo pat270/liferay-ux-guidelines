@@ -1,0 +1,5 @@
+$list-group-active-bg: lighten($brand-primary, 32.5);
+$list-group-active-border: $brand-primary;
+// $brand-primary: red;
+
+$list-group-border: desaturate(lighten($brand-primary, 28%), 41%);
