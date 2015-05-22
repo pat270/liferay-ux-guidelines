@@ -6,7 +6,7 @@ $list-group-active-border: $brand-primary;
 
 $list-group-border: desaturate(lighten($brand-primary, 28%), 41%);
 
-$list-group-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+$list-group-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
 
 $list-group-header-bg: #F5F8FA;
 $list-group-header-color: $brand-default;
@@ -19,3 +19,5 @@ $list-group-header-open-border-color: $brand-primary;
 $list-group-header-open-border-width: 2px;
 
 $list-group-header-icon-font-size: 20px;
+
+$list-group-item-heading-margin: 10px 0;

@@ -55,16 +55,36 @@ a.list-group-heading {
 	}
 }
 
-// Nested list groups shouldn't have box shadows
-
 .list-group,
 .tabular-list-group {
-	box-shadow: $list-group-box-shadow;
+	.list-group-item {
+		> .list-group-item-field, > .list-group-item-content {
+			border-bottom: 2px solid $list-group-border;
+		}
 
-	.list-group,
-	.tabular-list-group {
-		box-shadow: none;
+		&.active > .list-group-item-field, &.active > .list-group-item-content {
+			border-bottom: 2px solid $list-group-active-border;
+		}
 	}
+
+	//Classic specific list-group-positioning
+	.list-group-item-content, .list-group-item-field {
+		padding: 20px 8px 12px 8px;
+
+		&:first-child {
+			padding-left: 20px;
+			padding-right: 12px;
+		}
+
+		&:last-child {
+			padding-left: 0;
+			padding-right: 12px;
+		}
+	}
+}
+
+.list-group-item-content, .list-group-item-field {
+	vertical-align: top;
 }
 
 // Last list-group-heading shouldn't have bottom border
@@ -108,9 +128,18 @@ a.list-group-heading {
 	}
 }
 
-// Remove left and right borders on tabular list group due to box shadows
 
 .tabular-list-group {
+	// Add click-ability to tabular-list-groups
+	.list-group-item {
+		cursor: pointer;
+
+		&:hover, &.active {
+			background-color: $list-group-active-bg;
+		}
+	}
+
+	// Remove left and right borders on tabular list group due to box shadows
 	.list-group-item-content,
 	.list-group-item-field {
 		&:first-child {
@@ -148,5 +177,17 @@ a.list-group-heading {
 
 	.list-group-item-warning {
 		@include color-tabular-list-group-item($brand-warning);
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.tabular-list-group {
+		box-shadow: $list-group-box-shadow;
+
+		// Nested list groups shouldn't have box shadows
+		.list-group,
+		.tabular-list-group {
+			box-shadow: none;
+		}
 	}
 }
