@@ -42,3 +42,168 @@
 	background-color: #F5F8FA;
 	border-left: 1px solid #DFE0E3;
 }
+
+// Product Menu
+
+.product-menu {
+	background-color: $dark;
+	color: $secondary;
+	height: 100%;
+	position: relative;
+
+	a:hover {
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	.sidebar-header {
+		@include clearfix;
+
+		background-color: $dark-plus;
+		padding: 24px;
+
+		.product-menu-icon {
+			float: left;
+		}
+
+		.product-menu-heading {
+			color: #FFF;
+			float: left;
+			font-size: 16px;
+			line-height: 32px;
+			margin: 0;
+			padding: 0 10px;
+		}
+	}
+
+	.product-menu-nav {
+		@include clearfix;
+
+		list-style-type: none;
+		margin: 0;
+		padding: 16px 24px;
+		width: 100%;
+	}
+
+	.product-menu-nav-item {
+		border-bottom: 1px solid #252F37;
+		cursor: pointer;
+		display: inline-block;
+		float: left; //clear white space between li
+		padding: 0 1px;
+		width: 33%;
+	}
+
+	.product-menu-link-icon, .product-menu-link-text {
+		border-radius: 2px;
+		color: $secondary;
+		display: block;
+		font-size: 32px;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		width: 100%;
+	}
+
+	.product-menu-link-icon {
+		background-color: #1B262C;
+	}
+
+	.active > {
+		.product-menu-link-icon, .product-menu-link-text {
+			color: #FFF;
+		}
+
+		.product-menu-link-icon {
+			background-color: $subtle;
+		}
+	}
+
+	.product-menu-link-text {
+		font-size: 12px;
+	}
+
+	.product-menu-search {
+		@include clearfix;
+
+		background-color: $dark-plus;
+		color: $subtle;
+		display: block;
+		margin: 16px 24px 0 24px;
+		padding: 8px 12px;
+
+		.form-control {
+			background-color: transparent;
+			border-width: 0;
+			float: left;
+			height: 32px;
+			padding: 0;
+			width: calc(100% - 33px); //subtract icon from width
+		}
+
+		.btn {
+			background-color: transparent;
+			border-width: 0;
+			float: right;
+			padding: 0;
+
+			&:focus {
+				outline-width: 0;
+			}
+		}
+
+		@include color-placeholder("input", $subtle);
+		@include color-placeholder("input:focus", $secondary);
+
+		input:focus {
+			color: $secondary;
+		}
+
+		.form-control:focus + .btn {
+			color: $secondary;
+		}
+	}
+
+	.product-menu-body {
+		margin-bottom: 88px;
+	}
+
+	.product-menu-nameplate {
+		bottom: 0;
+		padding: 24px 24px 16px;
+		position: absolute;
+
+		.user-icon {
+			font-size: 21px;
+			height: $product-menu-icon-diameter;
+			line-height: $product-menu-icon-diameter;
+			width: $product-menu-icon-diameter;
+		}
+
+		.user-heading {
+			color: $secondary;
+			float: left;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 32px;
+			margin: 0;
+			padding: 0 10px;
+		}
+
+		.user-subheading {
+			color: $subtle;
+			display: block;
+			font-size: 13px;
+		}
+
+		.user-signout {
+			background-color: $subtle;
+			color: $dark;
+			float: right;
+			font-size: 30px;
+			height: $product-menu-icon-diameter;
+			line-height: $product-menu-icon-diameter;
+			width: $product-menu-icon-diameter;
+		}
+	}
+}
