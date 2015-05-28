@@ -1,0 +1,9 @@
+// Product Menu
+$secondary: #869CAD;
+$dark: darken($secondary, 45);
+$dark-plus: darken($secondary, 47);
+$subtle: darken($secondary, 32);
+$light: lighten($secondary, 30);
+
+$product-menu-nav-item-width: calc(33% - 24px/3);
+$product-menu-icon-diameter: 48px;
