@@ -10,7 +10,7 @@ section: Example Pages
 </style>
 
 <div class="row">
-	<div class="col-md-12">
+	<div class="col-md-12" id="blogActionExample" style="background: #F5F8FA; top: 0; right: 0; bottom: 0; left: 0; padding: 0;">
 		<div class="sidenav-container closed uxgl-slideout-nav" id="blogActionsSidenav">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
@@ -287,6 +287,9 @@ section: Example Pages
 
 			</div>
 		</div>
+		<button class="btn btn-primary btn-action" id="fullscreen-btn" onclick="fullscreen('blogActionExample', this)" style="z-index: 999999; position: fixed; bottom: 20px; right: 20px; padding: 0;">
+			<span class="icon-monospaced icon-desktop">
+		</button>
 	</div>
 </div>
 
@@ -295,4 +298,28 @@ section: Example Pages
 		toggler: '#blogActionsToggler'
 	});
 	$('.collapse-basic-search').collapsibleSearch();
+
+
+	function fullscreen(id, button) {
+		var node = $('#' + id);
+		var button = $(button);
+
+		if (!button.hasClass("active")) {
+			node.css(
+				{
+					position: 'fixed',
+					zIndex: '999'
+				}
+			);
+		}
+		else {
+			node.css(
+				{
+					position: 'relative',
+					zIndex: '0'
+				}
+			);
+		}
+		button.toggleClass('active');
+	}
 </script>
