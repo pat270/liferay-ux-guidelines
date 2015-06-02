@@ -22,6 +22,8 @@
 .sidenav-container.closed {
 	> .sidenav-menu-slider {
 		overflow: hidden;
+		transform: translateX(-100%);
+		@include transition(transform 0.3s ease-in-out, width 0s 0.4s);
 		width: 0;
 	}
 
@@ -60,14 +62,14 @@
 
 .sidenav-transition {
 	.sidenav-content {
-		@include transition(all 0.5s ease);
+		@include transition(all 0.3s ease-in-out);
 	}
 
 	.sidenav-menu-slider {
 		overflow: hidden;
 
-		&,.sidenav-menu {
-			@include transition(all 0.5s ease);
+		&, .sidenav-menu {
+			@include transition(transform 0.3s ease-in-out, width 0s);
 		}
 	}
 }
