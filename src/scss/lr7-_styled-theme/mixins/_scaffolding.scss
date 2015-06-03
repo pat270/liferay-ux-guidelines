@@ -1,0 +1,18 @@
+@mixin fixed-ratio-container($width, $height) {
+	position: relative;
+
+	&:before {
+		display: block;
+		content: "";
+		padding-top: ($height / $width) * 100%;
+		width: 100%;
+	}
+
+	> .content {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
