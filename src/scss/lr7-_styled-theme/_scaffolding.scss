@@ -28,3 +28,10 @@
 	@extend %center-crop;
 	height: 100%;
 }
+
+// Single line text overflow ellipsis
+.overflow-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
