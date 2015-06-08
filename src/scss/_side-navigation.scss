@@ -1,4 +1,5 @@
-$sideNavWidth: 220px;
+$sideNavWidth: 235px;
+$sideNavBoxShadow: 3px 0 5px -4px #444;
 
 #mainContent {
 	display: block;
@@ -23,8 +24,14 @@ $sideNavWidth: 220px;
 }
 
 .side-navigation {
+	box-shadow: $sideNavBoxShadow;
+	background-color: #FFF;
+	height: 100%;
+	left: 0;
+	padding-left: 15px;
 	padding-top: 35px;
-	z-index: 1;
+	width: $sideNavWidth;
+	z-index: 11;
 
 	li {
 		> a {
@@ -82,6 +89,25 @@ $sideNavWidth: 220px;
 	.collapse {
 		clear: both;
 	}
+}
+
+/* Adds scrim to sidenav */
+
+.sidenav-scrim:before {
+	background-color: rgba(0,0,0,0.3);
+	bottom: 0;
+	display: block;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	transition: opacity ease-in-out 0.38s, visibility ease-in-out 0.38s;
+}
+
+.closed.sidenav-scrim:before {
+	visibility: hidden;
+	opacity: 0;
 }
 
 /* Styles for side navigation component page */
@@ -146,14 +172,19 @@ $sideNavWidth: 220px;
 
 @media (min-width: $grid-float-breakpoint) {
 	#wrapper {
-		> .sidenav-container.closed {
+		> .sidenav-container {
 			> .sidenav-menu-slider {
-				width: $sideNavWidth;
+				transform: translateX(0);
+				width: 235px;
 			}
 
 			> .sidenav-content {
 				padding-left: $sideNavWidth + 35;
 			}
+		}
+		> .sidenav-scrim:before {
+			visibility: hidden;
+			opacity: 0;
 		}
 	}
 }
