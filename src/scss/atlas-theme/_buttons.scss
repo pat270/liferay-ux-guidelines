@@ -1,7 +1,6 @@
-.btn {
+.btn-classic {
+	@extend .btn;
 	@include button-size($btn-padding-vertical, $btn-padding-horizontal, $btn-font-size, $line-height-base, $btn-border-radius);
-
-	font-weight: 500;
 
 	&,
 	&:focus,
@@ -146,7 +145,7 @@ a.btn-action,
 }
 
 @media screen and (min-width: $grid-float-breakpoint) {
-	.btn {
+	.btn-classic {
 		@include button-size($btn-desktop-padding-vertical, $btn-desktop-padding-horizontal, $btn-desktop-font-size, $btn-line-height, $btn-border-radius);
 	}
 
