@@ -255,6 +255,7 @@
 		bottom: $offset + $border-width;
 		content: '';
 		left: -($arrow-size * 2);
+		right: auto;
 		top: auto;
 	}
 
@@ -267,6 +268,7 @@
 		bottom: $offset;
 		content: '';
 		left: -($arrow-size * 2) - ($border-width * 2);
+		right: auto;
 		top: auto;
 	}
 }
@@ -293,7 +295,9 @@
 		border-top: $arrow-size solid transparent;
 		content: '';
 		left: -($arrow-size * 2);
+		margin-left: 0;
 		margin-top: -$arrow-size;
+		right: auto;
 		top: 50%;
 	}
 
@@ -305,7 +309,9 @@
 		border-top: $arrow-size + $border-width solid transparent;
 		content: '';
 		left: -($arrow-size * 2) - ($border-width * 2);
+		margin-left: 0;
 		margin-top: -($arrow-size + $border-width);
+		right: auto;
 		top: 50%;
 	}
 }
@@ -331,6 +337,7 @@
 		border-top: $arrow-size solid transparent;
 		content: '';
 		left: -($arrow-size * 2);
+		right: auto;
 		top: $offset + $border-width;
 	}
 
@@ -342,6 +349,7 @@
 		border-top: $arrow-size + $border-width solid transparent;
 		content: '';
 		left: -($arrow-size * 2) - ($border-width * 2);
+		right: auto;
 		top: $offset;
 	}
 }
@@ -407,6 +415,7 @@
 		border-top: $arrow-size solid transparent;
 		content: '';
 		left: 100%;
+		margin-left: 0;
 		margin-top: -$arrow-size;
 		top: 50%;
 	}
@@ -419,6 +428,7 @@
 		border-top: $arrow-size + $border-width solid transparent;
 		content: '';
 		left: 100%;
+		margin-left: 0;
 		margin-top: -($arrow-size + $border-width);
 		top: 50%;
 	}
@@ -459,4 +469,8 @@
 		left: 100%;
 		top: $offset;
 	}
+}
+
+@mixin center-arrow() {
+		margin-right: calc(50% - (#{$offset} + #{$border-width} * 2 + #{$arrow-size})); // offset to center arrow on target
 }
