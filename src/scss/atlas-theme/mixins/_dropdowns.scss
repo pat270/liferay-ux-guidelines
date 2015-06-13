@@ -471,6 +471,6 @@
 	}
 }
 
-@mixin center-arrow() {
-		margin-right: calc(50% - (#{$offset} + #{$border-width} * 2 + #{$arrow-size})); // offset to center arrow on target
+@mixin center-arrow($direction, $arrow-size, $arrow-border-width, $arrow-offset) {
+		margin-#{$direction}:calc(50% - (#{$arrow-size} + #{$arrow-offset} + #{$arrow-border-width} * 2)); // offset to center arrow on target
 }

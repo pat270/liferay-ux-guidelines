@@ -51,16 +51,23 @@
 		line-height: $line-height-base;
 		padding: $dropdown-link-padding;
 	}
+
+	.dropdown-menu-no-caret {
+		&:after,
+		&:before {
+			content: none;
+		}
+	}
 }
 
 // Arrows and dropdown-menu positions
-// ($arrow-size, $border-width, $offset, $arrow-color, $border-color)
+// ($dropdown-arrow-size, $border-width, $offset, $arrow-color, $border-color)
 .dropdown-menu {
-	@include arrow-top-left(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow-top-left($dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset, $dropdown-arrow-color, $dropdown-border);
 }
 
 .dropdown-menu-side {
-	@include arrow-right-top(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow-right-top($dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset, $dropdown-arrow-color, $dropdown-border);
 
 	margin: 0;
 
@@ -71,22 +78,22 @@
 
 .dropdown-menu-right,
 .navbar-right .dropdown-menu {
-	@include arrow-top-right(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow-top-right($dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset, $dropdown-arrow-color, $dropdown-border);
 }
 
 .dropdown-menu-right.dropdown-menu-side {
-	@include arrow-left-top(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow-left-top($dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset, $dropdown-arrow-color, $dropdown-border);
 
 	margin: 0;
 }
 
 // Centered arrow positions
 .dropdown-menu-center {
-	@include arrow-top-center(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow-top-center($dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset, $dropdown-arrow-color, $dropdown-border);
 }
 
 .dropdown-menu-center.dropdown-menu-side {
-	@include arrow-right-middle(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow-right-middle($dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset, $dropdown-arrow-color, $dropdown-border);
 
 	margin: 0;
 
@@ -96,28 +103,26 @@
 }
 
 .dropdown-menu-center.dropdown-menu-side.dropdown-menu-right {
-	@include arrow-left-middle(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow-left-middle($dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset, $dropdown-arrow-color, $dropdown-border);
 
 	margin: 0;
 }
 
 // Dropup arrow positions
 .dropup .dropdown-menu {
-	@include arrow-bottom-left(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow-bottom-left($dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset, $dropdown-arrow-color, $dropdown-border);
 
-	// bottom: 100%;
-	// margin-bottom: 0;
-	// top: auto;
+	margin-bottom: 0;
 }
 
 .dropup .dropdown-menu-center {
-	@include arrow-bottom-center(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow-bottom-center($dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset, $dropdown-arrow-color, $dropdown-border);
 
 	margin-bottom: 0;
 }
 
 .dropup .dropdown-menu-side {
-	@include arrow-right-bottom(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow-right-bottom($dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset, $dropdown-arrow-color, $dropdown-border);
 
 	.inline-scroller {
 		margin-right: 3px;
@@ -125,29 +130,38 @@
 }
 
 .dropup .dropdown-menu-right {
-	@include arrow-bottom-right(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow-bottom-right($dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset, $dropdown-arrow-color, $dropdown-border);
 
 	margin-bottom: 0;
 }
 
 
 .dropup .dropdown-menu-right.dropdown-menu-side {
-	@include arrow-left-bottom(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow-left-bottom($dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset, $dropdown-arrow-color, $dropdown-border);
 
 	margin: 0;
 }
 
-.dropdown-menu-no-arrow,
-.dropdown-menu-no-arrow .dropdown-menu,
-.navbar-right .dropdown-menu-clear-arrow {
-	&:after,
-	&:before {
-		content: none;
+// Caret Aligned
+.caret-aligned{
+	.dropdown-menu {
+		@include center-arrow(left, $dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset);
+	}
+
+	.dropdown-menu-right:not(.dropdown-menu-side) {
+		@include center-arrow(right, $dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset);
+	}
+
+	.dropdown-menu-side {
+		@include center-arrow(top, $dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset);
+	}
+
+	&.dropup .dropdown-menu-side {
+		@include center-arrow(bottom, $dropdown-arrow-size, $dropdown-arrow-border-width, $dropdown-arrow-offset);
 	}
 }
 
 // Dropup Menus
-
 .dropup .dropdown-menu-right {
 	&:after,
 	&:before {

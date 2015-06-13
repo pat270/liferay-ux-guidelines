@@ -598,6 +598,128 @@ section: Components
 	</div>
 </div>
 
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>The dropdown menu can also be aligned so the caret is aligned to center on the parent container. This is done by adding the <code>.caret-aligned</code> to the parent container. This can also be used with the <code>.dropup</code> class. This cannot be used with <code>.dropdown-menu-center</code> as the caret is already centered on the parent container.</p>
+
+			<p>Note that vertical alignment (use with <code>.dropdown-menu-side</code>) only works with equilateral container elements as CSS calculates <code>margin-top</code> and <code>margin-bottom</code> values relative to the parent width, not height.</p>
+		</blockquote>
+
+		<div class="dropup caret-aligned" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button"><span class="icon-caret-up icon-monospaced"></span></button>
+			<ul class="dropdown-menu">
+				<li class="dropdown-header">dropdown-menu-center</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
+
+		<div class="dropdown caret-aligned" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button"><span class="icon-caret-down icon-monospaced"></span></button>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-header">dropdown-menu-top-center</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
+
+		<div class="dropdown caret-aligned" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" style="padding: 0;" type="button"><span class="icon-caret-left icon-monospaced"></span></button>
+			<ul class="dropdown-menu dropdown-menu-side">
+				<li class="dropdown-header">Dropdown Header</li>
+				<li>
+					<ul class="inline-scroller">
+						<li><a href="#">Action</a></li>
+						<li class="disabled"><a href="#">Disabled</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="dropup caret-aligned" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" style="padding: 0;" type="button"><span class="icon-caret-right icon-monospaced"></span></button>
+			<ul class="dropdown-menu dropdown-menu-right dropdown-menu-side">
+				<li class="dropdown-header">Dropdown Header</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
+
+<div class="uxgl-toggle-code" style="margin-top:15px;">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse5">
+	<pre><code class="html">```<div class="dropup caret-aligned" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button"><span class="icon-caret-up icon-monospaced"></span></button>
+			<ul class="dropdown-menu">
+				<li class="dropdown-header">dropdown-menu-center</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
+
+		<div class="dropdown caret-aligned" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button"><span class="icon-caret-down icon-monospaced"></span></button>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-header">dropdown-menu-top-center</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
+
+		<div class="dropdown caret-aligned" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button"><span class="icon-caret-left icon-monospaced"></span></button>
+			<ul class="dropdown-menu dropdown-menu-side">
+				<li class="dropdown-header">Dropdown Header</li>
+				<li>
+					<ul class="inline-scroller">
+						<li><a href="#">Action</a></li>
+						<li class="disabled"><a href="#">Disabled</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="dropup caret-aligned" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button"><span class="icon-caret-right icon-monospaced"></span></button>
+			<ul class="dropdown-menu dropdown-menu-right dropdown-menu-side">
+				<li class="dropdown-header">Dropdown Header</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>```</code></pre>
+</div>
+
+	</div>
+</div>
+
 <div class="row row-spacing uxgl-dropdown-display">
 	<div class="col-md-12">
 		<h3>Removing the Dropdown Arrow</h3>
