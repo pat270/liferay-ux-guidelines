@@ -79,7 +79,6 @@
 	a {
 		color: $navbar-default-link-color;
 		display: block;
-		min-width: 38px;
 		text-align: center;
 
 		&:focus,
@@ -221,6 +220,8 @@
 // Management Toolbar Skin
 
 .management-toolbar-default {
+	@extend .toolbar;
+
 	background-color: $management-toolbar-default-bg;
 	border-bottom: 1px solid $toolbar-bottom-border;
 	padding: 0 7px;
@@ -280,6 +281,8 @@
 // Header Toolbar Skins
 
 .header-toolbar-default {
+	@extend .header-toolbar;
+
 	background-color: $header-toolbar-default-bg;
 
 	.header-toolbar-title {
