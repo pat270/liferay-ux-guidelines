@@ -1,0 +1,37 @@
+// Use to create fixed ratio containers
+.fixed-ratio-one-one {
+	@include fixed-ratio-container(1, 1);
+}
+
+.fixed-ratio-sixteen-nine {
+	@include fixed-ratio-container(16, 9);
+}
+
+// Use to crop images vertically or horizontally
+%center-crop {
+	position: relative;
+	left: 100%;
+	margin-left: -200%;
+}
+
+// Parent container
+.img-cropped-container {
+	text-align: center;
+}
+
+.img-cropped-height {
+	@extend %center-crop;
+	width: 100%;
+}
+
+.img-cropped-width {
+	@extend %center-crop;
+	height: 100%;
+}
+
+// Single line text overflow ellipsis
+.overflow-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

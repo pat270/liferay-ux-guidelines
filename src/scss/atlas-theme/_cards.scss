@@ -24,3 +24,90 @@
 		}
 	}
 }
+
+.card-list {
+	@extend .card;
+
+	border-radius: 2px;
+	border: 1px solid #D1D6D9;
+	display: inline-block;
+	margin-left: $card-list-horizontal-margin;
+	margin-right: $card-list-horizontal-margin;
+	max-width: calc(100% - #{$card-list-horizontal-margin} * 2);
+	min-width: 150px;
+	transition: all 0.2s ease-in-out;
+	width: 100%;
+
+	&.active {
+		border-color: $brand-primary;
+		box-shadow: 0 0 0px 1px $brand-primary, 0 4px 6px 0px rgba(0, 0, 0, 0.2);
+	}
+
+	> .card-thumbnail {
+		background-color: lighten($brand-default, 30);
+		position: relative;
+		overflow: hidden;
+
+		.image-wrapper {
+			@include fixed-ratio-container(21, 9);
+		}
+
+		.checkbox-classic {
+			left: 16px;
+			position: absolute;
+			top: 16px;
+		}
+
+		.icon-monospaced {
+			left: 16px;
+			position: absolute;
+			bottom: 16px;
+		}
+	}
+
+	> .card-footer {
+		padding: 8px 0 8px 16px;
+		font-size: 12px;
+		line-height: 32px;
+		min-height: 48px;
+
+		> .card-footer-content {
+			float: left;
+			width: calc(100% - 32px); //inline with icon
+		}
+
+		> .icon-monospaced {
+			float: right;
+		}
+	}
+
+	.card-list-line {
+		@extend .overflow-ellipsis;
+
+		margin: 0;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		max-width: calc(33.3% - #{$card-list-horizontal-margin} * 2);
+
+		> .card-thumbnail .image-wrapper {
+			@include fixed-ratio-container(1, 1);
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		max-width: calc(25% - #{$card-list-horizontal-margin} * 2);
+
+		> .card-footer {
+			font-size: 16px;
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		max-width: calc(20% - #{$card-list-horizontal-margin} * 2);
+	}
+
+	@media (min-width: $screen-lg-min + 200) {
+		max-width: calc(16.6% - #{$card-list-horizontal-margin} * 2);
+	}
+}
