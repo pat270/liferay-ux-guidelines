@@ -79,7 +79,6 @@
 	a {
 		color: $navbar-default-link-color;
 		display: block;
-		min-width: 38px;
 		text-align: center;
 
 		&:focus,
@@ -218,9 +217,71 @@
 	margin-bottom: 0;
 }
 
+// Management Toolbar Skin
+
+.management-toolbar-default {
+	@extend .toolbar;
+
+	background-color: $management-toolbar-default-bg;
+	border-bottom: 1px solid $toolbar-bottom-border;
+	padding: 0 7px;
+
+	.dropdown-menu {
+		margin-top: $toolbar-dropdown-margin-top;
+	}
+
+	.toolbar-group, .toolbar-group-right, .toolbar-group-expand {
+		display: table;
+		height: 48px;
+	}
+
+	.toolbar-group, .toolbar-group-expand {
+		float: left;
+	}
+
+	.toolbar-group-right {
+		float: right;
+	}
+
+	.toolbar-group-content, .toolbar-group-field {
+		display: table-cell;
+		float: none;
+
+		> a {
+			padding: 0;
+		}
+	}
+
+	a {
+		border-radius: 2px;
+		color: $toolbar-default-link-color;
+
+		&:hover {
+			color: $toolbar-default-link-hover-color;
+			text-decoration: none;
+		}
+	}
+
+	a.active {
+		background-color: $management-toolbar-btn-active-bg;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.management-toolbar-default {
+		padding: 0 19px;
+
+		.toolbar-group, .toolbar-group-right, .toolbar-group-expand {
+			height: $management-toolbar-height;
+		}
+	}
+}
+
 // Header Toolbar Skins
 
 .header-toolbar-default {
+	@extend .header-toolbar;
+
 	background-color: $header-toolbar-default-bg;
 
 	.header-toolbar-title {

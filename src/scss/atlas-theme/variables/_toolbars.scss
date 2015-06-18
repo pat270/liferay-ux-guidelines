@@ -12,3 +12,23 @@ $header-toolbar-default-bg: #29343D !default;
 $header-toolbar-default-color: #FFF !default;
 $header-toolbar-default-link-color: #FFF !default;
 $header-toolbar-default-link-hover-bg: transparent !default;
+
+//== Toolbar Default
+$toolbar-bottom-border: darken(#F5F8FA, 4) !default;
+$toolbar-group-default-padding: 6px !default;
+
+$toolbar-default-link-active-color: $brand-primary !default;
+$toolbar-default-link-color: $brand-default !default;
+$toolbar-default-link-hover-color: $navbar-default-link-hover-color !default;
+
+$toolbar-default-btn-active-color: $brand-primary !default;
+$toolbar-default-btn-color: $brand-default !default;
+$toolbar-default-btn-hover-color: $navbar-default-link-hover-color !default;
+
+$toolbar-content-height: (($toolbar-group-default-padding * 2) + ($line-height-base * $input-font-size-base)) !default;
+//** Align dropdown with bottom of toolbar
+$toolbar-dropdown-margin-top: ceil($toolbar-height - $toolbar-content-height) / 2 !default;
+
+$management-toolbar-btn-active-bg: #D1D6D9 !default;
+$management-toolbar-default-bg: #F5F8FA !default;
+$management-toolbar-height: 56px !default;
