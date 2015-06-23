@@ -27,6 +27,7 @@
 	button[type='submit'].btn {
 		border-bottom-left-radius: $input-border-radius;
 		border-top-left-radius: $input-border-radius;
+		line-height: $line-height-base;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
 			border-bottom-left-radius: 0;
