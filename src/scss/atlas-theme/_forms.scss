@@ -119,21 +119,19 @@ label {
 	.radio & {
 		font-weight: 500;
 	}
-
-	&.checkbox-default1,
-	&.radio-default1,
-	.checkbox-default1 &,
-	.radio-default1 & {
-		cursor: pointer;
-		position: relative;
-	}
 }
 
-.checkbox-default1,
-.radio-default1 {
+%checkbox-styled,
+%radio-styled {
+	cursor: pointer;
+	position: relative;
+
 	input[type='checkbox'],
 	input[type='radio'] {
+		height: $checkbox-size;
+		margin-top: 0;
 		opacity: 0;
+		width: $checkbox-size;
 	}
 
 	.skin {
@@ -142,15 +140,58 @@ label {
 		margin-top: 0;
 		position: absolute;
 		top: 0;
+		height: $checkbox-size;
+		width: $checkbox-size;
+	}
+}
+
+.checkbox-classic {
+	@extend %checkbox-styled;
+
+	height: 20px;
+	margin: 0;
+	vertical-align: middle;
+
+	input[type='checkbox'] {
+		+ .skin {
+			background-color: #FFF;
+			border: 2px solid #D1D6D9;
+			border-radius: 2px;
+			transition: background 0.03s ease-in;
+
+			&:after {
+				content: '';
+				display: block;
+				height: 0;
+				left: 3px;
+				position: relative;
+				top: 3px;
+				transform: rotate(-45deg);
+				width: 0;
+				transition: height 0.05s ease-in 0s, width 0.1s ease-out 0.05s;
+			}
+		}
+
+		&:checked + .skin {
+			background-color: $brand-primary;
+			border-color: $brand-primary;
+
+			&:after {
+				border: 2px solid #FFF;
+				border-right: none;
+				border-top: none;
+				height: 7px;
+				width: 12px;
+			}
+		}
 	}
 }
 
 .checkbox-default1 {
+	@extend %checkbox-styled;
+
 	input[type='checkbox'] {
-		height: $checkbox-size;
-		margin-top: 0;
 		vertical-align: bottom;
-		width: $checkbox-size;
 
 		&:checked + .skin:after {
 			color: $checkbox-checked-color;
@@ -215,6 +256,8 @@ label {
 }
 
 .radio-default1 {
+	@extend %radio-styled;
+
 	input[type='radio'] {
 		width: 19px;
 
