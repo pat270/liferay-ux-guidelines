@@ -10,6 +10,11 @@ $btn-font-size: 14px !default; // Atlas
 $btn-padding-vertical: 8px !default; // Atlas
 $btn-padding-horizontal: round($btn-padding-vertical * 3) !default; // Atlas
 
+$btn-group-separator-height: 80% !default; // Atlas
+$btn-group-separator-left: 0 !default; // Atlas
+$btn-group-separator-top: 10% !default; // Atlas
+$btn-group-separator-width: ($btn-border-width / 2) !default; // Atlas
+
 $btn-lg-font-size: 16px !default; // Atlas
 $btn-lg-padding-vertical: 12px !default; // Atlas
 $btn-lg-padding-horizontal: round($btn-lg-padding-vertical * 3) !default; // Atlas
