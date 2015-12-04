@@ -11,6 +11,16 @@
 	padding-left: $btn-padding-horizontal / 3;
 	padding-right: $btn-padding-horizontal / 3;
 
+	&:after {
+		background: $btn-default-bg;
+		content: " ";
+		height: $btn-group-separator-height;
+		left: $btn-group-separator-left;
+		position: absolute;
+		top: $btn-group-separator-top;
+		width: $btn-group-separator-width;
+	}
+
 	@media screen and (min-width: $grid-float-breakpoint) {
 		padding-left: $btn-desktop-padding-horizontal / 3;
 		padding-right: $btn-desktop-padding-horizontal / 3;
