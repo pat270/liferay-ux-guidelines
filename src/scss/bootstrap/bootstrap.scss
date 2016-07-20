@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -11,11 +11,11 @@
 // Reset and dependencies
 @import "normalize";
 @import "print";
-@import "glyphicons";
 
 // Core CSS
-@import "scaffolding";
+@import "reboot";
 @import "type";
+@import "images";
 @import "code";
 @import "grid";
 @import "tables";
@@ -23,34 +23,34 @@
 @import "buttons";
 
 // Components
-@import "component-animations";
-@import "dropdowns";
-@import "button-groups";
-@import "input-groups";
-@import "navs";
+@import "animation";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
 @import "navbar";
-@import "breadcrumbs";
+@import "card";
+@import "breadcrumb";
 @import "pagination";
 @import "pager";
 @import "labels";
-@import "badges";
 @import "jumbotron";
-@import "thumbnails";
-@import "alerts";
-@import "progress-bars";
+@import "alert";
+@import "progress";
 @import "media";
 @import "list-group";
-@import "panels";
 @import "responsive-embed";
-@import "wells";
 @import "close";
 
 // Components w/ JavaScript
-@import "modals";
+@import "modal";
 @import "tooltip";
-@import "popovers";
+@import "popover";
 @import "carousel";
 
 // Utility classes
 @import "utilities";
-@import "responsive-utilities";
+@import "utilities-background";
+@import "utilities-spacing";
+@import "utilities-responsive";
