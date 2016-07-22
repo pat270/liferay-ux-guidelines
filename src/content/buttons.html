@@ -7,8 +7,8 @@ section: Components
 	<div class="col-md-12">
 		<h3>Default State</h3>
 		<div style="margin-bottom:5px;">
-			<button class="btn btn-default" type="button">Default</button>
 			<button class="btn btn-primary" type="button">Primary</button>
+			<button class="btn btn-secondary" type="button">Secondary</button>
 			<button class="btn btn-info" type="button">Info</button>
 			<button class="btn btn-success" type="button">Success</button>
 			<button class="btn btn-warning" type="button">Warning</button>
@@ -17,11 +17,11 @@ section: Components
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse0">
-	<pre><code class="html">```<button class="btn btn-default" type="button">Default</button>
-<button class="btn btn-primary" type="button">Primary</button>
+	<pre><code class="html">```<button class="btn btn-primary" type="button">Primary</button>
+<button class="btn btn-secondary" type="button">Secondary</button>
 <button class="btn btn-info" type="button">Info</button>
 <button class="btn btn-success" type="button">Success</button>
 <button class="btn btn-warning" type="button">Warning</button>
@@ -36,8 +36,8 @@ section: Components
 	<div class="col-md-12">
 		<h3>Active State</h3>
 		<div style="margin-bottom:5px;">
-			<button class="active btn btn-default" type="button">Default</button>
 			<button class="active btn btn-primary" type="button">Primary</button>
+			<button class="active btn btn-secondary" type="button">Secondary</button>
 			<button class="active btn btn-info" type="button">Info</button>
 			<button class="active btn btn-success" type="button">Success</button>
 			<button class="active btn btn-warning" type="button">Warning</button>
@@ -46,11 +46,11 @@ section: Components
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse1">
-	<pre><code class="html">```<button class="active btn btn-default" type="button">Default</button>
-<button class="active btn btn-primary" type="button">Primary</button>
+	<pre><code class="html">```<button class="active btn btn-primary" type="button">Primary</button>
+<button class="active btn btn-secondary" type="button">Secondary</button>
 <button class="active btn btn-info" type="button">Info</button>
 <button class="active btn btn-success" type="button">Success</button>
 <button class="active btn btn-warning" type="button">Warning</button>
@@ -65,8 +65,8 @@ section: Components
 	<div class="col-md-12">
 		<h3>Disabled State</h3>
 		<div>
-			<button class="btn btn-default" disabled type="button">Default</button>
 			<button class="btn btn-primary" disabled type="button">Primary</button>
+			<button class="btn btn-secondary" disabled type="button">Secondary</button>
 			<button class="btn btn-info" disabled type="button">Info</button>
 			<button class="btn btn-success" disabled type="button">Success</button>
 			<button class="btn btn-warning" disabled type="button">Warning</button>
@@ -75,11 +75,11 @@ section: Components
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse2">
-	<pre><code class="html">```<button class="btn btn-default" disabled="disabled" type="button">Default</button>
-<button class="btn btn-primary" disabled type="button">Primary</button>
+	<pre><code class="html">```<button class="btn btn-primary" disabled type="button">Primary</button>
+<button class="btn btn-secondary" disabled type="button">Secondary</button>
 <button class="btn btn-info" disabled type="button">Info</button>
 <button class="btn btn-success" disabled type="button">Success</button>
 <button class="btn btn-warning" disabled type="button">Warning</button>
@@ -93,8 +93,8 @@ section: Components
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Anchor Elements and Inputs as Buttons</h3>
-		<a href="#1" class="btn btn-default">Default</a>
 		<input class="btn btn-primary" type="button" value="Input" />
+		<a href="#1" class="btn btn-secondary">Secondary</a>
 		<input class="btn btn-info" type="submit" value="Submit" />
 		<a href="#1" class="btn btn-success">Success</a>
 		<a href="#1" class="btn btn-warning">Warning</a>
@@ -102,11 +102,11 @@ section: Components
 		<a href="#1" class="btn btn-link">Link</a>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse3">
-	<pre><code class="html">```<a href="#1" class="btn btn-default">Default</a>
-<input class="btn btn-primary" type="button" value="Input" />
+	<pre><code class="html">```<input class="btn btn-primary" type="button" value="Input" />
+<a href="#1" class="btn btn-secondary">Secondary</a>
 <input class="btn btn-info" type="submit" value="Submit" />
 <a href="#1" class="btn btn-success">Success</a>
 <a href="#1" class="btn btn-warning">Warning</a>
@@ -119,20 +119,43 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Sizes</h3>
-		<button class="btn btn-default btn-xs" type="button">Extra Small</button>
-		<button class="btn btn-default btn-sm" type="button">Small</button>
-		<button class="btn btn-default" type="button">Default</button>
-		<button class="btn btn-default btn-lg" type="button">Large</button>
+		<h3>Outline Buttons</h3>
+		<button class="btn btn-primary-outline" type="button">Primary</button>
+		<button class="btn btn-secondary-outline" type="button">Secondary</button>
+		<button class="btn btn-success-outline" type="button">Success</button>
+		<button class="btn btn-info-outline" type="button">Info</button>
+		<button class="btn btn-warning-outline" type="button">Warning</button>
+		<button class="btn btn-danger-outline" type="button">Danger</button>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse4">
-	<pre><code class="html">```<button class="btn btn-default btn-xs" type="button">Extra Small</button>
-<button class="btn btn-default btn-sm" type="button">Small</button>
-<button class="btn btn-default" type="button">Default</button>
-<button class="btn btn-default btn-lg" type="button">Large</button>```</code></pre>
+	<pre><code class="html">```<button type="button" class="btn btn-primary-outline" type="button">Primary</button>
+<button class="btn btn-secondary-outline" type="button">Secondary</button>
+<button class="btn btn-success-outline" type="button">Success</button>
+<button class="btn btn-info-outline" type="button">Info</button>
+<button class="btn btn-warning-outline" type="button">Warning</button>
+<button class="btn btn-danger-outline" type="button">Danger</button>```</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Sizes</h3>
+		<button class="btn btn-secondary btn-sm" type="button">Small</button>
+		<button class="btn btn-secondary" type="button">Default</button>
+		<button class="btn btn-secondary btn-lg" type="button">Large</button>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse5">
+	<pre><code class="html">```<button class="btn btn-secondary btn-sm" type="button">Small</button>
+<button class="btn btn-secondary" type="button">Default</button>
+<button class="btn btn-secondary btn-lg" type="button">Large</button>```</code></pre>
 </div>
 
 	</div>
@@ -141,17 +164,15 @@ section: Components
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Block Level Buttons</h3>
-		<button class="btn btn-block btn-primary btn-xs" type="button">Extra Small Block Level Button</button>
 		<button class="btn btn-block btn-primary btn-sm" type="button">Small Block Level Button</button>
 		<button class="btn btn-block btn-primary" type="button">Default Block Level Button</button>
 		<button class="btn btn-block btn-lg btn-primary" type="button">Large Block Level Button</button>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse5">
-	<pre><code class="html">```<button class="btn btn-block btn-primary btn-xs" type="button">Extra Small Block Level Button</button>
-<button class="btn btn-block btn-primary btn-sm" type="button">Small Block Level Button</button>
+<div class="collapse" id="codeCollapse6">
+	<pre><code class="html">```<button class="btn btn-block btn-primary btn-sm" type="button">Small Block Level Button</button>
 <button class="btn btn-block btn-primary" type="button">Default Block Level Button</button>
 <button class="btn btn-block btn-lg btn-primary" type="button">Large Block Level Button</button>```</code></pre>
 </div>
@@ -164,7 +185,7 @@ section: Components
 		<h3>Button Dropdowns</h3>
 
 		<div class="btn-group dropdown">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Default <span class="caret"></span>
+			<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">Primary <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				<li><a href="#">Action</a></li>
@@ -174,7 +195,7 @@ section: Components
 		</div>
 
 		<div class="btn-group dropdown">
-			<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">Primary <span class="caret"></span>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Secondary <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				<li><a href="#">Action</a></li>
@@ -224,12 +245,12 @@ section: Components
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse7"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse6">
+<div class="collapse" id="codeCollapse7">
 	<pre><code class="html">```<div class="btn-group dropdown">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-        Default <span class="caret"></span>
+    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
+        Primary <span class="caret"></span>
     </button>
 
     <ul class="dropdown-menu">
@@ -249,21 +270,6 @@ section: Components
 
 		<div class="btn-toolbar">
 			<div class="btn-group dropup">
-				<button type="button" class="btn btn-default">Dropup</button>
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					<span class="caret"></span>
-					<span class="sr-only">Toggle Dropdown</span>
-				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Separated link</a></li>
-				</ul>
-			</div>
-
-			<div class="btn-group dropup">
 				<button type="button" class="btn btn-primary">Right dropup</button>
 				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
 					<span class="caret"></span>
@@ -277,15 +283,30 @@ section: Components
 					<li><a href="#">Separated link</a></li>
 				</ul>
 			</div>
+
+			<div class="btn-group dropup">
+				<button type="button" class="btn btn-secondary">Dropup</button>
+				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse7"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse8"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse7">
+<div class="collapse" id="codeCollapse8">
 	<pre><code class="html">```<div class="btn-group dropup">
-    <button type="button" class="btn btn-default">Dropup</button>
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-primary">Dropup</button>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
         <span class="caret"></span>
         <span class="sr-only">Toggle Dropdown</span>
     </button>
@@ -308,8 +329,8 @@ section: Components
 		<h3>Split Button Dropdowns</h3>
 
 		<div class="btn-group dropdown">
-			<button class="btn btn-default" type="button">Default</button>
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+			<button class="btn btn-primary" type="button">Primary</button>
+			<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
 				<span class="caret"></span>
 				<span class="sr-only">Toggle Dropdown</span>
 			</button>
@@ -321,8 +342,8 @@ section: Components
 		</div>
 
 		<div class="btn-group dropdown">
-			<button class="btn btn-primary" type="button">Primary</button>
-			<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
+			<button class="btn btn-secondary" type="button">Secondary</button>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 				<span class="caret"></span>
 				<span class="sr-only">Toggle Dropdown</span>
 			</button>
@@ -386,12 +407,12 @@ section: Components
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse8"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse9"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse8">
+<div class="collapse" id="codeCollapse9">
 	<pre><code class="html">```<div class="btn-group dropdown">
-    <button class="btn btn-default" type="button">Default</button>
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+    <button class="btn btn-primary" type="button">Primary</button>
+    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
         <span class="caret"></span>
         <span class="sr-only">Toggle Dropdown</span>
     </button>
@@ -411,19 +432,19 @@ section: Components
 		<h3>Button Group</h3>
 
 		<div class="btn-group">
-			<button class="btn btn-default" type="button">Left</button>
-			<button class="btn btn-default" type="button">Middle</button>
-			<button class="btn btn-default" type="button">Right</button>
+			<button class="btn btn-secondary" type="button">Left</button>
+			<button class="btn btn-secondary" type="button">Middle</button>
+			<button class="btn btn-secondary" type="button">Right</button>
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse9"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse10"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse9">
+<div class="collapse" id="codeCollapse10">
 	<pre><code class="html">```<div class="btn-group">
-    <button class="btn btn-default" type="button">Left</button>
-    <button class="btn btn-default" type="button">Middle</button>
-    <button class="btn btn-default" type="button">Right</button>
+    <button class="btn btn-secondary" type="button">Left</button>
+    <button class="btn btn-secondary" type="button">Middle</button>
+    <button class="btn btn-secondary" type="button">Right</button>
 </div>```</code></pre>
 </div>
 
@@ -436,10 +457,10 @@ section: Components
 		<h3>Vertical Button Group</h3>
 
 		<div class="btn-group-vertical">
-			<button class="btn btn-default" type="button">Button</button>
-			<button class="btn btn-default" type="button">Button</button>
+			<button class="btn btn-secondary" type="button">Button</button>
+			<button class="btn btn-secondary" type="button">Button</button>
 			<div class="btn-group">
-				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+				<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					Dropdown
 					<span class="caret"></span>
 				</button>
@@ -449,7 +470,7 @@ section: Components
 				</ul>
 			</div>
 			<div class="btn-group">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
 					Dropdown
 					<span class="caret"></span>
 				</button>
@@ -459,7 +480,7 @@ section: Components
 				</ul>
 			</div>
 			<div class="btn-group">
-				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+				<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					Dropdown
 					<span class="caret"></span>
 				</button>
@@ -471,16 +492,16 @@ section: Components
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse10"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse11"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse10">
+<div class="collapse" id="codeCollapse11">
 	<pre><code class="html">```<div class="btn-group-vertical">
-    <button class="btn btn-default" type="button">Button</button>
+    <button class="btn btn-secondary" type="button">Button</button>
 
-    <button class="btn btn-default" type="button">Button</button>
+    <button class="btn btn-secondary" type="button">Button</button>
 
     <div class="btn-group">
-        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+        <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
             Dropdown
             <span class="caret"></span>
         </button>
@@ -491,7 +512,7 @@ section: Components
     </div>
 
     <div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
             Dropdown
             <span class="caret"></span>
         </button>
@@ -502,7 +523,7 @@ section: Components
     </div>
 
     <div class="btn-group">
-        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+        <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
             Dropdown
             <span class="caret"></span>
         </button>
@@ -523,31 +544,31 @@ section: Components
 
 		<div class="btn-group btn-group-justified">
 			<div class="btn-group">
-				<button class="btn btn-default" type="button">Left</button>
+				<button class="btn btn-secondary" type="button">Left</button>
 			</div>
 			<div class="btn-group">
-				<button class="btn btn-default" type="button">Middle</button>
+				<button class="btn btn-secondary" type="button">Middle</button>
 			</div>
 			<div class="btn-group">
-				<button class="btn btn-default" type="button">Right</button>
+				<button class="btn btn-secondary" type="button">Right</button>
 			</div>
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse11"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse12"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse11">
+<div class="collapse" id="codeCollapse12">
 	<pre><code class="html">```<div class="btn-group btn-group-justified">
     <div class="btn-group">
-        <button class="btn btn-default" type="button">Left</button>
+        <button class="btn btn-secondary" type="button">Left</button>
     </div>
 
     <div class="btn-group">
-        <button class="btn btn-default" type="button">Middle</button>
+        <button class="btn btn-secondary" type="button">Middle</button>
     </div>
 
     <div class="btn-group">
-        <button class="btn btn-default" type="button">Right</button>
+        <button class="btn btn-secondary" type="button">Right</button>
     </div>
 </div>```</code></pre>
 </div>
@@ -572,9 +593,9 @@ section: Components
 		</a>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse12"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse13"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse12">
+<div class="collapse" id="codeCollapse13">
 	<pre><code class="html">```<a class="btn btn-primary btn-action" href="../blogs-action">
     <svg class="icon-monospaced lexicon-icon">
         <use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
@@ -600,9 +621,9 @@ section: Components
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse13"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse14"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse13">
+<div class="collapse" id="codeCollapse14">
 	<pre><code class="html">```<div class="btn-action-secondary dropdown">
     <button class="btn btn-primary" data-toggle="dropdown" type="button">
         <svg class="icon-monospaced lexicon-icon">
