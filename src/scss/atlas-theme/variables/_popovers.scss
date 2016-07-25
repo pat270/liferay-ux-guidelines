@@ -1,11 +1,11 @@
 // Structure
 
-$popover-max-width:                               276px !default;
+$popover-max-width:                               240px !default;
 $popover-arrow-width:                             8px !default;
 
 // Skin
 
-$popover-border-radius: $border-radius-base !default; // Atlas
+$popover-border-radius: $border-radius !default; // Atlas
 
 //** Popover box shadow settings (Default is global box shadow settings)
 $popover-box-shadow-x: $box-shadow-default-x !default; // Atlas
@@ -19,6 +19,6 @@ $popover-bg:                                      #FFF !default;
 
 $popover-border-color:                            #AEB7BD !default;
 $popover-fallback-border-color:                   #AEB7BD !default;
-$popover-title-color: $text-color;
+$popover-title-color: $body-color;
 $popover-title-bg:                                #FFF !default;
 $popover-arrow-color:                             #FFF !default;

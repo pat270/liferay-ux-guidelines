@@ -4,7 +4,7 @@
 
 .tooltip-inner {
 	border-radius: $tooltip-border-radius;
-	padding: $tooltip-padding-vertical $tooltip-padding-horizontal;
+	padding: $tooltip-padding-y $tooltip-padding-x;
 }
 
 .tooltip-arrow:before {
@@ -17,7 +17,6 @@
 }
 
 // Tooltip box shadows
-//
 // Arrow shadows only appear when $tooltip-box-shadow-blur > 0
 
 .tooltip {

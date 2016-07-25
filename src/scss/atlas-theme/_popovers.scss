@@ -1,7 +1,7 @@
 .popover {
 	border-radius: $popover-border-radius;
 	box-shadow: none;
-	max-width: 240px;
+	max-width: $popover-max-width;
 	padding: 0;
 
 	&.bottom > .arrow:after {
@@ -35,7 +35,6 @@
 }
 
 // Popover box shadows
-//
 // Arrow shadows only appear when $popover-box-shadow-blur > 0
 
 .popover {

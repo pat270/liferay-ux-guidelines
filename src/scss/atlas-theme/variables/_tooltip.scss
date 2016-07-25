@@ -1,13 +1,13 @@
 // Structure
 
-$tooltip-font-size: 14px !default; // Atlas
+$tooltip-font-size: $font-size-base !default; // Atlas
 
-$tooltip-padding-horizontal: 24px !default; // Atlas
-$tooltip-padding-vertical: 8px !default; // Atlas
+$tooltip-padding-x: 24px !default; // Atlas
+$tooltip-padding-y: 8px !default; // Atlas
 
 // Skin
 
-$tooltip-border-radius: $border-radius-base !default; // Atlas
+$tooltip-border-radius: $border-radius !default; // Atlas
 
 //** Tooltip box shadow settings (Default is global box shadow settings)
 $tooltip-box-shadow-x: $box-shadow-default-x !default; // Atlas
