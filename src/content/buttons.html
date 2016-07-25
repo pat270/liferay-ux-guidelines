@@ -5,7 +5,7 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Default State</h3>
+		<h3>Buttons</h3>
 		<div style="margin-bottom:5px;">
 			<button class="btn btn-primary" type="button">Primary</button>
 			<button class="btn btn-secondary" type="button">Secondary</button>
@@ -34,7 +34,7 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Active State</h3>
+		<h3>Active Buttons</h3>
 		<div style="margin-bottom:5px;">
 			<button class="active btn btn-primary" type="button">Primary</button>
 			<button class="active btn btn-secondary" type="button">Secondary</button>
@@ -63,7 +63,7 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Disabled State</h3>
+		<h3>Disabled Buttons</h3>
 		<div>
 			<button class="btn btn-primary" disabled type="button">Primary</button>
 			<button class="btn btn-secondary" disabled type="button">Secondary</button>
@@ -93,25 +93,17 @@ section: Components
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Anchor Elements and Inputs as Buttons</h3>
+		<a href="#1" class="btn btn-primary">Anchor</a>
 		<input class="btn btn-primary" type="button" value="Input" />
-		<a href="#1" class="btn btn-secondary">Secondary</a>
-		<input class="btn btn-info" type="submit" value="Submit" />
-		<a href="#1" class="btn btn-success">Success</a>
-		<a href="#1" class="btn btn-warning">Warning</a>
-		<a href="#1" class="btn btn-danger">Danger</a>
-		<a href="#1" class="btn btn-link">Link</a>
+		<input class="btn btn-primary" type="submit" value="Submit" />
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse3">
-	<pre><code class="html">```<input class="btn btn-primary" type="button" value="Input" />
-<a href="#1" class="btn btn-secondary">Secondary</a>
-<input class="btn btn-info" type="submit" value="Submit" />
-<a href="#1" class="btn btn-success">Success</a>
-<a href="#1" class="btn btn-warning">Warning</a>
-<a href="#1" class="btn btn-danger">Danger</a>
-<a href="#1" class="btn btn-link">Link</a>```</code></pre>
+	<pre><code class="html">```<a href="#1" class="btn btn-primary">Anchor</a>
+<input class="btn btn-primary" type="button" value="Input" />
+<input class="btn btn-primary" type="submit" value="Submit" />```</code></pre>
 </div>
 
 	</div>
@@ -122,8 +114,8 @@ section: Components
 		<h3>Outline Buttons</h3>
 		<button class="btn btn-primary-outline" type="button">Primary</button>
 		<button class="btn btn-secondary-outline" type="button">Secondary</button>
-		<button class="btn btn-success-outline" type="button">Success</button>
 		<button class="btn btn-info-outline" type="button">Info</button>
+		<button class="btn btn-success-outline" type="button">Success</button>
 		<button class="btn btn-warning-outline" type="button">Warning</button>
 		<button class="btn btn-danger-outline" type="button">Danger</button>
 
@@ -187,61 +179,61 @@ section: Components
 		<div class="btn-group dropdown">
 			<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">Primary <span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 		</div>
 
 		<div class="btn-group dropdown">
 			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Secondary <span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 		</div>
 
 		<div class="btn-group dropdown">
 			<button class="btn btn-info dropdown-toggle" data-toggle="dropdown" type="button">Info <span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 		</div>
 
 		<div class="btn-group dropdown">
 			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown" type="button">Success <span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 		</div>
 
 		<div class="btn-group dropdown">
 			<button class="btn btn-warning dropdown-toggle" data-toggle="dropdown" type="button">Warning <span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 		</div>
 
 		<div class="btn-group dropdown">
 			<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown" type="button">Danger <span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 		</div>
 
 <div class="uxgl-toggle-code">
@@ -253,11 +245,11 @@ section: Components
         Primary <span class="caret"></span>
     </button>
 
-    <ul class="dropdown-menu">
-        <li><a href="#">Action</a></li>
-        <li class="divider"></li>
-        <li><a href="#1">Scope</a></li>
-    </ul>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#1">Action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#1">Scope</a>
+    </div>
 </div>```</code></pre>
 </div>
 
@@ -275,13 +267,13 @@ section: Components
 					<span class="caret"></span>
 					<span class="sr-only">Toggle Dropdown</span>
 				</button>
-				<ul class="dropdown-menu dropdown-menu-right">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Separated link</a></li>
-				</ul>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="#1">Action</a>
+					<a class="dropdown-item" href="#1">Another action</a>
+					<a class="dropdown-item" href="#1">Something else here</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Separated link</a>
+				</div>
 			</div>
 
 			<div class="btn-group dropup">
@@ -290,13 +282,13 @@ section: Components
 					<span class="caret"></span>
 					<span class="sr-only">Toggle Dropdown</span>
 				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Separated link</a></li>
-				</ul>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Action</a>
+					<a class="dropdown-item" href="#1">Another action</a>
+					<a class="dropdown-item" href="#1">Something else here</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Separated link</a>
+				</div>
 			</div>
 		</div>
 
@@ -311,13 +303,13 @@ section: Components
         <span class="sr-only">Toggle Dropdown</span>
     </button>
 
-    <ul class="dropdown-menu">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li class="divider"></li>
-        <li><a href="#">Separated link</a></li>
-    </ul>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#1">Action</a>
+        <a class="dropdown-item" href="#1">Another action</a>
+        <a class="dropdown-item" href="#1">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#1">Separated link</a>
+    </div>
 </div>```</code></pre>
 </div>
 
@@ -334,11 +326,11 @@ section: Components
 				<span class="caret"></span>
 				<span class="sr-only">Toggle Dropdown</span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 		</div>
 
 		<div class="btn-group dropdown">
@@ -347,11 +339,11 @@ section: Components
 				<span class="caret"></span>
 				<span class="sr-only">Toggle Dropdown</span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 		</div>
 
 		<div class="btn-group dropdown">
@@ -360,11 +352,11 @@ section: Components
 				<span class="caret"></span>
 				<span class="sr-only">Toggle Dropdown</span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 		</div>
 
 		<div class="btn-group dropdown">
@@ -373,11 +365,11 @@ section: Components
 				<span class="caret"></span>
 				<span class="sr-only">Toggle Dropdown</span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 		</div>
 
 		<div class="btn-group dropdown">
@@ -386,11 +378,11 @@ section: Components
 				<span class="caret"></span>
 				<span class="sr-only">Toggle Dropdown</span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 		</div>
 
 		<div class="btn-group dropdown">
@@ -399,11 +391,11 @@ section: Components
 				<span class="caret"></span>
 				<span class="sr-only">Toggle Dropdown</span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 		</div>
 
 <div class="uxgl-toggle-code">
@@ -416,11 +408,11 @@ section: Components
         <span class="caret"></span>
         <span class="sr-only">Toggle Dropdown</span>
     </button>
-    <ul class="dropdown-menu" role="menu">
-        <li><a href="#">Action</a></li>
-        <li class="divider"></li>
-        <li><a href="#1">Scope</a></li>
-    </ul>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#1">Action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#1">Scope</a>
+    </div>
 </div>```</code></pre>
 </div>
 
@@ -464,30 +456,30 @@ section: Components
 					Dropdown
 					<span class="caret"></span>
 				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Dropdown link</a></li>
-					<li><a href="#">Dropdown link</a></li>
-				</ul>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Dropdown link</a>
+					<a class="dropdown-item" href="#1">Dropdown link</a>
+				</div>
 			</div>
 			<div class="btn-group">
 				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
 					Dropdown
 					<span class="caret"></span>
 				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Dropdown link</a></li>
-					<li><a href="#">Dropdown link</a></li>
-				</ul>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Dropdown link</a>
+					<a class="dropdown-item" href="#1">Dropdown link</a>
+				</div>
 			</div>
 			<div class="btn-group">
 				<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					Dropdown
 					<span class="caret"></span>
 				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Dropdown link</a></li>
-					<li><a href="#">Dropdown link</a></li>
-				</ul>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Dropdown link</a>
+					<a class="dropdown-item" href="#1">Dropdown link</a>
+				</div>
 			</div>
 		</div>
 
@@ -505,10 +497,10 @@ section: Components
             Dropdown
             <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu">
-            <li><a href="#">Dropdown link</a></li>
-            <li><a href="#">Dropdown link</a></li>
-        </ul>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#1">Dropdown link</a>
+            <a class="dropdown-item" href="#1">Dropdown link</a>
+        </div>
     </div>
 
     <div class="btn-group">
@@ -516,10 +508,10 @@ section: Components
             Dropdown
             <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu">
-            <li><a href="#">Dropdown link</a></li>
-            <li><a href="#">Dropdown link</a></li>
-        </ul>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#1">Dropdown link</a>
+            <a class="dropdown-item" href="#1">Dropdown link</a>
+        </div>
     </div>
 
     <div class="btn-group">
@@ -527,10 +519,10 @@ section: Components
             Dropdown
             <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu">
-            <li><a href="#">Dropdown link</a></li>
-            <li><a href="#">Dropdown link</a></li>
-        </ul>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#1">Dropdown link</a>
+            <a class="dropdown-item" href="#1">Dropdown link</a>
+        </div>
     </div>
 </div>```</code></pre>
 </div>
@@ -580,7 +572,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Action Buttons</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Action buttons are used for providing easy access to primary actions, such as adding new entities (users, organizations, new blog entries). There are two kinds of action buttons: <code>.btn-action</code> and <code>.btn-action-secondary</code>.</p>
 
 			<p><code>.btn-action</code> should be used where only one primary action can be taken. A good use of <code>.btn-action</code> is adding a new entry in the blog portlet, where the user will be led to the new blog entry page.</p>
@@ -603,7 +595,7 @@ section: Components
 </a>```</code></pre>
 </div>
 
-		<blockquote class="blockquote-sm blockquote-success" style="margin-top:20px;">
+		<blockquote class="blockquote blockquote-sm blockquote-success" style="margin-top:20px;">
 			<p><code>.btn-action-secondary</code> should be used where multiple primary actions can be taken. This button will display an overflow menu with a list of available actions. For example, on the users and organizations page in the control panel, a user, organization, or location can be added. Clicking the button inside btn-action-secondary will open an overflow menu with add user, add organization, or add location options (button on bottom right).</p>
 		</blockquote>
 
@@ -613,11 +605,11 @@ section: Components
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
 				</svg>
 			</button>
-			<ul class="dropdown-menu dropdown-menu-right-side-bottom">
-				<li><a href="../blogs-action">User</a></li>
-				<li><a href="../blogs-action">Regular Organization</a></li>
-				<li><a href="../blogs-action">Location</a></li>
-			</ul>
+			<div class="dropdown-menu dropdown-menu-right-side-bottom">
+				<a class="dropdown-item" href="../blogs-action">User</a>
+				<a class="dropdown-item" href="../blogs-action">Regular Organization</a>
+				<a class="dropdown-item" href="../blogs-action">Location</a>
+			</div>
 		</div>
 
 <div class="uxgl-toggle-code">
@@ -631,9 +623,9 @@ section: Components
         </svg>
     </button>
     <ul class="dropdown-menu dropdown-menu-right-side dropdown-menu-bottom">
-        <li><a href="../blogs-action">User</a></li>
-        <li><a href="../blogs-action">Regular Organization</a></li>
-        <li><a href="../blogs-action">Location</a></li>
+        <a class="dropdown-item" href="../blogs-action">User</a>
+        <a class="dropdown-item" href="../blogs-action">Regular Organization</a>
+        <a class="dropdown-item" href="../blogs-action">Location</a>
     </ul>
 </div>```</code></pre>
 </div>
@@ -651,9 +643,9 @@ section: Components
 				</svg>
 			</button>
 			<ul class="dropdown-menu dropdown-menu-left-side-bottom">
-				<li><a href="../blogs-action">User</a></li>
-				<li><a href="../blogs-action">Regular Organization</a></li>
-				<li><a href="../blogs-action">Location</a></li>
+				<a  class="dropdown-item" href="../blogs-action">User</a>
+				<a  class="dropdown-item" href="../blogs-action">Regular Organization</a>
+				<a  class="dropdown-item" href="../blogs-action">Location</a>
 			</ul>
 		</div>
 	</div>
