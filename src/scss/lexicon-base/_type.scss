@@ -89,21 +89,21 @@ th {
 // Blockquote Variations
 
 .blockquote-xs {
-	border-left: 1px solid $blockquote-border-color;
-	font-size: $blockquote-font-size * 0.7;
-	padding: ($line-height-base / 2) ($line-height-base * 0.7);
+	border-width: $blockquote-xs-border-width;
+	font-size: $blockquote-xs-font-size;
+	padding: $blockquote-xs-padding-y $blockquote-xs-padding-x;
 }
 
 .blockquote-sm {
-	border-left: 3px solid $blockquote-border-color;
-	font-size: $blockquote-font-size * 0.8;
-	padding: ($line-height-base / 2) ($line-height-base * 0.8);
+	border-width: $blockquote-sm-border-width;
+	font-size: $blockquote-sm-font-size;
+	padding: $blockquote-sm-padding-y $blockquote-sm-padding-x;
 }
 
 .blockquote-lg {
-	border-left: 8px solid $blockquote-border-color;
-	font-size: $blockquote-font-size * 1.5;
-	padding: ($line-height-base / 2) ($line-height-base * 1.5);
+	border-width: $blockquote-lg-border-width;
+	font-size: $blockquote-lg-font-size;
+	padding: $blockquote-lg-padding-y $blockquote-lg-padding-x;
 }
 
 .blockquote-danger {
