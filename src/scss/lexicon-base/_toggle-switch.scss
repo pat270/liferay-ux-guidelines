@@ -143,7 +143,9 @@ input.toggle-switch {
 		.toggle-switch-icon,
 		.toggle-switch-handle:after,
 		.toggle-switch-handle:before {
-			@include transition(all 100ms ease-in);
+			@if $enable-transitions {
+				@include transition(all 100ms ease-in);
+			}
 		}
 	}
 }
