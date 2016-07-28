@@ -1,17 +1,22 @@
 // must all be same units--start
-$toggle-switch-bar-padding: 0 !default; // space between button and bar, can be negative value
-$toggle-switch-button-width: 25px !default;
+$toggle-switch-bar-spacing: 0 !default; // space between button and bar, can be negative value
+$toggle-switch-button-width: 1.5625rem !default;
 
-$toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) + $toggle-switch-button-width !default;
-$toggle-switch-bar-width: 50px !default; // width of switch bar
+$toggle-switch-bar-height: ($toggle-switch-bar-spacing * 2) + $toggle-switch-button-width !default;
+$toggle-switch-bar-width: 3.125rem !default; // width of switch bar
 // must all be same units--end
 
 $toggle-switch-bar-border-radius: 3px !default;
 $toggle-switch-bar-border-width: 1px !default;
-$toggle-switch-bar-font-size: 12px !default;
+$toggle-switch-bar-box-shadow-focus: 0 0 3px 2px #66AFE6 !default;
+$toggle-switch-bar-font-size: $font-size-xs !default;
 
 $toggle-switch-button-border-width: 1px !default;
 $toggle-switch-button-font-size: $toggle-switch-bar-font-size !default;
+
+$toggle-switch-handle-font-size: $font-size-sm !default;
+
+$toggle-switch-text-font-size: $font-size-base !default;
 
 // Toggle Switch Off
 $toggle-switch-bar-bg: $input-group-addon-bg !default;

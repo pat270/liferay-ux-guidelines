@@ -1,23 +1,27 @@
 // Toggle Card Settings
-$toggle-card-height: 78px !default;
-$toggle-card-width: 69px !default;
+$toggle-card-height: 4.875rem !default;
+$toggle-card-width: 4.3125rem !default;
 
-$toggle-card-padding-horizontal: 4px !default;
-$toggle-card-padding-vertical: 4px !default;
+$toggle-card-padding-x: 0.25rem !default;
+$toggle-card-padding-y: $toggle-card-padding-x !default;
 
 $toggle-card-border-radius: 4px !default;
 
 $toggle-card-box-shadow: none !default;
+$toggle-card-box-shadow-focus: 0 0 3px 2px rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), 0.6) !default;
 
 $toggle-card-icon-border-radius: 30px !default;
-$toggle-card-icon-font-size: 16px !default;
-$toggle-card-icon-height: 32px !default;
-$toggle-card-icon-width: 32px !default;
+$toggle-card-icon-font-size: $font-size-base !default;
+$toggle-card-icon-height: 2rem !default;
+$toggle-card-icon-width: 2rem !default;
+
+$toggle-card-label-font-size: $font-size-base !default;
 
 // Toggle Card Off Styles
 $toggle-card-bg: $input-bg !default;
-$toggle-card-border: $input-border-color !default;
-$toggle-card-border-width: 1px !default;
+$toggle-card-border-color: $input-border-color !default;
+$toggle-card-border-style: solid !default;
+$toggle-card-border-width: 0.0625rem !default;
 $toggle-card-icon-bg: transparent !default;
 $toggle-card-icon-border: #869CAD !default;
 $toggle-card-icon-border-width: 0 !default;
@@ -25,9 +29,11 @@ $toggle-card-text-color: $body-color !default;
 
 // Toggle Card On Styles
 $toggle-card-on-bg: $body-bg !default;
-$toggle-card-on-border: $brand-primary !default;
-$toggle-card-on-border-width: 1px !default;
+$toggle-card-on-border-color: $brand-primary !default;
+$toggle-card-on-border-style: $toggle-card-border-style !default;
+$toggle-card-on-border-width: 0.0625rem !default;
 $toggle-card-on-icon-bg: transparent !default;
-$toggle-card-on-icon-border: $toggle-card-on-border !default;
+$toggle-card-on-icon-border-color: $toggle-card-on-border-color !default;
+$toggle-card-on-icon-border-style: $toggle-card-on-border-style !default;
 $toggle-card-on-icon-border-width: 0 !default;
 $toggle-card-on-text-color: $brand-primary !default;
