@@ -6,7 +6,7 @@
 
 	border-radius: 50%;
 	display: block;
-	font-size: 16px;
+	font-size: $loading-icon-font-size;
 	height: 1em;
 	margin: 1em auto;
 	position: relative;
@@ -181,19 +181,19 @@ button {
 
 .loading-icon {
 	&.loading-icon-xs {
-		font-size: 8px;
+		font-size: $loading-icon-font-size-xs;
 	}
 
 	&.loading-icon-sm {
-		font-size: 10px;
+		font-size: $loading-icon-font-size-sm;
 	}
 
 	&.loading-icon-md {
-		font-size: 32px;
+		font-size: $loading-icon-font-size-md;
 	}
 
 	&.loading-icon-lg {
-		font-size: 64px;
+		font-size: $loading-icon-font-size-lg;
 	}
 }
 

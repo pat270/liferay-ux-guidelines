@@ -1,3 +1,8 @@
 $loading-icon-color: #0CF !default;
 $loading-icon-linear-color: #07F !default;
-$loading-icon-size: 64px !default;
+
+$loading-icon-font-size-xs: 0.5rem !default;
+$loading-icon-font-size-sm: 0.625rem !default;
+$loading-icon-font-size: $font-size-base !default
+$loading-icon-font-size-md: 2rem !default;
+$loading-icon-font-size-lg: 4rem !default;
