@@ -1,0 +1,67 @@
+---
+title: Migration
+section: Migration
+---
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Migrating to Lexicon v2</h3>
+
+		<div class="alert alert-info">
+			<a class="alert-link" href="http://v4-alpha.getbootstrap.com/migration/">Migrating to Bootstrap v4</a>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Global</h3>
+
+		<ul>
+			<li>Bootstrap 4 converted from using <code>px</code> to <code>rem</code> as their primary CSS unit. We removed sizing for small screens and large screens in Atlas accordingly. You can adjust the <code>font-size</code> on the <code>html</code> element to adjust the size of Lexicon components.</li>
+		</ul>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Mixins</h3>
+
+		<ul>
+			<li>Bootstrap 4 removed the following mixins: <code>animation</code>, <code>animation-delay</code>, <code>animation-direction</code>, <code>animation-duration</code>, <code>animation-fill-mode</code>, <code>animation-iteration-count</code>, <code>animation-name</code>, <code>animation-timing-function</code>, <code>backface-visibility</code>, <code>box-sizing</code>, <code>content-columns</code>, <code>hyphens</code>, <code>opacity</code>, <code>perspective</code>, <code>perspective-origin</code>, <code>rotate</code>, <code>rotateX</code>, <code>rotateY</code>, <code>scale</code>, <code>scaleX</code>, <code>scaleY</code>, <code>skew</code>, <code>transform-origin</code>, <code>transition-delay</code>, <code>transition-duration</code>, <code>transition-property</code>, <code>transition-timing-function</code>, <code>transition-transform</code>, <code>translate</code>, <code>translate3d</code>, <code>user-select</code></li>
+		</ul>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Grid System</h3>
+
+		<ul>
+			<li>Bootstrap 4 converted media query breakpoints to <code>$grid-breakpoints</code> sass map. You must use Bootstrap 4's breakpoints mixins or create media queries using <code>map-get($grid-breakpoints, md)</code>.</li>
+
+			<li>Bootstrap 4 removed variables: <code>$screen-xs</code>, <code>$screen-xs-min</code>, <code>$screen-phone</code>, <code>$screen-sm</code>, <code>$screen-sm-min</code>, <code>$screen-tablet</code>, <code>$screen-md</code>, <code>$screen-md-min</code>, <code>$screen-desktop</code>, <code>$screen-lg</code>, <code>$screen-lg-min</code>, <code>$screen-lg-desktop</code>, <code>$screen-xs-max</code>, <code>$screen-sm-max</code>, <code>$screen-md-max</code>, <code>$grid-float-breakpoint</code>, and <code>$grid-float-breakpoint-max</code></li>
+		</ul>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Buttons</h3>
+
+		<ul>
+			<li>Bootstrap 4 renamed <code>.btn-default</code> to <code>.btn-secondary</code></li>
+			<li>Bootstrap 4 removed <code>.btn-xs</code></li>
+			<li>Bootstrap 4 removed <code>$line-height</code> argument from button-size mixin.</li>
+			<li>Bootstrap 4 moved button padding to variables <code>$btn-padding-x</code> and <code>$btn-padding-y</code>.</li>
+			<li>Bootstrap 4 moved button border-radius to variables <code>$btn-border-radius</code>, <code>$btn-border-radius-lg</code>, <code>$btn-border-radius-sm</code>.</li>
+		</ul>
+
+		<ul>
+			<li>Atlas removed <code>.btn-xs</code></li>
+			<li>Atlas removed variables: <code>$btn-line-height</code>, <code>$btn-desktop-xs-font-size</code>, <code>$btn-desktop-xs-padding-vertical</code>, <code>$btn-desktop-xs-padding-horizontal</code>, <code>$btn-desktop-sm-font-size</code>, <code>$btn-desktop-sm-padding-vertical</code>, <code>$btn-desktop-sm-padding-horizontal</code>, <code>$btn-desktop-lg-font-size</code>, <code>$btn-desktop-lg-padding-vertical</code>, <code>$btn-desktop-lg-padding-horizontal</code>, <code>$btn-desktop-font-size</code>, <code>$btn-desktop-padding-vertical</code>, <code>$btn-desktop-padding-horizontal</code>, <code>$btn-xs-font-size</code>, <code>$btn-xs-padding-horizontal</code>, <code>$btn-xs-padding-vertical</code>, <code>$btn-xs-border-radius</code></li>
+
+			<li>Atlas renamed <code>$btn-padding-horizontal</code>, <code>$btn-padding-vertical</code>, <code>$btn-lg-padding-horizontal</code>, <code>$btn-lg-padding-vertical</code>, <code>$btn-sm-padding-horizontal</code>, <code>$btn-sm-padding-vertical</code>, <code>$btn-lg-border-radius</code>, <code>$btn-sm-border-radius</code>.</li>
+		</ul>
+	</div>
+</div>
