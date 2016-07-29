@@ -1,58 +1,25 @@
 .btn {
-	@include button-size($btn-padding-vertical, $btn-padding-horizontal, $btn-font-size, $line-height-base, $btn-border-radius);
-
-	font-weight: 500;
-
-	@media screen and (min-width: $grid-float-breakpoint) {
-		@include button-size($btn-desktop-padding-vertical, $btn-desktop-padding-horizontal, $btn-desktop-font-size, $btn-line-height, $btn-border-radius);
-	}
+	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
 
 	&,
 	&:focus,
 	&:hover {
-		border: $btn-border-width solid transparent;
-	}
-
-	&:active,
-	&.active {
-		box-shadow: none;
+		border-width: $btn-border-width;
 	}
 
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
-		@include opacity($btn-disabled-opacity);
+		opacity: $btn-disabled-opacity;
 	}
 }
 
-.btn-default {
-	@include color-btn($btn-default-border);
-	@include color-btn-hover($btn-default-hover-bg, $btn-default-hover-border);
-	@include color-btn-active($btn-default-active-bg, $btn-default-active-border);
+.btn-sm {
+	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
 }
 
-.btn-primary {
-	@include color-btn($btn-primary-border);
-	@include color-btn-hover($btn-primary-hover-bg, $btn-primary-hover-border);
-	@include color-btn-active($btn-primary-active-bg, $btn-primary-active-border);
-}
-
-.btn-success {
-	@include color-btn($btn-success-border);
-	@include color-btn-hover($btn-success-hover-bg, $btn-success-hover-border);
-	@include color-btn-active($btn-success-active-bg, $btn-success-active-border);
-}
-
-.btn-info {
-	@include color-btn($btn-info-border);
-	@include color-btn-hover($btn-info-hover-bg, $btn-info-hover-border);
-	@include color-btn-active($btn-info-active-bg, $btn-info-active-border);
-}
-
-.btn-warning {
-	@include color-btn($btn-warning-border);
-	@include color-btn-hover($btn-warning-hover-bg, $btn-warning-hover-border);
-	@include color-btn-active($btn-warning-active-bg, $btn-warning-active-border);
+.btn-lg {
+	@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
 }
 
 .btn-danger {
@@ -61,32 +28,38 @@
 	@include color-btn-active($btn-danger-active-bg, $btn-danger-active-border);
 }
 
+.btn-info {
+	@include color-btn($btn-info-border);
+	@include color-btn-hover($btn-info-hover-bg, $btn-info-hover-border);
+	@include color-btn-active($btn-info-active-bg, $btn-info-active-border);
+}
+
 .btn-link {
 	@include button-variant($link-color, transparent, transparent);
 }
 
-.btn-lg {
-	@include button-size($btn-lg-padding-vertical, $btn-lg-padding-horizontal, $btn-lg-font-size, $btn-line-height, $btn-lg-border-radius);
-
-	@media screen and (min-width: $grid-float-breakpoint) {
-		@include button-size($btn-desktop-lg-padding-vertical, $btn-desktop-lg-padding-horizontal, $btn-desktop-lg-font-size, $btn-line-height, $btn-lg-border-radius);
-	}
+.btn-primary {
+	@include color-btn($btn-primary-border);
+	@include color-btn-hover($btn-primary-hover-bg, $btn-primary-hover-border);
+	@include color-btn-active($btn-primary-active-bg, $btn-primary-active-border);
 }
 
-.btn-sm {
-	@include button-size($btn-sm-padding-vertical, $btn-sm-padding-horizontal, $btn-sm-font-size, $btn-line-height, $btn-sm-border-radius);
-
-	@media screen and (min-width: $grid-float-breakpoint) {
-		@include button-size($btn-desktop-sm-padding-vertical, $btn-desktop-sm-padding-horizontal, $btn-desktop-sm-font-size, $btn-line-height, $btn-sm-border-radius);
-	}
+.btn-secondary {
+	@include color-btn($btn-secondary-border);
+	@include color-btn-hover($btn-secondary-hover-bg, $btn-secondary-hover-border);
+	@include color-btn-active($btn-secondary-active-bg, $btn-secondary-active-border);
 }
 
-.btn-xs {
-	@include button-size($btn-xs-padding-vertical, $btn-xs-padding-horizontal, $btn-xs-font-size, $btn-line-height, $btn-xs-border-radius);
+.btn-success {
+	@include color-btn($btn-success-border);
+	@include color-btn-hover($btn-success-hover-bg, $btn-success-hover-border);
+	@include color-btn-active($btn-success-active-bg, $btn-success-active-border);
+}
 
-	@media screen and (min-width: $grid-float-breakpoint) {
-		@include button-size($btn-desktop-xs-padding-vertical, $btn-desktop-xs-padding-horizontal, $btn-desktop-xs-font-size, $btn-line-height, $btn-xs-border-radius);
-	}
+.btn-warning {
+	@include color-btn($btn-warning-border);
+	@include color-btn-hover($btn-warning-hover-bg, $btn-warning-hover-border);
+	@include color-btn-active($btn-warning-active-bg, $btn-warning-active-border);
 }
 
 // Action Buttons
@@ -99,7 +72,7 @@ a.btn-action,
 	[class*="icon-"] {
 		line-height: 52px - ($btn-border-width * 2);
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			line-height: 64px - ($btn-border-width * 2);
 		}
 	}
@@ -114,8 +87,7 @@ a.btn-action,
 	padding: 0;
 	width: 52px;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
-		font-size: $btn-desktop-font-size;
+	@include media-breakpoint-up(md) {
 		height: 64px;
 		line-height: 24px;
 		width: 64px;
@@ -127,7 +99,7 @@ a.btn-action,
 	text-align: right;
 	width: 52px;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		height: 64px;
 		width: 64px;
 	}
@@ -145,7 +117,7 @@ a.btn-action,
 		&:after {
 			left: 18px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				left: 24px;
 			}
 		}
@@ -153,7 +125,7 @@ a.btn-action,
 		&:before {
 			left: 17px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				left: 23px;
 			}
 		}
@@ -165,7 +137,7 @@ a.btn-action,
 		&:after {
 			right: 18px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				right: 24px;
 			}
 		}
@@ -173,7 +145,7 @@ a.btn-action,
 		&:before {
 			right: 17px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				right: 23px;
 			}
 		}
@@ -184,7 +156,7 @@ a.btn-action,
 		&:after {
 			top: 18px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				top: 24px;
 			}
 		}
@@ -192,7 +164,7 @@ a.btn-action,
 		&:before {
 			top: 17px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				top: 23px;
 			}
 		}
@@ -204,7 +176,7 @@ a.btn-action,
 			bottom: 18px;
 			top: auto;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				bottom: 24px;
 				top: auto;
 			}
@@ -214,7 +186,7 @@ a.btn-action,
 			bottom: 17px;
 			top: auto;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				bottom: 23px;
 				top: auto;
 			}
