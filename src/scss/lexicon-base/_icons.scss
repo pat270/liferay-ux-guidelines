@@ -1,7 +1,3 @@
-@function calcLexiconIconPadding($monospaced-size, $icon-size) {
-	@return floor(($monospaced-size - $icon-size) / 2);
-}
-
 .lexicon-icon {
 	display: inline-block;
 	fill: currentColor;
@@ -48,14 +44,14 @@ a.collapse-icon {
 		right: 15px;
 		top: 10px;
 
-		[class^="icon-"],
-		[class*=" icon-"] {
-			margin-top: calc(((1em * #{$line-height-base}) - 1em) / 2);
-		}
+		// [class^="icon-"],
+		// [class*=" icon-"] {
+		// 	margin-top: calc(((1em * #{$line-height-base}) - 1em) / 2);
+		// }
 
-		.lexicon-icon {
-			margin-top: calc(((1em * #{$line-height-base}) - #{$lexicon-icon-size}) / 2);
-		}
+		// .lexicon-icon {
+		// 	margin-top: calc(((1em * #{$line-height-base}) - #{$lexicon-icon-size}) / 2);
+		// }
 	}
 
 	.collapse-icon-closed {

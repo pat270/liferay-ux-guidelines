@@ -1,3 +1,7 @@
+@function calcLexiconIconPadding($monospaced-size, $icon-size) {
+	@return ($monospaced-size - $icon-size) / 2;
+}
+
 @mixin monospace($size) {
 	height: $size;
 	line-height: $size;
