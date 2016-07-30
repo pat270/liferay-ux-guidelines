@@ -2,7 +2,7 @@
 	background-color: $modal-body-bg;
 	color: $modal-body-color;
 
-	@media screen and (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(xs) {
 		bottom: $modal-footer-height;
 		left: 0;
 		overflow: auto;
@@ -39,7 +39,7 @@
 .modal-content {
 	overflow: auto;
 
-	@media screen and (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(xs) {
 		border-radius: 0;
 		border-width: 0;
 		box-shadow: none;
@@ -48,7 +48,7 @@
 }
 
 .modal-dialog {
-	@media screen and (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(xs) {
 		bottom: 0;
 		left: 0;
 		margin: 0;
@@ -66,7 +66,7 @@
 	clear: both;
 	text-align: left;
 
-	@media screen and (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(xs) {
 		bottom: 0;
 		position: absolute;
 		left: 0;
@@ -84,7 +84,7 @@
 	display: block;
 	text-align: center;
 
-	@include text-overflow;
+	@include text-truncate;
 }
 
 // Modal Buttons
@@ -98,7 +98,7 @@
 		color: #000;
 		cursor: pointer;
 
-		@include opacity(0.2);
+		opacity: 0.2;
 
 		padding: 0;
 
@@ -108,7 +108,7 @@
 			border-width: 0;
 			color: #000;
 
-			@include opacity(0.5);
+			opacity: 0.5;
 		}
 	}
 
@@ -116,7 +116,7 @@
 		float: left;
 		margin-right: 10px;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			float: right;
 			margin-right: 0;
 		}
@@ -154,7 +154,7 @@
 	top: 0;
 	width: auto;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		bottom: 45px;
 		left: 45px;
 		right: 45px;
@@ -169,7 +169,7 @@
 		right: 0;
 		top: $modal-header-height;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			bottom: $modal-desktop-footer-height;
 			top: $modal-desktop-header-height;
 		}
@@ -200,7 +200,7 @@
 		border-width: 0;
 		height: 100%;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			border-radius: 6px;
 			border-width: 1px;
 		}
@@ -213,7 +213,7 @@
 		right: 0;
 		top: auto;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			padding: $modal-inner-padding;
 		}
 	}
@@ -229,11 +229,11 @@
 	.close {
 		text-shadow: 0 1px 0 $modal-inverse-header-border-color;
 
-		@include opacity(0.5);
+		opacity: 0.5;
 
 		&:focus,
 		&:hover {
-			@include opacity(1);
+			opacity: 1;
 		}
 	}
 
