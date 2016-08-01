@@ -1,8 +1,17 @@
+.dropdown {
+	> a.btn.btn-lg.dropdown-toggle,
+	> a.btn.btn-sm.dropdown-toggle,
+	> a.btn.dropdown-toggle {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
 .dropdown-menu {
 	max-height: 295px;
 	overflow: auto;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		max-height: 320px;
 	}
 }
@@ -61,6 +70,10 @@
 }
 
 .dropdown-toggle {
+	&:after {
+		content: none;
+	}
+
 	&:focus {
 		@include tab-focus;
 	}
@@ -240,7 +253,7 @@
 
 	.link-list-heading {
 		display: block;
-		font-size: $font-size-small;
+		font-size: $font-size-sm;
 		line-height: $line-height-base;
 		padding: 3px 20px;
 		white-space: nowrap;
@@ -253,7 +266,7 @@
 		padding: 5px 0;
 		width: 100%;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			max-height: none;
 			padding: 20px 0;
 			width: 100%;
@@ -262,7 +275,7 @@
 		[class*="col-sm"],
 		[class*="col-md"],
 		[class*="col-lg"] {
-			@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
+			@include media-breakpoint-down(md) { // max-width: 767px
 				padding: 0;
 			}
 		}
@@ -285,11 +298,18 @@
 
 .dropdown-wide {
 	.dropdown-menu {
-		@media screen and (min-width: $screen-md-min) { // min-width 992px
+		@include media-breakpoint-up(lg) { // min-width 992px
 			min-width: $dropdown-wide-width;
 		}
 
-		@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { // between 768px and 991px
+		@include media-breakpoint-up(md) { // between 768px and 991px
+			&:after,
+			&:before {
+				border-bottom-width: 0;
+			}
+		}
+
+		@include media-breakpoint-down(xl) {
 			&:after,
 			&:before {
 				border-bottom-width: 0;
@@ -300,7 +320,7 @@
 
 .dropdown-wide,
 .nav > li.dropdown-wide {
-	@media screen and (min-width: $screen-md-min) {
+	@include media-breakpoint-up(lg) {
 		position: relative;
 	}
 }
@@ -318,8 +338,8 @@
 		> .dropdown-menu-top,
 		> .dropdown-menu-top-center,
 		> .dropdown-menu-top-right {
-			border-top-left-radius: $border-radius-base;
-			border-top-right-radius: $border-radius-base;
+			border-top-left-radius: $border-radius;
+			border-top-right-radius: $border-radius;
 		}
 	}
 
@@ -327,7 +347,7 @@
 	.dropdown-menu-left-side-middle,
 	.dropdown-menu-right-side-middle,
 	.dropdown-menu-top-center {
-		@media screen and (max-width: $grid-float-breakpoint-max) {
+		@include media-breakpoint-down(md) {
 			@include transform(none);
 		}
 	}

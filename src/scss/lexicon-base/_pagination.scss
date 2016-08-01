@@ -1,3 +1,7 @@
+a.page-link:hover, a.page-link:focus {
+	text-decoration: none;
+}
+
 .pagination-bar {
 	@include clearfix();
 
@@ -28,8 +32,8 @@
 
 	a {
 		display: block;
-		padding-bottom: $padding-base-vertical;
-		padding-top: $padding-base-vertical;
+		padding-bottom: $pagination-padding-y;
+		padding-top: $pagination-padding-y;
 
 		&:focus,
 		&:hover {
@@ -40,8 +44,8 @@
 
 .pagination-results {
 	float: right;
-	padding-bottom: $padding-base-vertical;
-	padding-top: $padding-base-vertical;
+	padding-bottom: $pagination-padding-y;
+	padding-top: $pagination-padding-y;
 }
 
 .pagination-lg {
@@ -49,14 +53,14 @@
 	&.pagination-results,
 	.pagination-items-per-page a,
 	.pagination-results {
-		font-size: $font-size-large;
-		padding-bottom: $padding-large-vertical;
-		padding-top: $padding-large-vertical;
+		font-size: $font-size-lg;
+		padding-bottom: $pagination-padding-y-lg;
+		padding-top: $pagination-padding-y-lg;
 	}
 
 	&.pagination,
 	.pagination {
-		@include pagination-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+		@include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
 	}
 }
 
@@ -65,18 +69,18 @@
 	&.pagination-results,
 	.pagination-items-per-page a,
 	.pagination-results {
-		font-size: $font-size-small;
-		padding-bottom: $padding-small-vertical;
-		padding-top: $padding-small-vertical;
+		font-size: $font-size-sm;
+		padding-bottom: $pagination-padding-y-sm;
+		padding-top: $pagination-padding-y-sm;
 	}
 
 	&.pagination,
 	.pagination {
-		@include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+		@include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
 	}
 }
 
-@media screen and (min-width: $grid-float-breakpoint) {
+@include media-breakpoint-up(md) {
 	.pagination-bar .pagination {
 		float: right;
 		margin: 0;
