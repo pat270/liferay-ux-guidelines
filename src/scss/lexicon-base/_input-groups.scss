@@ -21,7 +21,9 @@
 }
 
 .input-group-input {
-	display: table-cell;
+	@if not $enable-flex {
+		display: table-cell;
+	}
 
 	.form-control {
 		display: block;
@@ -36,47 +38,47 @@
 
 	@if $enable-flex {
 		display: flex;
-	} @else {
+	}
+	@else {
 		display: table;
 		border-collapse: separate;
 	}
 
 	.input-group-addon,
 	.input-group-btn {
-		@if not $enable-flex {
-			display: table-cell;
-			width: 1%;
+		@if $enable-flex {
+			@include align-self(center);
 		}
 	}
 
 	.input-group-addon {
 		background-color: transparent;
-		border-width: 0;
-		padding: 0 10px;
+		border-color: transparent;
+		padding: 0 $input-padding-x;
 
 		&:first-child .input-group-addon-content {
-			margin-left: -10px;
+			margin-left: -$input-padding-x;
 		}
 
 		&:last-child .input-group-addon-content {
-			margin-right: -10px;
+			margin-right: -$input-padding-x;
 		}
 	}
 
 	.help-icon {
-		@include monospace(28px);
+		@include monospace(1.75rem);
 	}
 }
 
 .input-sm {
 	.help-icon {
-		@include monospace(20px);
+		@include monospace(1.5625rem);
 	}
 }
 
 .input-lg {
 	.help-icon {
-		@include monospace(35px);
+		@include monospace(2.1875rem);
 	}
 }
 
