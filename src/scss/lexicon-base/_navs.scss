@@ -4,7 +4,7 @@
 }
 
 .nav-heading {
-	color: $text-color;
+	color: $body-color;
 	display: block;
 }
 
@@ -120,29 +120,29 @@
 		&,
 		&:hover,
 		&:focus {
-			background-color: $nav-pills-active-link-hover-bg;
-			color: $nav-pills-active-link-hover-color;
+			background-color: $nav-pills-active-link-bg;
+			color: $nav-pills-active-link-color;
 		}
 	}
 }
 
 .nav-circle {
-	> li > a,
-	.nav > li > a {
+	> li.nav-item > a.nav-link,
+	.nav > li.nav-item > a.nav-link {
 		border-radius: 100px;
 	}
 }
 
 .nav-rounded {
-	> li > a,
-	.nav > li > a {
+	> li.nav-item > a.nav-link,
+	.nav > li.nav-item > a.nav-link {
 		border-radius: 5px;
 	}
 }
 
 .nav-square {
-	> li > a,
-	.nav > li > a {
+	> li.nav-item > a.nav-link,
+	.nav > li.nav-item > a.nav-link {
 		border-radius: 0;
 	}
 }
