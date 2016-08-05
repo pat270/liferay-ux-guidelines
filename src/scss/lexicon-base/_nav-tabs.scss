@@ -34,7 +34,7 @@
 	}
 }
 
-@media screen and (max-width: $grid-float-breakpoint-max) {
+@include media-breakpoint-down(md) {
 	.nav-tabs-scrollbar {
 		$anim-key-frames: dropHeader 0.5s $ease-out-quint, removeBorder 0.75s $ease-out-quint;
 		$anim-delay: 0s, 0.45s;
@@ -59,7 +59,7 @@
 
 			white-space: nowrap;
 
-			> li {
+			> .nav-item {
 				@include prefixer(animation, fadeIn 0.5s ease-in, moz o webkit spec);
 				@include prefixer(animation-fill-mode, both, moz o webkit spec);
 				@include prefixer(animation-delay, 0.5s, moz o webkit spec);
@@ -82,7 +82,7 @@
 		&.open {
 			display: block;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				display: none;
 			}
 		}
@@ -91,7 +91,7 @@
 	.open > .dropdown-menu {
 		display: none;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			display: block;
 		}
 	}
@@ -101,14 +101,14 @@
 	.nav {
 		float: left;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			float: none;
 		}
 	}
 }
 
 .nav-tabs {
-	> li {
+	> .nav-item {
 		&[class*='col-'] {
 			padding-left: 0;
 			padding-right: 0;
@@ -124,11 +124,11 @@
 				float: right;
 			}
 
-			> a {
+			> .nav-link {
 				margin-left: 2px;
 				margin-right: 0;
 
-				@include text-overflow();
+				@include text-truncate();
 			}
 
 			> .dropdown-menu {
@@ -136,14 +136,14 @@
 			}
 		}
 
-		&:first-child > a {
+		&:first-child > .nav-link {
 			margin-left: 0;
 		}
 	}
 }
 
-.nav-tabs.nav-justified {
-	> li > a {
+.nav-tabs .nav-item {
+	+ .nav-item[class*='col-'] {
 		margin-left: 0;
 	}
 }
@@ -153,11 +153,11 @@
 .nav-tabs-default {
 	border-bottom-color: transparent;
 
-	> li:first-child {
+	> .nav-item:first-child {
 		&,
 		&.open,
 		&.active {
-			> a {
+			> .nav-link {
 				&,
 				&:focus,
 				&:hover {
@@ -167,7 +167,7 @@
 		}
 	}
 
-	> li > a {
+	> .nav-item > .nav-link {
 		border-left-color: $nav-tabs-border-color;
 		border-radius: 0;
 		border-width: 0 0 0 1px;
@@ -178,7 +178,7 @@
 		}
 	}
 
-	> li.active > a {
+	> .nav-item.active > .nav-link {
 		&,
 		&:focus,
 		&:hover {
@@ -187,7 +187,7 @@
 		}
 	}
 
-	.open > a {
+	.open > .nav-link {
 		&,
 		&:focus,
 		&:hover {
@@ -196,14 +196,14 @@
 	}
 }
 
-@media screen and (max-width: $grid-float-breakpoint-max) {
+@include media-breakpoint-down(md) {
 	.nav-tabs-scroll .nav-tabs-default {
-		> li {
-			&:first-child > a {
+		> .nav-item {
+			&:first-child > .nav-link {
 				margin-left: 0;
 			}
 
-			> a {
+			> .nav-link {
 				margin-left: -4px;
 			}
 		}
