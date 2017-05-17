@@ -3,29 +3,23 @@
 $popover-arrow-width: 8px !default;
 $popover-max-width: 276px !default;
 
-$popover-padding: 0 !default;
+$popover-inner-padding: 0 !default;
 
 $popover-title-font-size: 16px !default;
-$popover-title-margin: 0 16px !default;
-$popover-title-padding: 16px 0 !default;
+$popover-title-margin-x: 16px !default;
+$popover-title-margin-y: 0 !default;
+$popover-title-padding-x: 0 !default;
+$popover-title-padding-y: 16px !default;
 
-$popover-content-padding: 16px !default;
+$popover-content-padding-x: 16px !default;
+$popover-content-padding-y: 16px !default;
 
 // Skin
 
 $popover-border-color: #AEB7BD !default;
-$popover-fallback-border-color: #AEB7BD !default;
 $popover-border-radius: $border-radius !default; // 4px
-
-$popover-box-shadow-x: 0 !default; // 0
-$popover-box-shadow-y: 0 !default; // 0
-
-$popover-box-shadow-blur: 3px !default; // 3px
-$popover-box-shadow-spread: 1px !default; // 1px
-
-$popover-box-shadow-bg: rgba(0, 0, 0, 0.2) !default; // rgba(0, 0, 0, 0.2)
-
-$popover-box-shadow: $popover-box-shadow-x $popover-box-shadow-y $popover-box-shadow-blur $popover-box-shadow-spread $popover-box-shadow-bg !default;
+$popover-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
 
 $popover-title-bg: #FFF !default;
+$popover-title-border-color: $popover-border-color !default;
 $popover-title-color: $body-color !default;
