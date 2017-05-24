@@ -55,23 +55,11 @@
 		.divider {
 			background-color: $multi-step-progress-bar-complete-color;
 			color: $multi-step-progress-bar-complete-icon-color;
-
-			@if (variable-exists(atlas-theme)) {
-				margin-left: 18px;
-			}
-			@else {
-				margin-left: 15px;
-			}
+			margin-left: $multi-step-progress-bar-complete-margin-left;
 
 			&:after {
 				content: $multi-step-progress-bar-complete-icon;
-
-				@if (variable-exists(atlas-theme)) {
-					left: -16px;
-				}
-				@else {
-					left: -14px;
-				}
+				left: $multi-step-progress-bar-complete-icon-position-left;
 			}
 		}
 	}
@@ -80,13 +68,7 @@
 		background-color: $multi-step-progress-bar-color;
 		color: $multi-step-progress-bar-color;
 		height: $multi-step-progress-bar-divider-height;
-
-		@if (variable-exists(atlas-theme)) {
-			margin: 20px 0 20px 12px;
-		}
-		@else {
-			margin: 10px 0 10px 12px;
-		}
+		margin: $multi-step-progress-bar-divider-margin-top $multi-step-progress-bar-divider-margin-right $multi-step-progress-bar-divider-margin-bottom $multi-step-progress-bar-divider-margin-left;
 
 		position: relative;
 
@@ -105,10 +87,7 @@
 
 	.progress-bar-step,
 	.progress-bar-title {
-		@if (variable-exists(atlas-theme)) {
-			font-weight: 500;
-		}
-
+		font-weight: $progress-bar-title-font-weight;
 		margin-right: 10px;
 	}
 }
