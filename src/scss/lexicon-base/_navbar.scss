@@ -32,58 +32,6 @@
 // 	}
 // }
 
-.navbar-nav {
-	flex-direction: row;
-
-	.nav-link {
-		padding: $navbar-link-padding-y $navbar-link-padding-x;
-	}
-}
-
-.navbar-toggler {
-	height: $navbar-toggler-height;
-	margin-bottom: $navbar-toggler-margin-y;
-	margin-left: $navbar-toggler-margin-x;
-	margin-right: $navbar-toggler-margin-x;
-	margin-top: $navbar-toggler-margin-y;
-}
-
-.navbar-toggler-page-name {
-	border-width: 0;
-	height: ($navbar-height - ($navbar-padding-y * 2) - $navbar-border-bottom-width - $navbar-border-top-width);
-	font-size: $navbar-toggler-page-name-font-size;
-	margin-bottom: $navbar-toggler-page-name-margin-y;
-	margin-left: $navbar-toggler-page-name-margin-x;
-	margin-right: $navbar-toggler-page-name-margin-x;
-	margin-top: $navbar-toggler-page-name-margin-y;
-	padding-bottom: $navbar-toggler-page-name-padding-y;
-	padding-left: $navbar-toggler-page-name-padding-x;
-	padding-right: $navbar-toggler-page-name-padding-x;
-	padding-top: $navbar-toggler-page-name-padding-y;
-	position: relative;
-	z-index: 1;
-
-	@include hover-focus {
-		outline: 0;
-	}
-
-	&:after {
-		background-color: $navbar-active-highlight;
-		bottom: -$navbar-border-bottom-width - $navbar-padding-y;
-
-		@if not ($navbar-active-highlight == transparent) {
-			content: '';
-		}
-
-		display: block;
-		height: $navbar-active-border-bottom-width;
-		left: $navbar-toggler-page-name-padding-x;
-		position: absolute;
-		right: $navbar-toggler-page-name-padding-x;
-		width: auto;
-	}
-}
-
 // Basic Search
 
 .basic-search {
@@ -354,10 +302,93 @@
 	border-width: $navbar-border-width;
 }
 
+.navbar-nav {
+	flex-direction: row;
+
+	.nav-link {
+		padding: $navbar-link-padding-y $navbar-link-padding-x;
+	}
+}
+
+// Navbar Toggler
+
+.navbar-toggler {
+	height: $navbar-toggler-height;
+	margin-bottom: $navbar-toggler-margin-y;
+	margin-left: $navbar-toggler-margin-x;
+	margin-right: $navbar-toggler-margin-x;
+	margin-top: $navbar-toggler-margin-y;
+}
+
+.navbar-toggler-link {
+	align-items: center;
+	display: flex;
+	border-width: 0;
+	height: $navbar-toggler-link-height;
+	font-size: $navbar-toggler-link-font-size;
+	line-height: $navbar-toggler-link-line-height;
+	padding-bottom: $navbar-toggler-link-padding-y;
+	padding-left: $navbar-toggler-link-padding-x;
+	padding-right: $navbar-toggler-link-padding-x;
+	padding-top: $navbar-toggler-link-padding-y;
+	position: relative;
+	z-index: 1;
+
+	&:after {
+		background-color: $navbar-active-highlight;
+		bottom: -$navbar-border-bottom-width - $navbar-padding-y;
+
+		@if not ($navbar-active-highlight == transparent) {
+			content: '';
+		}
+
+		display: block;
+		height: $navbar-active-border-bottom-width;
+		left: $navbar-toggler-link-padding-x;
+		position: absolute;
+		right: $navbar-toggler-link-padding-x;
+		width: auto;
+	}
+
+	.lexicon-icon {
+		margin-right: 3px;
+		margin-top: 0;
+	}
+}
+
+.nav-item .navbar-toggler-link {
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: $navbar-link-padding-x;
+	padding-right: $navbar-link-padding-x;
+
+	&:after {
+		left: $navbar-link-padding-x;
+		right: $navbar-link-padding-x;
+	}
+}
+
+.navbar-toggler-text {
+	display: inline-block;
+	max-width: $navbar-toggler-text-max-width;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	+ .lexicon-icon {
+		margin-left: 5px;
+		margin-right: -5px;
+	}
+}
+
+// Navbar Brand
+
 .navbar-brand {
 	padding-left: $navbar-brand-padding-x;
 	padding-right: $navbar-brand-padding-x;
 }
+
+// Navbar Form
 
 .navbar-form {
 	align-items: center;
@@ -459,138 +490,37 @@
 }
 
 // Navbar Expand
-// TODO: Move stuff to placeholder/mixin? duplicates .navbar-expand below.
 
 .navbar-expand {
 	flex-wrap: wrap;
 	justify-content: space-between;
 
-	.navbar-form {
-		padding-left: $navbar-link-padding-x;
-		padding-right: $navbar-link-padding-x;
-	}
+	@include media-breakpoint-up(md) {
+		.navbar-d-breakpoint-block {
+			display: block !important;
+		}
 
-	.navbar-collapse {
-		flex-grow: 1;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
-	.nav-item {
-		align-items: center;
-		display: flex;
-	}
-
-	.navbar-nav .nav-btn {
-		margin-left: $navbar-link-padding-x;
-		margin-right: $navbar-link-padding-x;
-	}
-
-	.navbar-nav .nav-link {
-		&.active:after {
-			background-color: $navbar-active-highlight;
-			bottom: -$navbar-border-bottom-width - $navbar-padding-y;
-
-			@if not ($navbar-active-highlight == transparent) {
-				content: '';
-			}
-
-			display: block;
-			height: $navbar-active-border-bottom-width;
-			left: $navbar-link-padding-x-desktop;
-			position: absolute;
-			right: $navbar-link-padding-x-desktop;
-			width: auto;
+		.navbar-d-breakpoint-none {
+			display: none !important;
 		}
 	}
 
-	&.navbar-inverse-bg .navbar-nav .nav-link.active:after {
-		background-color: $navbar-inverse-active-highlight;
-
-		@if not ($navbar-inverse-active-highlight == transparent) {
-			content: '';
-		}
-	}
-
-	&.navbar-light-bg .navbar-nav .nav-link.active:after {
-		background-color: $navbar-light-active-highlight;
-
-		@if not ($navbar-light-active-highlight == transparent) {
-			content: '';
-		}
-	}
-
-	@if ($enable-mobile-desktop-sizes) {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			.navbar-brand {
-				@if not ($navbar-brand-font-size-desktop == $navbar-brand-font-size) {
-					font-size: $navbar-brand-font-size-desktop;
-				}
-
-				@if not ($navbar-brand-padding-y-desktop == $navbar-brand-padding-y) {
-					padding-bottom: $navbar-brand-padding-y-desktop;
-					padding-top: $navbar-brand-padding-y-desktop;
-				}
-
-				@if not ($navbar-brand-padding-x-desktop == $navbar-brand-padding-x) {
-					padding-left: $navbar-brand-padding-x-desktop;
-					padding-right: $navbar-brand-padding-x-desktop;
-				}
-			}
-
-			.navbar-d-breakpoint-block {
-				display: block !important;
-			}
-
-			.navbar-d-breakpoint-none {
-				display: none !important;
-			}
-
-			.navbar-nav .nav-btn {
-				@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
-					margin-left: $navbar-link-padding-x-desktop;
-					margin-right: $navbar-link-padding-x-desktop;
-				}
-			}
-
-			.navbar-form,
-			.navbar-nav .nav-item > .form-check {
-				@if not ($navbar-link-padding-x-desktop == 0.5rem) {
-					padding-left: $navbar-link-padding-x-desktop;
-					padding-right: $navbar-link-padding-x-desktop;
-				}
-			}
-
-			.navbar-nav .nav-link,
-			.navbar-nav .navbar-text {
-				@if not ($navbar-link-padding-y-desktop == $nav-link-padding-y) {
-					padding-bottom: $navbar-link-padding-y-desktop;
-					padding-top: $navbar-link-padding-y-desktop;
-				}
-
-				@if not ($navbar-link-padding-x-desktop == 0.5rem) {
-					padding-left: $navbar-link-padding-x-desktop;
-					padding-right: $navbar-link-padding-x-desktop;
-				}
-			}
-		}
-	}
-}
-
-// TODO: Move stuff to placeholder/mixin? duplicates .navbar-expand above.
-
-.navbar-expand {
 	@each $breakpoint in map-keys($grid-breakpoints) {
 		$next: breakpoint-next($breakpoint, $grid-breakpoints);
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
-		@if not ($infix == '') {
-			&#{$infix} {
-				> .navbar-nav .nav-item {
-					align-items: center;
-					display: flex;
-				}
+		&#{$infix} {
+			.nav-item {
+				align-items: center;
+				display: flex;
+			}
 
+			.navbar-nav .nav-btn {
+				margin-left: $navbar-link-padding-x;
+				margin-right: $navbar-link-padding-x;
+			}
+
+			@if not ($infix == '') {
 				@include media-breakpoint-down($breakpoint) {
 					&.navbar-collapse-absolute {
 						.navbar-collapse {
@@ -598,12 +528,12 @@
 							border-color: transparent;
 							border-style: solid;
 							border-width: 0 $navbar-border-right-width $navbar-border-bottom-width $navbar-border-left-width;
-
-							@if (variable-exists(navbar-collapse-absolute-box-shadow)) {
-								box-shadow: $navbar-collapse-absolute-box-shadow;
-							}
-
+							box-shadow: $navbar-collapse-absolute-box-shadow;
 							left: -$navbar-border-left-width;
+
+							@if ($navbar-border-bottom-width > 0) {
+								margin-top: $navbar-border-bottom-width;
+							}
 
 							@if not ($navbar-padding-x == 0) {
 								padding-left: $navbar-padding-x;
@@ -627,17 +557,13 @@
 						}
 					}
 
-					.navbar-nav .dropdown-menu {
-						position: absolute;
-					}
-
 					.navbar-collapse {
-						.dropdown-menu {
-							position: static;
-						}
-
 						.navbar-nav {
 							flex-direction: column;
+						}
+
+						.nav-item {
+							display: block;
 						}
 
 						.nav-link {
@@ -648,13 +574,15 @@
 						}
 					}
 				}
+			}
 
-				@include media-breakpoint-up($next) {
-					.navbar-form {
-						padding-left: $navbar-link-padding-x;
-						padding-right: $navbar-link-padding-x;
-					}
+			@include media-breakpoint-up($next) {
+				.navbar-form {
+					padding-left: $navbar-link-padding-x;
+					padding-right: $navbar-link-padding-x;
+				}
 
+				@if not ($infix == '') {
 					.navbar-collapse {
 						flex-grow: 1;
 						flex-wrap: wrap;
@@ -672,95 +600,50 @@
 					.navbar-d-breakpoint-none {
 						display: none !important;
 					}
+				}
 
-					.nav-item {
-						align-items: center;
-						display: flex;
-					}
+				.navbar-nav .nav-link {
+					&.active:after { // same
+						background-color: $navbar-active-highlight;
+						bottom: -$navbar-border-bottom-width - $navbar-padding-y;
 
-					.navbar-nav .nav-btn {
-						margin-left: $navbar-link-padding-x;
-						margin-right: $navbar-link-padding-x;
-					}
-
-					.navbar-nav .nav-link {
-						&.active:after {
-							background-color: $navbar-active-highlight;
-							bottom: -$navbar-border-bottom-width - $navbar-padding-y;
-
-							@if not ($navbar-active-highlight == transparent) {
-								content: '';
-							}
-
-							display: block;
-							height: $navbar-active-border-bottom-width;
-							left: $navbar-link-padding-x-desktop;
-							position: absolute;
-							right: $navbar-link-padding-x-desktop;
-							width: auto;
-						}
-					}
-
-					&.navbar-inverse-bg .navbar-nav .nav-link.active:after {
-						background-color: $navbar-inverse-active-highlight;
-
-						@if not ($navbar-inverse-active-highlight == transparent) {
+						@if not ($navbar-active-highlight == transparent) {
 							content: '';
 						}
+
+						display: block;
+						height: $navbar-active-border-bottom-width;
+						left: $navbar-link-padding-x-desktop;
+						position: absolute;
+						right: $navbar-link-padding-x-desktop;
+						width: auto;
 					}
+				}
 
-					&.navbar-light-bg .navbar-nav .nav-link.active:after {
-						background-color: $navbar-light-active-highlight;
+				&.navbar-inverse-bg .navbar-nav .nav-link.active:after {
+					background-color: $navbar-inverse-active-highlight;
 
-						@if not ($navbar-light-active-highlight == transparent) {
-							content: '';
+					@if not ($navbar-inverse-active-highlight == transparent) {
+						content: '';
+					}
+				}
+
+				&.navbar-light-bg .navbar-nav .nav-link.active:after {
+					background-color: $navbar-light-active-highlight;
+
+					@if not ($navbar-light-active-highlight == transparent) {
+						content: '';
+					}
+				}
+
+				@if ($enable-mobile-desktop-sizes) {
+					@if ($infix == '') {
+						@include media-breakpoint-up($mobile-desktop-breakpoint) {
+							@include navbar-expand-desktop;
 						}
 					}
-
-					@if ($enable-mobile-desktop-sizes) {
-						.navbar-brand {
-							@if not ($navbar-brand-font-size-desktop == $navbar-brand-font-size) {
-								font-size: $navbar-brand-font-size-desktop;
-							}
-
-							@if not ($navbar-brand-padding-y-desktop == $navbar-brand-padding-y) {
-								padding-bottom: $navbar-brand-padding-y-desktop;
-								padding-top: $navbar-brand-padding-y-desktop;
-							}
-
-							@if not ($navbar-brand-padding-x-desktop == $navbar-brand-padding-x) {
-								padding-left: $navbar-brand-padding-x-desktop;
-								padding-right: $navbar-brand-padding-x-desktop;
-							}
-						}
-
-						.navbar-nav .nav-btn {
-							@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
-								margin-left: $navbar-link-padding-x-desktop;
-								margin-right: $navbar-link-padding-x-desktop;
-							}
-						}
-
-						.navbar-form,
-						.navbar-nav .nav-item > .form-check {
-							@if not ($navbar-link-padding-x-desktop == 0.5rem) {
-								padding-left: $navbar-link-padding-x-desktop;
-								padding-right: $navbar-link-padding-x-desktop;
-							}
-						}
-
-						.navbar-nav .nav-link,
-						.navbar-nav .navbar-text {
-							@if not ($navbar-link-padding-y-desktop == $nav-link-padding-y) {
-								padding-bottom: $navbar-link-padding-y-desktop;
-								padding-top: $navbar-link-padding-y-desktop;
-							}
-
-							@if not ($navbar-link-padding-x-desktop == 0.5rem) {
-								padding-left: $navbar-link-padding-x-desktop;
-								padding-right: $navbar-link-padding-x-desktop;
-							}
-						}
+					@else {
+						@include navbar-expand-desktop;
 					}
 				}
 			}
@@ -809,7 +692,7 @@
 		}
 	}
 
-	.navbar-toggler-page-name {
+	.navbar-toggler-link {
 		&[aria-expanded="true"] {
 			color: $navbar-light-active-color;
 		}
@@ -857,6 +740,14 @@
 	.navbar-overlay {
 		background-color: $navbar-light-bg;
 	}
+
+	.navbar-toggler-link:after {
+		background-color: $navbar-light-active-highlight;
+
+		@if not ($navbar-light-active-highlight == transparent) {
+			content: '';
+		}
+	}
 }
 
 .navbar-inverse {
@@ -898,7 +789,7 @@
 		}
 	}
 
-	.navbar-toggler-page-name {
+	.navbar-toggler-link {
 		&[aria-expanded="true"] {
 			color: $navbar-inverse-active-color;
 		}
@@ -945,5 +836,13 @@
 
 	.navbar-overlay {
 		background-color: $navbar-inverse-bg;
+	}
+
+	.navbar-toggler-link:after {
+		background-color: $navbar-inverse-active-highlight;
+
+		@if not ($navbar-inverse-active-highlight == transparent) {
+			content: '';
+		}
 	}
 }

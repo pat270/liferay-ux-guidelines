@@ -5,14 +5,9 @@ $modal-inner-padding-y: 16px !default;
 
 $modal-inner-padding: $modal-inner-padding-y $modal-inner-padding-x !default;
 
-$modal-title-line-height: 36px !default;
-$modal-title-padding: 12px !default;
-
-$modal-footer-height: 72px !default;
-$modal-footer-height-desktop: $modal-footer-height !default;
-
-$modal-header-height: 61px !default;
-$modal-header-height-desktop: $modal-header-height !default;
+$modal-title-font-size: 19px !default;
+$modal-title-font-weight: normal !default;
+$modal-title-text-align: center !default;
 
 // Skin
 
@@ -23,11 +18,11 @@ $modal-content-sm-up-box-shadow: null !default;
 
 $modal-content-border-color: transparent !default;
 
-$modal-header-bg: #29353D !default;
+$modal-header-bg: #FCFEFF !default;
 $modal-header-border-color: #E4E6E8 !default;
-$modal-header-color: #FFF !default;
+$modal-header-color: $body-color !default;
 
-$modal-header-close-color: #FFF !default;
+$modal-header-close-color: $brand-secondary !default;
 $modal-header-close-icon-opacity: 1 !default;
 $modal-header-close-lexicon-icon-opacity: 1 !default;
 $modal-header-close-opacity-modifier: 1 !default;
@@ -39,13 +34,6 @@ $modal-footer-bg: $modal-header-bg !default;
 $modal-footer-border-color: transparent !default;
 $modal-footer-box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.15) !default;
 $modal-footer-color: $modal-header-color !default;
-
-$modal-header-bg-desktop: #FCFEFF !default;
-$modal-header-close-color-desktop: $brand-secondary !default;
-$modal-header-color-desktop: $body-color !default;
-
-$modal-footer-bg-desktop: $modal-header-bg-desktop !default;
-$modal-footer-color-desktop: $modal-header-color-desktop !default;
 
 // Modal Inverse
 
@@ -66,11 +54,22 @@ $modal-inverse-footer-color: $modal-inverse-header-color !default;
 $modal-inverse-link-color: $brand-primary !default;
 $modal-inverse-link-hover-color: $modal-inverse-link-color !default;
 
-$modal-inverse-header-bg-desktop: #FCFEFF !default;
-$modal-inverse-header-border-color-desktop: $modal-header-border-color !default;
-$modal-inverse-header-close-color-desktop: $modal-header-close-color-desktop !default;
-$modal-inverse-header-color-desktop: $body-color !default;
+// Modal Full Screen
 
-$modal-inverse-footer-bg-desktop: $modal-inverse-header-bg-desktop !default;
-$modal-inverse-footer-border-color-desktop: $modal-inverse-header-border-color-desktop !default;
-$modal-inverse-footer-color-desktop: $modal-inverse-header-color-desktop !default;
+$modal-full-screen-header-bg: #29353D !default;
+$modal-full-screen-header-border-color: #1C252C !default;
+$modal-full-screen-header-color: #FFF !default;
+$modal-full-screen-header-close-color: #FFF !default;
+
+$modal-full-screen-footer-bg: $modal-full-screen-header-bg !default;
+$modal-full-screen-footer-border-color: $modal-full-screen-header-border-color !default;
+$modal-full-screen-footer-color: $modal-full-screen-header-color !default;
+
+$modal-full-screen-header-bg-desktop: #FCFEFF !default;
+$modal-full-screen-header-border-color-desktop: #E4E6E8 !default;
+$modal-full-screen-header-color-desktop: $body-color !default;
+$modal-full-screen-header-close-color-desktop: $brand-secondary !default;
+
+$modal-full-screen-footer-bg-desktop: $modal-full-screen-header-bg-desktop !default
+$modal-full-screen-footer-border-color-desktop: $modal-full-screen-header-border-color-desktop !default;
+$modal-full-screen-footer-color-desktop: $modal-full-screen-header-color-desktop !default;

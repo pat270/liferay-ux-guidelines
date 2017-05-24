@@ -1,29 +1,40 @@
 .dropdown-header {
 	font-size: $dropdown-header-font-size;
+	overflow: hidden;
 
-	@if ($dropdown-item-padding-y != 3px) {
-		padding-bottom: $dropdown-item-padding-y;
-		padding-top: $dropdown-item-padding-y;
-	}
-
-	@if (variable-exists(atlas-theme)) {
-		overflow: hidden;
-
-		@include media-breakpoint-up(md) { // min-width: 768px
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
 			font-size: $dropdown-header-font-size-desktop;
 		}
 	}
 }
 
+.dropdown-header,
 .dropdown-item {
+	@if ($dropdown-item-padding-y != 3px) {
+		padding-bottom: $dropdown-item-padding-y;
+		padding-top: $dropdown-item-padding-y;
+	}
+}
+
+.dropdown-item {
+	overflow: hidden;
 	white-space: normal;
 	word-wrap: break-word;
 
 	&.active {
 		label,
-		.form-control-label,
-		.form-check-label {
+		.form-check-label,
+		.form-control-label {
 			color: $dropdown-link-active-color;
+		}
+	}
+
+	&.disabled {
+		label,
+		.form-check-label,
+		.form-control-label {
+			color: $dropdown-link-disabled-color;
 		}
 	}
 
@@ -49,23 +60,11 @@
 	padding-right: $dropdown-padding-right;
 	padding-top: $dropdown-padding-top;
 
-	@include media-breakpoint-up(md) {
-		max-height: $dropdown-max-height-desktop;
-
-		@if (variable-exists(atlas-theme)) {
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
 			font-size: $dropdown-font-size-desktop;
+			max-height: $dropdown-max-height-desktop;
 			max-width: $dropdown-max-width-desktop;
-		}
-	}
-
-	> li > a {
-		@if ($dropdown-item-padding-y != 3px) {
-			padding-bottom: $dropdown-item-padding-y;
-			padding-top: $dropdown-item-padding-y;
-		}
-
-		@if (variable-exists(atlas-theme)) {
-			overflow: hidden;
 		}
 	}
 }
@@ -81,7 +80,7 @@
 // Dropdown inline-scroller
 
 .inline-scroller {
-	height: 125px;
+	height: $dropdown-inline-scroller-height;
 	list-style: none;
 	margin: 0;
 	overflow: auto;
@@ -89,31 +88,6 @@
 	-webkit-overflow-scrolling: touch;
 
 	padding: 0;
-}
-
-.dropdown-menu {
-	.inline-scroller {
-		> .active > a {
-			&,
-			&:focus,
-			&:hover {
-				background-color: $dropdown-link-active-bg;
-				color: $dropdown-link-active-color;
-			}
-		}
-
-		> .disabled > a {
-			&,
-			&:hover,
-			&:focus {
-				background-color: transparent;
-				background-image: none;
-				color: $dropdown-link-disabled-color;
-				cursor: not-allowed;
-				text-decoration: none;
-			}
-		}
-	}
 }
 
 // Dropdown menu positions
