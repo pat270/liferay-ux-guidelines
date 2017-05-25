@@ -10,23 +10,28 @@ $multi-step-progress-bar-complete-color: $gray !default;
 $multi-step-progress-bar-complete-icon-color: $brand-primary !default;
 
 $multi-step-progress-bar-divider-height: 1px !default;
+$multi-step-progress-bar-divider-margin-bottom: 10px !default;
+$multi-step-progress-bar-divider-margin-left: 12px !default;
+$multi-step-progress-bar-divider-margin-right: 0 !default;
+$multi-step-progress-bar-divider-margin-top: 10px !default;
+
+$multi-step-progress-bar-icon-position-left: -12px !default;
 
 $multi-step-progress-bar-fixed-width: 100px !default;
+
+$multi-step-progress-bar-complete-margin-left: 15px !default;
+$multi-step-progress-bar-complete-icon-position-left: -14px !default;
+
+$multi-step-progress-bar-collapse-padding-top: 20px !default;
 
 $progress-box-shadow: null !default;
 
 $progress-bar-box-shadow: null !default;
 $progress-bar-font-size: null !default;
-$progress-bar-height: null !default;
 
-$progress-bar-xs-border-radius: 2px !default;
-$progress-bar-xs-font-size: 8px !default;
-$progress-bar-xs-height: 8px !default;
+$progress-bar-title-font-weight: null !default;
+$progress-bar-title-margin-right: 10px !default;
 
 $progress-bar-lg-border-radius: $border-radius !default;
 $progress-bar-lg-font-size: 14px !default;
 $progress-bar-lg-height: 32px !default;
-
-$progress-bar-xl-border-radius: $border-radius-lg !default;
-$progress-bar-xl-font-size: 18px !default;
-$progress-bar-xl-height: 52px !default;

@@ -1,41 +1,20 @@
 .progress {
-	box-shadow: $progress-box-shadow;
-	height: $progress-bar-height;
+	@include box-shadow($progress-box-shadow);
 }
 
 .progress-bar {
-	box-shadow: $progress-bar-box-shadow;
+	@include box-shadow($progress-bar-box-shadow);
+
 	font-size: $progress-bar-font-size;
-	line-height: $progress-bar-height;
-}
-
-.progress-xs {
-	border-radius: $progress-bar-xs-border-radius;
-	height: $progress-bar-xs-height;
-
-	.progress-bar {
-		font-size: $progress-bar-xs-font-size;
-		line-height: $progress-bar-xs-height;
-	}
 }
 
 .progress-lg {
-	border-radius: $progress-bar-lg-border-radius;
-	height: $progress-bar-lg-height;
+	@include border-radius($progress-bar-lg-border-radius);
 
 	.progress-bar {
 		font-size: $progress-bar-lg-font-size;
+		height: $progress-bar-lg-height;
 		line-height: $progress-bar-lg-height;
-	}
-}
-
-.progress-xl {
-	border-radius: $progress-bar-xl-border-radius;
-	height: $progress-bar-xl-height;
-
-	.progress-bar {
-		font-size: $progress-bar-xl-font-size;
-		line-height: $progress-bar-xl-height;
 	}
 }
 
@@ -75,23 +54,11 @@
 		.divider {
 			background-color: $multi-step-progress-bar-complete-color;
 			color: $multi-step-progress-bar-complete-icon-color;
-
-			@if (variable-exists(atlas-theme)) {
-				margin-left: 18px;
-			}
-			@else {
-				margin-left: 15px;
-			}
+			margin-left: $multi-step-progress-bar-complete-margin-left;
 
 			&:after {
 				content: $multi-step-progress-bar-complete-icon;
-
-				@if (variable-exists(atlas-theme)) {
-					left: -16px;
-				}
-				@else {
-					left: -14px;
-				}
+				left: $multi-step-progress-bar-complete-icon-position-left;
 			}
 		}
 	}
@@ -100,13 +67,7 @@
 		background-color: $multi-step-progress-bar-color;
 		color: $multi-step-progress-bar-color;
 		height: $multi-step-progress-bar-divider-height;
-
-		@if (variable-exists(atlas-theme)) {
-			margin: 20px 0 20px 12px;
-		}
-		@else {
-			margin: 10px 0 10px 12px;
-		}
+		margin: $multi-step-progress-bar-divider-margin-top $multi-step-progress-bar-divider-margin-right $multi-step-progress-bar-divider-margin-bottom $multi-step-progress-bar-divider-margin-left;
 
 		position: relative;
 
@@ -114,7 +75,7 @@
 			content: $multi-step-progress-bar-icon;
 			display: block;
 			font-family: 'fontawesome-alloy';
-			left: -12px;
+			left: $multi-step-progress-bar-icon-position-left;
 			position: absolute;
 			top: 50%;
 
@@ -125,17 +86,14 @@
 
 	.progress-bar-step,
 	.progress-bar-title {
-		@if (variable-exists(atlas-theme)) {
-			font-weight: 500;
-		}
-
-		margin-right: 10px;
+		font-weight: $progress-bar-title-font-weight;
+		margin-right: $progress-bar-title-margin-right;
 	}
 }
 
 .multi-step-progress-bar-collapse {
 	@include media-breakpoint-down(sm) {
-		padding-top: 20px;
+		padding-top: $multi-step-progress-bar-collapse-padding-top;
 	}
 
 	> li {
