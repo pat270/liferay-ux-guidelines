@@ -76,7 +76,7 @@
 			content: $multi-step-progress-bar-icon;
 			display: block;
 			font-family: 'fontawesome-alloy';
-			left: -12px;
+			left: $multi-step-progress-bar-icon-position-left;
 			position: absolute;
 			top: 50%;
 
@@ -88,13 +88,13 @@
 	.progress-bar-step,
 	.progress-bar-title {
 		font-weight: $progress-bar-title-font-weight;
-		margin-right: 10px;
+		margin-right: $progress-bar-title-margin-right;
 	}
 }
 
 .multi-step-progress-bar-collapse {
 	@include media-breakpoint-down(sm) {
-		padding-top: 20px;
+		padding-top: $multi-step-progress-bar-collapse-padding-top;
 	}
 
 	> li {

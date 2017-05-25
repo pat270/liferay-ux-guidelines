@@ -15,10 +15,14 @@ $multi-step-progress-bar-divider-margin-left: 12px !default;
 $multi-step-progress-bar-divider-margin-right: 0 !default;
 $multi-step-progress-bar-divider-margin-top: 10px !default;
 
+$multi-step-progress-bar-icon-position-left: -12px !default;
+
 $multi-step-progress-bar-fixed-width: 100px !default;
 
 $multi-step-progress-bar-complete-margin-left: 15px !default;
 $multi-step-progress-bar-complete-icon-position-left: -14px !default;
+
+$multi-step-progress-bar-collapse-padding-top: 20px !default;
 
 $progress-box-shadow: null !default;
 
@@ -27,6 +31,7 @@ $progress-bar-font-size: null !default;
 $progress-bar-height: null !default;
 
 $progress-bar-title-font-weight: null !default;
+$progress-bar-title-margin-right: 10px !default;
 
 $progress-bar-lg-border-radius: $border-radius !default;
 $progress-bar-lg-font-size: 14px !default;
