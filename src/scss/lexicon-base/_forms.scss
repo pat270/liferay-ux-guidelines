@@ -80,6 +80,10 @@ label,
 		}
 	}
 
+	&::placeholder {
+		text-overflow: ellipsis;
+	}
+
 	@if (variable-exists(atlas-theme)) {
 		&::-ms-clear,
 		&::-ms-reveal {
