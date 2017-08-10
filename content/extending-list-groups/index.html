@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8" />
 	<title>Lexicon - Extending List Groups</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 	<link rel="stylesheet" href="../../css/main.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -25,33 +26,33 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -61,15 +62,19 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
@@ -79,13 +84,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+<li class=""><a class="nav-title" href="../../content/grid">Grid</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -95,11 +104,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-pills">Nav Pills</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -109,18 +124,24 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+<li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+<li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -130,37 +151,19 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -172,19 +175,9 @@
 </ul>
 </div>
 </li>
-<li class=""><span class="nav-title">Experimental</span>
-<div class="">
-<ul class="nav nav-stacked">
-<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
-</li>
-</ul>
-</div>
-</li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -198,7 +191,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -219,10 +212,10 @@
 		</h1>
 
 		
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 
-		<h3 id="collapsible-list-group"><a class="heading-anchor" href="#collapsible-list-group"><i class="icon icon-link"></i></a>Collapsible List Group</h3>
+		<h3 id="collapsible-list-group"><a class="heading-anchor" href="#collapsible-list-group"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Collapsible List Group</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Create collapsible list groups with <a href="/liferay-ux-guidelines/content/list-groups/#listGroups">List Group</a> and the Collapse module.</p>
@@ -280,45 +273,13 @@
 				<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
 			</div>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
-    &lt;a aria-expanded=&quot;false&quot; class=&quot;collapsed list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#listGroupCollapse4&quot;&gt;
-        List Group Heading
-        &lt;span class=&quot;list-group-collapse-icon&quot;&gt;&lt;/span&gt;
-    &lt;/a&gt;
-    &lt;div class=&quot;collapse&quot; id=&quot;listGroupCollapse4&quot;&gt;
-        &lt;div class=&quot;list-group-item&quot; style=&quot;padding: 24px 24px 30px&quot;&gt;Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;a aria-expanded=&quot;true&quot; class=&quot;list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#listGroupCollapse5&quot;&gt;
-        List Group Heading
-        &lt;span class=&quot;list-group-collapse-icon&quot;&gt;&lt;/span&gt;
-    &lt;/a&gt;
-    &lt;div class=&quot;collapse in&quot; id=&quot;listGroupCollapse5&quot;&gt;
-        &lt;div class=&quot;list-group-item&quot; style=&quot;padding: 24px 24px 30px&quot;&gt;Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;a aria-expanded=&quot;false&quot; class=&quot;collapsed list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#listGroupCollapse6&quot;&gt;
-        List Group Heading
-        &lt;span class=&quot;list-group-collapse-icon&quot;&gt;&lt;/span&gt;
-    &lt;/a&gt;
-    &lt;div class=&quot;collapse&quot; id=&quot;listGroupCollapse6&quot;&gt;
-        &lt;div class=&quot;list-group-item&quot;style=&quot;padding: 24px 24px 30px&quot;&gt;Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 
-		<h3 id="collapsible-linked-list-groups"><a class="heading-anchor" href="#collapsible-linked-list-groups"><i class="icon icon-link"></i></a>Collapsible Linked List Groups</h3>
+		<h3 id="collapsible-linked-list-groups"><a class="heading-anchor" href="#collapsible-linked-list-groups"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Collapsible Linked List Groups</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Create collapsible lists of links with <a href="/liferay-ux-guidelines/content/list-groups/#linkedListGroups">Linked List Group</a> and the Collapse module.</p>
@@ -373,44 +334,12 @@
 				<a href="#" class="list-group-item">List Item 4</a>
 			</div>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
-    &lt;a aria-expanded=&quot;false&quot; class=&quot;collapsed list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#listGroupCollapse1&quot;&gt;List Group Heading&lt;/a&gt;
-    &lt;div class=&quot;collapse&quot; id=&quot;listGroupCollapse1&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 1&lt;/a&gt;
-        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 2&lt;/a&gt;
-        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 3&lt;/a&gt;
-        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 4&lt;/a&gt;
-    &lt;/div&gt;
-
-    &lt;a aria-expanded=&quot;true&quot; class=&quot;list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#listGroupCollapse2&quot;&gt;List Group Heading&lt;/a&gt;
-    &lt;div class=&quot;collapse in&quot; id=&quot;listGroupCollapse2&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 1&lt;/a&gt;
-        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 2&lt;/a&gt;
-        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 3&lt;/a&gt;
-        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 4&lt;/a&gt;
-    &lt;/div&gt;
-
-    &lt;a aria-expanded=&quot;false&quot; class=&quot;collapsed list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#listGroupCollapse3&quot;&gt;List Group Heading&lt;/a&gt;
-    &lt;div class=&quot;collapse&quot; id=&quot;listGroupCollapse3&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 1&lt;/a&gt;
-        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 2&lt;/a&gt;
-        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 3&lt;/a&gt;
-        &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;List Item 4&lt;/a&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="collapsible-tabular-list-groups"><a class="heading-anchor" href="#collapsible-tabular-list-groups"><i class="icon icon-link"></i></a>Collapsible Tabular List Groups</h3>
+		<h3 id="collapsible-tabular-list-groups"><a class="heading-anchor" href="#collapsible-tabular-list-groups"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Collapsible Tabular List Groups</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Insert <a href="/liferay-ux-guidelines/content/list-groups/#tabularListGroups">Tabular List Groups</a> inside <code>.collapse</code> to create collapsible Tabular List Groups.</p>
@@ -441,9 +370,11 @@
 						</div>
 
 						<div class="list-group-item-field">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
+							<a href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
 						</div>
 					</li>
 
@@ -468,9 +399,11 @@
 						</div>
 
 						<div class="list-group-item-field">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
+							<a href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
 						</div>
 					</li>
 				</ul>
@@ -500,9 +433,11 @@
 						</div>
 
 						<div class="list-group-item-field">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
+							<a href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
 						</div>
 					</li>
 
@@ -527,9 +462,11 @@
 						</div>
 
 						<div class="list-group-item-field">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
+							<a href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
 						</div>
 					</li>
 				</ul>
@@ -556,9 +493,11 @@
 						</div>
 
 						<div class="list-group-item-field">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
+							<a href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
 						</div>
 					</li>
 
@@ -580,9 +519,11 @@
 						</div>
 
 						<div class="list-group-item-field">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
+							<a href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
 						</div>
 					</li>
 
@@ -604,9 +545,11 @@
 						</div>
 
 						<div class="list-group-item-field">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
+							<a href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
 						</div>
 					</li>
 
@@ -628,9 +571,11 @@
 						</div>
 
 						<div class="list-group-item-field">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
+							<a href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
 						</div>
 					</li>
 
@@ -652,9 +597,11 @@
 						</div>
 
 						<div class="list-group-item-field">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
+							<a href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
 						</div>
 					</li>
 
@@ -676,51 +623,22 @@
 						</div>
 
 						<div class="list-group-item-field">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
+							<a href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
-    &lt;a aria-expanded=&quot;false&quot; class=&quot;collapsed list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#tabularListGroupCollapse1&quot;&gt;List Group Heading&lt;/a&gt;
-    &lt;div class=&quot;collapse&quot; id=&quot;tabularListGroupCollapse1&quot;&gt;
-        &lt;ul class=&quot;tabular-list-group&quot;&gt;
-          ...
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;a aria-expanded=&quot;true&quot; class=&quot;list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#tabularListGroupCollapse2&quot;&gt;List Group Heading&lt;/a&gt;
-    &lt;div class=&quot;collapse in&quot; id=&quot;tabularListGroupCollapse2&quot;&gt;
-        &lt;ul class=&quot;tabular-list-group&quot;&gt;
-          ...
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;a aria-expanded=&quot;false&quot; class=&quot;collapsed list-group-heading&quot; data-toggle=&quot;collapse&quot; href=&quot;#tabularListGroupCollapse3&quot;&gt;List Group Heading&lt;/a&gt;
-    &lt;div class=&quot;collapse&quot; id=&quot;tabularListGroupCollapse3&quot;&gt;
-        &lt;ul class=&quot;tabular-list-group&quot;&gt;
-          ...
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 	</div>
 
 		</section>
 	</div>
-
-	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 	<script src="../../js/site/toggle_css.js"></script>

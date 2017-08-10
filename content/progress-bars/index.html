@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8" />
 	<title>Lexicon - Progress Bars</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 	<link rel="stylesheet" href="../../css/main.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -25,33 +26,33 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -61,15 +62,19 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
@@ -79,13 +84,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+<li class=""><a class="nav-title" href="../../content/grid">Grid</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -95,11 +104,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-pills">Nav Pills</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -109,18 +124,24 @@
 </li>
 <li class="active"><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+<li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+<li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -130,37 +151,19 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -172,19 +175,9 @@
 </ul>
 </div>
 </li>
-<li class=""><span class="nav-title">Experimental</span>
-<div class="">
-<ul class="nav nav-stacked">
-<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
-</li>
-</ul>
-</div>
-</li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -198,7 +191,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -219,382 +212,257 @@
 		</h1>
 
 		
-<div class="row row-spacing">
+<div class="clay-site-progress-bar-page clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="multi-step-progress-bar"><a class="heading-anchor" href="#multi-step-progress-bar"><i class="icon icon-link"></i></a>Multi Step Progress Bar</h3>
+		<h3 id="progress-groups"><a class="heading-anchor" href="#progress-groups"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress Groups</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Multi Step Progress Bar by default fits to its container.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Place an addon on either side of a progress component with <code class="code">progress-group</code> and <code class="code">progress-group-addon</code>.</p>
 		</blockquote>
 
-		<ul class="multi-step-progress-bar">
-			<li class="complete">
-				<div class="progress-bar-title">Ticket Buyer Information</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">01</div>
-			</li>
-			<li class="complete">
-				<div class="progress-bar-title">Attendee Information</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">02</div>
-			</li>
-			<li class="active">
-				<div class="progress-bar-title">Submit Payment</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">03</div>
-			</li>
-			<li>
-				<div class="progress-bar-title">Complete Registration</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">07</div>
-			</li>
-		</ul>
-	</div>
-</div>
+		<div class="progress-group">
+			<div class="progress">
+				<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+			</div>
+			<div class="progress-group-addon">60%</div>
+		</div>
 
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add class <code>multi-step-progress-bar-collase</code> to collapse the progress bar in mobile view.</p>
-		</blockquote>
-
-		<ul class="multi-step-progress-bar multi-step-progress-bar-collapse">
-			<li class="complete">
-				<div class="progress-bar-title">Ticket Buyer Information</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">01</div>
-			</li>
-			<li class="complete">
-				<div class="progress-bar-title">Attendee Information</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">02</div>
-			</li>
-			<li class="complete">
-				<div class="progress-bar-title">Submit Payment</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">03</div>
-			</li>
-			<li class="complete">
-				<div class="progress-bar-title">Step 4</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">04</div>
-			</li>
-			<li class="active">
-				<div class="progress-bar-title">Step 5</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">05</div>
-			</li>
-			<li>
-				<div class="progress-bar-title">Step 6</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">06</div>
-			</li>
-			<li>
-				<div class="progress-bar-title">Complete Registration</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">07</div>
-			</li>
-		</ul>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use class <code>multi-step-progress-bar-fixed</code> to create equal width progress bar items. The width can be changed through the sass variable <code>$multi-step-progress-bar-fixed-width</code>.</p>
-		</blockquote>
-
-		<ul class="multi-step-progress-bar multi-step-progress-bar-fixed">
-			<li class="complete">
-				<div class="progress-bar-title">Ticket Buyer Information</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">01</div>
-			</li>
-			<li class="complete">
-				<div class="progress-bar-title">Attendee Information</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">02</div>
-			</li>
-			<li class="complete">
-				<div class="progress-bar-title">Submit Payment</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">03</div>
-			</li>
-			<li class="complete">
-				<div class="progress-bar-title">Step 4</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">04</div>
-			</li>
-			<li class="active">
-				<div class="progress-bar-title">Step 5</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">05</div>
-			</li>
-			<li>
-				<div class="progress-bar-title">Step 6</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">06</div>
-			</li>
-			<li>
-				<div class="progress-bar-title">Complete Registration</div>
-				<div class="divider"></div>
-				<div class="progress-bar-step">07</div>
-			</li>
-		</ul>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-12">
-		<h3 id="plain-progress-bars"><a class="heading-anchor" href="#plain-progress-bars"><i class="icon icon-link"></i></a>Plain Progress Bars</h3>
-
-		<div class="progress">
-			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;">
-				<span class="sr-only">60% Complete</span>
+		<div class="progress-group">
+			<div class="progress">
+				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;"></div>
+			</div>
+			<div class="progress-group-addon">
+				<div class="progress-group-feedback">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+						<use xlink:href="../../images/icons/icons.svg#check-circle">
+					</svg>
+				</div>
 			</div>
 		</div>
 
-		<div class="progress">
-			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;">
-				<span class="sr-only">100% Complete</span>
+		<div class="progress-group">
+			<div class="progress-group-addon">
+				<div class="progress-group-feedback">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+						<use xlink:href="../../images/icons/icons.svg#check-circle">
+					</svg>
+				</div>
+			</div>
+			<div class="progress">
+				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;"></div>
 			</div>
 		</div>
+	</div>
+</div>
 
-		<div class="progress">
-			<div aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 2%;">
-				<span class="sr-only">2% Complete</span>
+<div class="clay-site-progress-bar-page clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="progress-group-stacked"><a class="heading-anchor" href="#progress-group-stacked"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress Group Stacked</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Add <code class="code">progress-group-stacked</code> to <code class="code">progress-group</code> stack the addons and progress component.</p>
+		</blockquote>
+
+		<div class="progress-group progress-group-stacked">
+			<div class="progress-group-addon">60% Completed</div>
+			<div class="progress">
+				<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+			</div>
+			<div class="progress-group-addon">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+					<use xlink:href="../../images/icons/icons.svg#cog">
+				</svg>
 			</div>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code class="html">&lt;div class=&quot;progress&quot;&gt;
-    &lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;
-        &lt;span class=&quot;sr-only&quot;&gt;#%&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row">
+<div class="clay-site-progress-bar-page clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="progress-bars-with-label"><a class="heading-anchor" href="#progress-bars-with-label"><i class="icon icon-link"></i></a>Progress Bars with Label</h3>
+		<h3 id="progress-variants"><a class="heading-anchor" href="#progress-variants"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress Variants</h3>
 
-		<div class="progress">
-			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;">60%</div>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Add <code>progress-danger</code>, <code>progress-info</code>, <code>progress-success</code>, or <code>progress-warning</code> to <code>progress-group</code> or <code>progress</code> to provide visual feedback for different progress states. Color a block of text or icon by wrapping it with <code>progress-group-feedback</code>.</p>
+		</blockquote>
+
+		<div class="alert alert-warning">
+			Using the variant classes will set the <code>background-color</code> on <code>progress-bar</code>, no need to use Bootstrap 4 background utility classes.
 		</div>
 
-		<div class="progress">
-			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;">100%</div>
-		</div>
+		<h6>Progress</h6>
 
-		<div class="progress">
-			<div aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 0%;">0%</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 2%;">2%</div>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code class="html">&lt;div class=&quot;progress&quot;&gt;
-    &lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;#%&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-12">
-		<h3 id="contextual-progress-bars"><a class="heading-anchor" href="#contextual-progress-bars"><i class="icon icon-link"></i></a>Contextual Progress Bars</h3>
-
-		<div class="progress">
-			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-success" role="progressbar" style="width: 60%;">60% (Success)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-info" role="progressbar" style="width: 100%;">100% (Info)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-warning" role="progressbar" style="width: 40%;">40% (Warning)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-danger" role="progressbar" style="width: 80%;">80% (Danger)</div>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-	<pre><code class="html">&lt;div class=&quot;progress&quot;&gt;
-    &lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;progress-bar progress-bar-success&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;#%&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-12">
-
-		<h3 id="striped-contextual-progress-bars"><a class="heading-anchor" href="#striped-contextual-progress-bars"><i class="icon icon-link"></i></a>Striped Contextual Progress Bars</h3>
-
-		<div class="progress">
-			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-striped progress-bar-success" role="progressbar" style="width: 60%;">60% (Success)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" style="width: 100%;">100% (Info)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-striped progress-bar-warning" role="progressbar" style="width: 40%;">40% (Warning)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" style="width: 80%;">80% (Danger)</div>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse3">
-	<pre><code class="html">&lt;div class=&quot;progress&quot;&gt;
-    &lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;progress-bar progress-bar-striped progress-bar-success&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;#%&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-
-		<h3 id="active-progress-bars"><a class="heading-anchor" href="#active-progress-bars"><i class="icon icon-link"></i></a>Active Progress Bars</h3>
-
-		<div class="progress">
-			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="active progress-bar progress-bar-striped progress-bar-success" role="progressbar" style="width: 60%;">60% (Success)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="active progress-bar progress-bar-info progress-bar-striped" role="progressbar" style="width: 100%;">100% (Info)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="active progress-bar progress-bar-striped progress-bar-warning" role="progressbar" style="width: 40%;">40% (Warning)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="active progress-bar progress-bar-danger progress-bar-striped" role="progressbar" style="width: 80%;">80% (Danger)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" class="active progress-bar progress-bar-striped" role="progressbar" style="width: 20%;">20% (Default)</div>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code class="html">&lt;div class=&quot;progress&quot;&gt;
-    &lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;active progress-bar progress-bar-striped progress-bar-success&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;#%&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="stacked-progress-bars"><a class="heading-anchor" href="#stacked-progress-bars"><i class="icon icon-link"></i></a>Stacked Progress Bars</h3>
-
-		<div class="progress">
-			<div class="progress-bar progress-bar-striped progress-bar-success" style="width: 25%">25%</div>
-
-			<div class="progress-bar progress-bar-success" style="width: 25%">25%</div>
-
-			<div class="active progress-bar progress-bar-striped progress-bar-success" style="width: 25%">25%</div>
-		</div>
-
-		<div class="progress">
-			<div class="progress-bar progress-bar-striped progress-bar-info" style="width: 50%">50%</div>
-
-			<div class="progress-bar progress-bar-info" style="width: 50%">50%</div>
-		</div>
-
-		<div class="progress">
-			<div class="active progress-bar progress-bar-striped progress-bar-warning" style="width: 33%">33%</div>
-
-			<div class="progress-bar progress-bar-striped progress-bar-warning" style="width: 33%">33%</div>
-		</div>
-
-		<div class="progress">
-			<div class="progress-bar progress-bar-danger" style="width: 45%">45%</div>
-
-			<div class="active progress-bar progress-bar-danger progress-bar-striped" style="width: 45%">45%</div>
-		</div>
-
-		<div class="progress">
-			<div class="progress-bar" style="width: 10%">10%</div>
-
-			<div class="progress-bar progress-bar-warning" style="width: 10%">10%</div>
-
-			<div class="progress-bar progress-bar-success" style="width: 10%">10%</div>
-
-			<div class="progress-bar progress-bar-info" style="width: 10%">10%</div>
-
-			<div class="progress-bar progress-bar-striped progress-bar-success" style="width: 10%">10%</div>
-
-			<div class="active progress-bar progress-bar-danger progress-bar-striped" style="width: 10%">10%</div>
-
-			<div class="active progress-bar progress-bar-striped" style="width: 10%">10%</div>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code class="html">&lt;div class=&quot;progress&quot;&gt;
-    &lt;div class=&quot;progress-bar&quot; style=&quot;width: #%&quot;&gt;#%&lt;/div&gt;
-    &lt;div class=&quot;progress-bar&quot; style=&quot;width: #%&quot;&gt;#%&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="progress-bar-sizes"><a class="heading-anchor" href="#progress-bar-sizes"><i class="icon icon-link"></i></a>Progress Bar Sizes</h3>
-
-		<h6>progress-xs</h6>
-		<div class="progress progress-xs">
-			<div aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 15%;">15%</div>
-		</div>
-
-		<h6>default</h6>
 		<div class="progress">
 			<div aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 25%;">25%</div>
 		</div>
 
-		<h6>progress-lg</h6>
+		<div class="progress progress-success">
+			<div aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-striped" role="progressbar" style="width: 25%;">25%</div>
+		</div>
+
+		<div class="progress progress-info">
+			<div aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 50%;">50%</div>
+		</div>
+
+		<div class="progress progress-warning">
+			<div aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" style="width: 75%;">75%</div>
+		</div>
+
+		<div class="progress progress-danger">
+			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;">100%</div>
+		</div>
+
+		<h6>Progress Group</h6>
+
+		<div class="progress-group">
+			<div class="progress">
+				<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+			</div>
+			<div class="progress-group-addon">60%</div>
+		</div>
+
+		<div class="progress-group progress-success">
+			<div class="progress">
+				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;"></div>
+			</div>
+			<div class="progress-group-addon">
+				<div class="progress-group-feedback">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+						<use xlink:href="../../images/icons/icons.svg#check-circle">
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="progress-group progress-info">
+			<div class="progress">
+				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;"></div>
+			</div>
+			<div class="progress-group-addon">
+				<div class="progress-group-feedback">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+						<use xlink:href="../../images/icons/icons.svg#info-circle-open">
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="progress-group progress-warning">
+			<div class="progress">
+				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" style="width: 100%;"></div>
+			</div>
+			<div class="progress-group-addon">
+				<div class="progress-group-feedback">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle">
+						<use xlink:href="../../images/icons/icons.svg#exclamation-circle">
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="progress-danger progress-group">
+			<div class="progress">
+				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;"></div>
+			</div>
+			<div class="progress-group-addon">
+				<div class="progress-group-feedback">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+						<use xlink:href="../../images/icons/icons.svg#times-circle">
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-progress-bar-page clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="multiple-progress-bars"><a class="heading-anchor" href="#multiple-progress-bars"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Multiple Progress Bars</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>If you need multiple progress bars, use Bootstrap 4&apos;s background utilities, <code>bg-primary</code>, <code>bg-success</code>, <code>bg-info</code>, <code>bg-warning</code>, and <code>bg-danger</code> on <code>progress-bar</code>.</p>
+		</blockquote>
+
+		<div class="progress">
+			<div class="bg-success progress-bar progress-bar-striped" style="width: 25%">25%</div>
+			<div class="bg-success progress-bar" style="width: 25%">25%</div>
+			<div class="bg-success progress-bar progress-bar-animated progress-bar-striped" style="width: 25%">25%</div>
+		</div>
+
+		<div class="progress">
+			<div class="bg-info progress-bar progress-bar-striped" style="width: 50%">50%</div>
+			<div class="bg-info progress-bar" style="width: 50%">50%</div>
+		</div>
+
+		<div class="progress">
+			<div class="bg-warning progress-bar progress-bar-animated progress-bar-striped" style="width: 33%">33%</div>
+			<div class="bg-warning progress-bar progress-bar-striped" style="width: 33%">33%</div>
+		</div>
+
+		<div class="progress">
+			<div class="bg-danger progress-bar" style="width: 45%">45%</div>
+			<div class="bg-danger progress-bar progress-bar-animated progress-bar-striped" style="width: 45%">45%</div>
+		</div>
+
+		<div class="progress">
+			<div class="progress-bar" style="width: 10%">10%</div>
+			<div class="bg-warning progress-bar" style="width: 10%">10%</div>
+			<div class="bg-success progress-bar" style="width: 10%">10%</div>
+			<div class="bg-info progress-bar" style="width: 10%">10%</div>
+			<div class="bg-success progress-bar progress-bar-striped" style="width: 10%">10%</div>
+			<div class="bg-danger progress-bar progress-bar-animated progress-bar-striped" style="width: 10%">10%</div>
+			<div class="progress-bar progress-bar-animated progress-bar-striped" style="width: 10%">10%</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-progress-bar-page clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="progress-sizes"><a class="heading-anchor" href="#progress-sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress Sizes</h3>
+
+		<h6>Normal</h6>
+		<div class="progress">
+			<div aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 25%;">25%</div>
+		</div>
+
+		<div class="progress-group">
+			<div class="progress">
+				<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+			</div>
+			<div class="progress-group-addon">60%</div>
+		</div>
+
+		<h6>Large</h6>
 		<div class="progress progress-lg">
 			<div aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 45%;">45%</div>
 		</div>
 
-		<h6>progress-xl</h6>
-		<div class="progress progress-xl">
-			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;">100%</div>
+		<div class="progress-group progress-lg">
+			<div class="progress">
+				<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+			</div>
+			<div class="progress-group-addon">60%</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-progress-bar-page clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="progress-with-bootstrap-4-background-utility"><a class="heading-anchor" href="#progress-with-bootstrap-4-background-utility"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress with Bootstrap 4 Background Utility</h3>
+
+		<div class="progress">
+			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="bg-success progress-bar" role="progressbar" style="width: 60%;">60% (Success)</div>
+		</div>
+
+		<div class="progress">
+			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="bg-info progress-bar" role="progressbar" style="width: 100%;">100% (Info)</div>
+		</div>
+
+		<div class="progress">
+			<div aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="bg-warning progress-bar" role="progressbar" style="width: 40%;">40% (Warning)</div>
+		</div>
+
+		<div class="progress">
+			<div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="bg-danger progress-bar" role="progressbar" style="width: 80%;">80% (Danger)</div>
 		</div>
 	</div>
 </div>
@@ -602,8 +470,6 @@
 
 		</section>
 	</div>
-
-	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 	<script src="../../js/site/toggle_css.js"></script>

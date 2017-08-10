@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8" />
 	<title>Lexicon - Navbars</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 	<link rel="stylesheet" href="../../css/main.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -25,33 +26,33 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -61,15 +62,19 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
@@ -79,13 +84,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+<li class=""><a class="nav-title" href="../../content/grid">Grid</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -95,11 +104,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-pills">Nav Pills</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
 <li class="active"><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -109,18 +124,24 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+<li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+<li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -130,37 +151,19 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -172,19 +175,9 @@
 </ul>
 </div>
 </li>
-<li class=""><span class="nav-title">Experimental</span>
-<div class="">
-<ul class="nav nav-stacked">
-<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
-</li>
-</ul>
-</div>
-</li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -198,7 +191,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -219,603 +212,980 @@
 		</h1>
 
 		
-<div class="row row-spacing">
+<div id="navbarsPage"></div>
+
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="navbar-default"><a class="heading-anchor" href="#navbar-default"><i class="icon icon-link"></i></a>Navbar Default</h3>
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Default style navbar. The mark up deviates from Bootstrap 3&apos;s mark up with two navbar-headers. This allows us to preserve the tab order for keyboard users.</p>
-		</blockquote>
+		<h3 id="navbar-expand-md"><a class="heading-anchor" href="#navbar-expand-md"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar Expand Md</h3>
 
-		<nav class="navbar navbar-default">
-			<div class="navbar-header navbar-header-left-xs">
-				<a class="navbar-brand" href="#">Brand</a>
-			</div>
+		<nav class="navbar navbar-expand-md">
+			<a class="navbar-brand" href="#1">
+				<span class="navbar-text-truncate">Brand ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+			</a>
 
-			<div class="navbar-header navbar-header-right">
-				<button aria-expanded="false" class="collapsed navbar-toggle" data-target="#navbar-collapse-0" data-toggle="collapse" type="button">
-					<span class="sr-only">Toggle navigation</span>
-					<svg aria-hidden="true" class="lexicon-icon">
-						<use xlink:href="../../images/icons/icons.svg#bars">
-					</svg>
-				</button>
-			</div>
+			<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-target="#navbar-collapse-0a" data-toggle="collapse" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+					<use xlink:href="../../images/icons/icons.svg#bars">
+				</svg>
+			</button>
 
-			<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-0">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-					<li class="dropdown">
-						<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-							<li class="divider"></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul>
+			<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-0a">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a aria-label="Current" class="active nav-link" href="#1">
+							<span class="navbar-text-truncate">ActiveReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+						</a>
 					</li>
-				</ul>
-				<form class="navbar-form navbar-left" role="search">
-					<div class="form-group">
-						<input class="form-control" placeholder="Search" type="text">
-					</div>
-					<button class="btn btn-default" type="submit">Submit</button>
-				</form>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Link</a></li>
-					<li class="dropdown">
-						<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</nav>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-		<pre><code>&lt;nav class=&quot;navbar navbar-default&quot;&gt;
-    &lt;div class=&quot;navbar-header navbar-header-left-xs&quot;&gt;
-        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Brand&lt;/a&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;navbar-header navbar-header-right&quot;&gt;
-        &lt;button aria-expanded=&quot;false&quot; class=&quot;collapsed navbar-toggle&quot; data-target=&quot;#navbar-collapse-0&quot; data-toggle=&quot;collapse&quot; type=&quot;button&quot;&gt;
-            &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
-            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-        &lt;/button&gt;
-    &lt;/div&gt;
-
-    &lt;div aria-expanded=&quot;false&quot; class=&quot;collapse navbar-collapse&quot; id=&quot;navbar-collapse-0&quot;&gt;
-        &lt;ul class=&quot;nav navbar-nav&quot;&gt;
-            &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Link &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li class=&quot;dropdown&quot;&gt;
-                &lt;a aria-expanded=&quot;false&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-                &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-                    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;form class=&quot;navbar-form navbar-left&quot; role=&quot;search&quot;&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
-                &lt;input class=&quot;form-control&quot; placeholder=&quot;Search&quot; type=&quot;text&quot;&gt;
-            &lt;/div&gt;
-            &lt;button class=&quot;btn btn-default&quot; type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
-        &lt;/form&gt;
-        &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
-            &lt;li class=&quot;dropdown&quot;&gt;
-                &lt;a aria-expanded=&quot;false&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-                &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="navbar-with-basic-search"><a class="heading-anchor" href="#navbar-with-basic-search"><i class="icon icon-link"></i></a>Navbar with Basic Search</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>The basic search component was created specifically for search bars inside a navbar. We wanted a search bar that fills the remaining space. The minimum width of the input is 100px and maximum width is 300px.</p>
-
-			<p>When using <code>.basic-search</code>, elements should be floated around it. <code>.basic-search</code> should be <code>float: none;</code> and always be the last element declared in a group of floated elements.</p>
-
-			<p>Add class <code>basic-search-autofit</code> on the form to make basic-search fill remaining space. Tab order cannot be preserved with this pattern, the search bar is focused last.</p>
-		</blockquote>
-
-		<nav class="navbar navbar-default">
-			<div class="navbar-header navbar-header-left-xs">
-				<a class="navbar-brand" href="#">Brand</a>
-			</div>
-
-			<div class="navbar-header navbar-header-right">
-				<button aria-expanded="false" class="collapsed navbar-toggle" data-target="#navbar-collapse-2" data-toggle="collapse" type="button">
-					<span class="sr-only">Toggle navigation</span>
-					<svg aria-hidden="true" class="lexicon-icon">
-						<use xlink:href="../../images/icons/icons.svg#bars">
-					</svg>
-				</button>
-			</div>
-
-			<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-2">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-					<li><a href="#">Link</a></li>
-					<li class="dropdown">
-						<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-							<li class="divider"></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Link</a></li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
-					</li>
-				</ul>
-				<form class="basic-search basic-search-autofit input-group navbar-form">
-					<div class="input-group-input">
-						<input class="form-control" placeholder=" Search..." type="text">
-					</div>
-
-					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit">
-							<svg class="lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#search">
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
 							</svg>
-						</button>
-					</div>
-				</form>
+						</a>
+						<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Action</a>
+							<a class="dropdown-item" href="#1">Another action</a>
+							<a class="dropdown-item" href="#1">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Separated link</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">One more separated link</a>
+						</div>
+					</li>
+				</ul>
+				<div class="navbar-form navbar-form-autofit">
+					<form>
+						<div class="form-inline">
+							<input aria-label="Search" class="form-control" placeholder="Search" type="text">
+							<button class="btn btn-secondary" type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="disabled nav-link" href="#1">
+							<span class="navbar-text-truncate">Disabled</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Action</a>
+							<a class="dropdown-item" href="#1">Another action</a>
+							<a class="dropdown-item" href="#1">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Separated link</a>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</nav>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-		<pre><code class="html">&lt;nav class=&quot;navbar navbar-default&quot;&gt;
-    &lt;div class=&quot;navbar-header navbar-header-left-xs&quot;&gt;
-        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Brand&lt;/a&gt;
-    &lt;/div&gt;
+		<nav class="navbar navbar-expand-md navbar-light navbar-light-bg">
+			<a class="navbar-brand" href="#1">
+				<span class="navbar-text-truncate">Brand</span>
+			</a>
 
-    &lt;div class=&quot;navbar-header navbar-header-right&quot;&gt;
-        &lt;button aria-expanded=&quot;false&quot; class=&quot;collapsed navbar-toggle&quot; data-target=&quot;#navbar-collapse-2&quot; data-toggle=&quot;collapse&quot; type=&quot;button&quot;&gt;
-            &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
-            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-        &lt;/button&gt;
-    &lt;/div&gt;
+			<button aria-expanded="false" class="collapsed navbar-toggler" data-target="#navbar-collapse-0b" data-toggle="collapse" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+					<use xlink:href="../../images/icons/icons.svg#bars">
+				</svg>
+			</button>
 
-    &lt;div aria-expanded=&quot;false&quot; class=&quot;collapse navbar-collapse&quot; id=&quot;navbar-collapse-2&quot;&gt;
-        &lt;ul class=&quot;nav navbar-nav&quot;&gt;
-            &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Link &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
-            &lt;li class=&quot;dropdown&quot;&gt;
-                &lt;a aria-expanded=&quot;false&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-                &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-                    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
-            &lt;li class=&quot;dropdown&quot;&gt;
-                &lt;a aria-expanded=&quot;false&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-                &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;form class=&quot;basic-search basic-search-autofit input-group navbar-form&quot;&gt;
-            &lt;div class=&quot;input-group-input&quot;&gt;
-                &lt;input class=&quot;form-control&quot; placeholder=&quot; Search...&quot; type=&quot;text&quot; /&gt;
-            &lt;/div&gt;
+			<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-0b">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a aria-label="Current" class="active nav-link" href="#1">
+							<span class="navbar-text-truncate">Active</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Action</a>
+							<a class="dropdown-item" href="#1">Another action</a>
+							<a class="dropdown-item" href="#1">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Separated link</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">One more separated link</a>
+						</div>
+					</li>
+				</ul>
+				<div class="navbar-form navbar-form-autofit">
+					<form role="search">
+						<div class="form-inline">
+							<input class="form-control" placeholder="Search" type="text">
+							<button class="btn btn-secondary" type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="disabled nav-link" href="#1">
+							<span class="navbar-text-truncate">Disabled</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Action</a>
+							<a class="dropdown-item" href="#1">Another action</a>
+							<a class="dropdown-item" href="#1">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Separated link</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-            &lt;div class=&quot;input-group-btn&quot;&gt;
-                &lt;button class=&quot;btn btn-default&quot; type=&quot;submit&quot;&gt;
-                    &lt;span class=&quot;glyphicon glyphicon-search&quot;&gt;&lt;/span&gt;
-                &lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/form&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;</code></pre>
-</div>
+		<nav class="navbar navbar-dark navbar-dark-bg navbar-expand-md">
+			<a class="navbar-brand" href="#1">
+				<span class="navbar-text-truncate">Brand</span>
+			</a>
 
+			<button aria-expanded="false" class="collapsed navbar-toggler" data-target="#navbar-collapse-0c" data-toggle="collapse" type="button">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-0c">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a aria-label="Current" class="active nav-link" href="#1">
+							<span class="navbar-text-truncate">Active</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Action</a>
+							<a class="dropdown-item" href="#1">Another action</a>
+							<a class="dropdown-item" href="#1">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Separated link</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">One more separated link</a>
+						</div>
+					</li>
+				</ul>
+				<div class="navbar-form navbar-form-autofit">
+					<form role="search">
+						<div class="form-inline">
+							<input class="form-control" placeholder="Search" type="text">
+							<button class="btn btn-secondary" type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="disabled nav-link" href="#1">
+							<span class="navbar-text-truncate">Disabled</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Action</a>
+							<a class="dropdown-item" href="#1">Another action</a>
+							<a class="dropdown-item" href="#1">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Separated link</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="alternate-navbar-toggle-style"><a class="heading-anchor" href="#alternate-navbar-toggle-style"><i class="icon icon-link"></i></a>Alternate Navbar Toggle Style</h3>
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>In mobile screen sizes, style the navbar toggle like a navbar navigation item with <code>navbar-toggle-page-name</code>.</p>
+		<h3 id="navbar-with-form"><a class="heading-anchor" href="#navbar-with-form"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar with Form</h3>
 
-			<p>Also use this pattern when you want the search bar to be easily accessible in both mobile and desktop.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>The class <code class="code">.navbar-form</code> should be wrapped around your form. It adds the proper spacing between your form and other navbar components e.g. <code class="code">.navbar-nav</code>.</p>
+
+			<p>The class <code class="code">.navbar-form-autofit</code> should be added to <code class="code">.navbar-form</code> to make the form expand to fill the remaining space.</p>
 		</blockquote>
 
-		<nav class="collapse-basic-search navbar navbar-default">
-			<div class="navbar-header visible-xs">
-				<button class="collapsed navbar-toggle navbar-toggle-left navbar-toggle-page-name" data-target="#navbar-collapse-001" data-toggle="collapse" type="button">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="page-name">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
-					<span class="caret"></span>
-				</button>
-			</div>
+		<nav class="navbar navbar-expand-md">
+			<a class="navbar-brand" href="#1">
+				<span class="navbar-text-truncate">Brand ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+			</a>
 
-			<div class="collapse navbar-collapse navbar-collapse-left" id="navbar-collapse-001">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Message Boards</a></li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
-						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
-							<li class="dropdown-header" role="presentation">Dropdown Header</li>
-							<li role="presentation">
-								<ul class="inline-scroller">
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
+			<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-target="#navbar-collapse-2a" data-toggle="collapse" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+					<use xlink:href="../../images/icons/icons.svg#bars">
+				</svg>
+			</button>
+
+			<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-2a">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="active nav-link" href="#1">
+							<span class="navbar-text-truncate">Link</span>
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#1">
+							<span class="navbar-text-truncate">Link</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">DropdownReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Action</a>
+							<a class="dropdown-item" href="#1">Another action</a>
+							<a class="dropdown-item" href="#1">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Separated link</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">One more separated link</a>
+						</div>
+					</li>
+				</ul>
+				<div class="navbar-form">
+					<form>
+						<div class="input-group">
+							<input class="form-control" placeholder=" Search..." type="text">
+
+							<div class="dropdown-wide input-group-btn">
+								<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" data-toggle="dropdown" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+										<use xlink:href="../../images/icons/icons.svg#angle-down">
+									</svg>
+								</button>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#1">Action</a>
+									<a class="dropdown-item" href="#1">Another action</a>
+									<a class="dropdown-item" href="#1">Something else here</a>
+									<div class="dropdown-divider" role="separator"></div>
+									<a class="dropdown-item" href="#1">Separated link</a>
+								</div>
+
+								<button class="btn btn-secondary" type="submit">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+										<use xlink:href="../../images/icons/icons.svg#search">
+									</svg>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#1">
+							<span class="navbar-text-truncate">Link</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div class="dropdown-menu" role="menu">
+							<a class="dropdown-item" href="#1">Action</a>
+							<a class="dropdown-item" href="#1">Another action</a>
+							<a class="dropdown-item" href="#1">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Separated link</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<nav class="navbar navbar-expand-md navbar-light navbar-light-bg">
+			<a class="navbar-brand" href="#1">
+				<span class="navbar-text-truncate">Brand</span>
+			</a>
+
+			<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-target="#navbar-collapse-2b" data-toggle="collapse" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+					<use xlink:href="../../images/icons/icons.svg#bars">
+				</svg>
+			</button>
+
+			<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-2b">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a aria-label="Current" class="active nav-link" href="#1">
+							<span class="navbar-text-truncate">Link</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#1">
+							<span class="navbar-text-truncate">Link</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div class="dropdown-menu" role="menu">
+							<a class="dropdown-item" href="#1">Action</a>
+							<a class="dropdown-item" href="#1">Another action</a>
+							<a class="dropdown-item" href="#1">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Separated link</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">One more separated link</a>
+						</div>
+					</li>
+				</ul>
+				<div class="navbar-form">
+					<form>
+						<div class="input-group">
+							<input class="form-control" placeholder=" Search..." type="text">
+
+							<div class="dropdown-wide input-group-btn">
+								<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" data-toggle="dropdown" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+										<use xlink:href="../../images/icons/icons.svg#angle-down">
+									</svg>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#1">Action</a></li>
+									<li><a href="#1">Another action</a></li>
+									<li><a href="#1">Something else here</a></li>
+									<li class="divider" role="separator"></li>
+									<li><a href="#1">Separated link</a></li>
 								</ul>
-							</li>
-							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-							<li class="divider" role="presentation"></li>
-							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
-						</ul>
+
+								<button class="btn btn-secondary" type="submit">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+										<use xlink:href="../../images/icons/icons.svg#search">
+									</svg>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#1">
+							<span class="navbar-text-truncate">Link</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div class="dropdown-menu" role="menu">
+							<a class="dropdown-item" href="#1">Action</a>
+							<a class="dropdown-item" href="#1">Another action</a>
+							<a class="dropdown-item" href="#1">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Separated link</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<nav class="navbar navbar-dark navbar-dark-bg navbar-expand-md">
+			<a class="navbar-brand" href="#1">
+				<span class="navbar-text-truncate">Brand</span>
+			</a>
+
+			<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-target="#navbar-collapse-2c" data-toggle="collapse" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+					<use xlink:href="../../images/icons/icons.svg#bars">
+				</svg>
+			</button>
+
+			<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-2c">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a aria-label="Current" class="active nav-link" href="#1">
+							<span class="navbar-text-truncate">Link</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#1">
+							<span class="navbar-text-truncate">Link</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div class="dropdown-menu" role="menu">
+							<a class="dropdown-item" href="#1">Action</a>
+							<a class="dropdown-item" href="#1">Another action</a>
+							<a class="dropdown-item" href="#1">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Separated link</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">One more separated link</a>
+						</div>
+					</li>
+				</ul>
+				<div class="navbar-form">
+					<form>
+						<div class="input-group">
+							<input class="form-control" placeholder=" Search..." type="text">
+
+							<div class="dropdown-wide input-group-btn">
+								<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" data-toggle="dropdown" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+										<use xlink:href="../../images/icons/icons.svg#angle-down">
+									</svg>
+								</button>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#1">Action</a>
+									<a class="dropdown-item" href="#1">Another action</a>
+									<a class="dropdown-item" href="#1">Something else here</a>
+									<div class="dropdown-divider" role="separator"></div>
+									<a class="dropdown-item" href="#1">Separated link</a>
+								</div>
+
+								<button class="btn btn-secondary" type="submit">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+										<use xlink:href="../../images/icons/icons.svg#search">
+									</svg>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#1">
+							<span class="navbar-text-truncate">Link</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div class="dropdown-menu" role="menu">
+							<a class="dropdown-item" href="#1">Action</a>
+							<a class="dropdown-item" href="#1">Another action</a>
+							<a class="dropdown-item" href="#1">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Separated link</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="alternate-navbar-toggler-style"><a class="heading-anchor" href="#alternate-navbar-toggler-style"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Alternate Navbar Toggler Style</h3>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>In mobile screen sizes, style the navbar toggler like a navbar navigation item with <code>navbar-toggler-link</code>. Also use this pattern when you want the search bar to be easily accessible in both mobile and desktop.</p>
+		</blockquote>
+
+		<nav class="collapse-basic-search navbar navbar-expand-md">
+			<button aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navbar-collapse-d-001" data-toggle="collapse" type="button">
+				<span class="navbar-text-truncate">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+				</svg>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-d-001">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="active nav-link" href="#1">
+							<span class="navbar-text-truncate">Message Boards</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div aria-labelledby="dropdownMenu" class="dropdown-menu">
+							<div class="dropdown-header" role="presentation">Dropdown Header</div>
+							<a class="dropdown-item" href="#1">Actions</a>
+							<a class="dropdown-item" href="#1">Edit</a>
+							<a class="dropdown-item" href="#1">View</a>
+							<a class="dropdown-item" href="#1">Permissions</a>
+							<a class="disabled dropdown-item" href="#1" role="menuitem">Disabled</a>
+							<div class="dropdown-divider" role="presentation"></div>
+							<a class="dropdown-item" href="#1" role="menuitem">Scope</a>
+						</div>
 					</li>
 
-					<li><a href="#">Link</a></li>
-					<li class="disabled"><a href="#">Disabled</a></li>
+					<li class="nav-item">
+						<a class="nav-link" href="#1">
+							<span class="navbar-text-truncate">Link</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="disabled nav-link" href="#1">
+							<span class="navbar-text-truncate">Disabled</span>
+						</a>
+					</li>
 				</ul>
 			</div>
 
-			<div class="navbar-header navbar-header-right">
-				<form action="../navbar" class="basic-search input-group" method="GET">
-					<div class="input-group-input">
-						<div class="basic-search-slider">
-							<button class="basic-search-close btn btn-default" type="button">
-								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#times">
+			<div class="basic-search navbar-form">
+				<form action="../navbar" method="GET">
+					<div class="input-group">
+						<div class="input-group-input">
+							<div class="basic-search-slider">
+								<button class="basic-search-close btn btn-secondary" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<input class="form-control" name="search" placeholder=" Search..." type="text">
+							</div>
+						</div>
+
+						<div class="dropdown-wide input-group-btn">
+							<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" data-toggle="dropdown" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
 								</svg>
 							</button>
-							<input class="form-control" name="search" placeholder=" Search..." type="text">
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#1">Action</a>
+								<a class="dropdown-item" href="#1">Another action</a>
+								<a class="dropdown-item" href="#1">Something else here</a>
+								<div class="dropdown-divider" role="separator"></div>
+								<a class="dropdown-item" href="#1">Separated link</a>
+							</div>
+
+							<button class="btn btn-secondary" type="submit">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="../../images/icons/icons.svg#search">
+								</svg>
+							</button>
 						</div>
-					</div>
-					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit">
-							<svg class="lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#search">
-							</svg>
-						</button>
 					</div>
 				</form>
 			</div>
 		</nav>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-		<pre><code>&lt;nav class=&quot;collapse-basic-search navbar navbar-default&quot;&gt;
-    &lt;div class=&quot;navbar-header visible-xs&quot;&gt;
-        &lt;button class=&quot;collapsed navbar-toggle navbar-toggle-left navbar-toggle-page-name&quot; data-target=&quot;#navbar-collapse-001&quot; data-toggle=&quot;collapse&quot; type=&quot;button&quot;&gt;
-            &lt;span class=&quot;sr-only&quot;&gt;Toggle Navigation&lt;/span&gt;
-            &lt;span class=&quot;page-name&quot;&gt;Message Boards&lt;/span&gt;&lt;!-- current page name goes here e.g. Message Boards Home --&gt;
-            &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-        &lt;/button&gt;
-    &lt;/div&gt;
+		<nav class="collapse-basic-search navbar navbar-expand-md navbar-light navbar-light-bg">
+			<button aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navbar-collapse-001" data-toggle="collapse" type="button">
+				<span class="navbar-text-truncate">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+				</svg>
+			</button>
 
-    &lt;div class=&quot;collapse navbar-collapse navbar-collapse-left&quot; id=&quot;navbar-collapse-001&quot;&gt;
-        &lt;ul class=&quot;nav navbar-nav&quot;&gt;
-            &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Message Boards&lt;/a&gt;&lt;/li&gt;
-            &lt;li class=&quot;dropdown&quot;&gt;
-                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-                &lt;ul aria-labelledby=&quot;dropdownMenu&quot; class=&quot;dropdown-menu&quot;&gt;
-                    &lt;li class=&quot;dropdown-header&quot; role=&quot;presentation&quot;&gt;Dropdown Header&lt;/li&gt;
-                    &lt;li role=&quot;presentation&quot;&gt;
-                        &lt;ul class=&quot;inline-scroller&quot;&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/li&gt;
-                    &lt;li class=&quot;disabled&quot; role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Disabled&lt;/a&gt;&lt;/li&gt;
-                    &lt;li class=&quot;divider&quot; role=&quot;presentation&quot;&gt;&lt;/li&gt;
-                    &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/li&gt;
-
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
-            &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;Disabled&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;navbar-header navbar-header-right&quot;&gt;
-        &lt;form action=&quot;../navbar&quot; class=&quot;basic-search input-group&quot; method=&quot;GET&quot;&gt;
-            &lt;div class=&quot;input-group-input&quot;&gt;
-                &lt;div class=&quot;basic-search-slider&quot;&gt;
-                    &lt;button class=&quot;basic-search-close btn btn-default&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;icon-remove&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-                    &lt;input class=&quot;form-control&quot; name=&quot;search&quot; placeholder=&quot; Search...&quot; type=&quot;text&quot; /&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;input-group-btn&quot;&gt;
-                &lt;button class=&quot;btn btn-default&quot; type=&quot;submit&quot;&gt;&lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/form&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-12">
-		<h3 id="navbar-no-collapse"><a class="heading-anchor" href="#navbar-no-collapse"><i class="icon icon-link"></i></a>Navbar No Collapse</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use the navbar-no-collapse component to preserve desktop navbar styles in mobile. It&apos;s useful when there are only one or two links in the navbar; where collapsing doesn&apos;t make sense.</p>
-		</blockquote>
-
-		<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Message Boards</a></li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Blogs <span class="caret"></span></a>
-					<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
-						<li class="dropdown-header" role="presentation">Dropdown Header</li>
-						<li role="presentation">
-							<ul class="inline-scroller">
-								<li><a href="#">Actions</a></li>
-								<li><a href="#">Edit</a></li>
-								<li><a href="#">View</a></li>
-								<li><a href="#">Permissions</a></li>
-								<li><a href="#">Actions</a></li>
-								<li><a href="#">Edit</a></li>
-								<li><a href="#">View</a></li>
-								<li><a href="#">Permissions</a></li>
-								<li><a href="#">Actions</a></li>
-								<li><a href="#">Edit</a></li>
-								<li><a href="#">View</a></li>
-								<li><a href="#">Permissions</a></li>
-								<li><a href="#">Actions</a></li>
-								<li><a href="#">Edit</a></li>
-								<li><a href="#">View</a></li>
-								<li><a href="#">Permissions</a></li>
-							</ul>
-						</li>
-						<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-						<li class="divider" role="presentation"></li>
-						<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
-					</ul>
-				</li>
-			</ul>
-
-			<form class="basic-search input-group">
-				<div class="input-group-input">
-					<div class="basic-search-slider">
-						<button class="basic-search-close btn btn-default" type="button">
-							<svg class="lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#times">
+			<div class="collapse navbar-collapse" id="navbar-collapse-001">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="active nav-link" href="#1">
+							<span class="navbar-text-truncate">Message Boards</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
 							</svg>
-						</button>
-						<input class="form-control" placeholder=" Search..." type="text">
+						</a>
+						<div aria-labelledby="dropdownMenu" class="dropdown-menu">
+							<div class="dropdown-header" role="presentation">Dropdown Header</div>
+							<a class="dropdown-item" href="#1">Actions</a>
+							<a class="dropdown-item" href="#1">Edit</a>
+							<a class="dropdown-item" href="#1">View</a>
+							<a class="dropdown-item" href="#1">Permissions</a>
+							<a class="disabled dropdown-item" href="#1" role="menuitem">Disabled</a>
+							<div class="dropdown-divider" role="presentation"></div>
+							<a class="dropdown-item" href="#1" role="menuitem">Scope</a>
+						</div>
+
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#1">
+							<span class="navbar-text-truncate">Link</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="disabled nav-link" href="#1">
+							<span class="navbar-text-truncate">Disabled</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="basic-search navbar-form">
+				<form action="../navbar" method="GET">
+					<div class="input-group">
+						<div class="input-group-input">
+							<div class="basic-search-slider">
+								<button class="basic-search-close btn btn-secondary" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<input class="form-control" name="search" placeholder=" Search..." type="text">
+							</div>
+						</div>
+
+						<div class="dropdown-wide input-group-btn">
+							<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" data-toggle="dropdown" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#1">Action</a>
+								<a class="dropdown-item" href="#1">Another action</a>
+								<a class="dropdown-item" href="#1">Something else here</a>
+								<div class="dropdown-divider" role="separator"></div>
+								<a class="dropdown-item" href="#1">Separated link</a>
+							</div>
+
+							<button class="btn btn-secondary" type="submit">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="../../images/icons/icons.svg#search">
+								</svg>
+							</button>
+						</div>
 					</div>
-				</div>
-				<div class="input-group-btn">
-					<button class="btn btn-default" type="submit">
-						<svg class="lexicon-icon">
-							<use xlink:href="../../images/icons/icons.svg#search">
-						</svg>
-					</button>
-				</div>
-			</form>
+				</form>
+			</div>
 		</nav>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse3">
-		<pre><code>&lt;nav class=&quot;collapse-basic-search navbar navbar-default navbar-no-collapse&quot;&gt;
-    &lt;ul class=&quot;nav navbar-nav&quot;&gt;
-        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Message Boards&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;dropdown&quot;&gt;
-            &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;Blogs &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-            &lt;ul aria-labelledby=&quot;dropdownMenu&quot; class=&quot;dropdown-menu&quot;&gt;
-                &lt;li class=&quot;dropdown-header&quot; role=&quot;presentation&quot;&gt;Dropdown Header&lt;/li&gt;
-                &lt;li role=&quot;presentation&quot;&gt;
-                    &lt;ul class=&quot;inline-scroller&quot;&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;disabled&quot; role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Disabled&lt;/a&gt;&lt;/li&gt;
-                &lt;li class=&quot;divider&quot; role=&quot;presentation&quot;&gt;&lt;/li&gt;
-                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
+		<nav class="collapse-basic-search navbar navbar-collapse-absolute navbar-dark navbar-dark-bg navbar-expand-md">
+			<button aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navbar-collapse-001a" data-toggle="collapse" type="button">
+				<span class="navbar-text-truncate">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+				</svg>
+			</button>
 
-    &lt;form class=&quot;basic-search input-group&quot;&gt;
-        &lt;div class=&quot;input-group-input&quot;&gt;
-            &lt;div class=&quot;basic-search-slider&quot;&gt;
-                &lt;button class=&quot;basic-search-close btn btn-default&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;icon-remove&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-                &lt;input class=&quot;form-control&quot; placeholder=&quot; Search...&quot; type=&quot;text&quot; /&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;input-group-btn&quot;&gt;
-            &lt;button class=&quot;btn btn-default&quot; type=&quot;submit&quot;&gt;&lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/form&gt;
-&lt;/nav&gt;</code></pre>
-</div>
-
+			<div class="collapse navbar-collapse" id="navbar-collapse-001a">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="active nav-link" href="#1">
+							<span class="navbar-text-truncate">Message Boards</span>
+						</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+							<span class="navbar-text-truncate">Dropdown</span>
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div aria-labelledby="dropdownMenu" class="dropdown-menu">
+							<div class="dropdown-header" role="presentation">Dropdown Header</div>
+							<a class="dropdown-item" href="#1">Actions</a>
+							<a class="dropdown-item" href="#1">Edit</a>
+							<a class="dropdown-item" href="#1">View</a>
+							<a class="dropdown-item" href="#1">Permissions</a>
+							<a class="disabled dropdown-item" href="#1" role="menuitem">Disabled</a>
+							<div class="dropdown-divider" role="presentation"></div>
+							<a class="dropdown-item" href="#1" role="menuitem">Scope</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#1">
+							<span class="navbar-text-truncate">Link</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="disabled nav-link" href="#1">
+							<span class="navbar-text-truncate">Disabled</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="basic-search navbar-form">
+				<form action="../navbar" method="GET">
+					<div class="input-group">
+						<div class="input-group-input">
+							<div class="basic-search-slider">
+								<button class="basic-search-close btn btn-secondary" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<input class="form-control" name="search" placeholder=" Search..." type="text">
+							</div>
+						</div>
+						<div class="input-group-btn">
+							<button class="btn btn-secondary" type="submit">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="../../images/icons/icons.svg#search">
+								</svg>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</nav>
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="navbar-toggle"><a class="heading-anchor" href="#navbar-toggle"><i class="icon icon-link"></i></a>Navbar Toggle</h3>
+		<h3 id="navbar-expand"><a class="heading-anchor" href="#navbar-expand"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar Expand</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Use the <code class="code">.navbar-expand</code> class on <code class="code">.navbar</code> to preserve desktop navbar styles in mobile. It&apos;s useful when there are only one or two links in the navbar; where collapsing doesn&apos;t make sense.</p>
+		</blockquote>
+
+		<nav class="collapse-basic-search collapse-basic-search-transparent navbar navbar-expand">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="active nav-link" href="#1">
+						<span class="navbar-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+					</a>
+				</li>
+				<li class="dropdown nav-item">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+						<span class="navbar-text-truncate">Blogs</span>
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+						</svg>
+					</a>
+					<div aria-labelledby="dropdownMenu" class="dropdown-menu">
+						<div class="dropdown-header" role="presentation">Dropdown Header</div>
+						<a class="dropdown-item" href="#1">Actions</a>
+						<a class="dropdown-item" href="#1">Edit</a>
+						<a class="dropdown-item" href="#1">View</a>
+						<a class="dropdown-item" href="#1">Permissions</a>
+						<a class="disabled dropdown-item" href="#1" role="menuitem">Disabled</a>
+						<div class="dropdown-divider" role="presentation"></div>
+						<a class="dropdown-item" href="#1" role="menuitem">Scope</a>
+					</div>
+				</li>
+			</ul>
+			<div class="basic-search navbar-form">
+				<form>
+					<div class="input-group">
+						<div class="input-group-input">
+							<div class="basic-search-slider">
+								<button class="basic-search-close btn btn-secondary" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<input class="form-control" placeholder=" Search..." type="text">
+							</div>
+						</div>
+						<div class="input-group-btn">
+							<button class="btn btn-secondary" type="submit">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="../../images/icons/icons.svg#search">
+								</svg>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</nav>
+
+		<nav class="collapse-basic-search collapse-basic-search-transparent navbar navbar-expand navbar-light navbar-light-bg">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="active nav-link" href="#1">
+						<span class="navbar-text-truncate">Message Boards</span>
+					</a>
+				</li>
+				<li class="dropdown nav-item">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+						<span class="navbar-text-truncate">Blogs</span>
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+						</svg>
+					</a>
+					<div aria-labelledby="dropdownMenu" class="dropdown-menu">
+						<div class="dropdown-header" role="presentation">Dropdown Header</div>
+						<a class="dropdown-item" href="#1">Actions</a>
+						<a class="dropdown-item" href="#1">Edit</a>
+						<a class="dropdown-item" href="#1">View</a>
+						<a class="dropdown-item" href="#1">Permissions</a>
+						<a class="disabled dropdown-item" href="#1" role="menuitem">Disabled</a>
+						<div class="dropdown-divider" role="presentation"></div>
+						<a class="dropdown-item" href="#1" role="menuitem">Scope</a>
+					</div>
+				</li>
+			</ul>
+			<div class="basic-search navbar-form">
+				<form>
+					<div class="input-group">
+						<div class="input-group-input">
+							<div class="basic-search-slider">
+								<button class="basic-search-close btn btn-secondary" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<input class="form-control" placeholder=" Search..." type="text">
+							</div>
+						</div>
+						<div class="input-group-btn">
+							<button class="btn btn-secondary" type="submit">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="../../images/icons/icons.svg#search">
+								</svg>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</nav>
+
+		<nav class="collapse-basic-search collapse-basic-search-transparent navbar navbar-dark navbar-dark-bg navbar-expand">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="active nav-link" href="#1">
+						<span class="navbar-text-truncate">Message Boards</span>
+					</a>
+				</li>
+				<li class="dropdown nav-item">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+						<span class="navbar-text-truncate">Blogs</span>
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+						</svg>
+					</a>
+					<div aria-labelledby="dropdownMenu" class="dropdown-menu">
+						<div class="dropdown-header" role="presentation">Dropdown Header</div>
+						<a class="dropdown-item" href="#1">Actions</a>
+						<a class="dropdown-item" href="#1">Edit</a>
+						<a class="dropdown-item" href="#1">View</a>
+						<a class="dropdown-item" href="#1">Permissions</a>
+						<a class="disabled dropdown-item" href="#1" role="menuitem">Disabled</a>
+						<div class="dropdown-divider" role="presentation"></div>
+						<a class="dropdown-item" href="#1" role="menuitem">Scope</a>
+					</div>
+				</li>
+			</ul>
+			<div class="basic-search navbar-form">
+				<form>
+					<div class="input-group">
+						<div class="input-group-input">
+							<div class="basic-search-slider">
+								<button class="basic-search-close btn btn-secondary" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<input class="form-control" placeholder=" Search..." type="text">
+							</div>
+						</div>
+						<div class="input-group-btn">
+							<button class="btn btn-secondary" type="submit">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="../../images/icons/icons.svg#search">
+								</svg>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</nav>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="collapse-basic-search-transparent"><a class="heading-anchor" href="#collapse-basic-search-transparent"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Collapse Basic Search Transparent</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>navbar-toggle</code> is the button that opens and closes the navbar in mobile, must be used with the <a href="http://getbootstrap.com/javascript/#collapse">collapse plugin</a>.</p>
+			<p>Use <code>collapse-basic-search-transparent</code> on<code>collapse-basic-search</code> to give collapse-basic-search a different look.</p>
 		</blockquote>
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="navbar-toggle-page-name"><a class="heading-anchor" href="#navbar-toggle-page-name"><i class="icon icon-link"></i></a>Navbar Toggle Page Name</h3>
+		<h3 id="navbar-d-breakpoint-block"><a class="heading-anchor" href="#navbar-d-breakpoint-block"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar D Breakpoint Block</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>navbar-toggle-page-name</code> styles the navbar-toggle like a navbar link.</p>
+			<p><code>navbar-d-breakpoint-block</code> is a helper class to show content at it&apos;s expand breakpoint e.g. for <code>.navbar-expand-md</code>, <code>navbar-d-breakpoint-block</code> will <code>display: block;</code> at screen widths greater than 767px and <code>display: none;</code> at screen widths less than or equal to 767px.</p>
 		</blockquote>
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="navbar-toggle-left"><a class="heading-anchor" href="#navbar-toggle-left"><i class="icon icon-link"></i></a>Navbar Toggle Left</h3>
+		<h3 id="navbar-d-breakpoint-none"><a class="heading-anchor" href="#navbar-d-breakpoint-none"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar D Breakpoint None</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>navbar-toggle-left</code> is a helper class that sets float: left on navbar-toggle. The default is float: right.</p>
+			<p><code>navbar-d-breakpoint-none</code> is a helper class to hide content at it&apos;s expand breakpoint e.g. for <code>.navbar-expand-md</code>, <code>navbar-d-breakpoint-none</code> will <code>display: none;</code> at screen widths greater than 767px.</p>
 		</blockquote>
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="navbar-header"><a class="heading-anchor" href="#navbar-header"><i class="icon icon-link"></i></a>Navbar Header</h3>
+		<h3 id="navbar-toggler"><a class="heading-anchor" href="#navbar-toggler"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar Toggler</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>navbar-header</code> is an element that resides inside navbar. Its primary use is to display headings and controls in mobile view, but can also display items in desktop view if needed.</p>
+			<p><code>navbar-toggler</code> is the button that opens and closes the navbar in mobile, must be used with the <a href="http://getbootstrap.com/javascript/#collapse">collapse plugin</a>.</p>
 		</blockquote>
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="navbar-header-left-xs"><a class="heading-anchor" href="#navbar-header-left-xs"><i class="icon icon-link"></i></a>Navbar Header Left Xs</h3>
+		<h3 id="navbar-toggler-link"><a class="heading-anchor" href="#navbar-toggler-link"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar Toggler Link</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>navbar-header-left-xs</code> is a helper class that sets float: left on navbar-header in mobile view (screen &lt; 768px).</p>
+			<p><code>navbar-toggler-link</code> styles the navbar-toggler like a navbar link.</p>
 		</blockquote>
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="navbar-header-right-xs"><a class="heading-anchor" href="#navbar-header-right-xs"><i class="icon icon-link"></i></a>Navbar Header Right Xs</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>navbar-header-right-xs</code> is a helper class that sets float: right on navbar-header in mobile view (screen &lt; 768px).</p>
-		</blockquote>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="navbar-header-right"><a class="heading-anchor" href="#navbar-header-right"><i class="icon icon-link"></i></a>Navbar Header Right</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>navbar-header-right</code> is a helper class that sets float: right on navbar-header in desktop view (screen &gt;= 768px).</p>
-		</blockquote>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="navbar-collapse"><a class="heading-anchor" href="#navbar-collapse"><i class="icon icon-link"></i></a>Navbar Collapse</h3>
+		<h3 id="navbar-collapse"><a class="heading-anchor" href="#navbar-collapse"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar Collapse</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p><code>navbar-collapse</code> is the container for all content that should be collapsed into a collapsible menu in mobile.</p>
@@ -823,22 +1193,12 @@
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="navbar-collapse-absolute"><a class="heading-anchor" href="#navbar-collapse-absolute"><i class="icon icon-link"></i></a>Navbar Collapse Absolute</h3>
+		<h3 id="navbar-collapse-absolute"><a class="heading-anchor" href="#navbar-collapse-absolute"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar Collapse Absolute</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>navbar-collapse-absolute</code> turns navbar-collapse from a relative positioned menu into an absolutely positioned collapsible menu.</p>
-		</blockquote>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="navbar-collapse-left"><a class="heading-anchor" href="#navbar-collapse-left"><i class="icon icon-link"></i></a>Navbar Collapse Left</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>navbar-collapse-left</code> is a helper class that sets float: right on navbar-collapse in desktop (&gt;= 768px).</p>
+			<p>Add <code>navbar-collapse-absolute</code> to <code>navbar</code> to turn navbar-collapse from a relative positioned menu into an absolutely positioned collapsible menu.</p>
 		</blockquote>
 	</div>
 </div>
@@ -850,8 +1210,6 @@
 
 		</section>
 	</div>
-
-	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 	<script src="../../js/site/toggle_css.js"></script>

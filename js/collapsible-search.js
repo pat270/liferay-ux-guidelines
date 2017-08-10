@@ -1,7 +1,7 @@
 /**
-* Lexicon 0.2.14
+* Clay 2.0.0-alpha.4
 *
-* Copyright 2016, Liferay, Inc.
+* Copyright 2017, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
@@ -34,6 +34,7 @@
 			var instance = this;
 
 			var basicSearch = $(event.currentTarget).closest('.basic-search');
+
 			var basicSearchSlider = basicSearch.find('.basic-search-slider');
 			var basicSearchSubmit = basicSearch.find('[type="submit"]');
 
@@ -43,16 +44,21 @@
 				basicSearch.trigger('closed.lexicon.collapsible.search');
 			};
 
-			if (!$.support.transition) {
-				return complete.call(instance);
-			}
+			var supportsTransition = $.support.transition;
 
-			basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
-				.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
+			if (supportsTransition) {
+				basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
+					.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
+			}
 
 			basicSearch.addClass('basic-search-transition').removeClass('open');
 
-			basicSearchSubmit.focus();
+			if (!supportsTransition) {
+				complete.call(instance);
+			}
+			else {
+				basicSearchSubmit.focus();
+			}
 		},
 
 		destroy: function() {
@@ -73,6 +79,7 @@
 
 			if (window.innerWidth < CollapsibleSearch.BREAKPOINT) {
 				var basicSearch = $(event.currentTarget).parents('.basic-search');
+
 				var basicSearchInput = basicSearch.find('input[type="text"]');
 				var basicSearchSlider = basicSearch.find('.basic-search-slider');
 
@@ -83,37 +90,44 @@
 					basicSearch.trigger('open.lexicon.collapsible.search');
 				};
 
-				if (!$.support.transition) {
-					return complete.call(instance);
-				}
-
 				if (!basicSearch.hasClass('open')) {
 					event.preventDefault();
 
-					basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
-						.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
+					var supportsTransition = $.support.transition;
+
+					if (supportsTransition) {
+						basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
+							.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
+					}
 
 					basicSearch.addClass('basic-search-transition').addClass('open');
+
+					if (!supportsTransition) {
+						complete.call(instance);
+					}
 				}
 			}
 		}
 	};
 
 	var Plugin = function(option) {
-		return this.each(function() {
-			var $this = $(this);
-			var data = $this.data('lexicon.collapsible-search');
+		return this.each(
+			function() {
+				var $this = $(this);
 
-			if (!data) {
-				data = new CollapsibleSearch(this);
+				var data = $this.data('lexicon.collapsible-search');
 
-				$this.data('lexicon.collapsible-search', data);
+				if (!data) {
+					data = new CollapsibleSearch(this);
+
+					$this.data('lexicon.collapsible-search', data);
+				}
+
+				if (typeof option == 'string') {
+					data[option]();
+				}
 			}
-
-			if (typeof option == 'string') {
-				data[option]();
-			}
-		});
+		);
 	};
 
 	var old = $.fn.collapsibleSearch;

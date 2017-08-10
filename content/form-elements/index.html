@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8" />
 	<title>Lexicon - Form Elements</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 	<link rel="stylesheet" href="../../css/main.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -25,33 +26,33 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -61,15 +62,19 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
@@ -79,13 +84,17 @@
 </li>
 <li class="active"><a class="nav-title" href="../../content/form-elements">Form Elements</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+<li class=""><a class="nav-title" href="../../content/grid">Grid</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -95,11 +104,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-pills">Nav Pills</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -109,18 +124,24 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+<li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+<li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -130,37 +151,19 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -172,19 +175,9 @@
 </ul>
 </div>
 </li>
-<li class=""><span class="nav-title">Experimental</span>
-<div class="">
-<ul class="nav nav-stacked">
-<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
-</li>
-</ul>
-</div>
-</li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -198,7 +191,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -219,16 +212,30 @@
 		</h1>
 
 		
-<div class="row">
+<style>
+	.clay-site-row-spacer {
+		background-color: #FFF;
+		padding-top: 1rem;
+	}
+</style>
+
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="basic-form-elements"><a class="heading-anchor" href="#basic-form-elements"><i class="icon icon-link"></i></a>Basic Form Elements</h3>
+		<h3 id="basic-form-elements"><a class="heading-anchor" href="#basic-form-elements"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Basic Form Elements</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Add class <code>focus</code> on the label to change the color of the label.</p>
 		</blockquote>
 
 		<div class="form-group">
-			<label>Default text input</label>
+			<label>
+				Default text input
+				<span class="reference-mark">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+						<use xlink:href="../../images/icons/icons.svg#asterisk">
+					</svg>
+				</span>
+			</label>
 			<input class="form-control" placeholder="Placeholder" type="text">
 		</div>
 
@@ -241,33 +248,12 @@
 			<label>Textarea</label>
 			<textarea class="form-control" placeholder="Placeholder"></textarea>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Default text input&lt;/label&gt;
-    &lt;input class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Password input&lt;/label&gt;
-    &lt;input class=&quot;form-control&quot; placeholder=&quot;Enter password&quot; type=&quot;password&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Textarea&lt;/label&gt;
-    &lt;textarea class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot;&gt;&lt;/textarea&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="checkboxes-and-radios-no-extra-mark-up"><a class="heading-anchor" href="#checkboxes-and-radios-no-extra-mark-up"><i class="icon icon-link"></i></a>Checkboxes and Radios (no extra mark up)</h3>
+		<h3 id="checkboxes-and-radios"><a class="heading-anchor" href="#checkboxes-and-radios"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Checkboxes and Radios</h3>
 	</div>
 
 	<div class="col-md-6">
@@ -276,35 +262,35 @@
 <!-- Checkboxes unable to be styled in Firefox with this method. See https://bugzilla.mozilla.org/show_bug.cgi?id=605985
 Checkboxes unable to be styled in IE with this method. -->
 
-		<div class="checkbox">
-			<label>
-				<input type="checkbox" value="">
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" type="checkbox" value="">
 			</label>
 		</div>
-		<div class="checkbox">
-			<label>
-				<input type="checkbox" value="">
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" type="checkbox" value="">
 				Label
 			</label>
 		</div>
-		<div class="checkbox disabled">
-			<label>
-				<input checked disabled type="checkbox" value="">
+		<div class="form-check disabled">
+			<label class="form-check-label">
+				<input checked class="form-check-input" disabled type="checkbox" value="">
 				Disabled Check Box
 			</label>
 		</div>
 
-		<div class="checkbox">
-			<label class="checkbox-inline">
-				<input type="checkbox" id="inlineCheckbox1" value="option1">
+		<div class="form-check">
+			<label class="form-check-label form-check-inline">
+				<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
 				1
 			</label>
-			<label class="checkbox-inline">
-				<input type="checkbox" id="inlineCheckbox2" value="option2">
+			<label class="form-check-label form-check-inline">
+				<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
 				2
 			</label>
-			<label class="checkbox-inline">
-				<input type="checkbox" id="inlineCheckbox3" value="option3">
+			<label class="form-check-label form-check-inline">
+				<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
 				3
 			</label>
 		</div>
@@ -313,62 +299,43 @@ Checkboxes unable to be styled in IE with this method. -->
 	<div class="col-md-6">
 		<h5>Radio Buttons</h5>
 
-		<div class="radio">
-			<label>
-				<input type="radio" value="">
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" type="radio" value="">
 			</label>
 		</div>
 
-		<div class="radio">
-			<label>
-				<input type="radio" value="">
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" type="radio" value="">
 				Label
 			</label>
 		</div>
 
-		<div class="radio disabled">
-			<label>
-				<input disabled type="radio">
+		<div class="form-check disabled">
+			<label class="form-check-label">
+				<input class="form-check-input" disabled type="radio">
 				Disabled Radio Button
 			</label>
 		</div>
 
-		<div class="radio">
-			<label class="radio-inline">
-				<input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"> 1
+		<div class="form-check">
+			<label class="form-check-label form-check-inline">
+				<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1"> 1
 			</label>
-			<label class="radio-inline">
-				<input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"> 2
+			<label class="form-check-label form-check-inline">
+				<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2"> 2
 			</label>
-			<label class="radio-inline">
-				<input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"> 3
+			<label class="form-check-label form-check-inline">
+				<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3"> 3
 			</label>
 		</div>
 	</div>
 </div>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse3">
-  <pre><code class="html">&lt;div class=&quot;checkbox&quot;&gt;
-    &lt;label&gt;
-        &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
-        Label with class checkbox
-    &lt;/label&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;radio&quot;&gt;
-    &lt;label&gt;
-        &lt;input type=&quot;radio&quot;&gt;
-        Regular Radio Button
-    &lt;/label&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="select-box"><a class="heading-anchor" href="#select-box"><i class="icon icon-link"></i></a>Select Box</h3>
+		<h3 id="select-box"><a class="heading-anchor" href="#select-box"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Select Box</h3>
 
 		<div class="form-group">
 			<label>Regular Select Box</label>
@@ -393,66 +360,24 @@ Checkboxes unable to be styled in IE with this method. -->
 				<option>Sample 8</option>
 			</select>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Regular Select Box&lt;/label&gt;
-    &lt;select class=&quot;form-control&quot;&gt;
-        &lt;option&gt;Sample 1&lt;/option&gt;
-        &lt;option&gt;Sample 2&lt;/option&gt;
-        &lt;option&gt;Sample 3&lt;/option&gt;
-        &lt;option&gt;Sample 4&lt;/option&gt;
-    &lt;/select&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Select Box with Multiple Select Options&lt;/label&gt;
-    &lt;select class=&quot;form-control&quot; multiple&gt;
-        &lt;option&gt;Sample 1&lt;/option&gt;
-        &lt;option&gt;Sample 2&lt;/option&gt;
-        &lt;option&gt;Sample 3&lt;/option&gt;
-        &lt;option&gt;Sample 4&lt;/option&gt;
-        &lt;option&gt;Sample 5&lt;/option&gt;
-        &lt;option&gt;Sample 6&lt;/option&gt;
-        &lt;option&gt;Sample 7&lt;/option&gt;
-        &lt;option&gt;Sample 8&lt;/option&gt;
-    &lt;/select&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="file-upload"><a class="heading-anchor" href="#file-upload"><i class="icon icon-link"></i></a>File Upload</h3>
+		<h3 id="file-upload"><a class="heading-anchor" href="#file-upload"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>File Upload</h3>
 
 		<div class="form-group">
 			<label class="sr-only">FILE UPLOAD</label>
 
 			<input id="inputFile" type="file">
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse5">
-	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label class=&quot;sr-only&quot;&gt;FILE UPLOAD&lt;/label&gt;
-
-    &lt;input id=&quot;inputFile&quot; type=&quot;file&quot;&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="disabled-inputs"><a class="heading-anchor" href="#disabled-inputs"><i class="icon icon-link"></i></a>Disabled Inputs</h3>
+		<h3 id="disabled-inputs"><a class="heading-anchor" href="#disabled-inputs"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Disabled Inputs</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Add class <code>disabled</code> on the label to match the opacity to disabled input.</p>
@@ -460,7 +385,7 @@ Checkboxes unable to be styled in IE with this method. -->
 
 		<div class="form-group">
 			<label class="disabled">Text Input</label>
-			<input disabled class="form-control" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
+			<input class="form-control" disabled placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
 		</div>
 
 		<div class="form-group">
@@ -496,44 +421,28 @@ Checkboxes unable to be styled in IE with this method. -->
 				<option>Sample 8</option>
 			</select>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse6">
-	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-      &lt;label class=&quot;disabled&quot;&gt;Disabled Text Input&lt;/label&gt;
-      &lt;input disabled class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label class=&quot;disabled&quot;&gt;Password Input&lt;/label&gt;
-    &lt;input class=&quot;form-control&quot; disabled placeholder=&quot;Enter password&quot; type=&quot;password&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label class=&quot;disabled&quot;&gt;Textarea&lt;/label&gt;
-    &lt;textarea class=&quot;form-control&quot; disabled placeholder=&quot;Placeholder&quot;&gt;&lt;/textarea&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="disabled-fieldset"><a class="heading-anchor" href="#disabled-fieldset"><i class="icon icon-link"></i></a>Disabled Fieldset</h3>
+		<h3 id="disabled-fieldset"><a class="heading-anchor" href="#disabled-fieldset"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Disabled Fieldset</h3>
 
 		<form style="margin-bottom: 15px;">
 			<fieldset disabled>
 				<div class="form-group">
+					<label>Use fieldset to group related elements in a form and ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
+						<input class="form-control" type="text" value="Plunger pot, extra siphon latte">
+					</label>
+				</div>
+				<div class="form-group">
 					<label for="disabledTextInput">Disabled input</label>
-					<input type="text" id="disabledTextInput" class="form-control" value="Plunger pot, extra siphon latte">
+					<input class="form-control" id="disabledTextInput" type="text" value="Plunger pot, extra siphon latte">
 				</div>
 
 				<div class="form-group">
 					<label for="disabledSelect">Disabled select menu</label>
-					<select id="disabledSelect" class="form-control">
+					<select class="form-control" id="disabledSelect">
 						<option>Sample 1</option>
 						<option>Sample 2</option>
 						<option>Sample 3</option>
@@ -541,71 +450,29 @@ Checkboxes unable to be styled in IE with this method. -->
 					</select>
 				</div>
 
-				<div class="checkbox">
-					<label>
-						<input checked type="checkbox" value="">
-						<span class="skin"></span>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input checked class="form-check-input" type="checkbox" value="">
 						Disabled Checkbox
 					</label>
 				</div>
 
-				<div class="radio">
-					<label>
-						<input type="radio" value="">
-						<span class="skin"></span>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input class="form-check-input" type="radio" value="">
 						Disabled Radio
 					</label>
 				</div>
 
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button class="btn btn-primary" type="submit">Submit</button>
 			</fieldset>
 		</form>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse7"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse7">
-	<pre><code class="html">&lt;form&gt;
-    &lt;fieldset disabled=&quot;&quot;&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-            &lt;label for=&quot;disabledTextInput&quot;&gt;Disabled input&lt;/label&gt;
-            &lt;input type=&quot;text&quot; id=&quot;disabledTextInput&quot; class=&quot;form-control&quot; placeholder=&quot;Disabled input&quot;&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;form-group&quot;&gt;
-            &lt;label for=&quot;disabledSelect&quot;&gt;Disabled select menu&lt;/label&gt;
-            &lt;select id=&quot;disabledSelect&quot; class=&quot;form-control&quot;&gt;
-                &lt;option&gt;Disabled select&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;checkbox&quot;&gt;
-            &lt;label&gt;
-                &lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt;
-                &lt;span class=&quot;skin&quot;&gt;&lt;/span&gt;
-                Disabled Checkbox
-            &lt;/label&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;radio&quot;&gt;
-            &lt;label&gt;
-                &lt;input type=&quot;radio&quot; value=&quot;&quot;&gt;
-                &lt;span class=&quot;skin&quot;&gt;&lt;/span&gt;
-                Disabled Radio
-            &lt;/label&gt;
-        &lt;/div&gt;
-
-        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
-    &lt;/fieldset&gt;
-&lt;/form&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="read-only-states"><a class="heading-anchor" href="#read-only-states"><i class="icon icon-link"></i></a>Read Only States</h3>
+		<h3 id="read-only-states"><a class="heading-anchor" href="#read-only-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Read Only States</h3>
 
 		<div class="form-group">
 			<label>Text Input (Read Only)</label>
@@ -616,32 +483,16 @@ Checkboxes unable to be styled in IE with this method. -->
 			<label>Textarea (Read Only)</label>
 			<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse8"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse8">
-	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Text Input (Read Only)&lt;/label&gt;
-    &lt;input class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; readonly type=&quot;text&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Textarea (Read Only)&lt;/label&gt;
-    &lt;textarea class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; readonly&gt;&lt;/textarea&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="form-element-sizes"><a class="heading-anchor" href="#form-element-sizes"><i class="icon icon-link"></i></a>Form Element Sizes</h3>
+		<h3 id="form-element-sizes"><a class="heading-anchor" href="#form-element-sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form Element Sizes</h3>
 
 		<div class="form-group">
 			<label>Small text input</label>
-			<input class="form-control input-sm" placeholder="Placeholder" type="text">
+			<input class="form-control form-control-sm" placeholder="Placeholder" type="text">
 		</div>
 
 		<div class="form-group">
@@ -651,37 +502,168 @@ Checkboxes unable to be styled in IE with this method. -->
 
 		<div class="form-group">
 			<label>Large text input</label>
-			<input class="form-control input-lg" placeholder="Placeholder" type="text">
+			<input class="form-control form-control-lg" placeholder="Placeholder" type="text">
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse9"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse9">
-	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Small text input&lt;/label&gt;
-    &lt;input class=&quot;form-control input-sm&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Default text input&lt;/label&gt;
-    &lt;input class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Large text input&lt;/label&gt;
-    &lt;input class=&quot;form-control input-lg&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
-&lt;/div&gt;</code></pre>
+	</div>
 </div>
 
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="form-group"><a class="heading-anchor" href="#form-group"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form Group</h3>
+
+		<form class="aaa">
+			<div class="form-group">
+				<label class="form-control-label">
+					First Name
+				</label>
+				<input class="form-control" placeholder="First Name" type="text">
+			</div>
+			<div class="form-group">
+				<label class="form-control-label">
+					Last Name
+				</label>
+				<input class="form-control" placeholder="Last Name" type="text">
+			</div>
+			<div class="form-group">
+				<label class="form-control-label">
+					Address 1
+				</label>
+				<input class="form-control" placeholder="Address 1" type="text">
+			</div>
+			<div class="form-group">
+				<label class="form-control-label">
+					Address 2
+				</label>
+				<input class="form-control" placeholder="Address 2" type="text">
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="form-inline"><a class="heading-anchor" href="#form-inline"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form Inline</h3>
+
+		<form>
+			<div class="form-group form-inline">
+				<label class="form-control-label">Form Inline</label>
+				<input class="form-control" type="text">
+				<button class="btn btn-primary" type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="form-inline-autofit"><a class="heading-anchor" href="#form-inline-autofit"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form Inline Autofit</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			Equally spaced form inputs. To set a fixed width use <code class="code">flex-grow: 0; flex-basis: 200px;</code> on <code class="code">.form-inline-group</code> or any direct descendant of <code class="code">.form-inline-autofit</code>.
+		</blockquote>
+
+		<form>
+			<div class="form-group form-inline form-inline-autofit">
+				<div class="form-inline-group">
+					<label class="form-control-label">Form Inline Autofit</label>
+					<input class="form-control" type="text">
+				</div>
+				<div class="form-inline-group">
+					<label class="form-control-label">Select</label>
+					<select class="form-control">
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group form-inline form-inline-autofit">
+				<div class="form-inline-group">
+					<label class="form-control-label">First Name</label>
+					<input class="form-control" placeholder="First Name" type="text">
+				</div>
+				<div class="form-inline-group">
+					<label class="form-control-label">Last Name</label>
+					<input class="form-control" placeholder="Last Name" type="text">
+				</div>
+				<div class="input-group"> <div class="input-group-addon">$</div> <input class="form-control" id="exampleInputAmount" placeholder="Amount"> <div class="input-group-addon">.00</div> </div>
+			</div>
+
+			<div class="form-group form-inline form-inline-autofit">
+				<label>City</label>
+				<input class="form-control" placeholder="City" type="text">
+				<select class="form-control">
+					<option>AL</option>
+					<option>CA</option>
+					<option>FL</option>
+					<option>HI</option>
+					<option>NV</option>
+					<option>WA</option>
+				</select>
+				<input class="form-control" placeholder="Zip" type="number">
+				<div class="form-inline-group">
+					<label class="form-control-label">Donation</label>
+					<div class="input-group"> <div class="input-group-addon">$</div> <input class="form-control" id="exampleInputAmount" placeholder="Amount"> <div class="input-group-addon">.00</div> </div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit">Submit</button>
+				<a class="btn btn-danger" href="#1">Clear</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="form-inline-autofit-2-columns"><a class="heading-anchor" href="#form-inline-autofit-2-columns"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form Inline Autofit 2 Columns</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			An example of an inline form without using Bootstrap&apos;s grid.
+		</blockquote>
+
+		<style>
+			@media (min-width: 576px) {
+				.my-custom-form label,
+				.my-custom-form .form-control-label {
+					width: 200px;
+				}
+			}
+		</style>
+		<form class="my-custom-form">
+			<div class="form-group form-inline form-inline-autofit">
+				<label class="form-control-label">
+					Name
+				</label>
+				<input class="form-control" placeholder="First" type="text">
+				<input class="form-control" placeholder="Middle" type="text">
+				<input class="form-control" placeholder="Last" type="text">
+			</div>
+			<div class="form-group form-inline form-inline-autofit">
+				<label class="form-control-label">
+					Address 1
+				</label>
+				<input class="form-control" placeholder="Address 1" type="text">
+			</div>
+			<div class="form-group form-inline form-inline-autofit">
+				<label class="form-control-label">
+					Address 2
+				</label>
+				<input class="form-control" placeholder="Address 2" type="text">
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit">Submit</button>
+				<a class="btn btn-danger" href="#1">Clear</a>
+			</div>
+		</form>
 	</div>
 </div>
 	</div>
 
 		</section>
 	</div>
-
-	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 	<script src="../../js/site/toggle_css.js"></script>

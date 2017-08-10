@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8" />
 	<title>Lexicon - Documents and Media</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 	<link rel="stylesheet" href="../../css/main.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -25,33 +26,33 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -61,15 +62,19 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
@@ -79,13 +84,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+<li class=""><a class="nav-title" href="../../content/grid">Grid</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -95,11 +104,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-pills">Nav Pills</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -109,18 +124,24 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+<li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+<li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -130,37 +151,19 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -172,19 +175,9 @@
 </ul>
 </div>
 </li>
-<li class=""><span class="nav-title">Experimental</span>
-<div class="">
-<ul class="nav nav-stacked">
-<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
-</li>
-</ul>
-</div>
-</li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -198,7 +191,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -221,26 +214,28 @@
 		
 <div class="row" id="documentsAndMediaExample">
 	<div class="col-md-12">
-		<div class="closed sidenav-container" id="documentsAndMediaSidenav">
+		<div class="closed sidenav-container sidenav-js-fouc" id="documentsAndMediaSidenav">
 			<div class="sidenav-menu-slider">
 				<div class="sidebar sidebar-inverse sidenav-menu">
 					<div class="sidebar-header">
-						<h4>
-							<a href="#1">
-								<span class="sidebar-header-logo">
-									<svg class="icon-monospaced lexicon-icon">
-										<use xlink:href="../../images/icons/icons.svg#staging">
+						<ul class="sidebar-actions">
+							<li>
+								<a class="sidenav-close" href="#1">
+									<svg class="icon-monospaced lexicon-icon lexicon-icon-times">
+										<use xlink:href="../../images/icons/icons.svg#times">
 									</svg>
-								</span>
-								<span>Squareup</span>
-							</a>
+								</a>
+							</li>
+						</ul>
 
-							<a class="sidenav-close" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#times">
+						<a class="sidebar-title" href="#1">
+							<div class="sticker sticker-static sticker-success">
+								<svg class="lexicon-icon lexicon-icon-staging">
+									<use xlink:href="../../images/icons/icons.svg#staging">
 								</svg>
-							</a>
-						</h4>
+							</div>
+							<span>Liferay</span>
+						</a>
 					</div>
 
 					<div class="sidebar-body">
@@ -323,14 +318,15 @@
 						<div class="nameplate">
 							<div class="nameplate-field">
 								<div class="user-icon user-icon-warning">
-									<svg class="icon-monospaced lexicon-icon">
+									<svg class="lexicon-icon lexicon-icon-user">
 										<use xlink:href="../../images/icons/icons.svg#user">
 									</svg>
 								</div>
 							</div>
 
 							<div class="nameplate-content">
-								<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+								Joe Bloggs<br>
+								Subheading
 							</div>
 
 							<div class="nameplate-field">
@@ -348,7 +344,7 @@
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
 								<a class="sidenav-toggler" href="#documentsAndMediaSidenav" id="documentsAndMediaToggler">
-									<svg class="icon-monospaced lexicon-icon">
+									<svg class="icon-monospaced lexicon-icon lexicon-icon-bars">
 										<use xlink:href="../../images/icons/icons.svg#bars">
 									</svg>
 								</a>
@@ -359,7 +355,7 @@
 							<div class="toolbar-group-content">
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-										<svg class="icon-monospaced lexicon-icon">
+										<svg class="icon-monospaced lexicon-icon lexicon-icon-cog">
 											<use xlink:href="../../images/icons/icons.svg#cog">
 										</svg>
 									</a>
@@ -381,7 +377,7 @@
 				<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse">
 					<div class="container-fluid-1280">
 						<ul class="nav navbar-nav">
-							<li><a href="#1">All Posts</a></li>
+							<li class="active"><a href="#1">All Posts</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -404,20 +400,22 @@
 
 							<ul class="management-bar-nav management-bar-nav-right nav">
 								<li>
-									<a class="btn btn-default" href="#documentsAndMediaRightSidenav" id="documentsAndMediaRightSidenavToggler">
-										<span class="icon-info-sign icon-monospaced"></span>
+									<a class="active btn btn-default open" href="#documentsAndMediaRightSidenav" id="documentsAndMediaRightSidenavToggler">
+										<svg class="icon-monospaced lexicon-icon lexicon-icon-info-circle">
+											<use xlink:href="../../images/icons/icons.svg#info-circle">
+										</svg>
 									</a>
 								</li>
 								<li>
 									<a class="btn btn-default" href="#">
-										<svg class="icon-monospaced lexicon-icon">
+										<svg class="icon-monospaced lexicon-icon lexicon-icon-trash">
 											<use xlink:href="../../images/icons/icons.svg#trash">
 										</svg>
 									</a>
 								</li>
 								<li class="dropdown">
 									<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
-										<svg class="icon-monospaced lexicon-icon">
+										<svg class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 											<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 										</svg>
 									</a>
@@ -432,60 +430,61 @@
 						</div>
 					</div>
 
-					<div class="container-fluid-1280 sidenav-container" id="documentsAndMediaRightSidenav">
+					<div class="container-fluid-1280 open sidenav-container sidenav-js-fouc" id="documentsAndMediaRightSidenav">
 						<div class="sidenav-menu-slider">
 							<div class="sidebar sidebar-default sidenav-menu">
 								<div class="sidebar-header">
-									<ul class="list-inline list-unstyled sidebar-header-actions">
+									<ul class="sidebar-actions">
 										<li>
 											<a href="#1">
-												<svg class="icon-monospaced lexicon-icon">
+												<svg class="icon-monospaced lexicon-icon lexicon-icon-star-o">
 													<use xlink:href="../../images/icons/icons.svg#star-o">
 												</svg>
 											</a>
 										</li>
 										<li>
-											<a class="" href="#1">
-												<svg class="icon-monospaced lexicon-icon">
+											<a href="#1">
+												<svg class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 													<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 												</svg>
 											</a>
 										</li>
 										<li>
 											<a class="sidenav-close" href="#1">
-												<svg class="icon-monospaced lexicon-icon">
+												<svg class="icon-monospaced lexicon-icon lexicon-icon-times">
 													<use xlink:href="../../images/icons/icons.svg#times">
 												</svg>
 											</a>
 										</li>
 									</ul>
 
-									<h4>Image1.jpg</h4>
-
-									<h5 class="text-default">
-										<span>Approved<span>
-									</span></span></h5>
+									<h4 class="sidebar-title">Image1.jpg</h4>
+									<h5>Approved</h5>
+									<h6 class="sidebar-caption">Users are allowed to request membership. The request is accepted automatically.</h6>
 								</div>
-								<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse">
+
+								<nav class="navbar navbar-default navbar-no-collapse">
 									<ul class="nav navbar-nav">
-										<li class="active dropdown">
-											<a aria-expanded="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Details <span class="caret"></span></a>
-											<ul class="dropdown-menu" role="menu">
-												<li><a href="#">Details</a></li>
-												<li><a href="#">Versions</a></li>
-												<li><a href="#">Comments (17)</a></li>
-											</ul>
+										<li class="active">
+											<a href="#1">Details</a>
+										</li>
+										<li>
+											<a href="#1">Versions</a>
 										</li>
 									</ul>
 								</nav>
 
 								<div class="sidebar-body">
-									<div class="sidebar-panel">
+									<div class="crop-img crop-img-center crop-img-middle sidebar-panel">
 										<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_hot_air_ballon.jpg">
-										<div class="sticker sticker-bottom sticker-danger">PDF</div>
+										<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
 									</div>
 
-									<dl>
+									<div style="margin-bottom:20px;margin-top: 20px;">
+										<a class="btn btn-default btn-sm" href="#1">Download</a>
+									</div>
+
+									<dl class="sidebar-block">
 										<dt class="h5">Size</dt>
 										<dd>136 KB</dd>
 										<dt class="h5">Dimensions</dt>
@@ -494,38 +493,39 @@
 										<dd>By Helen Smith on Feb 15 2015, 10:15am</dd>
 										<dt class="h5">Last Modification</dt>
 										<dd>By Helen Smith on Feb 15 2015, 10:15am</dd>
-										<dt class="h5">Tags</dt>
-										<dd>
-											<p>
-												<span class="badge badge-default">
-													History
-													<a class="" href="#1">
-														<svg aria-hidden="true" class="lexicon-icon">
-															<use xlink:href="../../images/icons/icons.svg#times">
-														</svg>
-													</a>
-												</span>
-												<span class="badge badge-default">
-													Flat
-													<a class="" href="#1">
-														<svg aria-hidden="true" class="lexicon-icon">
-															<use xlink:href="../../images/icons/icons.svg#times">
-														</svg>
-													</a>
-												</span>
-												<span class="badge badge-default">
-													Default
-													<a class="" href="#1">
-														<svg aria-hidden="true" class="lexicon-icon">
-															<use xlink:href="../../images/icons/icons.svg#times">
-														</svg>
-													</a>
-												</span>
-											</p>
-
-											<a class="btn btn-default btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
-										</dd>
 									</dl>
+
+									<div class="sidebar-block">
+										<span>Tags: </span>
+										<span class="badge badge-default badge-sm">
+											History
+											<a href="#1">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+													<use xlink:href="../../images/icons/icons.svg#times">
+												</svg>
+											</a>
+										</span>
+										<span class="badge badge-default badge-sm">
+											Flat
+											<a href="#1">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+													<use xlink:href="../../images/icons/icons.svg#times">
+												</svg>
+											</a>
+										</span>
+										<span class="badge badge-default badge-sm">
+											Default
+											<a href="#1">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+													<use xlink:href="../../images/icons/icons.svg#times">
+												</svg>
+											</a>
+										</span>
+
+										<div style="margin-bottom: 20px;margin-top:20px;">
+											<a class="btn btn-default btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -545,17 +545,19 @@
 											<div class="card card-horizontal">
 												<div class="card-row card-row-padded">
 													<div class="card-col-field">
-														<svg class="icon-monospaced lexicon-icon">
-															<use xlink:href="../../images/icons/icons.svg#folder">
-														</svg>
+														<div class="sticker sticker-default sticker-lg sticker-static">
+															<svg class="lexicon-icon lexicon-icon-folder">
+																<use xlink:href="../../images/icons/icons.svg#folder">
+															</svg>
+														</div>
 													</div>
 													<div class="card-col-content card-col-gutters clamp-horizontal">
 														<div class="clamp-container"><span class="h4 truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
 													</div>
-													<div class="card-col-field" style="vertical-align:top;">
+													<div class="card-col-field">
 														<div class="dropdown">
 															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+																<svg class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 																</svg>
 															</a>
@@ -582,17 +584,19 @@
 											<div class="card card-horizontal">
 												<div class="card-row card-row-padded">
 													<div class="card-col-field">
-														<svg class="icon-monospaced lexicon-icon">
-															<use xlink:href="../../images/icons/icons.svg#folder">
-														</svg>
+														<div class="sticker sticker-default sticker-lg sticker-static">
+															<svg class="lexicon-icon lexicon-icon-folder">
+																<use xlink:href="../../images/icons/icons.svg#folder">
+															</svg>
+														</div>
 													</div>
 													<div class="card-col-content card-col-gutters clamp-horizontal">
 														<div class="clamp-container"><span class="h4 truncate-text" title="Folder 01">Folder 01</span></div>
 													</div>
-													<div class="card-col-field" style="vertical-align:top;">
+													<div class="card-col-field">
 														<div class="dropdown">
 															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+																<svg class="icon-monospaced lexicon-icon  lexicon-icon-ellipsis-v">
 																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 																</svg>
 															</a>
@@ -619,17 +623,19 @@
 											<div class="card card-horizontal">
 												<div class="card-row card-row-padded">
 													<div class="card-col-field">
-														<svg class="icon-monospaced lexicon-icon">
-															<use xlink:href="../../images/icons/icons.svg#folder">
-														</svg>
+														<div class="sticker sticker-default sticker-lg sticker-static">
+															<svg class="lexicon-icon lexicon-icon-folder">
+																<use xlink:href="../../images/icons/icons.svg#folder">
+															</svg>
+														</div>
 													</div>
 													<div class="card-col-content card-col-gutters clamp-horizontal">
 														<div class="clamp-container"><span class="h4 truncate-text" title="Folder 02">Folder 02</span></div>
 													</div>
-													<div class="card-col-field" style="vertical-align:top;">
+													<div class="card-col-field">
 														<div class="dropdown">
 															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+																<svg class="icon-monospaced lexicon-icon  lexicon-icon-ellipsis-v">
 																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 																</svg>
 															</a>
@@ -656,17 +662,19 @@
 											<div class="card card-horizontal">
 												<div class="card-row card-row-padded">
 													<div class="card-col-field">
-														<svg class="icon-monospaced lexicon-icon">
-															<use xlink:href="../../images/icons/icons.svg#folder">
-														</svg>
+														<div class="sticker sticker-default sticker-lg sticker-static">
+															<svg class="lexicon-icon lexicon-icon-folder">
+																<use xlink:href="../../images/icons/icons.svg#folder">
+															</svg>
+														</div>
 													</div>
 													<div class="card-col-content card-col-gutters clamp-horizontal">
 														<div class="clamp-container"><span class="h4 truncate-text" title="Folder 03">Folder 03</span></div>
 													</div>
-													<div class="card-col-field" style="vertical-align:top;">
+													<div class="card-col-field">
 														<div class="dropdown">
 															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+																<svg class="icon-monospaced lexicon-icon  lexicon-icon-ellipsis-v">
 																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 																</svg>
 															</a>
@@ -699,17 +707,15 @@
 												</div>
 
 												<div class="card-row card-row-padded card-row-valign-top">
-													<div class="card-col-content clamp-horizontal" style="height: 75px;">
-														<div class="clamp-container">
-															<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
-															<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
-															<span class="truncate-text">Approved</span>
-														</div>
+													<div class="card-col-content">
+														<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+														<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+														<span class="truncate-text">Approved</span>
 													</div>
 													<div class="card-col-field">
-														<div class="dropdown">
+														<div class="dropdown" style="margin-right: -8px;">
 															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+																<svg class="icon-monospaced lexicon-icon  lexicon-icon-ellipsis-v">
 																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 																</svg>
 															</a>
@@ -740,17 +746,15 @@
 												</div>
 
 												<div class="card-row card-row-padded card-row-valign-top">
-													<div class="card-col-content clamp-horizontal" style="height: 75px;">
-														<div class="clamp-container">
-															<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
-															<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
-															<span class="truncate-text">Approved</span>
-														</div>
+													<div class="card-col-content">
+														<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+														<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+														<span class="truncate-text">Approved</span>
 													</div>
 													<div class="card-col-field">
-														<div class="dropdown">
+														<div class="dropdown" style="margin-right: -8px;">
 															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+																<svg class="icon-monospaced lexicon-icon  lexicon-icon-ellipsis-v">
 																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 																</svg>
 															</a>
@@ -781,17 +785,15 @@
 												</div>
 
 												<div class="card-row card-row-padded card-row-valign-top">
-													<div class="card-col-content clamp-horizontal" style="height: 75px;">
-														<div class="clamp-container">
-															<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
-															<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
-															<span class="truncate-text">Approved</span>
-														</div>
+													<div class="card-col-content">
+														<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+														<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+														<span class="truncate-text">Approved</span>
 													</div>
 													<div class="card-col-field">
-														<div class="dropdown">
+														<div class="dropdown" style="margin-right: -8px;">
 															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+																<svg class="icon-monospaced lexicon-icon  lexicon-icon-ellipsis-v">
 																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 																</svg>
 															</a>
@@ -822,17 +824,15 @@
 												</div>
 
 												<div class="card-row card-row-padded card-row-valign-top">
-													<div class="card-col-content clamp-horizontal" style="height: 75px;">
-														<div class="clamp-container">
-															<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
-															<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
-															<span class="truncate-text">Approved</span>
-														</div>
+													<div class="card-col-content">
+														<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+														<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+														<span class="truncate-text">Approved</span>
 													</div>
 													<div class="card-col-field">
-														<div class="dropdown">
+														<div class="dropdown" style="margin-right: -8px;">
 															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+																<svg class="icon-monospaced lexicon-icon  lexicon-icon-ellipsis-v">
 																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 																</svg>
 															</a>
@@ -863,17 +863,15 @@
 												</div>
 
 												<div class="card-row card-row-padded card-row-valign-top">
-													<div class="card-col-content clamp-horizontal" style="height: 75px;">
-														<div class="clamp-container">
-															<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
-															<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
-															<span class="truncate-text">Approved</span>
-														</div>
+													<div class="card-col-content">
+														<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+														<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+														<span class="truncate-text">Approved</span>
 													</div>
 													<div class="card-col-field">
-														<div class="dropdown">
+														<div class="dropdown" style="margin-right: -8px;">
 															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+																<svg class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 																</svg>
 															</a>
@@ -904,17 +902,15 @@
 												</div>
 
 												<div class="card-row card-row-padded card-row-valign-top">
-													<div class="card-col-content clamp-horizontal" style="height: 75px;">
-														<div class="clamp-container">
-															<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
-															<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
-															<span class="truncate-text">Approved</span>
-														</div>
+													<div class="card-col-content">
+														<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+														<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+														<span class="truncate-text">Approved</span>
 													</div>
 													<div class="card-col-field">
-														<div class="dropdown">
+														<div class="dropdown" style="margin-right: -8px;">
 															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+																<svg class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 																</svg>
 															</a>
@@ -937,9 +933,9 @@
 
 							<div class="pagination-bar">
 								<div class="dropdown pagination-items-per-page">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#1" type="button">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 										10 entries
-										<svg class="lexicon-icon">
+										<svg class="lexicon-icon lexicon-icon-caret-double-l">
 											<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 										</svg>
 									</a>
@@ -991,30 +987,39 @@
 	</div>
 </div>
 
-<a class="btn btn-action btn-bottom-right btn-primary" data-placement="left" data-toggle="tooltip" href="#1" id="fullscreenBtn" title="Fullscreen"><span class="icon-monospaced"><span class="icon-desktop"></span></span></a>
+<a class="btn btn-action btn-bottom-right btn-primary" data-placement="left" data-toggle="tooltip" href="#1" id="fullscreenBtn" title="Fullscreen">
+	<span class="icon-monospaced"><span class="icon-desktop"></span></span>
+</a>
 
 <script>
-	$('#fullscreenBtn').on('click', function(event) {
-		event.preventDefault();
+	$('#fullscreenBtn').on(
+		'click',
+			function(event) {
+			event.preventDefault();
 
-		$('#documentsAndMediaExample').toggleClass('uxgl-fullscreen-fixed');
-		$('body').toggleClass('fixed');
-	});
+			$('#documentsAndMediaExample').toggleClass('uxgl-fullscreen-fixed');
+			$('body').toggleClass('fixed');
+		}
+	);
 
-	$('#documentsAndMediaToggler').sideNavigation({
-		gutter: 0,
-		position: 'left',
-		typeMobile: 'fixed',
-		type: 'fixed-push',
-		width: 320
-	});
+	$('#documentsAndMediaToggler').sideNavigation(
+		{
+			gutter: 0,
+			position: 'left',
+			type: 'fixed-push',
+			typeMobile: 'fixed',
+			width: 320
+		}
+	);
 
-	$('#documentsAndMediaRightSidenavToggler').sideNavigation({
-		gutter: 0,
-		position: 'right',
-		typeMobile: 'fixed',
-		width: 320
-	});
+	$('#documentsAndMediaRightSidenavToggler').sideNavigation(
+		{
+			gutter: 0,
+			position: 'right',
+			typeMobile: 'fixed',
+			width: 320
+		}
+	);
 
 	$('.collapse-basic-search').collapsibleSearch();
 </script>
@@ -1022,8 +1027,6 @@
 
 		</section>
 	</div>
-
-	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 	<script src="../../js/site/toggle_css.js"></script>

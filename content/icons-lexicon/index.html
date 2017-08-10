@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8" />
 	<title>Lexicon - Icons (Lexicon)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 	<link rel="stylesheet" href="../../css/main.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -25,33 +26,33 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -61,15 +62,19 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
@@ -79,13 +84,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+<li class=""><a class="nav-title" href="../../content/grid">Grid</a>
 </li>
 <li class="active"><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -95,11 +104,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-pills">Nav Pills</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -109,18 +124,24 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+<li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+<li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -130,37 +151,19 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -172,19 +175,9 @@
 </ul>
 </div>
 </li>
-<li class=""><span class="nav-title">Experimental</span>
-<div class="">
-<ul class="nav nav-stacked">
-<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
-</li>
-</ul>
-</div>
-</li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -198,7 +191,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -223,7 +216,7 @@
 	<p>Lexicon icons do not use the same format as Font Awesome or Bootstrap&apos;s Glyphicons.</p>
 </div>
 <p>We use SVG elements that link to an SVG sprite, like so:</p>
-<p><pre><code>&lt;svg class=&quot;lexicon-icon&quot;&gt;
+<p><pre><code>&lt;svg aria-hidden=&quot;true&quot; class=&quot;lexicon-icon lexicon-icon-add-column&quot;&gt;
     &lt;use xlink:href=&quot;path/to/icons.svg#add-column&quot; /&gt;
 &lt;/svg&gt;
 </code></pre></p>
@@ -235,6 +228,7 @@
 <!-- inject:svg -->
 <li><svg class="lexicon-icon lexicon-icon-add-cell"><use xlink:href="../../images/icons/icons.svg#add-cell"></svg> <span>add-cell</span></li>
 <li><svg class="lexicon-icon lexicon-icon-add-column"><use xlink:href="../../images/icons/icons.svg#add-column"></svg> <span>add-column</span></li>
+<li><svg class="lexicon-icon lexicon-icon-add-role"><use xlink:href="../../images/icons/icons.svg#add-role"></svg> <span>add-role</span></li>
 <li><svg class="lexicon-icon lexicon-icon-add-row"><use xlink:href="../../images/icons/icons.svg#add-row"></svg> <span>add-row</span></li>
 <li><svg class="lexicon-icon lexicon-icon-adjust"><use xlink:href="../../images/icons/icons.svg#adjust"></svg> <span>adjust</span></li>
 <li><svg class="lexicon-icon lexicon-icon-align-center"><use xlink:href="../../images/icons/icons.svg#align-center"></svg> <span>align-center</span></li>
@@ -247,6 +241,8 @@
 <li><svg class="lexicon-icon lexicon-icon-angle-up"><use xlink:href="../../images/icons/icons.svg#angle-up"></svg> <span>angle-up</span></li>
 <li><svg class="lexicon-icon lexicon-icon-archive"><use xlink:href="../../images/icons/icons.svg#archive"></svg> <span>archive</span></li>
 <li><svg class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="../../images/icons/icons.svg#asterisk"></svg> <span>asterisk</span></li>
+<li><svg class="lexicon-icon lexicon-icon-audio"><use xlink:href="../../images/icons/icons.svg#audio"></svg> <span>audio</span></li>
+<li><svg class="lexicon-icon lexicon-icon-autosize"><use xlink:href="../../images/icons/icons.svg#autosize"></svg> <span>autosize</span></li>
 <li><svg class="lexicon-icon lexicon-icon-bars"><use xlink:href="../../images/icons/icons.svg#bars"></svg> <span>bars</span></li>
 <li><svg class="lexicon-icon lexicon-icon-blogs"><use xlink:href="../../images/icons/icons.svg#blogs"></svg> <span>blogs</span></li>
 <li><svg class="lexicon-icon lexicon-icon-bold"><use xlink:href="../../images/icons/icons.svg#bold"></svg> <span>bold</span></li>
@@ -270,6 +266,7 @@
 <li><svg class="lexicon-icon lexicon-icon-comments"><use xlink:href="../../images/icons/icons.svg#comments"></svg> <span>comments</span></li>
 <li><svg class="lexicon-icon lexicon-icon-compress"><use xlink:href="../../images/icons/icons.svg#compress"></svg> <span>compress</span></li>
 <li><svg class="lexicon-icon lexicon-icon-control-panel"><use xlink:href="../../images/icons/icons.svg#control-panel"></svg> <span>control-panel</span></li>
+<li><svg class="lexicon-icon lexicon-icon-custom-size"><use xlink:href="../../images/icons/icons.svg#custom-size"></svg> <span>custom-size</span></li>
 <li><svg class="lexicon-icon lexicon-icon-cut"><use xlink:href="../../images/icons/icons.svg#cut"></svg> <span>cut</span></li>
 <li><svg class="lexicon-icon lexicon-icon-date"><use xlink:href="../../images/icons/icons.svg#date"></svg> <span>date</span></li>
 <li><svg class="lexicon-icon lexicon-icon-desktop"><use xlink:href="../../images/icons/icons.svg#desktop"></svg> <span>desktop</span></li>
@@ -280,6 +277,9 @@
 <li><svg class="lexicon-icon lexicon-icon-effects"><use xlink:href="../../images/icons/icons.svg#effects"></svg> <span>effects</span></li>
 <li><svg class="lexicon-icon lexicon-icon-ellipsis-h"><use xlink:href="../../images/icons/icons.svg#ellipsis-h"></svg> <span>ellipsis-h</span></li>
 <li><svg class="lexicon-icon lexicon-icon-ellipsis-v"><use xlink:href="../../images/icons/icons.svg#ellipsis-v"></svg> <span>ellipsis-v</span></li>
+<li><svg class="lexicon-icon lexicon-icon-embed"><use xlink:href="../../images/icons/icons.svg#embed"></svg> <span>embed</span></li>
+<li><svg class="lexicon-icon lexicon-icon-envelope-closed"><use xlink:href="../../images/icons/icons.svg#envelope-closed"></svg> <span>envelope-closed</span></li>
+<li><svg class="lexicon-icon lexicon-icon-envelope-open"><use xlink:href="../../images/icons/icons.svg#envelope-open"></svg> <span>envelope-open</span></li>
 <li><svg class="lexicon-icon lexicon-icon-exclamation-circle"><use xlink:href="../../images/icons/icons.svg#exclamation-circle"></svg> <span>exclamation-circle</span></li>
 <li><svg class="lexicon-icon lexicon-icon-exclamation-full"><use xlink:href="../../images/icons/icons.svg#exclamation-full"></svg> <span>exclamation-full</span></li>
 <li><svg class="lexicon-icon lexicon-icon-expand"><use xlink:href="../../images/icons/icons.svg#expand"></svg> <span>expand</span></li>
@@ -299,6 +299,8 @@
 <li><svg class="lexicon-icon lexicon-icon-horizontal-scroll"><use xlink:href="../../images/icons/icons.svg#horizontal-scroll"></svg> <span>horizontal-scroll</span></li>
 <li><svg class="lexicon-icon lexicon-icon-hr"><use xlink:href="../../images/icons/icons.svg#hr"></svg> <span>hr</span></li>
 <li><svg class="lexicon-icon lexicon-icon-import-export"><use xlink:href="../../images/icons/icons.svg#import-export"></svg> <span>import-export</span></li>
+<li><svg class="lexicon-icon lexicon-icon-indent-less"><use xlink:href="../../images/icons/icons.svg#indent-less"></svg> <span>indent-less</span></li>
+<li><svg class="lexicon-icon lexicon-icon-indent-more"><use xlink:href="../../images/icons/icons.svg#indent-more"></svg> <span>indent-more</span></li>
 <li><svg class="lexicon-icon lexicon-icon-info-circle-open"><use xlink:href="../../images/icons/icons.svg#info-circle-open"></svg> <span>info-circle-open</span></li>
 <li><svg class="lexicon-icon lexicon-icon-info-circle"><use xlink:href="../../images/icons/icons.svg#info-circle"></svg> <span>info-circle</span></li>
 <li><svg class="lexicon-icon lexicon-icon-info-panel-closed"><use xlink:href="../../images/icons/icons.svg#info-panel-closed"></svg> <span>info-panel-closed</span></li>
@@ -316,14 +318,20 @@
 <li><svg class="lexicon-icon lexicon-icon-mark-as-answer"><use xlink:href="../../images/icons/icons.svg#mark-as-answer"></svg> <span>mark-as-answer</span></li>
 <li><svg class="lexicon-icon lexicon-icon-mark-as-question"><use xlink:href="../../images/icons/icons.svg#mark-as-question"></svg> <span>mark-as-question</span></li>
 <li><svg class="lexicon-icon lexicon-icon-message-boards"><use xlink:href="../../images/icons/icons.svg#message-boards"></svg> <span>message-boards</span></li>
+<li><svg class="lexicon-icon lexicon-icon-mobile-device-rules"><use xlink:href="../../images/icons/icons.svg#mobile-device-rules"></svg> <span>mobile-device-rules</span></li>
 <li><svg class="lexicon-icon lexicon-icon-mobile-landscape"><use xlink:href="../../images/icons/icons.svg#mobile-landscape"></svg> <span>mobile-landscape</span></li>
 <li><svg class="lexicon-icon lexicon-icon-mobile-portrait"><use xlink:href="../../images/icons/icons.svg#mobile-portrait"></svg> <span>mobile-portrait</span></li>
 <li><svg class="lexicon-icon lexicon-icon-moon"><use xlink:href="../../images/icons/icons.svg#moon"></svg> <span>moon</span></li>
 <li><svg class="lexicon-icon lexicon-icon-move"><use xlink:href="../../images/icons/icons.svg#move"></svg> <span>move</span></li>
 <li><svg class="lexicon-icon lexicon-icon-myspace"><use xlink:href="../../images/icons/icons.svg#myspace"></svg> <span>myspace</span></li>
+<li><svg class="lexicon-icon lexicon-icon-order-arrow"><use xlink:href="../../images/icons/icons.svg#order-arrow"></svg> <span>order-arrow</span></li>
+<li><svg class="lexicon-icon lexicon-icon-organizations"><use xlink:href="../../images/icons/icons.svg#organizations"></svg> <span>organizations</span></li>
+<li><svg class="lexicon-icon lexicon-icon-page-template"><use xlink:href="../../images/icons/icons.svg#page-template"></svg> <span>page-template</span></li>
 <li><svg class="lexicon-icon lexicon-icon-page"><use xlink:href="../../images/icons/icons.svg#page"></svg> <span>page</span></li>
+<li><svg class="lexicon-icon lexicon-icon-pages-tree"><use xlink:href="../../images/icons/icons.svg#pages-tree"></svg> <span>pages-tree</span></li>
 <li><svg class="lexicon-icon lexicon-icon-paperclip"><use xlink:href="../../images/icons/icons.svg#paperclip"></svg> <span>paperclip</span></li>
 <li><svg class="lexicon-icon lexicon-icon-paragraph"><use xlink:href="../../images/icons/icons.svg#paragraph"></svg> <span>paragraph</span></li>
+<li><svg class="lexicon-icon lexicon-icon-password-policies"><use xlink:href="../../images/icons/icons.svg#password-policies"></svg> <span>password-policies</span></li>
 <li><svg class="lexicon-icon lexicon-icon-paste"><use xlink:href="../../images/icons/icons.svg#paste"></svg> <span>paste</span></li>
 <li><svg class="lexicon-icon lexicon-icon-pause"><use xlink:href="../../images/icons/icons.svg#pause"></svg> <span>pause</span></li>
 <li><svg class="lexicon-icon lexicon-icon-pencil"><use xlink:href="../../images/icons/icons.svg#pencil"></svg> <span>pencil</span></li>
@@ -341,7 +349,9 @@
 <li><svg class="lexicon-icon lexicon-icon-quote-left"><use xlink:href="../../images/icons/icons.svg#quote-left"></svg> <span>quote-left</span></li>
 <li><svg class="lexicon-icon lexicon-icon-quote-right"><use xlink:href="../../images/icons/icons.svg#quote-right"></svg> <span>quote-right</span></li>
 <li><svg class="lexicon-icon lexicon-icon-radio-button"><use xlink:href="../../images/icons/icons.svg#radio-button"></svg> <span>radio-button</span></li>
+<li><svg class="lexicon-icon lexicon-icon-redo"><use xlink:href="../../images/icons/icons.svg#redo"></svg> <span>redo</span></li>
 <li><svg class="lexicon-icon lexicon-icon-reload"><use xlink:href="../../images/icons/icons.svg#reload"></svg> <span>reload</span></li>
+<li><svg class="lexicon-icon lexicon-icon-remove-role"><use xlink:href="../../images/icons/icons.svg#remove-role"></svg> <span>remove-role</span></li>
 <li><svg class="lexicon-icon lexicon-icon-remove-style"><use xlink:href="../../images/icons/icons.svg#remove-style"></svg> <span>remove-style</span></li>
 <li><svg class="lexicon-icon lexicon-icon-reply"><use xlink:href="../../images/icons/icons.svg#reply"></svg> <span>reply</span></li>
 <li><svg class="lexicon-icon lexicon-icon-repository"><use xlink:href="../../images/icons/icons.svg#repository"></svg> <span>repository</span></li>
@@ -355,6 +365,7 @@
 <li><svg class="lexicon-icon lexicon-icon-simulation-menu-closed"><use xlink:href="../../images/icons/icons.svg#simulation-menu-closed"></svg> <span>simulation-menu-closed</span></li>
 <li><svg class="lexicon-icon lexicon-icon-simulation-menu-open"><use xlink:href="../../images/icons/icons.svg#simulation-menu-open"></svg> <span>simulation-menu-open</span></li>
 <li><svg class="lexicon-icon lexicon-icon-simulation-menu"><use xlink:href="../../images/icons/icons.svg#simulation-menu"></svg> <span>simulation-menu</span></li>
+<li><svg class="lexicon-icon lexicon-icon-site-template"><use xlink:href="../../images/icons/icons.svg#site-template"></svg> <span>site-template</span></li>
 <li><svg class="lexicon-icon lexicon-icon-sites"><use xlink:href="../../images/icons/icons.svg#sites"></svg> <span>sites</span></li>
 <li><svg class="lexicon-icon lexicon-icon-staging"><use xlink:href="../../images/icons/icons.svg#staging"></svg> <span>staging</span></li>
 <li><svg class="lexicon-icon lexicon-icon-star-half"><use xlink:href="../../images/icons/icons.svg#star-half"></svg> <span>star-half</span></li>
@@ -370,6 +381,7 @@
 <li><svg class="lexicon-icon lexicon-icon-tablet-landscape"><use xlink:href="../../images/icons/icons.svg#tablet-landscape"></svg> <span>tablet-landscape</span></li>
 <li><svg class="lexicon-icon lexicon-icon-tablet-portrait"><use xlink:href="../../images/icons/icons.svg#tablet-portrait"></svg> <span>tablet-portrait</span></li>
 <li><svg class="lexicon-icon lexicon-icon-tag"><use xlink:href="../../images/icons/icons.svg#tag"></svg> <span>tag</span></li>
+<li><svg class="lexicon-icon lexicon-icon-text-editor"><use xlink:href="../../images/icons/icons.svg#text-editor"></svg> <span>text-editor</span></li>
 <li><svg class="lexicon-icon lexicon-icon-text"><use xlink:href="../../images/icons/icons.svg#text"></svg> <span>text</span></li>
 <li><svg class="lexicon-icon lexicon-icon-thumbs-down"><use xlink:href="../../images/icons/icons.svg#thumbs-down"></svg> <span>thumbs-down</span></li>
 <li><svg class="lexicon-icon lexicon-icon-thumbs-up"><use xlink:href="../../images/icons/icons.svg#thumbs-up"></svg> <span>thumbs-up</span></li>
@@ -380,11 +392,13 @@
 <li><svg class="lexicon-icon lexicon-icon-trash"><use xlink:href="../../images/icons/icons.svg#trash"></svg> <span>trash</span></li>
 <li><svg class="lexicon-icon lexicon-icon-twitter"><use xlink:href="../../images/icons/icons.svg#twitter"></svg> <span>twitter</span></li>
 <li><svg class="lexicon-icon lexicon-icon-underline"><use xlink:href="../../images/icons/icons.svg#underline"></svg> <span>underline</span></li>
+<li><svg class="lexicon-icon lexicon-icon-undo"><use xlink:href="../../images/icons/icons.svg#undo"></svg> <span>undo</span></li>
 <li><svg class="lexicon-icon lexicon-icon-unlock"><use xlink:href="../../images/icons/icons.svg#unlock"></svg> <span>unlock</span></li>
 <li><svg class="lexicon-icon lexicon-icon-user"><use xlink:href="../../images/icons/icons.svg#user"></svg> <span>user</span></li>
 <li><svg class="lexicon-icon lexicon-icon-users"><use xlink:href="../../images/icons/icons.svg#users"></svg> <span>users</span></li>
 <li><svg class="lexicon-icon lexicon-icon-vertical-scroll"><use xlink:href="../../images/icons/icons.svg#vertical-scroll"></svg> <span>vertical-scroll</span></li>
 <li><svg class="lexicon-icon lexicon-icon-view"><use xlink:href="../../images/icons/icons.svg#view"></svg> <span>view</span></li>
+<li><svg class="lexicon-icon lexicon-icon-vocabulary"><use xlink:href="../../images/icons/icons.svg#vocabulary"></svg> <span>vocabulary</span></li>
 <li><svg class="lexicon-icon lexicon-icon-web-content"><use xlink:href="../../images/icons/icons.svg#web-content"></svg> <span>web-content</span></li>
 <li><svg class="lexicon-icon lexicon-icon-wiki-page"><use xlink:href="../../images/icons/icons.svg#wiki-page"></svg> <span>wiki-page</span></li>
 <li><svg class="lexicon-icon lexicon-icon-wiki"><use xlink:href="../../images/icons/icons.svg#wiki"></svg> <span>wiki</span></li>
@@ -420,6 +434,7 @@
 <li><svg class="lexicon-icon lexicon-icon-en-gb"><use xlink:href="../../images/icons/icons.svg#en-gb"></svg> <span>English (United Kingdom) (en-gb)</span></li>
 <li><svg class="lexicon-icon lexicon-icon-en-us"><use xlink:href="../../images/icons/icons.svg#en-us"></svg> <span>English (United States) (en-us)</span></li>
 <li><svg class="lexicon-icon lexicon-icon-es-es"><use xlink:href="../../images/icons/icons.svg#es-es"></svg> <span>Spanish (Spain) (es-es)</span></li>
+<li><svg class="lexicon-icon lexicon-icon-et-ee"><use xlink:href="../../images/icons/icons.svg#et-ee"></svg> <span>Estonian (Estonia) (et-ee)</span></li>
 <li><svg class="lexicon-icon lexicon-icon-eu-es"><use xlink:href="../../images/icons/icons.svg#eu-es"></svg> <span>Basque (Spain) (eu-es)</span></li>
 <li><svg class="lexicon-icon lexicon-icon-fa-ir"><use xlink:href="../../images/icons/icons.svg#fa-ir"></svg> <span>Farsi (Iran) (fa-ir)</span></li>
 <li><svg class="lexicon-icon lexicon-icon-fi-fi"><use xlink:href="../../images/icons/icons.svg#fi-fi"></svg> <span>Finnish (Finland) (fi-fi)</span></li>
@@ -449,6 +464,7 @@
 <li><svg class="lexicon-icon lexicon-icon-sr-rs-latin"><use xlink:href="../../images/icons/icons.svg#sr-rs-latin"></svg> <span>Serbian (Latin,Serbia) (sr-rs-latin)</span></li>
 <li><svg class="lexicon-icon lexicon-icon-sr-rs"><use xlink:href="../../images/icons/icons.svg#sr-rs"></svg> <span>Serbian (Serbia) (sr-rs)</span></li>
 <li><svg class="lexicon-icon lexicon-icon-sv-se"><use xlink:href="../../images/icons/icons.svg#sv-se"></svg> <span>Swedish (Sweden) (sv-se)</span></li>
+<li><svg class="lexicon-icon lexicon-icon-th-th"><use xlink:href="../../images/icons/icons.svg#th-th"></svg> <span>Thai (Thailand) (th-th)</span></li>
 <li><svg class="lexicon-icon lexicon-icon-tr-tr"><use xlink:href="../../images/icons/icons.svg#tr-tr"></svg> <span>Turkish (Turkey) (tr-tr)</span></li>
 <li><svg class="lexicon-icon lexicon-icon-uk-ua"><use xlink:href="../../images/icons/icons.svg#uk-ua"></svg> <span>Ukrainian (Ukraine) (uk-ua)</span></li>
 <li><svg class="lexicon-icon lexicon-icon-vi-vn"><use xlink:href="../../images/icons/icons.svg#vi-vn"></svg> <span>Vietnamese (Vietnam) (vi-vn)</span></li>
@@ -457,19 +473,53 @@
 <!-- endinject -->
 </ul>
 
+<h3>SVG Icons as Background Images</h3>
+
+<blockquote class="blockquote-sm blockquote-success">
+	<p>We have created a Sass function to turn Lexicon SVG icon&apos;s into data uri schemes, which enables you to include them as a background-image on an HTML element. The Sass function <code>lx-icon(icon-name, color)</code> takes the name of a Lexicon SVG Icon and color takes a color. The Sass rule set <code>.site-add-cell { background-image: lx-icon(add-cell, #5AF); background-size: contain; display: inline-block; height: 20px; width: 20px; }</code> will place the SVG icon add-cell as a background-image on any element with class site-add-cell.</p>
+</blockquote>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<span class="site-add-cell site-svg-bg">add-cell</span>
+		<span class="site-add-column site-svg-bg">add-column</span>
+		<span class="site-add-row site-svg-bg">add-row</span>
+		<span class="site-adjust site-svg-bg">adjust</span>
+		<span class="site-align-center site-svg-bg">align-center</span>
+		<span class="site-asterisk site-svg-bg">asterisk</span>
+		<span class="site-svg-bg site-times-circle">times-circle</span>
+		<span class="site-svg-bg site-workflow">workflow</span>
+	</div>
+</div>
+
+<blockquote class="blockquote-sm blockquote-success">
+	<p>You can turn your custom SVG into a data uri using the Sass function <code>svg-url($svg)</code> where <code>$svg</code> is the code for your inline SVG. The function returns <code>url(your_svg_as_data_uri)</code>.</p>
+</blockquote>
+
+<div class="alert alert-info">
+	When using <code>svg-url()</code>, wrap your inline SVG code with single quotes if your SVG&apos;s attributes are delimited with double quotes.
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<span class="site-linux-tux site-svg-bg">Linux Tux</span>
+	</div>
+</div>
+
+
 <h2>Why do we use SVG?</h2>
 <p id="lexicon-icon-explanation">
 	SVG gives us and you a greater amount of freedom in styling the icons, as well as a higher level of fidelity and clarity in the icons.
 	Font icons, while fairly simple, also suffer some drawbacks, mainly with sub-pixel aliasing that cause the quality to not be as high as we would like.
 	Also SVG allows for multi-color icons, for example:
 	<span class="lexicon-icon-examples">
-		<svg class="lexicon-icon lexicon-icon-asterisk">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
 			<use xlink:href="../../images/icons/icons.svg#asterisk">
 		</svg>
-		<svg class="lexicon-icon lexicon-icon-logout">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-logout">
 			<use xlink:href="../../images/icons/icons.svg#logout">
 		</svg>
-		<svg class="lexicon-icon lexicon-icon-exclamation-full">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
 			<use xlink:href="../../images/icons/icons.svg#exclamation-full">
 		</svg>
 	</span>
@@ -478,8 +528,6 @@
 
 		</section>
 	</div>
-
-	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 	<script src="../../js/site/toggle_css.js"></script>

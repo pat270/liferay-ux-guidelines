@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8" />
 	<title>Lexicon - Buttons</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 	<link rel="stylesheet" href="../../css/main.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -25,33 +26,33 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -61,15 +62,19 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
 </li>
 <li class="active"><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
@@ -79,13 +84,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+<li class=""><a class="nav-title" href="../../content/grid">Grid</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -95,11 +104,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-pills">Nav Pills</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -109,18 +124,24 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+<li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+<li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -130,37 +151,19 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -172,19 +175,9 @@
 </ul>
 </div>
 </li>
-<li class=""><span class="nav-title">Experimental</span>
-<div class="">
-<ul class="nav nav-stacked">
-<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
-</li>
-</ul>
-</div>
-</li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -198,7 +191,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -219,646 +212,282 @@
 		</h1>
 
 		
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="default-state"><a class="heading-anchor" href="#default-state"><i class="icon icon-link"></i></a>Default State</h3>
-		<div style="margin-bottom:5px;">
-			<button class="btn btn-default" type="button">Default</button>
-			<button class="btn btn-primary" type="button">Primary</button>
-			<button class="btn btn-info" type="button">Info</button>
-			<button class="btn btn-success" type="button">Success</button>
-			<button class="btn btn-warning" type="button">Warning</button>
-			<button class="btn btn-danger" type="button">Danger</button>
-			<button class="btn btn-link" type="button">Link</button>
+		<h3 id="button"><a class="heading-anchor" href="#button"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Button</h3>
+
+		<h6>Normal</h6>
+		<button class="btn btn-primary" type="button">Primary</button>
+		<button class="btn btn-secondary" type="button">Secondary</button>
+		<button class="btn btn-info" type="button">Info</button>
+		<button class="btn btn-success" type="button">Success</button>
+		<button class="btn btn-warning" type="button">Warning</button>
+		<button class="btn btn-danger" type="button">Danger</button>
+		<div class="clay-site-light-container">
+			<button class="btn btn-light" type="button">Light</button>
 		</div>
+		<button class="btn btn-dark" type="button">Dark</button>
+		<button class="btn btn-link" type="button">Link</button>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code class="html">&lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Default&lt;/button&gt;
-&lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Primary&lt;/button&gt;
-&lt;button class=&quot;btn btn-info&quot; type=&quot;button&quot;&gt;Info&lt;/button&gt;
-&lt;button class=&quot;btn btn-success&quot; type=&quot;button&quot;&gt;Success&lt;/button&gt;
-&lt;button class=&quot;btn btn-warning&quot; type=&quot;button&quot;&gt;Warning&lt;/button&gt;
-&lt;button class=&quot;btn btn-danger&quot; type=&quot;button&quot;&gt;Danger&lt;/button&gt;
-&lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;Link&lt;/button&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="active-state"><a class="heading-anchor" href="#active-state"><i class="icon icon-link"></i></a>Active State</h3>
-		<div style="margin-bottom:5px;">
-			<button class="active btn btn-default" type="button">Default</button>
-			<button class="active btn btn-primary" type="button">Primary</button>
-			<button class="active btn btn-info" type="button">Info</button>
-			<button class="active btn btn-success" type="button">Success</button>
-			<button class="active btn btn-warning" type="button">Warning</button>
-			<button class="active btn btn-danger" type="button">Danger</button>
-			<button class="active btn btn-link" type="button">Link</button>
+		<h6>Focus</h6>
+		<button class="btn btn-primary focus" type="button">Primary</button>
+		<button class="btn btn-secondary focus" type="button">Secondary</button>
+		<button class="btn btn-info focus" type="button">Info</button>
+		<button class="btn btn-success focus" type="button">Success</button>
+		<button class="btn btn-warning focus" type="button">Warning</button>
+		<button class="btn btn-danger focus" type="button">Danger</button>
+		<div class="clay-site-light-container">
+			<button class="btn btn-light focus" type="button">Light</button>
 		</div>
+		<button class="btn btn-dark focus" type="button">Dark</button>
+		<button class="btn btn-link focus" type="button">Link</button>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code class="html">&lt;button class=&quot;active btn btn-default&quot; type=&quot;button&quot;&gt;Default&lt;/button&gt;
-&lt;button class=&quot;active btn btn-primary&quot; type=&quot;button&quot;&gt;Primary&lt;/button&gt;
-&lt;button class=&quot;active btn btn-info&quot; type=&quot;button&quot;&gt;Info&lt;/button&gt;
-&lt;button class=&quot;active btn btn-success&quot; type=&quot;button&quot;&gt;Success&lt;/button&gt;
-&lt;button class=&quot;active btn btn-warning&quot; type=&quot;button&quot;&gt;Warning&lt;/button&gt;
-&lt;button class=&quot;active btn btn-danger&quot; type=&quot;button&quot;&gt;Danger&lt;/button&gt;
-&lt;button class=&quot;active btn btn-link&quot; type=&quot;button&quot;&gt;Link&lt;/button&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="disabled-state"><a class="heading-anchor" href="#disabled-state"><i class="icon icon-link"></i></a>Disabled State</h3>
-		<div>
-			<button class="btn btn-default" disabled type="button">Default</button>
-			<button class="btn btn-primary" disabled type="button">Primary</button>
-			<button class="btn btn-info" disabled type="button">Info</button>
-			<button class="btn btn-success" disabled type="button">Success</button>
-			<button class="btn btn-warning" disabled type="button">Warning</button>
-			<button class="btn btn-danger" disabled type="button">Danger</button>
-			<button class="btn btn-link" disabled type="button">Link</button>
+		<h6>Active</h6>
+		<button class="active btn btn-primary" type="button">Primary</button>
+		<button class="active btn btn-secondary" type="button">Secondary</button>
+		<button class="active btn btn-info" type="button">Info</button>
+		<button class="active btn btn-success" type="button">Success</button>
+		<button class="active btn btn-warning" type="button">Warning</button>
+		<button class="active btn btn-danger" type="button">Danger</button>
+		<div class="clay-site-light-container">
+			<button class="active btn btn-light" type="button">Light</button>
 		</div>
+		<button class="active btn btn-dark" type="button">Dark</button>
+		<button class="active btn btn-link" type="button">Link</button>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-	<pre><code class="html">&lt;button class=&quot;btn btn-default&quot; disabled=&quot;disabled&quot; type=&quot;button&quot;&gt;Default&lt;/button&gt;
-&lt;button class=&quot;btn btn-primary&quot; disabled type=&quot;button&quot;&gt;Primary&lt;/button&gt;
-&lt;button class=&quot;btn btn-info&quot; disabled type=&quot;button&quot;&gt;Info&lt;/button&gt;
-&lt;button class=&quot;btn btn-success&quot; disabled type=&quot;button&quot;&gt;Success&lt;/button&gt;
-&lt;button class=&quot;btn btn-warning&quot; disabled type=&quot;button&quot;&gt;Warning&lt;/button&gt;
-&lt;button class=&quot;btn btn-danger&quot; disabled type=&quot;button&quot;&gt;Danger&lt;/button&gt;
-&lt;button class=&quot;btn btn-link&quot; disabled type=&quot;button&quot;&gt;Link&lt;/button&gt;</code></pre>
-</div>
+		<h6>Disabled</h6>
+		<button class="btn btn-primary" disabled type="button">Primary</button>
+		<button class="btn btn-secondary" disabled type="button">Secondary</button>
+		<button class="btn btn-info" disabled type="button">Info</button>
+		<button class="btn btn-success" disabled type="button">Success</button>
+		<button class="btn btn-warning" disabled type="button">Warning</button>
+		<button class="btn btn-danger" disabled type="button">Danger</button>
+		<div class="clay-site-light-container">
+			<button class="btn btn-light" disabled type="button">Light</button>
+		</div>
+		<button class="btn btn-dark" disabled type="button">Dark</button>
+		<button class="btn btn-link" disabled type="button">Link</button>
 
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="anchor-elements-and-inputs-as-buttons"><a class="heading-anchor" href="#anchor-elements-and-inputs-as-buttons"><i class="icon icon-link"></i></a>Anchor Elements and Inputs as Buttons</h3>
-		<a href="#1" class="btn btn-default">Default</a>
+		<h6>Anchor and Input Elements as Buttons</h6>
 		<input class="btn btn-primary" type="button" value="Input">
+		<a class="btn btn-secondary" href="#1" role="button">Anchor</a>
 		<input class="btn btn-info" type="submit" value="Submit">
-		<a href="#1" class="btn btn-success">Success</a>
-		<a href="#1" class="btn btn-warning">Warning</a>
-		<a href="#1" class="btn btn-danger">Danger</a>
-		<a href="#1" class="btn btn-link">Link</a>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse3">
-	<pre><code class="html">&lt;a href=&quot;#1&quot; class=&quot;btn btn-default&quot;&gt;Default&lt;/a&gt;
-&lt;input class=&quot;btn btn-primary&quot; type=&quot;button&quot; value=&quot;Input&quot; /&gt;
-&lt;input class=&quot;btn btn-info&quot; type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
-&lt;a href=&quot;#1&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/a&gt;
-&lt;a href=&quot;#1&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/a&gt;
-&lt;a href=&quot;#1&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/a&gt;
-&lt;a href=&quot;#1&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/a&gt;</code></pre>
-</div>
-
+		<a class="btn btn-success" href="#1" role="button">Anchor</a>
+		<a class="btn btn-warning" href="#1" role="button">Anchor</a>
+		<a class="btn btn-danger" href="#1" role="button">Anchor</a>
+		<div class="clay-site-light-container">
+			<a class="btn btn-light" href="#1" role="button">Anchor</a>
+		</div>
+		<a class="btn btn-dark" href="#1" role="button">Anchor</a>
+		<a class="btn btn-link" href="#1" role="button">Anchor</a>
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="sizes"><a class="heading-anchor" href="#sizes"><i class="icon icon-link"></i></a>Sizes</h3>
-		<button class="btn btn-default btn-xs" type="button">Extra Small</button>
-		<button class="btn btn-default btn-sm" type="button">Small</button>
-		<button class="btn btn-default" type="button">Default</button>
-		<button class="btn btn-default btn-lg" type="button">Large</button>
+		<h3 id="button-outline"><a class="heading-anchor" href="#button-outline"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Button Outline</h3>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code class="html">&lt;button class=&quot;btn btn-default btn-xs&quot; type=&quot;button&quot;&gt;Extra Small&lt;/button&gt;
-&lt;button class=&quot;btn btn-default btn-sm&quot; type=&quot;button&quot;&gt;Small&lt;/button&gt;
-&lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Default&lt;/button&gt;
-&lt;button class=&quot;btn btn-default btn-lg&quot; type=&quot;button&quot;&gt;Large&lt;/button&gt;</code></pre>
-</div>
+		<h6>Normal</h6>
+		<button class="btn btn-outline-primary" type="button">Primary</button>
+		<button class="btn btn-outline-secondary" type="button">Secondary</button>
+		<button class="btn btn-outline-info" type="button">Info</button>
+		<button class="btn btn-outline-success" type="button">Success</button>
+		<button class="btn btn-outline-warning" type="button">Warning</button>
+		<button class="btn btn-outline-danger" type="button">Danger</button>
+		<div class="clay-site-light-container">
+			<button class="btn btn-outline-light" type="button">Light</button>
+		</div>
+		<button class="btn btn-outline-dark" type="button">Dark</button>
 
+		<h6>Focus</h6>
+		<button class="btn btn-outline-primary focus" type="button">Primary</button>
+		<button class="btn btn-outline-secondary focus" type="button">Secondary</button>
+		<button class="btn btn-outline-info focus" type="button">Info</button>
+		<button class="btn btn-outline-success focus" type="button">Success</button>
+		<button class="btn btn-outline-warning focus" type="button">Warning</button>
+		<button class="btn btn-outline-danger focus" type="button">Danger</button>
+		<div class="clay-site-light-container">
+			<button class="btn btn-outline-light focus" type="button">Light</button>
+		</div>
+		<button class="btn btn-outline-dark focus" type="button">Dark</button>
+
+		<h6>Active</h6>
+		<button class="active btn btn-outline-primary" type="button">Primary</button>
+		<button class="active btn btn-outline-secondary" type="button">Secondary</button>
+		<button class="active btn btn-outline-info" type="button">Info</button>
+		<button class="active btn btn-outline-success" type="button">Success</button>
+		<button class="active btn btn-outline-warning" type="button">Warning</button>
+		<button class="active btn btn-outline-danger" type="button">Danger</button>
+		<div class="clay-site-light-container">
+			<button class="active btn btn-outline-light" type="button">Light</button>
+		</div>
+		<button class="active btn btn-outline-dark" type="button">Dark</button>
+
+		<h6>Disabled</h6>
+		<button class="btn btn-outline-primary" disabled type="button">Primary</button>
+		<button class="btn btn-outline-secondary" disabled type="button">Secondary</button>
+		<button class="btn btn-outline-info" disabled type="button">Info</button>
+		<button class="btn btn-outline-success" disabled type="button">Success</button>
+		<button class="btn btn-outline-warning" disabled type="button">Warning</button>
+		<button class="btn btn-outline-danger" disabled type="button">Danger</button>
+		<div class="clay-site-light-container">
+			<button class="btn btn-outline-light" disabled type="button">Light</button>
+		</div>
+		<button class="btn btn-outline-dark" disabled type="button">Dark</button>
+
+		<h6>Anchor and Input Elements as Buttons</h6>
+		<input class="btn btn-outline-primary" type="button" value="Input">
+		<a class="btn btn-outline-secondary" href="#1" role="button">Anchor</a>
+		<input class="btn btn-outline-info" type="submit" value="Submit">
+		<a class="btn btn-outline-success" href="#1" role="button">Anchor</a>
+		<a class="btn btn-outline-warning" href="#1" role="button">Anchor</a>
+		<a class="btn btn-outline-danger" href="#1" role="button">Anchor</a>
+		<div class="clay-site-light-container">
+			<a class="btn btn-outline-light" href="#1" role="button">Anchor</a>
+		</div>
+		<a class="btn btn-outline-dark" href="#1" role="button">Anchor</a>
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="block-level-buttons"><a class="heading-anchor" href="#block-level-buttons"><i class="icon icon-link"></i></a>Block Level Buttons</h3>
-		<button class="btn btn-block btn-primary btn-xs" type="button">Extra Small Block Level Button</button>
-		<button class="btn btn-block btn-primary btn-sm" type="button">Small Block Level Button</button>
-		<button class="btn btn-block btn-primary" type="button">Default Block Level Button</button>
-		<button class="btn btn-block btn-lg btn-primary" type="button">Large Block Level Button</button>
+		<h3 id="button-monospaced"><a class="heading-anchor" href="#button-monospaced"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Button Monospaced</h3>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse5">
-	<pre><code class="html">&lt;button class=&quot;btn btn-block btn-primary btn-xs&quot; type=&quot;button&quot;&gt;Extra Small Block Level Button&lt;/button&gt;
-&lt;button class=&quot;btn btn-block btn-primary btn-sm&quot; type=&quot;button&quot;&gt;Small Block Level Button&lt;/button&gt;
-&lt;button class=&quot;btn btn-block btn-primary&quot; type=&quot;button&quot;&gt;Default Block Level Button&lt;/button&gt;
-&lt;button class=&quot;btn btn-block btn-lg btn-primary&quot; type=&quot;button&quot;&gt;Large Block Level Button&lt;/button&gt;</code></pre>
-</div>
-
+		<button class="btn btn-monospaced btn-primary" type="button">A</button>
+		<button class="btn btn-monospaced btn-secondary" type="button">B</button>
+		<button class="btn btn-monospaced btn-info" type="button">C</button>
+		<button class="btn btn-monospaced btn-success" type="button">D</button>
+		<button class="btn btn-monospaced btn-warning" type="button">E</button>
+		<button class="btn btn-monospaced btn-danger" type="button">F</button>
+		<div class="clay-site-light-container">
+			<button class="btn btn-monospaced btn-light" type="button">G</button>
+		</div>
+		<button class="btn btn-monospaced btn-dark" type="button">H</button>
+		<button class="btn btn-monospaced btn-link" type="button">I</button>
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="button-dropdowns"><a class="heading-anchor" href="#button-dropdowns"><i class="icon icon-link"></i></a>Button Dropdowns</h3>
-
-		<div class="btn-group dropdown">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Default <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
-		</div>
-
-		<div class="btn-group dropdown">
-			<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">Primary <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
-		</div>
-
-		<div class="btn-group dropdown">
-			<button class="btn btn-info dropdown-toggle" data-toggle="dropdown" type="button">Info <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
-		</div>
-
-		<div class="btn-group dropdown">
-			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown" type="button">Success <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
-		</div>
-
-		<div class="btn-group dropdown">
-			<button class="btn btn-warning dropdown-toggle" data-toggle="dropdown" type="button">Warning <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
-		</div>
-
-		<div class="btn-group dropdown">
-			<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown" type="button">Danger <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse6">
-	<pre><code class="html">&lt;div class=&quot;btn-group dropdown&quot;&gt;
-    &lt;button class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
-        Default &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-    &lt;/button&gt;
-
-    &lt;ul class=&quot;dropdown-menu&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="button-dropups"><a class="heading-anchor" href="#button-dropups"><i class="icon icon-link"></i></a>Button Dropups</h3>
-
-		<div class="btn-toolbar">
-			<div class="btn-group dropup">
-				<button type="button" class="btn btn-default">Dropup</button>
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					<span class="caret"></span>
-					<span class="sr-only">Toggle Dropdown</span>
-				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Separated link</a></li>
-				</ul>
-			</div>
-
-			<div class="btn-group dropup">
-				<button type="button" class="btn btn-primary">Right dropup</button>
-				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-					<span class="caret"></span>
-					<span class="sr-only">Toggle Dropdown</span>
-				</button>
-				<ul class="dropdown-menu dropdown-menu-right">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Separated link</a></li>
-				</ul>
-			</div>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse7"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse7">
-	<pre><code class="html">&lt;div class=&quot;btn-group dropup&quot;&gt;
-    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Dropup&lt;/button&gt;
-    &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
-        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-        &lt;span class=&quot;sr-only&quot;&gt;Toggle Dropdown&lt;/span&gt;
-    &lt;/button&gt;
-
-    &lt;ul class=&quot;dropdown-menu&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="split-button-dropdowns"><a class="heading-anchor" href="#split-button-dropdowns"><i class="icon icon-link"></i></a>Split Button Dropdowns</h3>
-
-		<div class="btn-group dropdown">
-			<button class="btn btn-default" type="button">Default</button>
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-				<span class="caret"></span>
-				<span class="sr-only">Toggle Dropdown</span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
-		</div>
-
-		<div class="btn-group dropdown">
-			<button class="btn btn-primary" type="button">Primary</button>
-			<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
-				<span class="caret"></span>
-				<span class="sr-only">Toggle Dropdown</span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
-		</div>
-
-		<div class="btn-group dropdown">
-			<button class="btn btn-info" type="button">Info</button>
-			<button class="btn btn-info dropdown-toggle" data-toggle="dropdown" type="button">
-				<span class="caret"></span>
-				<span class="sr-only">Toggle Dropdown</span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
-		</div>
-
-		<div class="btn-group dropdown">
-			<button class="btn btn-success" type="button">Success</button>
-			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown" type="button">
-				<span class="caret"></span>
-				<span class="sr-only">Toggle Dropdown</span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
-		</div>
-
-		<div class="btn-group dropdown">
-			<button class="btn btn-warning" type="button">Warning</button>
-			<button class="btn btn-warning dropdown-toggle" data-toggle="dropdown" type="button">
-				<span class="caret"></span>
-				<span class="sr-only">Toggle Dropdown</span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
-		</div>
-
-		<div class="btn-group dropdown">
-			<button class="btn btn-danger" type="button">Danger</button>
-			<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown" type="button">
-				<span class="caret"></span>
-				<span class="sr-only">Toggle Dropdown</span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">Action</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse8"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse8">
-	<pre><code class="html">&lt;div class=&quot;btn-group dropdown&quot;&gt;
-    &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Default&lt;/button&gt;
-    &lt;button class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
-        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-        &lt;span class=&quot;sr-only&quot;&gt;Toggle Dropdown&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="button-group"><a class="heading-anchor" href="#button-group"><i class="icon icon-link"></i></a>Button Group</h3>
-
-		<div class="btn-group">
-			<button class="btn btn-default" type="button">Left</button>
-			<button class="btn btn-default" type="button">Middle</button>
-			<button class="btn btn-default" type="button">Right</button>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse9"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse9">
-	<pre><code class="html">&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Left&lt;/button&gt;
-    &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Middle&lt;/button&gt;
-    &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Right&lt;/button&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="vertical-button-group"><a class="heading-anchor" href="#vertical-button-group"><i class="icon icon-link"></i></a>Vertical Button Group</h3>
-
-		<div class="btn-group-vertical">
-			<button class="btn btn-default" type="button">Button</button>
-			<button class="btn btn-default" type="button">Button</button>
-			<div class="btn-group">
-				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-					Dropdown
-					<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Dropdown link</a></li>
-					<li><a href="#">Dropdown link</a></li>
-				</ul>
-			</div>
-			<div class="btn-group">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					Dropdown
-					<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Dropdown link</a></li>
-					<li><a href="#">Dropdown link</a></li>
-				</ul>
-			</div>
-			<div class="btn-group">
-				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-					Dropdown
-					<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Dropdown link</a></li>
-					<li><a href="#">Dropdown link</a></li>
-				</ul>
-			</div>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse10"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse10">
-	<pre><code class="html">&lt;div class=&quot;btn-group-vertical&quot;&gt;
-    &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
-
-    &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
-
-    &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
-            Dropdown
-            &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;ul class=&quot;dropdown-menu&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
-            Dropdown
-            &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;ul class=&quot;dropdown-menu&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
-            Dropdown
-            &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;ul class=&quot;dropdown-menu&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="justified-button-groups"><a class="heading-anchor" href="#justified-button-groups"><i class="icon icon-link"></i></a>Justified Button Groups</h3>
-
-		<div class="btn-group btn-group-justified">
-			<div class="btn-group">
-				<button class="btn btn-default" type="button">Left</button>
-			</div>
-			<div class="btn-group">
-				<button class="btn btn-default" type="button">Middle</button>
-			</div>
-			<div class="btn-group">
-				<button class="btn btn-default" type="button">Right</button>
-			</div>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse11"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse11">
-	<pre><code class="html">&lt;div class=&quot;btn-group btn-group-justified&quot;&gt;
-    &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Left&lt;/button&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Middle&lt;/button&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Right&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="action-buttons"><a class="heading-anchor" href="#action-buttons"><i class="icon icon-link"></i></a>Action Buttons</h3>
+		<h3 id="action-button"><a class="heading-anchor" href="#action-button"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Action Button</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Action buttons are used for providing easy access to primary actions, such as adding new entities (users, organizations, new blog entries). There are two kinds of action buttons: <code>.btn-action</code> and <code>.btn-action-secondary</code>.</p>
-
-			<p><code>.btn-action</code> should be used where only one primary action can be taken. A good use of <code>.btn-action</code> is adding a new entry in the blog portlet, where the user will be led to the new blog entry page.</p>
+			<p><code>btn-action</code> is a fixed positioned button that can be positioned on any corner of the page using the classes <code>btn-action-top-left</code>, <code>btn-action-top-right</code>, <code>btn-action-bottom-right</code>, and <code>btn-action-bottom-left</code>.</p>
 		</blockquote>
 
-		<a class="btn btn-primary btn-action" href="../../content/blogs-action" onclick="alert(&apos;Link to Somewhere&apos;);return false;">
-			<svg class="icon-monospaced lexicon-icon">
-				<use xlink:href="../../images/icons/icons.svg#plus">
-			</svg>
-		</a>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse12"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse12">
-	<pre><code class="html">&lt;a class=&quot;btn btn-primary btn-action&quot; href=&quot;../blogs-action&quot;&gt;
-    &lt;svg class=&quot;icon-monospaced lexicon-icon&quot;&gt;
-        &lt;use xlink:href=&quot;../../images/icons/icons.svg#plus&quot; /&gt;
-    &lt;/svg&gt;
-&lt;/a&gt;</code></pre>
-</div>
-
-		<blockquote class="blockquote-sm blockquote-success" style="margin-top:20px;">
-			<p><code>.btn-action-secondary</code> should be used where multiple primary actions can be taken. This button will display an overflow menu with a list of available actions. For example, on the users and organizations page in the control panel, a user, organization, or location can be added. Clicking the button inside btn-action-secondary will open an overflow menu with add user, add organization, or add location options (button on bottom right).</p>
-		</blockquote>
-
-		<div class="btn-action-secondary dropdown">
-			<button class="btn btn-primary" data-toggle="dropdown" type="button">
-				<svg class="icon-monospaced lexicon-icon">
+		<div class="btn-action">
+			<a class="btn btn-primary btn-monospaced btn-lg" href="#1" role="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+					<use xlink:href="../../images/icons/icons.svg#plus">
+				</svg>
+			</a>
+		</div>
+		<div class="btn-action dropdown">
+			<button class="btn btn-primary btn-monospaced btn-lg" data-toggle="dropdown" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
 					<use xlink:href="../../images/icons/icons.svg#plus">
 				</svg>
 			</button>
-			<ul class="dropdown-menu dropdown-menu-right-side-bottom">
-				<li><a href="../blogs-action">User</a></li>
-				<li><a href="../blogs-action">Regular Organization</a></li>
-				<li><a href="../blogs-action">Location</a></li>
-			</ul>
+			<div class="dropdown-menu dropdown-menu-right-side-bottom">
+				<a class="dropdown-item" href="#1">User</a>
+				<a class="dropdown-item" href="#1">Regular Organization</a>
+				<a class="dropdown-item" href="#1">Location</a>
+			</div>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse13"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse13">
-	<pre><code class="html">&lt;div class=&quot;btn-action-secondary dropdown&quot;&gt;
-    &lt;button class=&quot;btn btn-primary&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
-        &lt;svg class=&quot;icon-monospaced lexicon-icon&quot;&gt;
-            &lt;use xlink:href=&quot;../../images/icons/icons.svg#plus&quot; /&gt;
-        &lt;/svg&gt;
-    &lt;/button&gt;
-    &lt;ul class=&quot;dropdown-menu dropdown-menu-right-side dropdown-menu-bottom&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;../blogs-action&quot;&gt;User&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;../blogs-action&quot;&gt;Regular Organization&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;../blogs-action&quot;&gt;Location&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-		<a class="btn btn-primary btn-action btn-top-left" href="../blogs-action" type="submit">
-			<svg class="icon-monospaced lexicon-icon">
-				<use xlink:href="../../images/icons/icons.svg#plus">
-			</svg>
-		</a>
-
-		<div class="btn-action-secondary btn-bottom-right dropdown">
-			<button class="btn btn-primary" data-toggle="dropdown" type="button">
-				<svg class="icon-monospaced lexicon-icon">
+		<div class="btn-action btn-action-bottom-right dropdown">
+			<button class="btn btn-primary btn-monospaced btn-lg" data-toggle="dropdown" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
 					<use xlink:href="../../images/icons/icons.svg#plus">
 				</svg>
 			</button>
-			<ul class="dropdown-menu dropdown-menu-left-side-bottom">
-				<li><a href="../blogs-action">User</a></li>
-				<li><a href="../blogs-action">Regular Organization</a></li>
-				<li><a href="../blogs-action">Location</a></li>
-			</ul>
+			<div class="dropdown-menu dropdown-menu-left-side-bottom">
+				<div class="dropdown-header">Add Button Dropdown Header</div>
+				<a class="dropdown-item" href="#1">Folder</a>
+				<a class="dropdown-item" href="#1">Shortcut</a>
+				<a class="dropdown-item" href="#1">Repository</a>
+				<a class="dropdown-item" href="#1">Multiple Documents</a>
+				<a class="dropdown-item" href="#1">Basic Document</a>
+				<a class="dropdown-item" href="#1">Google Docs</a>
+				<a class="dropdown-item" href="#1">Marketing Banner</a>
+				<a class="dropdown-item" href="#1">Online Training</a>
+				<a class="dropdown-item" href="#1">Sales Presentation</a>
+			</div>
 		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="button-dropdown"><a class="heading-anchor" href="#button-dropdown"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Button Dropdown</h3>
+
+		<div class="dropdown">
+			<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
+				Primary
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+				</svg>
+			</button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+				Primary
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+				</svg>
+			</button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#1">Action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="sizes"><a class="heading-anchor" href="#sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sizes</h3>
+
+		<button class="btn btn-secondary btn-sm" type="button">Small</button>
+		<button class="btn btn-secondary" type="button">Default</button>
+		<button class="btn btn-secondary btn-lg" type="button">Large</button>
+
+		<h6>Button Monospaced</h6>
+		<button class="btn btn-monospaced btn-secondary btn-sm" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+				<use xlink:href="../../images/icons/icons.svg#blogs">
+			</svg>
+		</button>
+		<button class="btn btn-monospaced btn-secondary" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+				<use xlink:href="../../images/icons/icons.svg#plus">
+			</svg>
+		</button>
+		<button class="btn btn-monospaced btn-secondary btn-lg" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+				<use xlink:href="../../images/icons/icons.svg#share">
+			</svg>
+		</button>
+		<button class="btn btn-monospaced btn-secondary btn-xl" type="button">
+			XL
+		</button>
+
+		<h6>Button Block</h6>
+		<button class="btn btn-block btn-secondary btn-sm" type="button">Small Block Level Button</button>
+		<button class="btn btn-block btn-secondary" type="button">Normal Block Level Button</button>
+		<button class="btn btn-block btn-lg btn-secondary" type="button">Large Block Level Button</button>
 	</div>
 </div>
 	</div>
 
 		</section>
 	</div>
-
-	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 	<script src="../../js/site/toggle_css.js"></script>

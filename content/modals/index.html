@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8" />
 	<title>Lexicon - Modals</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 	<link rel="stylesheet" href="../../css/main.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -25,33 +26,33 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -61,15 +62,19 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
@@ -79,13 +84,17 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+<li class=""><a class="nav-title" href="../../content/grid">Grid</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -95,11 +104,17 @@
 </li>
 <li class="active"><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-pills">Nav Pills</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -109,18 +124,24 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+<li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
+<li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -130,37 +151,19 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -172,19 +175,9 @@
 </ul>
 </div>
 </li>
-<li class=""><span class="nav-title">Experimental</span>
-<div class="">
-<ul class="nav nav-stacked">
-<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
-</li>
-</ul>
-</div>
-</li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -198,7 +191,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -219,32 +212,32 @@
 		</h1>
 
 		
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="small-modal"><a class="heading-anchor" href="#small-modal"><i class="icon icon-link"></i></a>Small Modal</h3>
+		<h3 id="small-modal"><a class="heading-anchor" href="#small-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Small Modal</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>300px wide modal window.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>300px wide modal window, expands full width of screen at 575px and below.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexSmallModal">Small Modal</button>
+		<button class="btn btn-info" data-target="#lexSmallModal" data-toggle="modal">Small Modal</button>
 		<div aria-labelledby="lexSmallModalLabel" class="fade modal" id="lexSmallModal" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="../../images/icons/icons.svg#times">
-							</svg>
-						</button>
-
-						<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
 						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
 					</div>
 
 					<div class="modal-body">
@@ -261,31 +254,32 @@
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="default-modal"><a class="heading-anchor" href="#default-modal"><i class="icon icon-link"></i></a>Default Modal</h3>
+		<h3 id="default-modal"><a class="heading-anchor" href="#default-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Default Modal</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>600px wide modal window.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>500px wide modal window, expands full width of screen at 575px and below.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexDefaultModal">Default Modal</button>
+		<button class="btn btn-info" data-target="#lexDefaultModal" data-toggle="modal">Default Modal</button>
 		<div aria-labelledby="lexDefaultModalLabel" class="fade modal" id="lexDefaultModal" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-inverse">
+			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="../../images/icons/icons.svg#times">
-							</svg>
-						</button>
-
-						<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
+
 						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
 					</div>
 
 					<div class="modal-body">
@@ -302,32 +296,34 @@
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="large-modal"><a class="heading-anchor" href="#large-modal"><i class="icon icon-link"></i></a>Large Modal</h3>
+		<h3 id="large-modal"><a class="heading-anchor" href="#large-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Large Modal</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>900px wide modal in window sizes greater than 992px. 600px wide modal in window sizes between 768px and 992px.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>800px wide modal in window sizes greater than 992px.</p>
+			<p>500px wide modal in window sizes between 576px and 991px</p>
+			<p>Full width of screen at 575px and below.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexLargeModal">Large Modal</button>
+		<button class="btn btn-info" data-target="#lexLargeModal" data-toggle="modal">Large Modal</button>
 		<div aria-labelledby="lexLargeModalLabel" class="fade modal" id="lexLargeModal" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="../../images/icons/icons.svg#times">
-							</svg>
-						</button>
-
-						<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
 						<h4 class="modal-title" id="lexLargeModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
 					</div>
 
 					<div class="modal-body">
@@ -336,7 +332,7 @@
 
 					<div class="modal-footer">
 						<button class="btn btn-primary" type="button">Primary</button>
-						<button class="btn btn-default" type="button">Alt</button>
+						<button class="btn btn-secondary" type="button">Alt</button>
 						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
 					</div>
 				</div>
@@ -345,36 +341,99 @@
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="full-screen-modal"><a class="heading-anchor" href="#full-screen-modal"><i class="icon icon-link"></i></a>Full Screen Modal</h3>
+		<h3 id="inline-scroller"><a class="heading-anchor" href="#inline-scroller"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Inline Scroller</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>A modal that stretches to fit the browser window with 45px padding on every side.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p><code>inline-scroller</code> is a helper class that sizes modal-body to a fixed height and scrolls any overflowing content. Add it to modal-body when you want modal-body to be a fixed height. It defaults to height 125px.</p>
 		</blockquote>
 
-		<div class="alert alert-warning">
-			<p>The add button must be duplicated in the header and hidden in screen sizes greater than or equal to 768px if we want to preserve the tab order in mobile.</p>
-		</div>
-
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModal">Full Screen Modal</button>
-		<div aria-labelledby="lexLargeModalLabel" class="fade modal" id="lexFullScreenModal" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-full-screen">
+		<button class="btn btn-info" data-target="#claySmallModalInlineScroller" data-toggle="modal">Small Modal Inline Scroller</button>
+		<div aria-labelledby="claySmallModalInlineScrollerLabel" class="fade modal" id="claySmallModalInlineScroller" role="dialog" tabindex="-1">
+			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
+
+						<h4 class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
 						</button>
+					</div>
 
-						<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+					<div class="modal-body inline-scroller">
+						<h4>Modal Body</h4>
+						<div>
+							<p>
+								<a href="#1">Crema coffee</a> a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+							</p>
+
+							<p>
+								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
+							</p>
+
+							<p>
+								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+							</p>
+
+							<p>
+								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+							</p>
+
+							<p>
+								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
+							</p>
+
+							<p>
+								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+							</p>
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="full-screen-modal"><a class="heading-anchor" href="#full-screen-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Full Screen Modal</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>A modal that stretches to fit the browser window with 45px spacing on every side, expands to fill the screen at screen sizes 767px and below.</p>
+		</blockquote>
+
+		<button class="btn btn-info" data-target="#lexFullScreenModal" data-toggle="modal">Full Screen Modal</button>
+		<div aria-labelledby="lexLargeModalLabel" class="fade modal" id="lexFullScreenModal" role="dialog" tabindex="-1">
+			<div class="modal-dialog modal-full-screen">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
 						<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
 					</div>
 
 					<div class="modal-body">
@@ -492,64 +551,38 @@
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="modal-body-no-footer"><a class="heading-anchor" href="#modal-body-no-footer"><i class="icon icon-link"></i></a>Modal Body No Footer</h3>
+		<h3 id="modal-full-screen-sm-down"><a class="heading-anchor" href="#modal-full-screen-sm-down"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Modal Full Screen Sm Down</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>modal-body-no-footer</code> is a <code>modal-body</code> helper class that removes the reserved space for modal-footer. Add it to modal-body when no modal-footer is present.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Add <code class="code">modal-full-screen-sm-down</code> to any <code class="code">modal-dialog</code> to stretch to fit the browser window at screen widths 767px and below.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModal01">Full Screen Modal</button>
-
-		<div aria-labelledby="lexFullScreenModal01Label" class="fade modal" id="lexFullScreenModal01" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-full-screen">
+		<button class="btn btn-info" data-target="#lexModalFullScreenSmDown" data-toggle="modal">Modal Full Screen Sm Down</button>
+		<div aria-labelledby="lexModalFullScreenSmDownLabel" class="fade modal" id="lexModalFullScreenSmDown" role="dialog" tabindex="-1">
+			<div class="modal-dialog modal-full-screen-sm-down">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="../../images/icons/icons.svg#times">
-							</svg>
-						</button>
-
-						<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
-						<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
+						<h4 class="modal-title">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
 					</div>
 
-					<div class="modal-body modal-body-no-footer">
+					<div class="modal-body">
 						<h4>Modal Body</h4>
 						<div>
 							<p>
-								<a href="#1">Crema coffee a turkish</a> decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-						<div>
-							<p>
 								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
 							</p>
 
@@ -567,182 +600,6 @@
 
 							<p>
 								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-						<div>
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-						<div>
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="modal-body-no-header"><a class="heading-anchor" href="#modal-body-no-header"><i class="icon icon-link"></i></a>Modal Body No Header</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>modal-body-no-header</code> is a <code>modal-body</code> helper class that removes the reserved space for modal-header. Add it to modal-body when no modal-header is present.</p>
-		</blockquote>
-
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModal02">Full Screen Modal</button>
-
-		<div aria-labelledby="lexFullScreenModal02Label" class="fade modal" id="lexFullScreenModal02" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-full-screen">
-				<div class="modal-content">
-					<div class="modal-body modal-body-no-header">
-						<h4>Modal Body</h4>
-						<div>
-							<p>
-								<a href="#1">Crema coffee a turkish</a> decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-						<div>
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-						<div>
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-						<div>
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
 							</p>
 						</div>
 					</div>
@@ -758,34 +615,34 @@
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="modal-body-iframe"><a class="heading-anchor" href="#modal-body-iframe"><i class="icon icon-link"></i></a>Modal Body Iframe</h3>
+		<h3 id="modal-body-iframe"><a class="heading-anchor" href="#modal-body-iframe"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Modal Body Iframe</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p><code>modal-body-iframe</code> is a <code>modal-body</code> helper class that sizes and styles an iframe nested inside modal-body. Add it to modal-body when you want the iframe to be the same width and height as modal-body.</p>
 		</blockquote>
 
 		<div class="alert alert-warning">In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow will cause the iframe to scroll to the top.</div>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModalIframe">Full Screen Modal Iframe</button>
+		<button class="btn btn-info" data-target="#lexFullScreenModalIframe" data-toggle="modal">Full Screen Modal Iframe</button>
 		<div aria-labelledby="lexFullScreenModalIframeLabel" class="fade modal" id="lexFullScreenModalIframe" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-full-screen modal-inverse">
+			<div class="modal-dialog modal-full-screen">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="../../images/icons/icons.svg#times">
-							</svg>
-						</button>
-
-						<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
 						<h4 class="modal-title" id="lexFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
 					</div>
 
 					<div class="modal-body modal-body-iframe">
@@ -794,8 +651,7 @@
 
 					<div class="modal-footer">
 						<button class="btn btn-primary" type="button">Add</button>
-
-						<a href="#1" class="btn btn-link close-modal" data-dismiss="modal" type="button">Cancel</a>
+						<a class="btn btn-link close-modal" data-dismiss="modal" href="#1">Cancel</a>
 					</div>
 				</div>
 			</div>
@@ -803,117 +659,175 @@
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="inline-scroller"><a class="heading-anchor" href="#inline-scroller"><i class="icon icon-link"></i></a>Inline Scroller</h3>
+		<h3 id="modal-variants"><a class="heading-anchor" href="#modal-variants"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Modal Variants</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>inline-scroller</code> is a helper class that sizes modal-body to a fixed height and scrolls any overflowing content. Add it to modal-body when you want modal-body to be a fixed height. It defaults to height 125px.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p><code class="code">modal-inverse</code>, <code class="code">modal-danger</code>, <code class="code">modal-info</code>, <code class="code">modal-success</code>, or <code class="code">modal-warning</code> are helper classes that style a modal based on that state, add it to modal-dialog.</p>
 		</blockquote>
 
-		<div class="alert alert-warning">If using modal-fullscreen the class inline-scroller shouldn&apos;t be added to modal-body.</div>
+		<button class="btn btn-secondary" data-target="#clayModalInverse" data-toggle="modal">Modal Inverse</button>
+		<div aria-labelledby="clayModalInverseLabel" class="fade modal" id="clayModalInverse" role="dialog" tabindex="-1">
+			<div class="modal-dialog modal-full-screen-sm-down modal-inverse">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
+
+						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<h4>Modal Body</h4>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal">Modal Danger</button>
+		<div aria-labelledby="clayModalDangerLabel" class="fade modal" id="clayModalDanger" role="dialog" tabindex="-1">
+			<div class="modal-danger modal-dialog modal-full-screen-sm-down">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
+
+						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<h4>Modal Body</h4>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-info" data-target="#clayModalInfo" data-toggle="modal">Modal Info</button>
+		<div aria-labelledby="clayModalInfoLabel" class="fade modal" id="clayModalInfo" role="dialog" tabindex="-1">
+			<div class="modal-info modal-dialog modal-full-screen-sm-down">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
+
+						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<h4>Modal Body</h4>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-success" data-target="#clayModalSuccess" data-toggle="modal">Modal Success</button>
+		<div aria-labelledby="clayModalSuccessLabel" class="fade modal" id="clayModalSuccess" role="dialog" tabindex="-1">
+			<div class="modal-success modal-dialog modal-full-screen-sm-down">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
+
+						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<h4>Modal Body</h4>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-warning" data-target="#clayModalWarning" data-toggle="modal">Modal Warning</button>
+		<div aria-labelledby="clayModalWarningLabel" class="fade modal" id="clayModalWarning" role="dialog" tabindex="-1">
+			<div class="modal-warning modal-dialog modal-full-screen-sm-down">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
+
+						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<h4>Modal Body</h4>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="modal-inverse"><a class="heading-anchor" href="#modal-inverse"><i class="icon icon-link"></i></a>Modal Inverse</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>modal-inverse</code> is a helper class that styles a modal with inverted colors, add it to modal-dialog.</p>
-		</blockquote>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="modal-browser-bugs"><a class="heading-anchor" href="#modal-browser-bugs"><i class="icon icon-link"></i></a>Modal Browser Bugs</h3>
-
-		<blockquote class="blockquote-sm blockquote-warning">
-			<p>iOS Safari doesn&apos;t respect <code>overflow: hidden</code> on the body element. See <a href="https://bugs.webkit.org/show_bug.cgi?id=153852">https://bugs.webkit.org/show_bug.cgi?id=153852</a>.</p>
-
-			<p>In iOS Safari, body content under the modal will scroll when the beginning or end of scrollable content inside a modal is reached. Use the position fixed workaround by adding <code>position: fixed;</code> to the <code>modal-open</code> class. The body content will be scrolled to the top as a side effect.</p>
-
-			<pre><code>@media screen and (max-width: 767px) {
-    .modal-open {
-        position: fixed;
-    }
-}</code></pre>
-
-		<p>The jQuery work around:</p>
-
-		<pre><code>(function($) {
-	var winScrollPos;
-	var $doc = $(document);
-	var $body = $(&apos;body&apos;);
-	var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) &amp;&amp; !window.MSStream;
-
-	$doc.on(&apos;hidden.bs.modal&apos;, function(e) {
-		if (iOS &amp;&amp; !(winScrollPos === 0)) {
-				window.scrollTo(0, winScrollPos);
-
-				$body.css({
-					position: &apos;&apos;,
-					top: &apos;&apos;
-				});
-			}
-	});
-
-	$doc.on(&apos;show.bs.modal&apos;, function(e) {
-		if (iOS) {
-			winScrollPos = window.scrollY;
-
-			if (!(winScrollPos === 0)) {
-				$body.css({
-					position: &apos;fixed&apos;,
-					top: -winScrollPos
-				});
-			}
-		}
-	});
-})(jQuery);</code></pre>
-		</blockquote>
-	</div>
-</div>
-
-<script>
-	(function($) {
-		var winScrollPos;
-		var $doc = $(document);
-		var $body = $('body');
-		var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-		$doc.on('hidden.bs.modal', function(e) {
-			if (iOS && !(winScrollPos === 0)) {
-					window.scrollTo(0, winScrollPos);
-
-					$body.css({
-						position: '',
-						top: ''
-					});
-				}
-		});
-
-		$doc.on('show.bs.modal', function(e) {
-			if (iOS) {
-				winScrollPos = window.scrollY;
-
-				if (!(winScrollPos === 0)) {
-					$body.css({
-						position: 'fixed',
-						top: -winScrollPos
-					});
-				}
-			}
-		});
-	})(jQuery);
-</script>
 	</div>
 
 		</section>
 	</div>
-
-	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 	<script src="../../js/site/toggle_css.js"></script>
