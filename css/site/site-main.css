@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-alpha.6
+* Clay 2.0.0-alpha.7
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -43,7 +43,7 @@ section.row {
 }
 
 #headerTopBar {
-  background: #0058BA url(../images/back_decoration_nav.png) no-repeat 100% 0;
+  background: #0058BA url(../../images/back_decoration_nav.png) no-repeat 100% 0;
   position: relative;
 }
 
@@ -147,10 +147,6 @@ section.row {
   width: 100%;
 }
 
-.hljs {
-  background-color: transparent;
-}
-
 .lx-site-toggle-code,
 .uxgl-toggle-code {
   clear: both;
@@ -177,6 +173,12 @@ section.row {
   display: inline-block;
   padding: 4px;
   vertical-align: middle;
+}
+
+.clay-site-form-container {
+  background-color: #FFF;
+  box-shadow: 0 1px 10px -4px rgba(0, 0, 0, 0.6);
+  padding: 1.25rem;
 }
 
 .clay-site-alerts .alert {
@@ -1092,4 +1094,4 @@ body.sidenav-transition {
   width: 50%;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=site-main.css.map */
