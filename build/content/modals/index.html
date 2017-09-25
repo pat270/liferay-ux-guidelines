@@ -4,11 +4,10 @@
 	<meta charset="UTF-8" />
 	<title>Lexicon - Modals</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
-	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
-	<link rel="stylesheet" href="../../css/main.css" />
+	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../css/site/site-main.css" />
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="../../js/bootstrap.js"></script>
 	<script src="../../js/collapsible-search.js"></script>
 	<script src="../../js/side-navigation.js"></script>
@@ -19,33 +18,40 @@
 			<div class="container">
 				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
 
-				<button type="button" class="animated-toggle navbar-toggle">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+				<button type="button" class="animated-toggle btn btn-primary d-md-none navbar-toggle navbar-toggler mt-2 hidden-sm-up">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+						<use xlink:href="../../images/icons/icons.svg#bars" />
+					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.4</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.8</span></h4>
 
 				<div class="dropdown" id="siteConfig">
-	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+			<use xlink:href="../../images/icons/icons.svg#cog"></use>
+		</svg>
+	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<div class="dropdown-header">Site Settings</div>
 		<form>
 			<div class="dropdown-item">
-				<label class="custom-control custom-checkbox">
-					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Show Atlas Theme</span>
-				</label>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Show Atlas</span>
+					</label>
+				</div>
 			</div>
 			<div class="dropdown-item">
-				<label class="custom-control custom-checkbox">
-					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Show Site CSS</span>
-				</label>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Show Site CSS</span>
+					</label>
+				</div>
 			</div>
 
 			<div class="dropdown-section">
@@ -94,13 +100,13 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+<li class=""><a class="nav-title" href="../../content/images-aspect-ratio">Images (Aspect Ratios)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
 </li>
 <li class="active"><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
@@ -112,9 +118,13 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+<li class=""><a class="nav-title" href="../../content/nav-underline">Nav Underline</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/management-bar">Navbar (Management Bar)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navigation-bar">Navbar (Navigation Bar)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -126,11 +136,11 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
 </li>
@@ -154,36 +164,12 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-</ul>
-</div>
-</li>
-<li class=""><span class="nav-title">Example Pages</span>
-<div class="">
-<ul class="nav flex-column main-nav-section">
-<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
-</li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
 <ul class="nav flex-column main-nav-section">
-<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
-</li>
 <li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
 </li>
 </ul>
@@ -205,7 +191,7 @@
 </nav>
 
 	<div class="" id="mainContent">
-		<h1 class="page-title" id="beginContent" tabindex="-1">
+		<h1 class="page-title mt-5" id="beginContent" tabindex="-1">
 			Modals
 
 			
@@ -216,24 +202,24 @@
 	<div class="col-md-12">
 		<h3 id="small-modal"><a class="heading-anchor" href="#small-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Small Modal</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>300px wide modal window, expands full width of screen at 575px and below.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-target="#lexSmallModal" data-toggle="modal">Small Modal</button>
-		<div aria-labelledby="lexSmallModalLabel" class="fade modal" id="lexSmallModal" role="dialog" tabindex="-1">
+		<button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal">Small Modal</button>
+		<div aria-labelledby="claySmallModalLabel" class="fade modal" id="claySmallModal" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+						<button class="btn btn-monospaced btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
-						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+						<div class="modal-title" id="claySmallModalLabel">Modal Title</div>
 
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+						<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -245,8 +231,8 @@
 					</div>
 
 					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
 						<button class="btn btn-primary" type="button">Primary</button>
-						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
 					</div>
 				</div>
 			</div>
@@ -258,24 +244,24 @@
 	<div class="col-md-12">
 		<h3 id="default-modal"><a class="heading-anchor" href="#default-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Default Modal</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>500px wide modal window, expands full width of screen at 575px and below.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-target="#lexDefaultModal" data-toggle="modal">Default Modal</button>
-		<div aria-labelledby="lexDefaultModalLabel" class="fade modal" id="lexDefaultModal" role="dialog" tabindex="-1">
+		<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal">Default Modal</button>
+		<div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+						<button class="btn btn-monospaced btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
-						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+						<div class="modal-title" id="claySmallModalLabel">Modal Title</div>
 
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+						<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -287,8 +273,8 @@
 					</div>
 
 					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
 						<button class="btn btn-primary" type="button">Primary</button>
-						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
 					</div>
 				</div>
 			</div>
@@ -300,26 +286,26 @@
 	<div class="col-md-12">
 		<h3 id="large-modal"><a class="heading-anchor" href="#large-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Large Modal</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>800px wide modal in window sizes greater than 992px.</p>
 			<p>500px wide modal in window sizes between 576px and 991px</p>
 			<p>Full width of screen at 575px and below.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-target="#lexLargeModal" data-toggle="modal">Large Modal</button>
-		<div aria-labelledby="lexLargeModalLabel" class="fade modal" id="lexLargeModal" role="dialog" tabindex="-1">
+		<button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal">Large Modal</button>
+		<div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayLargeModal" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+						<button class="btn btn-monospaced btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
-						<h4 class="modal-title" id="lexLargeModalLabel">Modal Title</h4>
+						<div class="modal-title" id="clayLargeModalLabel">Modal Title</div>
 
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+						<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -331,9 +317,8 @@
 					</div>
 
 					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
 						<button class="btn btn-primary" type="button">Primary</button>
-						<button class="btn btn-secondary" type="button">Alt</button>
-						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
 					</div>
 				</div>
 			</div>
@@ -345,7 +330,7 @@
 	<div class="col-md-12">
 		<h3 id="inline-scroller"><a class="heading-anchor" href="#inline-scroller"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Inline Scroller</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p><code>inline-scroller</code> is a helper class that sizes modal-body to a fixed height and scrolls any overflowing content. Add it to modal-body when you want modal-body to be a fixed height. It defaults to height 125px.</p>
 		</blockquote>
 
@@ -354,15 +339,15 @@
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+						<button class="btn btn-monospaced btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
-						<h4 class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</h4>
+						<div class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</div>
 
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+						<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -399,8 +384,8 @@
 					</div>
 
 					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
 						<button class="btn btn-primary" type="button">Primary</button>
-						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
 					</div>
 				</div>
 			</div>
@@ -412,24 +397,24 @@
 	<div class="col-md-12">
 		<h3 id="full-screen-modal"><a class="heading-anchor" href="#full-screen-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Full Screen Modal</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>A modal that stretches to fit the browser window with 45px spacing on every side, expands to fill the screen at screen sizes 767px and below.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-target="#lexFullScreenModal" data-toggle="modal">Full Screen Modal</button>
-		<div aria-labelledby="lexLargeModalLabel" class="fade modal" id="lexFullScreenModal" role="dialog" tabindex="-1">
+		<button class="btn btn-info" data-target="#clayFullScreenModal" data-toggle="modal">Full Screen Modal</button>
+		<div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayFullScreenModal" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-full-screen">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+						<button class="btn btn-monospaced btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
-						<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
+						<div class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</div>
 
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+						<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -541,9 +526,8 @@
 					</div>
 
 					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
 						<button class="btn btn-primary" type="button">Add</button>
-
-						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Cancel</button>
 					</div>
 				</div>
 			</div>
@@ -555,24 +539,24 @@
 	<div class="col-md-12">
 		<h3 id="modal-full-screen-sm-down"><a class="heading-anchor" href="#modal-full-screen-sm-down"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Modal Full Screen Sm Down</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Add <code class="code">modal-full-screen-sm-down</code> to any <code class="code">modal-dialog</code> to stretch to fit the browser window at screen widths 767px and below.</p>
+		<blockquote class="blockquote">
+			<p>Add <code>modal-full-screen-sm-down</code> to any <code>modal-dialog</code> to stretch to fit the browser window at screen widths 767px and below.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-target="#lexModalFullScreenSmDown" data-toggle="modal">Modal Full Screen Sm Down</button>
-		<div aria-labelledby="lexModalFullScreenSmDownLabel" class="fade modal" id="lexModalFullScreenSmDown" role="dialog" tabindex="-1">
+		<button class="btn btn-info" data-target="#clayModalFullScreenSmDown" data-toggle="modal">Modal Full Screen Sm Down</button>
+		<div aria-labelledby="clayModalFullScreenSmDownLabel" class="fade modal" id="clayModalFullScreenSmDown" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-full-screen-sm-down">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+						<button class="btn btn-monospaced btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
-						<h4 class="modal-title">Modal Title</h4>
+						<div class="modal-title">Modal Title</div>
 
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+						<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -605,9 +589,8 @@
 					</div>
 
 					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
 						<button class="btn btn-primary" type="button">Add</button>
-
-						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Cancel</button>
 					</div>
 				</div>
 			</div>
@@ -619,26 +602,26 @@
 	<div class="col-md-12">
 		<h3 id="modal-body-iframe"><a class="heading-anchor" href="#modal-body-iframe"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Modal Body Iframe</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p><code>modal-body-iframe</code> is a <code>modal-body</code> helper class that sizes and styles an iframe nested inside modal-body. Add it to modal-body when you want the iframe to be the same width and height as modal-body.</p>
 		</blockquote>
 
 		<div class="alert alert-warning">In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow will cause the iframe to scroll to the top.</div>
 
-		<button class="btn btn-info" data-target="#lexFullScreenModalIframe" data-toggle="modal">Full Screen Modal Iframe</button>
-		<div aria-labelledby="lexFullScreenModalIframeLabel" class="fade modal" id="lexFullScreenModalIframe" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-full-screen">
+		<button class="btn btn-info" data-target="#clayFullScreenModalIframe" data-toggle="modal">Full Screen Modal Iframe</button>
+		<div aria-labelledby="clayFullScreenModalIframeLabel" class="fade modal" id="clayFullScreenModalIframe" role="dialog" tabindex="-1">
+			<div class="modal-dialog modal-full-screen modal-full-screen-sm-down">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+						<button class="btn btn-monospaced btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
-						<h4 class="modal-title" id="lexFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</h4>
+						<div class="modal-title" id="clayFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+						<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -650,8 +633,8 @@
 					</div>
 
 					<div class="modal-footer">
+						<a class="btn btn-secondary" data-dismiss="modal" href="#1">Cancel</a>
 						<button class="btn btn-primary" type="button">Add</button>
-						<a class="btn btn-link close-modal" data-dismiss="modal" href="#1">Cancel</a>
 					</div>
 				</div>
 			</div>
@@ -663,55 +646,24 @@
 	<div class="col-md-12">
 		<h3 id="modal-variants"><a class="heading-anchor" href="#modal-variants"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Modal Variants</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p><code class="code">modal-inverse</code>, <code class="code">modal-danger</code>, <code class="code">modal-info</code>, <code class="code">modal-success</code>, or <code class="code">modal-warning</code> are helper classes that style a modal based on that state, add it to modal-dialog.</p>
+		<blockquote class="blockquote">
+			<p><code>modal-danger</code>, <code>modal-info</code>, <code>modal-success</code>, or <code>modal-warning</code> are helper classes that style a modal based on that state, add it to modal-dialog.</p>
 		</blockquote>
 
-		<button class="btn btn-secondary" data-target="#clayModalInverse" data-toggle="modal">Modal Inverse</button>
-		<div aria-labelledby="clayModalInverseLabel" class="fade modal" id="clayModalInverse" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-full-screen-sm-down modal-inverse">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="../../images/icons/icons.svg#check">
-							</svg>
-						</button>
-
-						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
-
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="../../images/icons/icons.svg#times">
-							</svg>
-						</button>
-					</div>
-
-					<div class="modal-body">
-						<h4>Modal Body</h4>
-					</div>
-
-					<div class="modal-footer">
-						<button class="btn btn-primary" type="button">Primary</button>
-						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
 		<button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal">Modal Danger</button>
 		<div aria-labelledby="clayModalDangerLabel" class="fade modal" id="clayModalDanger" role="dialog" tabindex="-1">
 			<div class="modal-danger modal-dialog modal-full-screen-sm-down">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+						<button class="btn btn-monospaced btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
-						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+						<div class="modal-title" id="claySmallModalLabel">Modal Title</div>
 
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+						<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -723,8 +675,8 @@
 					</div>
 
 					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
 						<button class="btn btn-primary" type="button">Primary</button>
-						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
 					</div>
 				</div>
 			</div>
@@ -734,15 +686,15 @@
 			<div class="modal-info modal-dialog modal-full-screen-sm-down">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+						<button class="btn btn-monospaced btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
-						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+						<div class="modal-title" id="claySmallModalLabel">Modal Title</div>
 
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+						<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -754,8 +706,8 @@
 					</div>
 
 					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
 						<button class="btn btn-primary" type="button">Primary</button>
-						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
 					</div>
 				</div>
 			</div>
@@ -765,15 +717,15 @@
 			<div class="modal-success modal-dialog modal-full-screen-sm-down">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+						<button class="btn btn-monospaced btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
-						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+						<div class="modal-title" id="claySmallModalLabel">Modal Title</div>
 
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+						<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -785,8 +737,8 @@
 					</div>
 
 					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
 						<button class="btn btn-primary" type="button">Primary</button>
-						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
 					</div>
 				</div>
 			</div>
@@ -796,15 +748,15 @@
 			<div class="modal-warning modal-dialog modal-full-screen-sm-down">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+						<button class="btn btn-monospaced btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</button>
 
-						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+						<div class="modal-title" id="claySmallModalLabel">Modal Title</div>
 
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+						<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -816,8 +768,8 @@
 					</div>
 
 					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
 						<button class="btn btn-primary" type="button">Primary</button>
-						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
 					</div>
 				</div>
 			</div>
@@ -829,7 +781,6 @@
 		</section>
 	</div>
 
-	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 	<script src="../../js/site/toggle_css.js"></script>
 	<script src="../../js/svg4everybody.js" type="text/javascript"></script>
 
@@ -902,8 +853,6 @@
 				}
 			);
 		});
-
-		hljs.initHighlightingOnLoad();
 	</script>
 	</body>
 </html>

@@ -101,8 +101,8 @@ module.exports = function(gulp, plugins, _, config) {
 			return gulp.src([
 				'src/fonts/**/*',
 				'src/images/icons/*',
-				'src/scss/+(atlas-theme|bootstrap|lexicon-base)/**/*',
-				'src/scss/+(atlas|atlas-variables|bootstrap|lexicon-base|lexicon-base-variables).scss',
+				'src/scss/+(atlas|bootstrap|components|functions|mixins|variables)/**/*',
+				'src/scss/+(_components|_mixins|_variables|atlas-variables|atlas|base-variables|base|bootstrap).scss',
 				'src/js/{,bootstrap/}*.js'
 				], {base: './src'})
 			.pipe(assetFilter)
@@ -147,7 +147,7 @@ module.exports = function(gulp, plugins, _, config) {
 			cmdPromise.resolve()
 				.git('checkout', 'develop')
 				.cmd('gulp', 'build:svg:scss-icons')
-				.git('status', '--porcelain', './src/scss/lexicon-base/mixins/_global-functions.scss').then(checkStatus('It appears that there are new icons. Please commit the modified Sass functions file.'))
+				.git('status', '--porcelain', './src/scss/lexicon-base/functions/_global-functions.scss').then(checkStatus('It appears that there are new icons. Please commit the modified Sass functions file.'))
 				.git('checkout', 'master')
 				.git('status', '--porcelain').then(checkStatus('working directory not clean, aborting'))
 				.then(getGitRemote)

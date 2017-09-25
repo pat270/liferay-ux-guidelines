@@ -7,6 +7,19 @@ section: Components
 	<div class="col-md-12">
 		<h3>Badges</h3>
 
+		<span class="badge badge-primary">8</span>
+		<span class="badge badge-secondary">87</span>
+		<span class="badge badge-success">999K</span>
+		<span class="badge badge-info">91</span>
+		<span class="badge badge-warning">21</span>
+		<span class="badge badge-danger">130</span>
+		<div class="clay-site-light-container">
+			<span class="badge badge-light">130</span>
+		</div>
+		<span class="badge badge-dark">130</span>
+	</div>
+
+	<div class="col-md-12">
 		<span class="badge badge-primary">Primary</span>
 		<span class="badge badge-secondary">Secondary</span>
 		<span class="badge badge-success">Success</span>
@@ -41,6 +54,19 @@ section: Components
 	<div class="col-md-12">
 		<h3>Badge Pill</h3>
 
+		<span class="badge badge-pill badge-primary">8</span>
+		<span class="badge badge-pill badge-secondary">87</span>
+		<span class="badge badge-pill badge-success">999K</span>
+		<span class="badge badge-info badge-pill">91</span>
+		<span class="badge badge-pill badge-warning">21</span>
+		<span class="badge badge-danger badge-pill">130</span>
+		<div class="clay-site-light-container">
+			<span class="badge badge-light badge-pill">130</span>
+		</div>
+		<span class="badge badge-dark badge-pill">130</span>
+	</div>
+
+	<div class="col-md-12">
 		<span class="badge badge-pill badge-primary">Primary</span>
 		<span class="badge badge-pill badge-secondary">Secondary</span>
 		<span class="badge badge-pill badge-success">Success</span>
@@ -58,7 +84,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Badge Sizes</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Use <code>badge-sm</code> and <code>badge-lg</code> to change the badge size.</p>
 		</blockquote>
 
@@ -79,7 +105,7 @@ section: Components
 				<a href="#1">Small Badge</a>
 				<button aria-label="Close" class="close" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="../../images/icons/icons.svg#times"></use>
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
 					</svg>
 				</button>
 			</span>
@@ -87,7 +113,7 @@ section: Components
 				<a href="#1">Normal Badge</a>
 				<button aria-label="Close" class="close" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="../../images/icons/icons.svg#times"></use>
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
 					</svg>
 				</button>
 			</span>
@@ -95,7 +121,7 @@ section: Components
 				<a href="#1">Large Badge</a>
 				<button aria-label="Close" class="close" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="../../images/icons/icons.svg#times"></use>
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
 					</svg>
 				</button>
 			</span>
@@ -159,7 +185,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Label Sizes</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Use <code>label-sm</code> and <code>label-lg</code> to change the label size.</p>
 		</blockquote>
 
@@ -178,7 +204,7 @@ section: Components
 				<a href="#1">Small Label</a>
 				<button aria-label="Close" class="close" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="../../images/icons/icons.svg#times"></use>
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
 					</svg>
 				</button>
 			</span>
@@ -186,7 +212,7 @@ section: Components
 				<a href="#1">Normal Label</a>
 				<button aria-label="Close" class="close" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="../../images/icons/icons.svg#times"></use>
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
 					</svg>
 				</button>
 			</span>
@@ -194,7 +220,7 @@ section: Components
 				<a href="#1">Large Label</a>
 				<button aria-label="Close" class="close" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="../../images/icons/icons.svg#times"></use>
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
 					</svg>
 				</button>
 			</span>
@@ -206,7 +232,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Sticker</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Stickers are monospaced badges/labels.</p>
 		</blockquote>
 
@@ -227,35 +253,35 @@ section: Components
 	<div class="col-md-12">
 		<h3>Positional Stickers</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Place them anywhere relative to your container using positional sticker classes <code>sticker-top-left</code>, <code>sticker-bottom-left</code>, <code>sticker-top-right</code>, and <code>sticker-bottom-right</code>.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-3 col-6">
 		<div class="aspect-ratio">
-			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 			<span class="sticker sticker-danger sticker-top-left">PDF</span>
 		</div>
 	</div>
 
 	<div class="col-md-3 col-6">
 		<div class="aspect-ratio">
-			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 			<span class="sticker sticker-bottom-left sticker-danger">PDF</span>
 		</div>
 	</div>
 
 	<div class="col-md-3 col-6">
 		<div class="aspect-ratio">
-			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 			<span class="sticker sticker-danger sticker-top-right">PDF</span>
 		</div>
 	</div>
 
 	<div class="col-md-3 col-6">
 		<div class="aspect-ratio">
-			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 			<span class="sticker sticker-bottom-right sticker-danger">PDF</span>
 		</div>
 	</div>
@@ -265,7 +291,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Sticker Sizes</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Stickers come in 3 different sizes, small, regular and large. Create your own custom size by changing the <code>width</code>, <code>height</code>, <code>line-height</code>, and <code>font-size</code>. You can also use the sass monospace mixin to change the width and height e.g. <code>@include monospace(30px);</code>.</p>
 		</blockquote>
 
@@ -305,7 +331,7 @@ section: Components
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Sticker Overlay</h3>
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Overlay content over stickers by nesting <code>sticker-overlay</code> inside <code>sticker</code>.</p>
 		</blockquote>
 
@@ -343,7 +369,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Sticker Outside</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Add class <code>sticker-outside</code> in conjunction with sticker positions to position the sticker on the outside corners.</p>
 		</blockquote>
 	</div>

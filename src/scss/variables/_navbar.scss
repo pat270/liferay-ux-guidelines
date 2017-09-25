@@ -1,0 +1,66 @@
+$enable-scaling-navbar: $enable-scaling-components !default;
+
+$navbar-border-radius: null !default;
+
+$navbar-active-highlight: transparent !default;
+
+$navbar-text-truncate-spacer-right: 25px !default;
+$navbar-text-truncate-max-width: 140px !default;
+
+// Navbar Collapse
+
+$navbar-collapse-absolute-box-shadow: null !default;
+
+// Navbar Brand
+
+$navbar-brand-color: null !default;
+$navbar-brand-hover-color: null !default;
+
+// Navbar Light
+
+$navbar-light-bg: map-get($theme-colors, light) !default;
+$navbar-light-border-color: transparent !default;
+
+$navbar-light-active-bg: null !default;
+$navbar-light-hover-bg: null !default;
+$navbar-light-disabled-bg: null !default;
+
+$navbar-light-active-highlight: $component-active-bg !default;
+
+$navbar-light-brand-bg: null !default;
+$navbar-light-brand-hover-bg: null !default;
+$navbar-light-brand-color: null !default;
+$navbar-light-brand-hover-color: null !default;
+
+// Navbar Dark
+
+$navbar-dark-bg: map-get($theme-colors, dark) !default;
+$navbar-dark-border-color: transparent !default;
+
+$navbar-dark-active-bg: null !default;
+$navbar-dark-hover-bg: null !default;
+$navbar-dark-disabled-bg: null !default;
+
+$navbar-dark-active-highlight: $component-active-bg !default;
+
+$navbar-dark-brand-bg: null !default;
+$navbar-dark-brand-hover-bg: null !default;
+$navbar-dark-brand-color: null !default;
+$navbar-dark-brand-hover-color: null !default;
+
+// Navbar Primary
+
+$navbar-primary-bg: lighten(map-get($theme-colors, primary), 44%) !default;
+$navbar-primary-border-color: map-get($theme-colors, primary) !default;
+
+$navbar-primary-active-bg: null !default;
+$navbar-primary-hover-bg: null !default;
+
+$navbar-primary-disabled-bg: null !default;
+
+$navbar-primary-active-highlight: $component-active-bg !default;
+
+$navbar-primary-brand-bg: null !default;
+$navbar-primary-brand-hover-bg: null !default;
+$navbar-primary-brand-color: null !default;
+$navbar-primary-brand-hover-color: null !default;
