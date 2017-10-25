@@ -81,6 +81,10 @@
 	height: 100%;
 	width: 100%;
 
+	&.message-content {
+		display: block;
+	}
+
 	&.card-row-padded .card-col-gutters {
 		&:first-child {
 			padding-left: 0;
