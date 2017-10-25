@@ -1,3 +1,17 @@
+### v1.0.22 - June 29, 2017
+* New: Nav Nested added `$nav-nested-link-active-bg`, `$nav-nested-link-active-color` and active states
+* Update: Nav added `word-break: wrap-word;` to nav-links
+* Update: Estonia and Thai flag sizing
+* Site: Navs demo added active states to Nested Nav
+
+### v1.0.21 - June 27, 2017
+* New: Add Estonia and Thai flags
+* Site: Remove unused images
+
+### v1.0.20 - June 14, 2017
+* Fix: side-navigation.js Simple Sidenav should add open class to data-content in mobile
+* Update: `.aspect-ratio-center.aspect-ratio-middle` should center and vertically align
+
 ### v1.0.19 - April 3, 2017
 * New: Added Lexicon SVG Icons `add-role.svg` and `remove-role.svg`
 
