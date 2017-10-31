@@ -9084,6 +9084,18 @@ label .reference-mark {
   color: #ffc107;
 }
 
+.form-container {
+  background-color: #fff;
+  border-color: rgba(0, 0, 0, 0.125);
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-radius: 0.25rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+}
+
 .form-group {
   position: relative;
 }
@@ -14122,6 +14134,23 @@ a.multi-step-icon:focus, a.multi-step-icon:hover {
   margin-right: -1.25rem;
 }
 
+.form-container > .panel-group-fluid {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+.form-container > .panel-group-fluid-first {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-top: -1.5rem;
+}
+
+.form-container > .panel-group-fluid-last {
+  margin-bottom: -1.5rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
 .panel-secondary {
   border-color: rgba(0, 0, 0, 0.125);
 }
@@ -14622,7 +14651,7 @@ a.multi-step-icon:focus, a.multi-step-icon:hover {
 }
 
 .sticker-sm {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   height: 1.5rem;
   line-height: 1.5rem;
   width: 1.5rem;
