@@ -10027,6 +10027,7 @@ a.label {
   line-height: 1.75rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  text-transform: none;
 }
 
 .label-primary {
@@ -15411,6 +15412,11 @@ th {
 .table-cell-field {
   display: table-cell;
   width: 1%;
+}
+
+.table-bordered thead td,
+.table-bordered thead th {
+  border-top-width: 1px;
 }
 
 .table-list {
