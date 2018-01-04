@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-alpha.4
+* Clay 2.0.0-beta.5
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -786,7 +786,7 @@
 				}
 			};
 
-			if (!$.support.transition) {
+			if (!bootstrap.Util.supportsTransitionEnd()) {
 				complete.call(instance);
 			}
 			else {

@@ -1,6 +1,6 @@
 {
   "name": "clay",
-  "version": "2.0.0-alpha.4",
+  "version": "2.0.0-beta.5",
   "description": "Liferay's web implementation of the Lexicon Design Language",
   "main": "index.js",
   "csfConfig": {
@@ -69,6 +69,7 @@
     "gulp-metalsmith": "0.0.3",
     "gulp-plumber": "^1.0.1",
     "gulp-postcss": "^6.2.0",
+    "gulp-liferay-r2-css": "0.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-svgmin": "^1.2.0",
     "gulp-svgstore": "^5.0.4",

@@ -2,7 +2,7 @@ var inquirer = require('inquirer');
 var path = require('path');
 
 var gulp = require('gulp-help')(require('gulp'));
-var liferayGulpTasks = require('liferay-gulp-tasks');
+// var liferayGulpTasks = require('liferay-gulp-tasks');
 var plugins = require('gulp-load-plugins')({pattern: ['autoprefixer', 'gulp-*', 'gulp.*', 'merge-stream', 'postcss-*']});
 var runSequence = require('run-sequence');
 
@@ -36,10 +36,10 @@ var config = {
 
 var tasks = require('require-dir')('./tasks');
 
-liferayGulpTasks(gulp, {
-	artifactSrc: ['**/release/**/*', '!node_modules/', '!node_modules/**'],
-	artifactName: 'clay'
-});
+// liferayGulpTasks(gulp, {
+// 	artifactSrc: ['**/release/**/*', '!node_modules/', '!node_modules/**'],
+// 	artifactName: 'clay'
+// });
 
 _.invoke(tasks, 'call', tasks, gulp, plugins, _, config);
 
@@ -51,6 +51,7 @@ gulp.task('build', function(cb) {
 		'build:svg',
 		'build:svg:scss-icons',
 		'build:metalsmith',
+		'build:rtl',
 		'build:clean-bootstrap-patch',
 		function(err) {
 			gulp.emit('build:finished', err);
@@ -106,7 +107,8 @@ gulp.task(
 			},
 			{
 				default: false,
-				message: 'Do you want to push to the Maven repo and publish to npm?',
+				// message: 'Do you want to push to the Maven repo and publish to npm?',
+				message: 'Do you want to publish to npm?',
 				name: 'packageManagers',
 				type: 'confirm',
 				when: function(answers) {
@@ -129,8 +131,9 @@ gulp.task(
 							];
 
 							if (answers.packageManagers) {
-								args.splice(2, 0, 'maven-publish');
-								args.splice(3, 0, 'release:npm');
+								// args.splice(2, 0, 'maven-publish');
+								// args.splice(3, 0, 'release:npm');
+								args.splice(2, 0, 'release:npm');
 							}
 
 							runSequence.apply(null, args);

@@ -1,0 +1,13 @@
+$sidebar-dt-font-size: 0.6875rem !default; // 11px
+$sidebar-dd-font-size: !default; // $font-size-base 14px
+
+// Sidebar Light
+
+$sidebar-light: (
+	link-color: $body-color,
+	header-title-color: $body-color,
+	subtitle-color: $secondary,
+	caption-color: $secondary,
+	actions-link-color: $secondary,
+	dt-color: $secondary
+) !default;

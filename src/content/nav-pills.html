@@ -7,7 +7,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Nav Pills</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Add <code>.nav-pills</code> to <code>.nav</code> to add background colors and border styles.</p>
 		</blockquote>
 
@@ -16,19 +16,18 @@ section: Components
 			<li class="nav-item"><a class="nav-link" href="#1">Settings</a></li>
 			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents</a></li>
 			<li class="dropdown nav-item">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 					Configuration
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
 					</svg>
 				</a>
-
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="#1">Setup</a>
 					<a class="dropdown-item" href="#1">Supported Clients</a>
 					<a class="dropdown-item" href="#1">Permissions</a>
 					<a class="dropdown-item" href="#1">Sharing</a>
-					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider" role="separator"></div>
 					<a class="dropdown-item" href="#1">Scope</a>
 				</div>
 			</li>
@@ -40,7 +39,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Nav Pills Justified</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Add <code>.nav-justified</code> to make nav-pills equal width relative to its parent container.</p>
 		</blockquote>
 
@@ -49,19 +48,18 @@ section: Components
 			<li class="nav-item"><a class="nav-link" href="#1">Settings</a></li>
 			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents</a></li>
 			<li class="dropdown nav-item">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 					Configuration
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
 					</svg>
 				</a>
-
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="#1">Setup</a>
 					<a class="dropdown-item" href="#1">Supported Clients</a>
 					<a class="dropdown-item" href="#1">Permissions</a>
 					<a class="dropdown-item" href="#1">Sharing</a>
-					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider" role="separator"></div>
 					<a class="dropdown-item" href="#1">Scope</a>
 				</div>
 			</li>
@@ -79,25 +77,24 @@ section: Components
 			<li class="nav-item"><a class="active nav-link" href="#1">Fields</a></li>
 			<li class="nav-item">
 				<a class="nav-link" href="#1">
-					<span class="badge pull-right">2</span>
 					Fields with Badge
+					<span class="badge badge-warning">2</span>
 				</a>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="#1">Settings</a></li>
 			<li class="dropdown nav-item">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 					Configuration
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
 					</svg>
 				</a>
-
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="#1">Setup</a>
 					<a class="dropdown-item" href="#1">Supported Clients</a>
 					<a class="dropdown-item" href="#1">Permissions</a>
 					<a class="dropdown-item" href="#1">Sharing</a>
-					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider" role="separator"></div>
 					<a class="dropdown-item" href="#1">Scope</a>
 				</div>
 			</li>
@@ -113,33 +110,41 @@ section: Components
 	<div class="col-md-4">
 		<ul class="flex-column nav nav-nested nav-pills">
 			<li class="nav-item">
-				<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navPillsCollapse01">
+				<a aria-controls="navPillsCollapse01" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navPillsCollapse01" role="button">
 					Basic Information
 					<span class="collapse-icon-closed">
-						<span class="icon-caret-right"></span>
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
+						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<span class="icon-caret-down"></span>
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-down" />
+						</svg>
 					</span>
 				</a>
 				<div class="collapse show" id="navPillsCollapse01">
 					<ul class="flex-column nav">
 						<li class="nav-item"><a class="nav-link" href="#">Details</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Catagorization</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Categorization</a></li>
 						<li class="nav-item">
-							<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navPillsCollapse02">
+							<a aria-controls="navPillsCollapse02" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navPillsCollapse02" role="button">
 								Documents and Media
 								<span class="collapse-icon-closed">
-									<span class="icon-caret-right"></span>
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
+									</svg>
 								</span>
 								<span class="collapse-icon-open">
-									<span class="icon-caret-down"></span>
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-down" />
+									</svg>
 								</span>
 							</a>
 							<div class="collapse" id="navPillsCollapse02">
 								<ul class="flex-column nav">
 									<li class="nav-item"><a class="nav-link" href="#">Details</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">Catagorization</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Categorization</a></li>
 									<li class="nav-item"><a class="nav-link" href="#">Documents and Media</a></li>
 									<li class="nav-item"><a class="nav-link" href="#">Site Template</a></li>
 								</ul>
