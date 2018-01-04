@@ -283,9 +283,9 @@
 
 					var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
 
-					contentNode.css('min-height', tallest);
-					navNode.css('min-height', tallest);
-					sideNavMenuNode.css('min-height', tallest);
+					contentNode.css('height', tallest);
+					navNode.css('height', tallest);
+					sideNavMenuNode.css('height', tallest);
 				}
 			}
 		},
