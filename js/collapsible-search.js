@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-beta.6
+* Clay 2.0.0-beta.8
 *
 * Copyright 2018, Liferay, Inc.
 * All rights reserved.

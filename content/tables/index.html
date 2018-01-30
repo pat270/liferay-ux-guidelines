@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../../js/popper.js"></script>
 	<script src="../../js/bootstrap.js"></script>
 	<script src="../../js/collapsible-search.js"></script>
 	<script src="../../js/side-navigation.js"></script>
@@ -24,7 +25,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.6</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.8</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -241,14 +242,58 @@
 		<thead>
 			<tr>
 				<th></th>
-				<th>ID</th>
-				<th class="table-cell-expand">
-					<span class="text-truncate" title="Description">Title</span>
+				<th class="table-head-title">
+					<span class="inline-item inline-item-before">
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+								<use xlink:href="../../images/icons/icons.svg#drag">
+							</svg>
+						</a>
+					</span><a class="inline-item text-truncate-inline" href="#1">
+						<span class="text-truncate" title="ID">ID</span><span class="inline-item inline-item-after">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
+								<use xlink:href="../../images/icons/icons.svg#order-arrow-down">
+							</svg>
+						</span>
+					</a>
+				</th>
+				<th class="table-cell-expand table-head-title">
+					<span class="inline-item inline-item-before">
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+								<use xlink:href="../../images/icons/icons.svg#drag">
+							</svg>
+						</a>
+					</span><a class="inline-item text-truncate-inline" href="#1">
+						<span class="text-truncate" title="Title">Title</span><span class="inline-item inline-item-after">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
+								<use xlink:href="../../images/icons/icons.svg#order-arrow-down">
+							</svg>
+						</span>
+					</a>
 				</th>
 				<th>Status</th>
-				<th>Modified Date</th>
+				<th class="table-head-title">
+					<span class="inline-item inline-item-before">
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+								<use xlink:href="../../images/icons/icons.svg#drag">
+							</svg>
+						</a>
+					</span><a class="inline-item text-truncate-inline" href="#1">
+						<span class="text-truncate" title="Modified Date">Modified Date</span>
+					</a>
+				</th>
 				<th>Display Date</th>
-				<th>Author</th>
+				<th class="table-head-title">
+					<a class="inline-item text-truncate-inline" href="#1">
+						<span class="text-truncate" title="Author">Author</span><span class="inline-item inline-item-after">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
+								<use xlink:href="../../images/icons/icons.svg#order-arrow-up">
+							</svg>
+						</span>
+					</a>
+				</th>
 				<th>Type</th>
 				<th></th>
 			</tr>
@@ -307,12 +352,12 @@
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1" role="button">Remove</a>
-							<a class="dropdown-item" href="#1" role="button">Edit</a>
-							<a class="dropdown-item" href="#1" role="button">Move</a>
-							<a class="dropdown-item" href="#1" role="button">Checkout</a>
-						</div>
+						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+						</ul>
 					</div>
 				</td>
 			</tr>
@@ -330,9 +375,9 @@
 				</td>
 				<td class="table-cell-expand">
 					<h4 class="table-list-title">
-						<span class="text-truncate-inline">
-							<a class="text-truncate" href="#1" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</a></span>
-						
+						<a class="text-truncate-inline" href="#1">
+							<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						</a>
 					</h4>
 				</td>
 				<td>--</td>
@@ -364,12 +409,12 @@
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1" role="button">Remove</a>
-							<a class="dropdown-item" href="#1" role="button">Edit</a>
-							<a class="dropdown-item" href="#1" role="button">Move</a>
-							<a class="dropdown-item" href="#1" role="button">Checkout</a>
-						</div>
+						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+						</ul>
 					</div>
 				</td>
 			</tr>
@@ -419,12 +464,12 @@
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1" role="button">Remove</a>
-							<a class="dropdown-item" href="#1" role="button">Edit</a>
-							<a class="dropdown-item" href="#1" role="button">Move</a>
-							<a class="dropdown-item" href="#1" role="button">Checkout</a>
-						</div>
+						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+						</ul>
 					</div>
 				</td>
 			</tr>
@@ -474,12 +519,12 @@
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1" role="button">Remove</a>
-							<a class="dropdown-item" href="#1" role="button">Edit</a>
-							<a class="dropdown-item" href="#1" role="button">Move</a>
-							<a class="dropdown-item" href="#1" role="button">Checkout</a>
-						</div>
+						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+						</ul>
 					</div>
 				</td>
 			</tr>
@@ -500,7 +545,9 @@
 					<tr>
 						<th></th>
 						<th class="table-cell-expand">
-							<span class="text-truncate" title="Description">Description</span>
+							<span class="text-truncate-inline">
+								<span class="text-truncate" title="Description">Description</span>
+							</span>
 						</th>
 						<th>Format</th>
 						<th>Label</th>
@@ -552,12 +599,12 @@
 										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 									</svg>
 								</a>
-								<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1" role="button">Remove</a>
-									<a class="dropdown-item" href="#1" role="button">Edit</a>
-									<a class="dropdown-item" href="#1" role="button">Move</a>
-									<a class="dropdown-item" href="#1" role="button">Checkout</a>
-								</div>
+								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+								</ul>
 							</div>
 						</td>
 					</tr>
@@ -604,12 +651,12 @@
 										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 									</svg>
 								</a>
-								<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1" role="button">Remove</a>
-									<a class="dropdown-item" href="#1" role="button">Edit</a>
-									<a class="dropdown-item" href="#1" role="button">Move</a>
-									<a class="dropdown-item" href="#1" role="button">Checkout</a>
-								</div>
+								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+								</ul>
 							</div>
 						</td>
 					</tr>
@@ -656,12 +703,12 @@
 										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 									</svg>
 								</a>
-								<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1" role="button">Remove</a>
-									<a class="dropdown-item" href="#1" role="button">Edit</a>
-									<a class="dropdown-item" href="#1" role="button">Move</a>
-									<a class="dropdown-item" href="#1" role="button">Checkout</a>
-								</div>
+								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+								</ul>
 							</div>
 						</td>
 					</tr>
@@ -708,12 +755,12 @@
 										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 									</svg>
 								</a>
-								<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1" role="button">Remove</a>
-									<a class="dropdown-item" href="#1" role="button">Edit</a>
-									<a class="dropdown-item" href="#1" role="button">Move</a>
-									<a class="dropdown-item" href="#1" role="button">Checkout</a>
-								</div>
+								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+								</ul>
 							</div>
 						</td>
 					</tr>
@@ -787,12 +834,12 @@
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1" role="button">Remove</a>
-							<a class="dropdown-item" href="#1" role="button">Edit</a>
-							<a class="dropdown-item" href="#1" role="button">Move</a>
-							<a class="dropdown-item" href="#1" role="button">Checkout</a>
-						</div>
+						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+						</ul>
 					</div>
 				</td>
 			</tr>
@@ -839,12 +886,12 @@
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1" role="button">Remove</a>
-							<a class="dropdown-item" href="#1" role="button">Edit</a>
-							<a class="dropdown-item" href="#1" role="button">Move</a>
-							<a class="dropdown-item" href="#1" role="button">Checkout</a>
-						</div>
+						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+						</ul>
 					</div>
 				</td>
 			</tr>
@@ -891,12 +938,12 @@
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1" role="button">Remove</a>
-							<a class="dropdown-item" href="#1" role="button">Edit</a>
-							<a class="dropdown-item" href="#1" role="button">Move</a>
-							<a class="dropdown-item" href="#1" role="button">Checkout</a>
-						</div>
+						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+						</ul>
 					</div>
 				</td>
 			</tr>
@@ -943,12 +990,12 @@
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1" role="button">Remove</a>
-							<a class="dropdown-item" href="#1" role="button">Edit</a>
-							<a class="dropdown-item" href="#1" role="button">Move</a>
-							<a class="dropdown-item" href="#1" role="button">Checkout</a>
-						</div>
+						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+							<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+						</ul>
 					</div>
 				</td>
 			</tr>
@@ -1023,12 +1070,12 @@
 										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 									</svg>
 								</a>
-								<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1" role="button">Remove</a>
-									<a class="dropdown-item" href="#1" role="button">Edit</a>
-									<a class="dropdown-item" href="#1" role="button">Move</a>
-									<a class="dropdown-item" href="#1" role="button">Checkout</a>
-								</div>
+								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+								</ul>
 							</div>
 						</td>
 					</tr>
@@ -1075,12 +1122,12 @@
 										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 									</svg>
 								</a>
-								<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1" role="button">Remove</a>
-									<a class="dropdown-item" href="#1" role="button">Edit</a>
-									<a class="dropdown-item" href="#1" role="button">Move</a>
-									<a class="dropdown-item" href="#1" role="button">Checkout</a>
-								</div>
+								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+								</ul>
 							</div>
 						</td>
 					</tr>
@@ -1127,12 +1174,12 @@
 										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 									</svg>
 								</a>
-								<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1" role="button">Remove</a>
-									<a class="dropdown-item" href="#1" role="button">Edit</a>
-									<a class="dropdown-item" href="#1" role="button">Move</a>
-									<a class="dropdown-item" href="#1" role="button">Checkout</a>
-								</div>
+								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+								</ul>
 							</div>
 						</td>
 					</tr>
@@ -1179,12 +1226,12 @@
 										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 									</svg>
 								</a>
-								<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1" role="button">Remove</a>
-									<a class="dropdown-item" href="#1" role="button">Edit</a>
-									<a class="dropdown-item" href="#1" role="button">Move</a>
-									<a class="dropdown-item" href="#1" role="button">Checkout</a>
-								</div>
+								<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+									<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+									<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+								</ul>
 							</div>
 						</td>
 					</tr>
@@ -1209,9 +1256,9 @@
 						<th></th>
 						<th>ID</th>
 						<th class="table-cell-expand">
-							<span class="text-truncate-inline">
+							<a class="inline-item text-truncate-inline" href="#1">
 								<span class="text-truncate" title="Description">Title</span>
-							</span>
+							</a>
 						</th>
 						<th>Status</th>
 						<th>Modified Date</th>

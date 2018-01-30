@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-beta.6
+* Clay 2.0.0-beta.8
 *
 * Copyright 2018, Liferay, Inc.
 * All rights reserved.
@@ -385,21 +385,11 @@ section.row {
   padding-top: 10px;
 }
 
-.clay-site-popover-display .popover {
+.clay-site-popover-display-column {
   display: inline-block;
-  margin: 20px;
+  height: 240px;
   position: relative;
-  z-index: 1;
-}
-
-.clay-site-popover-display .bs-popover-bottom .arrow,
-.clay-site-popover-display .bs-popover-top .arrow {
-  left: 50%;
-}
-
-.clay-site-popover-display .bs-popover-left .arrow,
-.clay-site-popover-display .bs-popover-right .arrow {
-  top: 50%;
+  width: 250px;
 }
 
 .clay-site-progress-bar-page .progress {
@@ -426,22 +416,11 @@ section.row {
   height: 120px;
 }
 
-.clay-site-tooltip-display .tooltip {
+.clay-site-tooltip-display-column {
   display: inline-block;
-  opacity: 1;
-  margin: 10px 20px;
+  height: 100px;
   position: relative;
-  z-index: 1;
-}
-
-.clay-site-tooltip-display .bs-tooltip-bottom .arrow,
-.clay-site-tooltip-display .bs-tooltip-top .arrow {
-  left: 50%;
-}
-
-.clay-site-tooltip-display .bs-tooltip-left .arrow,
-.clay-site-tooltip-display .bs-tooltip-right .arrow {
-  top: 50%;
+  width: 250px;
 }
 
 .clay-site-sans-serif {

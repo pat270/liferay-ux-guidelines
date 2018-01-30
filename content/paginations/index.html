@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../../js/popper.js"></script>
 	<script src="../../js/bootstrap.js"></script>
 	<script src="../../js/collapsible-search.js"></script>
 	<script src="../../js/side-navigation.js"></script>
@@ -24,7 +25,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.6</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.8</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -249,15 +250,17 @@
 	<li class="page-item"><a class="page-link" href="#1">10</a></li>
 	<li class="dropdown page-item">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
-		<div class="dropdown-menu dropdown-menu-top-center">
-			<div class="inline-scroller">
-				<a class="dropdown-item" href="#1">11</a>
-				<a class="dropdown-item" href="#1">12</a>
-				<a class="dropdown-item" href="#1">13</a>
-				<a class="dropdown-item" href="#1">14</a>
-				<a class="dropdown-item" href="#1">15</a>
-			</div>
-		</div>
+		<ul class="dropdown-menu dropdown-menu-top-center">
+			<li>
+				<ul class="inline-scroller">
+					<li><a class="dropdown-item" href="#1">11</a></li>
+					<li><a class="dropdown-item" href="#1">12</a></li>
+					<li><a class="dropdown-item" href="#1">13</a></li>
+					<li><a class="dropdown-item" href="#1">14</a></li>
+					<li><a class="dropdown-item" href="#1">15</a></li>
+				</ul>
+			</li>
+		</ul>
 	</li>
 	<li class="page-item"><a class="page-link" href="#1">16</a></li>
 	<li class="page-item">
@@ -289,13 +292,13 @@
 				<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 			</svg>
 		</a>
-		<div class="dropdown-menu dropdown-menu-top">
-			<a class="dropdown-item" href="#1">5</a>
-			<a class="dropdown-item" href="#1">10</a>
-			<a class="dropdown-item" href="#1">20</a>
-			<a class="dropdown-item" href="#1">30</a>
-			<a class="dropdown-item" href="#1">50</a>
-		</div>
+		<ul class="dropdown-menu dropdown-menu-top">
+			<li><a class="dropdown-item" href="#1">5</a></li>
+			<li><a class="dropdown-item" href="#1">10</a></li>
+			<li><a class="dropdown-item" href="#1">20</a></li>
+			<li><a class="dropdown-item" href="#1">30</a></li>
+			<li><a class="dropdown-item" href="#1">50</a></li>
+		</ul>
 	</div>
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
@@ -311,23 +314,25 @@
 		<li class="page-item"><a class="page-link" href="#1">2</a></li>
 		<li class="dropdown page-item">
 			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
-			<div class="dropdown-menu dropdown-menu-top-center">
-				<div class="inline-scroller">
-					<a class="dropdown-item" href="#1">3</a>
-					<a class="dropdown-item" href="#1">4</a>
-					<a class="dropdown-item" href="#1">5</a>
-					<a class="dropdown-item" href="#1">6</a>
-					<a class="dropdown-item" href="#1">7</a>
-					<a class="dropdown-item" href="#1">8</a>
-					<a class="dropdown-item" href="#1">9</a>
-					<a class="dropdown-item" href="#1">10</a>
-					<a class="dropdown-item" href="#1">11</a>
-					<a class="dropdown-item" href="#1">12</a>
-					<a class="dropdown-item" href="#1">13</a>
-					<a class="dropdown-item" href="#1">14</a>
-					<a class="dropdown-item" href="#1">15</a>
-				</div>
-			</div>
+			<ul class="dropdown-menu dropdown-menu-top-center">
+				<li>
+					<ul class="inline-scroller">
+						<li><a class="dropdown-item" href="#1">3</a></li>
+						<li><a class="dropdown-item" href="#1">4</a></li>
+						<li><a class="dropdown-item" href="#1">5</a></li>
+						<li><a class="dropdown-item" href="#1">6</a></li>
+						<li><a class="dropdown-item" href="#1">7</a></li>
+						<li><a class="dropdown-item" href="#1">8</a></li>
+						<li><a class="dropdown-item" href="#1">9</a></li>
+						<li><a class="dropdown-item" href="#1">10</a></li>
+						<li><a class="dropdown-item" href="#1">11</a></li>
+						<li><a class="dropdown-item" href="#1">12</a></li>
+						<li><a class="dropdown-item" href="#1">13</a></li>
+						<li><a class="dropdown-item" href="#1">14</a></li>
+						<li><a class="dropdown-item" href="#1">15</a></li>
+					</ul>
+				</li>
+			</ul>
 		</li>
 		<li class="page-item"><a class="page-link" href="#1">16</a></li>
 		<li class="page-item">
@@ -364,13 +369,13 @@
 							<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 						</svg>
 					</a>
-					<div class="dropdown-menu dropdown-menu-top">
-						<a class="dropdown-item" href="#1">5</a>
-						<a class="dropdown-item" href="#1">10</a>
-						<a class="dropdown-item" href="#1">20</a>
-						<a class="dropdown-item" href="#1">30</a>
-						<a class="dropdown-item" href="#1">50</a>
-					</div>
+					<ul class="dropdown-menu dropdown-menu-top">
+						<li><a class="dropdown-item" href="#1">5</a></li>
+						<li><a class="dropdown-item" href="#1">10</a></li>
+						<li><a class="dropdown-item" href="#1">20</a></li>
+						<li><a class="dropdown-item" href="#1">30</a></li>
+						<li><a class="dropdown-item" href="#1">50</a></li>
+					</ul>
 				</div>
 				<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 				<ul class="pagination">
@@ -386,23 +391,25 @@
 					<li class="page-item"><a class="page-link" href="#1">2</a></li>
 					<li class="dropdown page-item">
 						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
-						<div class="dropdown-menu dropdown-menu-top-center">
-							<div class="inline-scroller">
-								<a class="dropdown-item" href="#1">3</a>
-								<a class="dropdown-item" href="#1">4</a>
-								<a class="dropdown-item" href="#1">5</a>
-								<a class="dropdown-item" href="#1">6</a>
-								<a class="dropdown-item" href="#1">7</a>
-								<a class="dropdown-item" href="#1">8</a>
-								<a class="dropdown-item" href="#1">9</a>
-								<a class="dropdown-item" href="#1">10</a>
-								<a class="dropdown-item" href="#1">11</a>
-								<a class="dropdown-item" href="#1">12</a>
-								<a class="dropdown-item" href="#1">13</a>
-								<a class="dropdown-item" href="#1">14</a>
-								<a class="dropdown-item" href="#1">15</a>
-							</div>
-						</div>
+						<ul class="dropdown-menu dropdown-menu-top-center">
+							<li>
+								<ul class="inline-scroller">
+									<li><a class="dropdown-item" href="#1">3</a></li>
+									<li><a class="dropdown-item" href="#1">4</a></li>
+									<li><a class="dropdown-item" href="#1">5</a></li>
+									<li><a class="dropdown-item" href="#1">6</a></li>
+									<li><a class="dropdown-item" href="#1">7</a></li>
+									<li><a class="dropdown-item" href="#1">8</a></li>
+									<li><a class="dropdown-item" href="#1">9</a></li>
+									<li><a class="dropdown-item" href="#1">10</a></li>
+									<li><a class="dropdown-item" href="#1">11</a></li>
+									<li><a class="dropdown-item" href="#1">12</a></li>
+									<li><a class="dropdown-item" href="#1">13</a></li>
+									<li><a class="dropdown-item" href="#1">14</a></li>
+									<li><a class="dropdown-item" href="#1">15</a></li>
+								</ul>
+							</li>
+						</ul>
 					</li>
 					<li class="page-item"><a class="page-link" href="#1">16</a></li>
 					<li class="page-item">
@@ -426,13 +433,13 @@
 							<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 						</svg>
 					</a>
-					<div class="dropdown-menu dropdown-menu-top">
-						<a class="dropdown-item" href="#1">5</a>
-						<a class="dropdown-item" href="#1">10</a>
-						<a class="dropdown-item" href="#1">20</a>
-						<a class="dropdown-item" href="#1">30</a>
-						<a class="dropdown-item" href="#1">50</a>
-					</div>
+					<ul class="dropdown-menu dropdown-menu-top">
+						<li><a class="dropdown-item" href="#1">5</a></li>
+						<li><a class="dropdown-item" href="#1">10</a></li>
+						<li><a class="dropdown-item" href="#1">20</a></li>
+						<li><a class="dropdown-item" href="#1">30</a></li>
+						<li><a class="dropdown-item" href="#1">50</a></li>
+					</ul>
 				</div>
 				<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 				<ul class="pagination">
@@ -448,23 +455,25 @@
 					<li class="page-item"><a class="page-link" href="#1">2</a></li>
 					<li class="dropdown page-item">
 						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
-						<div class="dropdown-menu dropdown-menu-top-center">
-							<div class="inline-scroller">
-								<a class="dropdown-item" href="#1">3</a>
-								<a class="dropdown-item" href="#1">4</a>
-								<a class="dropdown-item" href="#1">5</a>
-								<a class="dropdown-item" href="#1">6</a>
-								<a class="dropdown-item" href="#1">7</a>
-								<a class="dropdown-item" href="#1">8</a>
-								<a class="dropdown-item" href="#1">9</a>
-								<a class="dropdown-item" href="#1">10</a>
-								<a class="dropdown-item" href="#1">11</a>
-								<a class="dropdown-item" href="#1">12</a>
-								<a class="dropdown-item" href="#1">13</a>
-								<a class="dropdown-item" href="#1">14</a>
-								<a class="dropdown-item" href="#1">15</a>
-							</div>
-						</div>
+						<ul class="dropdown-menu dropdown-menu-top-center">
+							<li>
+								<ul class="inline-scroller">
+									<li><a class="dropdown-item" href="#1">3</a></li>
+									<li><a class="dropdown-item" href="#1">4</a></li>
+									<li><a class="dropdown-item" href="#1">5</a></li>
+									<li><a class="dropdown-item" href="#1">6</a></li>
+									<li><a class="dropdown-item" href="#1">7</a></li>
+									<li><a class="dropdown-item" href="#1">8</a></li>
+									<li><a class="dropdown-item" href="#1">9</a></li>
+									<li><a class="dropdown-item" href="#1">10</a></li>
+									<li><a class="dropdown-item" href="#1">11</a></li>
+									<li><a class="dropdown-item" href="#1">12</a></li>
+									<li><a class="dropdown-item" href="#1">13</a></li>
+									<li><a class="dropdown-item" href="#1">14</a></li>
+									<li><a class="dropdown-item" href="#1">15</a></li>
+								</ul>
+							</li>
+						</ul>
 					</li>
 					<li class="page-item"><a class="page-link" href="#1">16</a></li>
 					<li class="page-item">
@@ -488,13 +497,13 @@
 							<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 						</svg>
 					</a>
-					<div class="dropdown-menu dropdown-menu-top">
-						<a class="dropdown-item" href="#1">5</a>
-						<a class="dropdown-item" href="#1">10</a>
-						<a class="dropdown-item" href="#1">20</a>
-						<a class="dropdown-item" href="#1">30</a>
-						<a class="dropdown-item" href="#1">50</a>
-					</div>
+					<ul class="dropdown-menu dropdown-menu-top">
+						<li><a class="dropdown-item" href="#1">5</a></li>
+						<li><a class="dropdown-item" href="#1">10</a></li>
+						<li><a class="dropdown-item" href="#1">20</a></li>
+						<li><a class="dropdown-item" href="#1">30</a></li>
+						<li><a class="dropdown-item" href="#1">50</a></li>
+					</ul>
 				</div>
 				<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 				<ul class="pagination">
@@ -510,23 +519,25 @@
 					<li class="page-item"><a class="page-link" href="#1">2</a></li>
 					<li class="dropdown page-item">
 						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
-						<div class="dropdown-menu dropdown-menu-top-center">
-							<div class="inline-scroller">
-								<a class="dropdown-item" href="#1">3</a>
-								<a class="dropdown-item" href="#1">4</a>
-								<a class="dropdown-item" href="#1">5</a>
-								<a class="dropdown-item" href="#1">6</a>
-								<a class="dropdown-item" href="#1">7</a>
-								<a class="dropdown-item" href="#1">8</a>
-								<a class="dropdown-item" href="#1">9</a>
-								<a class="dropdown-item" href="#1">10</a>
-								<a class="dropdown-item" href="#1">11</a>
-								<a class="dropdown-item" href="#1">12</a>
-								<a class="dropdown-item" href="#1">13</a>
-								<a class="dropdown-item" href="#1">14</a>
-								<a class="dropdown-item" href="#1">15</a>
-							</div>
-						</div>
+						<ul class="dropdown-menu dropdown-menu-top-center">
+							<li>
+								<ul class="inline-scroller">
+									<li><a class="dropdown-item" href="#1">3</a></li>
+									<li><a class="dropdown-item" href="#1">4</a></li>
+									<li><a class="dropdown-item" href="#1">5</a></li>
+									<li><a class="dropdown-item" href="#1">6</a></li>
+									<li><a class="dropdown-item" href="#1">7</a></li>
+									<li><a class="dropdown-item" href="#1">8</a></li>
+									<li><a class="dropdown-item" href="#1">9</a></li>
+									<li><a class="dropdown-item" href="#1">10</a></li>
+									<li><a class="dropdown-item" href="#1">11</a></li>
+									<li><a class="dropdown-item" href="#1">12</a></li>
+									<li><a class="dropdown-item" href="#1">13</a></li>
+									<li><a class="dropdown-item" href="#1">14</a></li>
+									<li><a class="dropdown-item" href="#1">15</a></li>
+								</ul>
+							</li>
+						</ul>
 					</li>
 					<li class="page-item"><a class="page-link" href="#1">16</a></li>
 					<li class="page-item">
@@ -555,13 +566,13 @@
 						<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 					</svg>
 				</button>
-				<div class="dropdown-menu dropdown-menu-top">
-					<a class="dropdown-item" href="#1">5</a>
-					<a class="dropdown-item" href="#1">10</a>
-					<a class="dropdown-item" href="#1">20</a>
-					<a class="dropdown-item" href="#1">30</a>
-					<a class="dropdown-item" href="#1">50</a>
-				</div>
+				<ul class="dropdown-menu dropdown-menu-top">
+					<li><a class="dropdown-item" href="#1">5</a></li>
+					<li><a class="dropdown-item" href="#1">10</a></li>
+					<li><a class="dropdown-item" href="#1">20</a></li>
+					<li><a class="dropdown-item" href="#1">30</a></li>
+					<li><a class="dropdown-item" href="#1">50</a></li>
+				</ul>
 			</div>
 			<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 			<ul class="pagination">
@@ -581,23 +592,25 @@
 				</li>
 				<li class="dropdown page-item">
 					<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle page-link" data-toggle="dropdown" type="button">...</button>
-					<div class="dropdown-menu dropdown-menu-top-center">
-						<div class="inline-scroller">
-							<a class="dropdown-item" href="#1">3</a>
-							<a class="dropdown-item" href="#1">4</a>
-							<a class="dropdown-item" href="#1">5</a>
-							<a class="dropdown-item" href="#1">6</a>
-							<a class="dropdown-item" href="#1">7</a>
-							<a class="dropdown-item" href="#1">8</a>
-							<a class="dropdown-item" href="#1">9</a>
-							<a class="dropdown-item" href="#1">10</a>
-							<a class="dropdown-item" href="#1">11</a>
-							<a class="dropdown-item" href="#1">12</a>
-							<a class="dropdown-item" href="#1">13</a>
-							<a class="dropdown-item" href="#1">14</a>
-							<a class="dropdown-item" href="#1">15</a>
-						</div>
-					</div>
+					<ul class="dropdown-menu dropdown-menu-top-center">
+						<li>
+							<ul class="inline-scroller">
+								<li><a class="dropdown-item" href="#1">3</a></li>
+								<li><a class="dropdown-item" href="#1">4</a></li>
+								<li><a class="dropdown-item" href="#1">5</a></li>
+								<li><a class="dropdown-item" href="#1">6</a></li>
+								<li><a class="dropdown-item" href="#1">7</a></li>
+								<li><a class="dropdown-item" href="#1">8</a></li>
+								<li><a class="dropdown-item" href="#1">9</a></li>
+								<li><a class="dropdown-item" href="#1">10</a></li>
+								<li><a class="dropdown-item" href="#1">11</a></li>
+								<li><a class="dropdown-item" href="#1">12</a></li>
+								<li><a class="dropdown-item" href="#1">13</a></li>
+								<li><a class="dropdown-item" href="#1">14</a></li>
+								<li><a class="dropdown-item" href="#1">15</a></li>
+							</ul>
+						</li>
+					</ul>
 				</li>
 				<li class="page-item">
 					<button class="btn btn-unstyled page-link" type="button">16</button>

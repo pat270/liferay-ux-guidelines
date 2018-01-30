@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-beta.6
+* Clay 2.0.0-beta.8
 *
 * Copyright 2018, Liferay, Inc.
 * All rights reserved.
@@ -30,9 +30,9 @@
  * SOFTWARE.
  */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global.Popper = factory());
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global.Popper = factory());
 }(this, (function () { 'use strict';
 
 var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
