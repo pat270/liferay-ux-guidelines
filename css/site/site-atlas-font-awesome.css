@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-beta.8
+* Clay 2.0.0-rc.0
 *
 * Copyright 2018, Liferay, Inc.
 * All rights reserved.
@@ -10485,6 +10485,13 @@ fieldset[disabled] .form-control, .form-control[disabled] {
   margin-bottom: 1.5rem;
 }
 
+@media (min-width: 576px) {
+  .form-group-autofit {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
 .form-group-autofit .form-group-item {
   display: flex;
   flex-basis: auto;
@@ -10500,19 +10507,39 @@ fieldset[disabled] .form-control, .form-control[disabled] {
   margin-bottom: 1rem;
 }
 
-.form-group-autofit .form-group-item-shrink {
-  flex-shrink: 0;
-  width: auto;
-}
-
 @media (min-width: 576px) {
-  .form-group-autofit {
-    flex-direction: row;
-    width: 100%;
-  }
   .form-group-autofit > .form-group-item:not(:last-child) {
     margin-bottom: 0;
     margin-right: 12px;
+  }
+}
+
+.form-group-autofit .form-group-item-shrink {
+  flex-shrink: 0;
+  max-width: 100%;
+  width: auto;
+}
+
+@media (max-width: 575.98px) {
+  .form-group-autofit .form-group-item-label:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .form-group-item-label {
+    justify-content: center;
+    min-height: 2.5rem;
+  }
+  .form-group-item-label > label {
+    margin-bottom: 0;
+    max-width: 12.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .form-group-item-label-spacer {
+    margin-top: 1.46875rem;
   }
 }
 
@@ -13123,6 +13150,12 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
   justify-content: space-between;
 }
 
+.navbar-nav .dropdown-menu-right,
+.navbar-form .dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
+
 .navbar-nav {
   flex-direction: row;
 }
@@ -14075,6 +14108,10 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
   margin-top: 0.5rem;
 }
 
+.application-bar .navbar-nav .nav-btn-monospaced {
+  font-size: 1rem;
+}
+
 .application-bar .navbar-nav .nav-item > .custom-control,
 .application-bar .navbar-nav .nav-item > .form-check {
   margin-left: 0.25rem;
@@ -14094,6 +14131,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
 }
 
 .application-bar .navbar-nav .nav-link-monospaced {
+  font-size: 1rem;
   margin-bottom: 0.5rem;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -14149,6 +14187,9 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0.25rem;
     margin-top: 0.75rem;
   }
+  .application-bar.navbar-expand-sm .nav-btn-monospaced {
+    font-size: 1rem;
+  }
   .application-bar.navbar-expand-sm .nav-item > .custom-control,
   .application-bar.navbar-expand-sm .nav-item > .form-check {
     margin-left: 0.25rem;
@@ -14166,6 +14207,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.34375rem;
   }
   .application-bar.navbar-expand-sm .nav-link-monospaced {
+    font-size: 1rem;
     margin-bottom: 0.75rem;
     margin-left: 0.25rem;
     margin-right: 0.25rem;
@@ -14222,6 +14264,9 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0.25rem;
     margin-top: 0.75rem;
   }
+  .application-bar.navbar-expand-md .nav-btn-monospaced {
+    font-size: 1rem;
+  }
   .application-bar.navbar-expand-md .nav-item > .custom-control,
   .application-bar.navbar-expand-md .nav-item > .form-check {
     margin-left: 0.25rem;
@@ -14239,6 +14284,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.34375rem;
   }
   .application-bar.navbar-expand-md .nav-link-monospaced {
+    font-size: 1rem;
     margin-bottom: 0.75rem;
     margin-left: 0.25rem;
     margin-right: 0.25rem;
@@ -14295,6 +14341,9 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0.25rem;
     margin-top: 0.75rem;
   }
+  .application-bar.navbar-expand-lg .nav-btn-monospaced {
+    font-size: 1rem;
+  }
   .application-bar.navbar-expand-lg .nav-item > .custom-control,
   .application-bar.navbar-expand-lg .nav-item > .form-check {
     margin-left: 0.25rem;
@@ -14312,6 +14361,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.34375rem;
   }
   .application-bar.navbar-expand-lg .nav-link-monospaced {
+    font-size: 1rem;
     margin-bottom: 0.75rem;
     margin-left: 0.25rem;
     margin-right: 0.25rem;
@@ -14368,6 +14418,9 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0.25rem;
     margin-top: 0.75rem;
   }
+  .application-bar.navbar-expand-xl .nav-btn-monospaced {
+    font-size: 1rem;
+  }
   .application-bar.navbar-expand-xl .nav-item > .custom-control,
   .application-bar.navbar-expand-xl .nav-item > .form-check {
     margin-left: 0.25rem;
@@ -14385,6 +14438,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.34375rem;
   }
   .application-bar.navbar-expand-xl .nav-link-monospaced {
+    font-size: 1rem;
     margin-bottom: 0.75rem;
     margin-left: 0.25rem;
     margin-right: 0.25rem;
@@ -14414,6 +14468,10 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
   margin-top: 0.75rem;
 }
 
+.application-bar.navbar-expand .nav-btn-monospaced {
+  font-size: 1rem;
+}
+
 .application-bar.navbar-expand .nav-item > .custom-control,
 .application-bar.navbar-expand .nav-item > .form-check {
   margin-left: 0.25rem;
@@ -14433,6 +14491,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
 }
 
 .application-bar.navbar-expand .nav-link-monospaced {
+  font-size: 1rem;
   margin-bottom: 0.75rem;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -14710,6 +14769,10 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
   margin-top: 0.46875rem;
 }
 
+.management-bar .navbar-nav .nav-btn-monospaced {
+  font-size: 1rem;
+}
+
 .management-bar .navbar-nav .nav-item > .custom-control,
 .management-bar .navbar-nav .nav-item > .form-check {
   margin-left: 0.5rem;
@@ -14729,6 +14792,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
 }
 
 .management-bar .navbar-nav .nav-link-monospaced {
+  font-size: 1rem;
   margin-bottom: 0.46875rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -14789,6 +14853,9 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0.5rem;
     margin-top: 0.96875rem;
   }
+  .management-bar.navbar-expand-sm .nav-btn-monospaced {
+    font-size: 1rem;
+  }
   .management-bar.navbar-expand-sm .nav-item > .custom-control,
   .management-bar.navbar-expand-sm .nav-item > .form-check {
     margin-left: 0.5rem;
@@ -14806,6 +14873,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.34375rem;
   }
   .management-bar.navbar-expand-sm .nav-link-monospaced {
+    font-size: 1rem;
     margin-bottom: 0.96875rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -14863,6 +14931,9 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0.5rem;
     margin-top: 0.96875rem;
   }
+  .management-bar.navbar-expand-md .nav-btn-monospaced {
+    font-size: 1rem;
+  }
   .management-bar.navbar-expand-md .nav-item > .custom-control,
   .management-bar.navbar-expand-md .nav-item > .form-check {
     margin-left: 0.5rem;
@@ -14880,6 +14951,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.34375rem;
   }
   .management-bar.navbar-expand-md .nav-link-monospaced {
+    font-size: 1rem;
     margin-bottom: 0.96875rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -14937,6 +15009,9 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0.5rem;
     margin-top: 0.96875rem;
   }
+  .management-bar.navbar-expand-lg .nav-btn-monospaced {
+    font-size: 1rem;
+  }
   .management-bar.navbar-expand-lg .nav-item > .custom-control,
   .management-bar.navbar-expand-lg .nav-item > .form-check {
     margin-left: 0.5rem;
@@ -14954,6 +15029,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.34375rem;
   }
   .management-bar.navbar-expand-lg .nav-link-monospaced {
+    font-size: 1rem;
     margin-bottom: 0.96875rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -15011,6 +15087,9 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0.5rem;
     margin-top: 0.96875rem;
   }
+  .management-bar.navbar-expand-xl .nav-btn-monospaced {
+    font-size: 1rem;
+  }
   .management-bar.navbar-expand-xl .nav-item > .custom-control,
   .management-bar.navbar-expand-xl .nav-item > .form-check {
     margin-left: 0.5rem;
@@ -15028,6 +15107,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.34375rem;
   }
   .management-bar.navbar-expand-xl .nav-link-monospaced {
+    font-size: 1rem;
     margin-bottom: 0.96875rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -15057,6 +15137,10 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
   margin-top: 0.96875rem;
 }
 
+.management-bar.navbar-expand .nav-btn-monospaced {
+  font-size: 1rem;
+}
+
 .management-bar.navbar-expand .nav-item > .custom-control,
 .management-bar.navbar-expand .nav-item > .form-check {
   margin-left: 0.5rem;
@@ -15076,6 +15160,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
 }
 
 .management-bar.navbar-expand .nav-link-monospaced {
+  font-size: 1rem;
   margin-bottom: 0.96875rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -15523,6 +15608,12 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-left: 0;
     margin-right: 0;
   }
+  .navigation-bar.navbar-expand-sm .navbar-collapse .navbar-nav .dropdown-item {
+    padding-bottom: 0.8125rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.8125rem;
+  }
   .navigation-bar.navbar-expand-sm .navbar-form {
     padding-bottom: 0.8125rem;
     padding-left: 1rem;
@@ -15551,6 +15642,12 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
   .navigation-bar.navbar-expand-md .navbar-collapse .navbar-nav .dropdown-divider {
     margin-left: 0;
     margin-right: 0;
+  }
+  .navigation-bar.navbar-expand-md .navbar-collapse .navbar-nav .dropdown-item {
+    padding-bottom: 0.8125rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.8125rem;
   }
   .navigation-bar.navbar-expand-md .navbar-form {
     padding-bottom: 0.8125rem;
@@ -15581,6 +15678,12 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-left: 0;
     margin-right: 0;
   }
+  .navigation-bar.navbar-expand-lg .navbar-collapse .navbar-nav .dropdown-item {
+    padding-bottom: 0.8125rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.8125rem;
+  }
   .navigation-bar.navbar-expand-lg .navbar-form {
     padding-bottom: 0.8125rem;
     padding-left: 1rem;
@@ -15609,6 +15712,12 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
   .navigation-bar.navbar-expand-xl .navbar-collapse .navbar-nav .dropdown-divider {
     margin-left: 0;
     margin-right: 0;
+  }
+  .navigation-bar.navbar-expand-xl .navbar-collapse .navbar-nav .dropdown-item {
+    padding-bottom: 0.8125rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.8125rem;
   }
   .navigation-bar.navbar-expand-xl .navbar-form {
     padding-bottom: 0.8125rem;
@@ -17439,7 +17548,7 @@ th {
 
 .table-title {
   color: #272833;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.5;
   margin-bottom: 0;
@@ -17463,6 +17572,7 @@ th {
 
 .table-action-link {
   align-items: center;
+  border-radius: 0.25rem;
   color: #6B6C7E;
   display: inline-flex;
   font-size: 1rem;
@@ -17476,6 +17586,10 @@ th {
   background-color: rgba(0, 0, 0, 0.02);
   color: #272833;
   text-decoration: none;
+}
+
+.show > .table-action-link, .table-action-link:active, .table-action-link.active {
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 .table-action-link .lexicon-icon {
@@ -17610,7 +17724,7 @@ th {
 
 .table-list-title {
   color: #272833;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: 0;

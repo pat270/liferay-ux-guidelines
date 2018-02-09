@@ -25,7 +25,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.8</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-rc.0</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -227,6 +227,10 @@
 
 		<div class="alert alert-warning">
 			Collapsing the Search Input in mobile requires additional javascript to add and remove the show class on <code>navbar-overlay-sm-down</code>.
+		</div>
+
+		<div class="alert alert-warning">
+			Bootstrap 4 doesn&apos;t support Dropdown Menu&apos;s with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="../dropdowns/#dropdown-alignment">Dropdown Alignment</a>.
 		</div>
 
 		<nav class="management-bar navbar navbar-expand-md">
@@ -695,7 +699,7 @@
 										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 									</svg>
 								</a>
-								<ul class="dropdown-menu">
+								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a class="dropdown-item" href="#1" role="button">Delete</a></li>
 									<li><a class="dropdown-item" href="#1" role="button">Copy</a></li>
 									<li><a class="dropdown-item" href="#1" role="button">Info</a></li>

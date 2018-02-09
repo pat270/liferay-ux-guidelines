@@ -25,7 +25,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.8</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-rc.0</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -228,6 +228,10 @@
 		<blockquote class="blockquote">
 			Similar to Nav, Navbar is a base component used to create other horizontal navigation like bars (e.g., Navigation Bar, Management Bar, and Application Bar). Navbar on its own doesn&apos;t have any special color styling. Colors can be modified using a combination of Bootstrap 4&apos;s Navbar color utilities <code>.navbar-light</code>, <code>.navbar-dark</code> and background utilities. We don&apos;t recommend using color utilities as it&apos;s hard to keep track of the colors in large applications, rather we recommend scoping your color class to the component and using the <code>clay-navbar-variant($map)</code> mixin to customize colors that are not covered by any of the Navbar variants.
 		</blockquote>
+
+		<div class="alert alert-warning">
+			Bootstrap 4 doesn&apos;t support Dropdown Menu&apos;s with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="../dropdowns/#dropdown-alignment">Dropdown Alignment</a>.
+		</div>
 	</div>
 </div>
 
@@ -575,7 +579,7 @@
 										<use xlink:href="../../images/icons/icons.svg#angle-down">
 									</svg>
 								</button>
-								<ul class="dropdown-menu">
+								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a class="dropdown-item" href="#1">Action</a></li>
 									<li><a class="dropdown-item" href="#1">Another action</a></li>
 									<li><a class="dropdown-item" href="#1">Something else here</a></li>
@@ -669,7 +673,7 @@
 										<use xlink:href="../../images/icons/icons.svg#angle-down">
 									</svg>
 								</button>
-								<ul class="dropdown-menu">
+								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a class="dropdown-item" href="#1">Action</a></li>
 									<li><a class="dropdown-item" href="#1">Another action</a></li>
 									<li><a class="dropdown-item" href="#1">Something else here</a></li>
@@ -763,7 +767,7 @@
 										<use xlink:href="../../images/icons/icons.svg#angle-down">
 									</svg>
 								</button>
-								<ul class="dropdown-menu">
+								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a class="dropdown-item" href="#1">Action</a></li>
 									<li><a class="dropdown-item" href="#1">Another action</a></li>
 									<li><a class="dropdown-item" href="#1">Something else here</a></li>
@@ -870,7 +874,7 @@
 										<use xlink:href="../../images/icons/icons.svg#angle-down">
 									</svg>
 								</button>
-								<ul class="dropdown-menu">
+								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a class="dropdown-item" href="#1">Action</a></li>
 									<li><a class="dropdown-item" href="#1">Another action</a></li>
 									<li><a class="dropdown-item" href="#1">Something else here</a></li>
@@ -946,7 +950,7 @@
 										<use xlink:href="../../images/icons/icons.svg#angle-down">
 									</svg>
 								</button>
-								<ul class="dropdown-menu">
+								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a class="dropdown-item" href="#1">Action</a></li>
 									<li><a class="dropdown-item" href="#1">Another action</a></li>
 									<li><a class="dropdown-item" href="#1">Something else here</a></li>
@@ -1022,7 +1026,7 @@
 										<use xlink:href="../../images/icons/icons.svg#angle-down">
 									</svg>
 								</button>
-								<ul class="dropdown-menu">
+								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a class="dropdown-item" href="#1">Action</a></li>
 									<li><a class="dropdown-item" href="#1">Another action</a></li>
 									<li><a class="dropdown-item" href="#1">Something else here</a></li>

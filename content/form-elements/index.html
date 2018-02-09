@@ -25,7 +25,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-beta.8</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-rc.0</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -582,21 +582,6 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="form-inline"><a class="heading-anchor" href="#form-inline"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form Inline</h3>
-
-<div class="sheet">
-	<div class="form-group form-inline">
-		<label for="formInlineInput">Form Inline</label>
-		<input class="form-control" id="formInlineInput" type="text">
-		<button class="btn btn-primary" type="submit">Submit</button>
-	</div>
-</div>
-
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
 		<h3 id="form-group-autofit"><a class="heading-anchor" href="#form-group-autofit"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form Group Autofit</h3>
 
 		<blockquote class="blockquote">
@@ -604,17 +589,33 @@
 		</blockquote>
 
 		<blockquote class="blockquote">
-			To set a fixed width on <code>.form-group-item</code> use <code>max-width: 200px;</code> or <code>flex-grow: 0; flex-basis: 200px;</code>. For <code>labels</code> or anything that doesn&apos;t have <code>width: 100%;</code> by default, you will need to set <code>width</code> instead of <code>max-width</code>.
+			To set a maximum width on a <code>.form-group-item</code> use <code>max-width: 200px;</code>.
 		</blockquote>
+
+		<blockquote class="blockquote">
+			To make a <code>.form-group-item</code> shrink to the size of its content add <code>.form-group-item-shrink</code>. This component should only be used for static content, such as labels or buttons. This component doesn&apos;t work well with dynamically added content, such as form helper text, use the max-width method above instead.
+		</blockquote>
+
+		<div class="alert alert-warning">
+			Form Group Autofit doesn&apos;t support <code>.form-feedback-item</code> or <code>.form-text</code> + <code>label</code>&apos;s with long text that breaks to new lines.
+		</div>
 
 <div class="sheet">
 	<div class="form-group-autofit">
 		<div class="form-group-item">
-			<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
+			<label for="formInlineAutofitTextInput1">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="Form Inline Autofit">Form Inline Autofit</span>
+				</span>
+			</label>
 			<input class="form-control" id="formInlineAutofitTextInput1" type="text">
 		</div>
-		<div class="form-group-item form-group-item-shrink">
-			<label for="formInlineAutofitSelectElement1">Select Element</label>
+		<div class="form-group-item" style="max-width: 200px;">
+			<label for="formInlineAutofitSelectElement1">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="Select Element">Select Element</span>
+				</span>
+			</label>
 			<select class="form-control" id="formInlineAutofitSelectElement1">
 				<option>Option 1</option>
 				<option>Option 2</option>
@@ -624,15 +625,27 @@
 	</div>
 	<div class="form-group-autofit">
 		<div class="form-group-item">
-			<label for="formInlineAutofitFirstName">First Name</label>
+			<label for="formInlineAutofitFirstName">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="First Name">First Name</span>
+				</span>
+			</label>
 			<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text">
 		</div>
 		<div class="form-group-item">
-			<label for="formInlineAutofitLastName">Last Name</label>
+			<label for="formInlineAutofitLastName">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="Last Name">Last Name</span>
+				</span>
+			</label>
 			<input class="form-control" id="formInlineAutofitLastName" placeholder="Last Name" type="text">
 		</div>
 		<div class="form-group-item">
-			<label for="formInlineAutofitInputGroup">Input Group</label>
+			<label for="formInlineAutofitInputGroup">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="Input Group">Input Group</span>
+				</span>
+			</label>
 			<div class="input-group">
 				<div class="input-group-item input-group-item-shrink input-group-prepend">
 					<span class="input-group-text">$</span>
@@ -644,15 +657,26 @@
 					<span class="input-group-text">.00</span>
 				</div>
 			</div>
+			<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
 		</div>
 	</div>
 	<div class="form-group-autofit">
-		<div class="form-group-item">
-			<label for="formInlineAutofitCity">City</label>
+		<div class="form-group-item form-group-item-label form-group-item-label-spacer form-group-item-shrink">
+			<label for="formInlineAutofitCity">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="City">City</span>
+				</span>
+			</label>
+		</div>
+		<div class="form-group-item form-group-item-label-spacer">
 			<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text">
 		</div>
 		<div class="form-group-item">
-			<label for="formInlineAutofitState">State</label>
+			<label for="formInlineAutofitState">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="State ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">State ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+				</span>
+			</label>
 			<select class="form-control" id="formInlineAutofitState">
 				<option>AL</option>
 				<option>CA</option>
@@ -663,11 +687,20 @@
 			</select>
 		</div>
 		<div class="form-group-item">
-			<label for="formInlineAutofitZip">Zip Code</label>
+			<label for="formInlineAutofitZip">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="Zip Code">Zip Code</span>
+				</span>
+			</label>
 			<input class="form-control" id="formInlineAutofitZip" placeholder="Zip" type="text">
+			<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
 		</div>
 		<div class="form-group-item">
-			<label for="formInlineAutofitDonation">Donation</label>
+			<label for="formInlineAutofitDonation">
+				<span class="text-truncate-inline">
+					<span class="text-truncate" title="Donation">Donation</span>
+				</span>
+			</label>
 			<div class="input-group">
 				<div class="input-group-item input-group-item-shrink input-group-prepend">
 					<span class="input-group-text">$</span>
@@ -683,7 +716,7 @@
 	</div>
 	<div class="form-group">
 		<button class="btn btn-primary" type="submit">Submit</button>
-		<a class="btn btn-danger" href="#1" role="button">Clear</a>
+		<a class="btn btn-secondary" href="#1" role="button">Clear</a>
 	</div>
 </div>
 
@@ -692,24 +725,24 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="form-inline-autofit-2-columns"><a class="heading-anchor" href="#form-inline-autofit-2-columns"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form Inline Autofit 2 Columns</h3>
+		<h3 id="form-group-autofit-horizontal-form"><a class="heading-anchor" href="#form-group-autofit-horizontal-form"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form Group Autofit (Horizontal Form)</h3>
 
 		<blockquote class="blockquote">
-			An example of an inline form without using Bootstrap&apos;s grid.
+			Create horizontal forms by placing each <code>input</code> inside <code>form-group-item</code> and <code>label</code> inside <code>form-group-item form-group-item-label form-group-item-shrink</code> and set a min-width on <code>.form-group-item-label</code>.
 		</blockquote>
 
 <style>
 	@media (min-width: 576px) {
-		.my-custom-form label {
-			width: 200px;
+		.my-custom-form .form-group-item-label {
+			min-width: 200px;
 		}
 	}
 </style>
 <div class="sheet">
 	<form class="my-custom-form">
 		<div class="form-group-autofit">
-			<div class="form-group-item form-group-item-shrink">
-				<label>Name</label>
+			<div class="form-group-item form-group-item-label form-group-item-shrink">
+				<label>Name ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</label>
 			</div>
 			<div class="form-group-item">
 				<input aria-label="First Name" class="form-control" placeholder="First" type="text">
@@ -724,7 +757,7 @@
 			</div>
 		</div>
 		<div class="form-group-autofit">
-			<div class="form-group-item form-group-item-shrink">
+			<div class="form-group-item form-group-item-label form-group-item-shrink">
 				<label for="formInlineAutofitCustomAddress1">Address 1</label>
 			</div>
 			<div class="form-group-item">
@@ -732,7 +765,7 @@
 			</div>
 		</div>
 		<div class="form-group-autofit">
-			<div class="form-group-item form-group-item-shrink">
+			<div class="form-group-item form-group-item-label form-group-item-shrink">
 				<label for="formInlineAutofitCustomAddress2">Address 2</label>
 			</div>
 			<div class="form-group-item">
@@ -741,9 +774,28 @@
 		</div>
 		<div class="form-group">
 			<button class="btn btn-primary" type="submit">Submit</button>
-			<a class="btn btn-danger" href="#1" role="button">Clear</a>
+			<a class="btn btn-secondary" href="#1" role="button">Clear</a>
 		</div>
 	</form>
+</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="form-inline"><a class="heading-anchor" href="#form-inline"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form Inline</h3>
+
+		<div class="alert alert-warning">
+			It&apos;s recommended to use <code>.form-group-autofit</code> instead. This Bootstrap 4 component isn&apos;t supported by Clay and is here only for documentation purposes.
+		</div>
+
+<div class="sheet">
+	<div class="form-group form-inline">
+		<label for="formInlineInput">Form Inline</label>
+		<input class="form-control" id="formInlineInput" type="text">
+		<button class="btn btn-primary" type="submit">Submit</button>
+	</div>
 </div>
 
 	</div>
