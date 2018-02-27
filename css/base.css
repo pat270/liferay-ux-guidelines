@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-rc.0
+* Clay 2.0.0-rc.1
 *
 * Copyright 2018, Liferay, Inc.
 * All rights reserved.
@@ -9511,6 +9511,7 @@ label .reference-mark {
   background-clip: border-box;
   border-width: 1px;
   height: calc(2.25rem + 2px);
+  min-width: 0;
 }
 
 .form-control[type="range"] {
@@ -9644,6 +9645,10 @@ fieldset[disabled] .form-control, .form-control[disabled] {
     flex-direction: row;
     width: 100%;
   }
+}
+
+.form-group-autofit label {
+  align-self: flex-start;
 }
 
 .form-group-autofit .form-group-item {
@@ -10187,6 +10192,11 @@ button.component-action:focus {
   font-size: 80%;
 }
 
+.form-feedback-group {
+  width: 100%;
+  word-wrap: break-word;
+}
+
 .form-feedback-item {
   font-size: 80%;
   margin-top: 0.25rem;
@@ -10384,12 +10394,18 @@ a.collapse-icon {
 .input-group-item {
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
   margin-left: 0.5rem;
   width: 1%;
+  word-wrap: break-word;
 }
 
 .input-group-item:first-child {
   margin-left: 0;
+}
+
+.input-group-item > .btn {
+  align-self: flex-start;
 }
 
 .input-group-item-shrink {
@@ -10437,12 +10453,6 @@ a.collapse-icon {
 .input-group-append {
   align-items: stretch;
   margin-left: -0.0625rem;
-}
-
-.input-group > .input-group-append:not(:last-child) > .form-control,
-.input-group > .input-group-append:last-child > .form-control:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .input-group > .input-group-append > .form-control {
@@ -10494,7 +10504,9 @@ a.collapse-icon {
 }
 
 .input-group-inset {
+  flex-grow: 1;
   order: 5;
+  width: 1%;
 }
 
 .input-group-inset:focus {
@@ -10508,6 +10520,10 @@ a.collapse-icon {
 
 .input-group-inset:disabled ~ .input-group-inset-item {
   background-color: #e9ecef;
+}
+
+.input-group-inset ~ .form-feedback-group {
+  order: 13;
 }
 
 .input-group-inset-item {
@@ -12196,6 +12212,10 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
   margin-right: 0.5rem;
 }
 
+.navbar-nav-last {
+  margin-left: auto;
+}
+
 .navbar-title {
   font-size: 1.25rem;
   font-weight: 500;
@@ -13169,6 +13189,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0;
   }
   .application-bar.navbar-expand-sm .navbar-form {
+    height: 3rem;
     padding-bottom: 0.25rem;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
@@ -13190,8 +13211,14 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.8125rem;
   }
   .application-bar.navbar-expand-sm .navbar-form {
+    height: 3.5rem;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
+  }
+  .application-bar.navbar-expand-sm .navbar-form > .container,
+  .application-bar.navbar-expand-sm .navbar-form > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
   }
   .application-bar.navbar-expand-sm .nav-btn {
     margin-bottom: 0.75rem;
@@ -13246,6 +13273,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0;
   }
   .application-bar.navbar-expand-md .navbar-form {
+    height: 3rem;
     padding-bottom: 0.25rem;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
@@ -13267,8 +13295,14 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.8125rem;
   }
   .application-bar.navbar-expand-md .navbar-form {
+    height: 3.5rem;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
+  }
+  .application-bar.navbar-expand-md .navbar-form > .container,
+  .application-bar.navbar-expand-md .navbar-form > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
   }
   .application-bar.navbar-expand-md .nav-btn {
     margin-bottom: 0.75rem;
@@ -13323,6 +13357,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0;
   }
   .application-bar.navbar-expand-lg .navbar-form {
+    height: 3rem;
     padding-bottom: 0.25rem;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
@@ -13344,8 +13379,14 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.8125rem;
   }
   .application-bar.navbar-expand-lg .navbar-form {
+    height: 3.5rem;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
+  }
+  .application-bar.navbar-expand-lg .navbar-form > .container,
+  .application-bar.navbar-expand-lg .navbar-form > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
   }
   .application-bar.navbar-expand-lg .nav-btn {
     margin-bottom: 0.75rem;
@@ -13400,6 +13441,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0;
   }
   .application-bar.navbar-expand-xl .navbar-form {
+    height: 3rem;
     padding-bottom: 0.25rem;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
@@ -13421,8 +13463,14 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.8125rem;
   }
   .application-bar.navbar-expand-xl .navbar-form {
+    height: 3.5rem;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
+  }
+  .application-bar.navbar-expand-xl .navbar-form > .container,
+  .application-bar.navbar-expand-xl .navbar-form > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
   }
   .application-bar.navbar-expand-xl .nav-btn {
     margin-bottom: 0.75rem;
@@ -13469,8 +13517,15 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
 }
 
 .application-bar.navbar-expand .navbar-form {
+  height: 3.5rem;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.application-bar.navbar-expand .navbar-form > .container,
+.application-bar.navbar-expand .navbar-form > .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .application-bar.navbar-expand .nav-btn {
@@ -13831,6 +13886,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0;
   }
   .management-bar.navbar-expand-sm .navbar-form {
+    height: 2.9375rem;
     padding-bottom: 0.25rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -13853,8 +13909,14 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 1.03125rem;
   }
   .management-bar.navbar-expand-sm .navbar-form {
+    height: 3.9375rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+  .management-bar.navbar-expand-sm .navbar-form > .container,
+  .management-bar.navbar-expand-sm .navbar-form > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
   }
   .management-bar.navbar-expand-sm .nav-btn {
     margin-bottom: 0.96875rem;
@@ -13909,6 +13971,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0;
   }
   .management-bar.navbar-expand-md .navbar-form {
+    height: 2.9375rem;
     padding-bottom: 0.25rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -13931,8 +13994,14 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 1.03125rem;
   }
   .management-bar.navbar-expand-md .navbar-form {
+    height: 3.9375rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+  .management-bar.navbar-expand-md .navbar-form > .container,
+  .management-bar.navbar-expand-md .navbar-form > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
   }
   .management-bar.navbar-expand-md .nav-btn {
     margin-bottom: 0.96875rem;
@@ -13987,6 +14056,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0;
   }
   .management-bar.navbar-expand-lg .navbar-form {
+    height: 2.9375rem;
     padding-bottom: 0.25rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -14009,8 +14079,14 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 1.03125rem;
   }
   .management-bar.navbar-expand-lg .navbar-form {
+    height: 3.9375rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+  .management-bar.navbar-expand-lg .navbar-form > .container,
+  .management-bar.navbar-expand-lg .navbar-form > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
   }
   .management-bar.navbar-expand-lg .nav-btn {
     margin-bottom: 0.96875rem;
@@ -14065,6 +14141,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     margin-right: 0;
   }
   .management-bar.navbar-expand-xl .navbar-form {
+    height: 2.9375rem;
     padding-bottom: 0.25rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -14087,8 +14164,14 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 1.03125rem;
   }
   .management-bar.navbar-expand-xl .navbar-form {
+    height: 3.9375rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+  .management-bar.navbar-expand-xl .navbar-form > .container,
+  .management-bar.navbar-expand-xl .navbar-form > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
   }
   .management-bar.navbar-expand-xl .nav-btn {
     margin-bottom: 0.96875rem;
@@ -14135,8 +14218,15 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
 }
 
 .management-bar.navbar-expand .navbar-form {
+  height: 3.9375rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.management-bar.navbar-expand .navbar-form > .container,
+.management-bar.navbar-expand .navbar-form > .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .management-bar.navbar-expand .nav-btn {
@@ -14618,6 +14708,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.71875rem;
   }
   .navigation-bar.navbar-expand-sm .navbar-form {
+    height: 2.9375rem;
     padding-bottom: 0.71875rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -14653,6 +14744,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.71875rem;
   }
   .navigation-bar.navbar-expand-md .navbar-form {
+    height: 2.9375rem;
     padding-bottom: 0.71875rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -14688,6 +14780,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.71875rem;
   }
   .navigation-bar.navbar-expand-lg .navbar-form {
+    height: 2.9375rem;
     padding-bottom: 0.71875rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -14723,6 +14816,7 @@ a.multi-step-icon:hover, a.multi-step-icon:focus {
     padding-top: 0.71875rem;
   }
   .navigation-bar.navbar-expand-xl .navbar-form {
+    height: 2.9375rem;
     padding-bottom: 0.71875rem;
     padding-left: 1rem;
     padding-right: 1rem;
