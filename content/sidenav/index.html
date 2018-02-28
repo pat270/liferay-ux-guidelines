@@ -25,7 +25,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-rc.2</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-rc.3</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -191,15 +191,21 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-card-view-template">Card View Template</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/test-card-view-template-info-panel">Card View Template (Info Panel)</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/test-form-hierarchy">Form Hierarchy</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-list-view-template-info-panel">List View Template (Info Panel)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-localizable-input-field">Localizable Input Field</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-subnav-tbar">Subnav Tbar</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-table-view-template-info-panel">Table View Template (Info Panel)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
 </li>
@@ -236,11 +242,11 @@
 &lt;/head&gt;
 
 &lt;body&gt;
-    &lt;div class=&quot;sidenav-container&quot; id=&quot;mySidenavContainerId&quot;&gt;
-        &lt;a class=&quot;btn btn-default sidenav-toggler&quot; href=&quot;#mySidenavContainerId&quot;&gt;
-            &lt;span class=&quot;glyphicon glyphicon-align-justify&quot;&gt;&lt;/span&gt; Toggle
-        &lt;/a&gt;
+    &lt;a class=&quot;btn btn-secondary sidenav-toggler&quot; href=&quot;#mySidenavContainerId&quot;&gt;
+        Toggle
+    &lt;/a&gt;
 
+    &lt;div class=&quot;sidenav-container&quot; id=&quot;mySidenavContainerId&quot;&gt;
         &lt;div class=&quot;sidenav-menu-slider&quot;&gt;
             &lt;div class=&quot;sidenav-menu&quot;&gt;
                 ... Your Side Nav Content ...
@@ -259,6 +265,7 @@
             content: &apos;.sidenav-content&apos;, // The class or ID of the content. Default: &apos;.sidenav-content&apos;.
             equalHeight: true, // The height of content and navigation should be equal.
             gutter: &apos;15px&apos;, // The space between the sidenav-slider and the sidenav-content. Default: 15px.
+            heightType: null, // Calculates the height of sidenav when type is relative. Possible values: `fullHeight`, `equalHeight`
             loadingIndicatorTPL: &apos;&lt;div class=&quot;loading-animation loading-animation-md&quot;&gt;&lt;/div&gt;&apos;, // Loading indicator template
             navigation: &apos;.sidenav-menu-slider&apos;, // The class or ID of the slider. Default: &apos;.sidenav-menu-slider&apos;.
             position: &apos;left&apos;, // The position of the sidenav-slider. Possible values: left, right. Default: &apos;left&apos;.
@@ -284,7 +291,7 @@
 			Avoid the flash of unstyled content when using the Javascript api by adding the class <span class="text-danger">sidenav-js-fouc</span> to the <span class="text-danger">sidenav-container</span>.
 		</div>
 
-		<button class="active btn btn-default open sidenav-toggler" data-target="#mySidenavContainerId" style="margin-bottom:5px;">
+		<button class="active btn btn-secondary open sidenav-toggler" data-target="#mySidenavContainerId" style="margin-bottom:5px;">
 			Sidenav Toggler
 		</button>
 
@@ -307,7 +314,7 @@
 
 <div class="clay-site-row-spacer row sidenav-demo-container">
 	<div class="col-md-12">
-		<button class="active btn btn-default open sidenav-toggler1" style="margin-bottom:5px;">
+		<button class="active btn btn-secondary open sidenav-toggler1" style="margin-bottom:5px;">
 			Sidenav Toggler 1
 		</button>
 
@@ -339,53 +346,38 @@
 		</blockquote>
 
 		<div class="side-navigation-data-api-buttons">
-			<a class="btn btn-default" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav" id="simpleToggle1">Simple Sidenav Toggler</a>
+			<a class="btn btn-secondary" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav" id="simpleToggle1">Simple Sidenav Toggler</a>
 
-			<a class="btn btn-default" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav">
+			<a class="btn btn-secondary" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav">
 				Another Simple Sidenav Toggler
 			</a>
 		</div>
 
 		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
-			<div class="sidebar sidebar-default sidenav-menu">
-				<div class="sidebar-header">
-					<ul class="sidebar-actions">
-						<li>
-							<a class="sidenav-close" href="#1" id="sidenavClose1">
-								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-times">
-									<use xlink:href="../../images/icons/icons.svg#times">
-								</svg>
-							</a>
-						</li>
-					</ul>
-
-					<a class="sidebar-title" href="#1">
-						<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-staging sticker sticker-default sticker-static">
-							<use xlink:href="../../images/icons/icons.svg#staging">
-						</svg>
-						<span>Simple Sidenav</span>
-					</a>
-				</div>
-
-				<div class="sidebar-body"></div>
-
-				<div class="sidebar-footer">
-					<div class="nameplate">
-						<div class="nameplate-field">
-							<div class="user-icon user-icon-warning">
-								:D
-							</div>
-						</div>
-
-						<div class="nameplate-content">
-							Joe Bloggs<br>
-							Subheading
-						</div>
-
-						<div class="nameplate-field">
-							<a class="icon-monospaced" href="#1"></a>
-						</div>
+			<div class="sidebar sidebar-light sidenav-menu">
+				<nav class="component-tbar tbar">
+					<div class="container-fluid">
+						<ul class="tbar-nav">
+							<li class="tbar-item tbar-item-expand">
+								<div class="tbar-section">
+									<span class="text-truncate-inline">
+										<span class="text-truncate">Simple Sidenav</span>
+									</span>
+								</div>
+							</li>
+							<li class="tbar-item">
+								<a class="component-action" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav" role="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</a>
+							</li>
+						</ul>
 					</div>
+				</nav>
+
+				<div class="sidebar-body">
+					Some body content...
 				</div>
 			</div>
 		</div>
@@ -397,61 +389,38 @@
 		</blockquote>
 
 		<div class="side-navigation-data-api-buttons">
-			<a class="btn btn-default" data-content="body" data-toggle="sidenav" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
+			<button class="btn btn-secondary" data-content="body" data-target="#simpleSidenav2" data-toggle="sidenav" type="button">Simple Sidenav 2 Toggler</button>
 
-			<a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" data-type-mobile="fixed-push" href="#simpleSidenav2">
+			<button class="btn btn-secondary" data-content="body" data-target="#simpleSidenav2" data-toggle="sidenav" data-type-mobile="fixed-push" type="button">
 				Another Simple Sidenav 2 Toggler
-			</a>
-
-			<a class="btn btn-default" href="#1" id="showSimpleSidenav2">
-				Show Simple Sidenav 2
-			</a>
-
-			<a class="btn btn-default" href="#1" id="hideSimpleSidenav2">
-				Hide Simple Sidenav 2
-			</a>
+			</button>
 		</div>
 
 		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
-			<div class="sidebar sidebar-default sidenav-menu">
-				<div class="sidebar-header">
-					<ul class="sidebar-actions">
-						<li>
-							<a class="sidenav-close" href="#1">
-								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-times">
-									<use xlink:href="../../images/icons/icons.svg#times">
-								</svg>
-							</a>
-						</li>
-					</ul>
-
-					<a class="sidebar-title" href="#1">
-						<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-home sticker sticker-danger sticker-static">
-							<use xlink:href="../../images/icons/icons.svg#home">
-						</svg>
-						<span>Simple Sidenav 2</span>
-					</a>
-				</div>
-
-				<div class="sidebar-body"></div>
-
-				<div class="sidebar-footer">
-					<div class="nameplate">
-						<div class="nameplate-field">
-							<div class="user-icon user-icon-warning">
-								:D
-							</div>
-						</div>
-
-						<div class="nameplate-content">
-							Joe Bloggs<br>
-							Subheading
-						</div>
-
-						<div class="nameplate-field">
-							<a class="icon-monospaced" href="#1"></a>
-						</div>
+			<div class="sidebar sidebar-light sidenav-menu">
+				<nav class="component-tbar tbar">
+					<div class="container-fluid">
+						<ul class="tbar-nav">
+							<li class="tbar-item tbar-item-expand">
+								<div class="tbar-section">
+									<span class="text-truncate-inline">
+										<span class="text-truncate">Simple Sidenav 2</span>
+									</span>
+								</div>
+							</li>
+							<li class="tbar-item">
+								<a class="component-action" data-content="body" data-toggle="sidenav" href="#simpleSidenav2" role="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</a>
+							</li>
+						</ul>
 					</div>
+				</nav>
+
+				<div class="sidebar-body">
+					Some body content...
 				</div>
 			</div>
 		</div>
@@ -461,10 +430,10 @@
 &lt;/head&gt;
 
 &lt;div id=&quot;#wrapper&quot;&gt;
-    &lt;a class=&quot;btn btn-default&quot; data-content=&quot;body&quot; data-toggle=&quot;sidenav&quot; data-type=&quot;fixed-push&quot; href=&quot;#simpleSidenav2&quot;&gt;Simple Sidenav 2 Toggler&lt;/a&gt;
+    &lt;a class=&quot;btn btn-secondary&quot; data-content=&quot;body&quot; data-toggle=&quot;sidenav&quot; data-type=&quot;fixed-push&quot; href=&quot;#simpleSidenav2&quot;&gt;Simple Sidenav 2 Toggler&lt;/a&gt;
 
     &lt;div class=&quot;closed sidenav-fixed sidenav-menu-slider&quot; id=&quot;simpleSidenav2&quot;&gt;
-        &lt;div class=&quot;sidebar sidebar-default sidenav-menu&quot;&gt;
+        &lt;div class=&quot;sidebar sidebar-light sidenav-menu&quot;&gt;
             ...
         &lt;/div&gt;
     &lt;/div&gt;
@@ -486,50 +455,32 @@
 		</blockquote>
 
 		<div>
-			<a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" data-url="../../partials/alerts" href="#simpleSidenav3">Simple Sidenav 3 Toggler</a>
+			<a class="btn btn-secondary" data-content="body" data-toggle="sidenav" data-type="fixed-push" data-url="../../partials/alerts" href="#simpleSidenav3" role="button">Simple Sidenav 3 Toggler</a>
 		</div>
 
 		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav3">
-			<div class="sidebar sidebar-default sidenav-menu">
-				<div class="sidebar-header">
-					<ul class="sidebar-actions">
-						<li>
-							<a class="sidenav-close" href="#1">
-								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-times">
-									<use xlink:href="../../images/icons/icons.svg#times">
-								</svg>
-							</a>
-						</li>
-					</ul>
-
-					<a class="sidebar-title" href="#1">
-						<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-home sticker sticker-static sticker-warning">
-							<use xlink:href="../../images/icons/icons.svg#home">
-						</svg>
-						<span>Simple Sidenav 3</span>
-					</a>
-				</div>
-
-				<div class="sidebar-body"></div>
-
-				<div class="sidebar-footer">
-					<div class="nameplate">
-						<div class="nameplate-field">
-							<div class="user-icon user-icon-warning">
-								:D
-							</div>
-						</div>
-
-						<div class="nameplate-content">
-							Joe Bloggs<br>
-							Subheading
-						</div>
-
-						<div class="nameplate-field">
-							<a class="icon-monospaced" href="#1"></a>
-						</div>
+			<div class="sidebar sidebar-light sidenav-menu">
+				<nav class="component-tbar tbar">
+					<div class="container-fluid">
+						<ul class="tbar-nav">
+							<li class="tbar-item tbar-item-expand">
+								<div class="tbar-section">
+									<span class="text-truncate-inline">
+										<span class="text-truncate">Simple Sidenav 3</span>
+									</span>
+								</div>
+							</li>
+							<li class="tbar-item">
+								<a class="component-action" data-content="body" data-toggle="sidenav" data-type="fixed-push" href="#simpleSidenav3" role="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</a>
+							</li>
+						</ul>
 					</div>
-				</div>
+				</nav>
+				<div class="sidebar-body"></div>
 			</div>
 		</div>
 
@@ -539,7 +490,7 @@
 		</blockquote>
 
 		<pre><code>&lt;div class=&quot;sidenav-container&quot;&gt;
-    &lt;a class=&quot;btn btn-default sidenav-toggler&quot; href=&quot;&quot;&gt;
+    &lt;a class=&quot;btn btn-secondary sidenav-toggler&quot; href=&quot;&quot;&gt;
         &lt;span class=&quot;glyphicon glyphicon-align-justify&quot;&gt;&lt;/span&gt; Toggle
     &lt;/a&gt;
 
@@ -676,19 +627,8 @@ $(&apos;#myTogglerId&apos;).sideNavigation(&apos;hide&apos;).sideNavigation(&apo
 
 	$('.sidenav-toggler1').sideNavigation({
 		container: '#mySidenavContainerId1',
+		typeMobile: 'fixed',
 		position: 'right'
-	});
-
-	$('#showSimpleSidenav2').on('click', function(event) {
-		event.preventDefault();
-
-		$('[href="#simpleSidenav2"]').first().sideNavigation('show');
-	});
-
-	$('#hideSimpleSidenav2').on('click', function(event) {
-		event.preventDefault();
-
-		$('[href="#simpleSidenav2"]').first().sideNavigation('hide');
 	});
 </script>
 	</div>
