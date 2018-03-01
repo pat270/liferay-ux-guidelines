@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-rc.3
+* Clay 2.0.0-rc.4
 *
 * Copyright 2018, Liferay, Inc.
 * All rights reserved.

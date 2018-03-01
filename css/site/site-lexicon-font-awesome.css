@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-rc.3
+* Clay 2.0.0-rc.4
 *
 * Copyright 2018, Liferay, Inc.
 * All rights reserved.
@@ -8509,6 +8509,21 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: 2;
 }
 
+.btn-group {
+  flex-wrap: wrap;
+}
+
+.btn-group-item {
+  align-items: center;
+  display: inline-flex;
+  margin-right: 0.5rem;
+}
+
+.btn-group-item:last-child,
+.btn-group-item-last {
+  margin-right: 0;
+}
+
 .btn-toolbar .btn-group,
 .btn-toolbar .input-group {
   margin-bottom: 0.125rem;
@@ -9219,6 +9234,10 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0.25rem 1.5rem;
 }
 
+.dropdown-section .form-group + .form-group {
+  margin-top: 0.5rem;
+}
+
 .dropdown-menu {
   max-height: 500px;
   max-width: 260px;
@@ -9257,6 +9276,10 @@ a.text-dark:hover, a.text-dark:focus {
 
 .dropdown-menu .alert-fluid:last-child {
   margin-bottom: -0.5rem;
+}
+
+.dropdown-menu .form-group {
+  margin-bottom: 0;
 }
 
 .dropdown-menu .inline-scroller {

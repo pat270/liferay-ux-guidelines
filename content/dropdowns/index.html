@@ -25,7 +25,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-rc.3</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-rc.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -275,11 +275,15 @@
 	<div class="col-md-12">
 		<h3 id="dropdown-menu"><a class="heading-anchor" href="#dropdown-menu"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Dropdown Menu</h3>
 
+		<div class="alert alert-warning">
+			Disabled <code>a.dropdown-item</code> should have <code>tabindex=&quot;-1&quot;</code> and <code>event.preventDefault();</code> on click or use <code>&lt;span class=&quot;dropdown-item&quot;&gt;Disabled&lt;/span&gt;</code> for disabled dropdown-item.
+		</div>
+
 <div class="clay-site-dropdown-menu-container">
 	<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 		<li class="dropdown-subheader">Order by</li>
 		<li><a class="active dropdown-item" href="#1">Author</a></li>
-		<li><a class="disabled dropdown-item" href="#1">Title Entry</a></li>
+		<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Title Entry</a></li>
 		<li class="dropdown-divider"></li>
 		<li><a class="dropdown-item" href="#1">Date</a></li>
 		<li><a class="dropdown-item" href="#1">Description</a></li>
@@ -399,6 +403,41 @@
 	</form>
 </div>
 
+<div class="clay-site-dropdown-menu-container">
+	<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
+		<li class="dropdown-section form-group">
+			<label for="basicInputTypeText1">
+				Text 1
+			</label>
+			<input class="form-control form-control-sm" id="basicInputTypeText1" placeholder="Placeholder" type="text">
+		</li>
+		<li class="dropdown-subheader">Form Section</li>
+		<li class="dropdown-section">
+			<div class="form-group">
+				<label for="basicInputTypeText2">
+					Text 2
+				</label>
+				<input class="form-control form-control-sm" id="basicInputTypeText2" placeholder="Placeholder" type="text">
+			</div>
+		</li>
+		<li class="dropdown-section">
+			<div class="form-group">
+				<label for="basicInputTypeText3">
+					Text 3
+				</label>
+				<input class="form-control form-control-sm" id="basicInputTypeText3" placeholder="Placeholder" type="text">
+			</div>
+			<div class="form-group">
+				<label for="basicInputTypeTextarea">Textarea</label>
+				<textarea class="form-control form-control-sm" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
+			</div>
+		</li>
+		<li class="dropdown-subheader">Order by</li>
+		<li><a class="active dropdown-item" href="#1">Author</a></li>
+		<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Title Entry</a></li>
+	</ul>
+</div>
+
 	</div>
 </div>
 
@@ -469,7 +508,7 @@
 		</a>
 	</li>
 	<li>
-		<a class="disabled dropdown-item" href="#1">
+		<a class="disabled dropdown-item" href="#1" tabindex="-1">
 			Step 02
 			<div class="dropdown-item-indicator">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
@@ -529,7 +568,7 @@
 			<li><a class="dropdown-item" href="#1">Permissions</a></li>
 		</ul>
 	</li>
-	<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+	<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 	<li class="dropdown-divider"></li>
 	<li><a class="dropdown-item" href="#1">Scope</a></li>
 </ul>
@@ -549,7 +588,7 @@
 		<ul class="inline-scroller">
 			<li><a class="dropdown-item" href="#1">D Structure</a></li>
 			<li><a class="dropdown-item" href="#1">F Structure</a></li>
-			<li><a class="disabled dropdown-item" href="#1">H Structure</a></li>
+			<li><a class="disabled dropdown-item" href="#1" tabindex="-1">H Structure</a></li>
 			<li><a class="dropdown-item" href="#1">J Structure</a></li>
 			<li><a class="dropdown-item" href="#1">L Structure</a></li>
 			<li><a class="dropdown-item" href="#1">M Structure</a></li>
@@ -584,7 +623,7 @@
 					<ul class="col-sm-4 list-unstyled">
 						<li class="dropdown-subheader">By Resource</li>
 						<li><a class="dropdown-item" href="#1">Support Home</a></li>
-						<li><a class="disabled dropdown-item" href="#1">Disabled Link</a></li>
+						<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled Link</a></li>
 						<li><a class="dropdown-item" href="#1">Chat or Call</a></li>
 						<li class="dropdown-subheader">By Product</li>
 						<li><a class="active dropdown-item" href="#1">Developing for the Platform</a></li>
@@ -636,7 +675,7 @@
 			<ul aria-labelledby="dropdownAlignment1" class="dropdown-menu">
 				<li class="dropdown-header">Dropdown Header</li>
 				<li><a class="dropdown-item" href="#1">Action</a></li>
-				<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+				<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 				<li class="dropdown-divider"></li>
 				<li><a class="dropdown-item" href="#1">Scope</a></li>
 			</ul>
@@ -650,7 +689,7 @@
 			<ul aria-labelledby="dropdownAlignment2" class="dropdown-menu dropdown-menu-right">
 				<li class="dropdown-header">Dropdown Header</li>
 				<li><a class="dropdown-item" href="#1">Action</a></li>
-				<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+				<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 				<li class="dropdown-divider"></li>
 				<li><a class="dropdown-item" href="#1">Scope</a></li>
 			</ul>
@@ -664,7 +703,7 @@
 			<ul aria-labelledby="dropdownAlignment3" class="dropdown-menu dropdown-menu-top">
 				<li class="dropdown-header">Dropdown Header</li>
 				<li><a class="dropdown-item" href="#1">Action</a></li>
-				<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+				<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 				<li class="dropdown-divider"></li>
 				<li><a class="dropdown-item" href="#1">Scope</a></li>
 			</ul>
@@ -678,7 +717,7 @@
 			<ul aria-labelledby="dropdownAlignment4" class="dropdown-menu dropdown-menu-top-right">
 				<li class="dropdown-header">Dropdown Header</li>
 				<li><a class="dropdown-item" href="#1">Action</a></li>
-				<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+				<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 				<li class="dropdown-divider"></li>
 				<li><a class="dropdown-item" href="#1">Scope</a></li>
 			</ul>
@@ -700,7 +739,7 @@
 			<ul aria-labelledby="dropdownAlignment5" class="dropdown-menu dropdown-menu-right-side">
 				<li class="dropdown-header">Dropdown Header</li>
 				<li><a class="dropdown-item" href="#1">Action</a></li>
-				<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+				<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 				<li class="dropdown-divider"></li>
 				<li><a class="dropdown-item" href="#1">Scope</a></li>
 			</ul>
@@ -715,7 +754,7 @@
 				<li class="dropdown-header">Dropdown Header</li>
 				<ul class="inline-scroller">
 					<li><a class="dropdown-item" href="#1">Action</a></li>
-					<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+					<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 					<li class="dropdown-divider"></li>
 					<li><a class="dropdown-item" href="#1">Scope</a></li>
 					<li><a class="dropdown-item" href="#1">Scope</a></li>
@@ -737,7 +776,7 @@
 					<ul class="inline-scroller">
 						<li class="dropdown-header">Dropdown Header</li>
 						<li><a class="dropdown-item" href="#1">Action</a></li>
-						<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+						<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 						<li class="dropdown-divider"></li>
 						<li><a class="dropdown-item" href="#1">Scope</a></li>
 						<li><a class="dropdown-item" href="#1">Scope</a></li>
@@ -760,7 +799,7 @@
 					<ul class="inline-scroller">
 						<li class="dropdown-header">Dropdown Header</li>
 						<li><a class="dropdown-item" href="#1">Action</a></li>
-						<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+						<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 						<li class="dropdown-divider"></li>
 						<li><a class="dropdown-item" href="#1">Scope</a></li>
 						<li><a class="dropdown-item" href="#1">Scope</a></li>
@@ -791,7 +830,7 @@
 			<ul aria-labelledby="dropdownAlignment9" class="dropdown-menu dropdown-menu-center">
 				<li class="dropdown-header">dropdown-menu-center</li>
 				<li><a class="dropdown-item" href="#1">Action</a></li>
-				<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+				<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 				<li class="dropdown-divider"></li>
 				<li><a class="dropdown-item" href="#1">Scope</a></li>
 			</ul>
@@ -805,7 +844,7 @@
 			<ul aria-labelledby="dropdownAlignment10" class="dropdown-menu dropdown-menu-top-center">
 				<li class="dropdown-header">dropdown-menu-top-center</li>
 				<li><a class="dropdown-item" href="#1">Action</a></li>
-				<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+				<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 				<li class="dropdown-divider"></li>
 				<li><a class="dropdown-item" href="#1">Scope</a></li>
 			</ul>
@@ -820,7 +859,7 @@
 				<li class="dropdown-header">Dropdown Header</li>
 				<ul class="inline-scroller">
 					<li><a class="dropdown-item" href="#1">Action</a></li>
-					<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+					<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 					<li class="dropdown-divider"></li>
 					<li><a class="dropdown-item" href="#1">Scope</a></li>
 					<li><a class="dropdown-item" href="#1">Scope</a></li>
@@ -840,7 +879,7 @@
 			<ul aria-labelledby="dropdownAlignment12" class="dropdown-menu dropdown-menu-right-side-middle">
 				<li class="dropdown-header">Dropdown Header</li>
 				<li><a class="dropdown-item" href="#1">Action</a></li>
-				<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+				<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 				<li class="dropdown-divider"></li>
 				<li><a class="dropdown-item" href="#1">Scope</a></li>
 			</ul>
@@ -963,7 +1002,7 @@
 							<div class="row">
 								<ul class="col-sm-6 list-unstyled">
 									<li class="dropdown-header">By Resource</li>
-									<li><a class="disabled dropdown-item" href="#1">Support Home</a></li>
+									<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Support Home</a></li>
 									<li><a class="dropdown-item" href="#1">Ask the Experts</a></li>
 									<li><a class="dropdown-item" href="#1">Chat or Call</a></li>
 									<li class="dropdown-header">By Product</li>
@@ -1000,7 +1039,7 @@
 								<ul class="col-sm-4 list-unstyled">
 									<li class="dropdown-header">By Resource</li>
 									<li><a class="dropdown-item" href="#1">Support Home</a></li>
-									<li><a class="disabled dropdown-item" href="#1">Disabled Link</a></li>
+									<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled Link</a></li>
 									<li><a class="dropdown-item" href="#1">Chat or Call</a></li>
 									<li class="dropdown-header">By Product</li>
 									<li><a class="dropdown-item" href="#1">Developing for the Platform</a></li>
@@ -1067,7 +1106,7 @@
 								<li><a class="dropdown-item" href="#1">View</a></li>
 								<li><a class="dropdown-item" href="#1">Permissions</a></li>
 							</ul>
-							<li><a class="disabled dropdown-item" href="#1">Disabled</a></li>
+							<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
 							<li class="dropdown-divider"></li>
 							<li><a class="dropdown-item" href="#1">Scope</a></li>
 						</ul>
