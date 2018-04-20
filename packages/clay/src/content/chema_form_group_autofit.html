@@ -1,0 +1,783 @@
+---
+title: Form Group Autofit
+section: Chema Demo
+---
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+
+		<p>Form Group Autofit equally spaces each item by row. You can drop several inputs into this component and expect it to be spaced evenly. The big benefit is not having to rely on Bootstrap's grid and tab order is left to right instead of top to bottom with grids.</p>
+
+		<p>In screen sizes less than 576px, they will stack. There are no responsive stacking helpers at the moment, but we plan on adding them.</p>
+
+		<div class="sheet">
+			<div class="form-group-autofit">
+				<div class="form-group-item form-group-item-label form-group-item-shrink">
+					<label for="shippingAddress">Choose Shipping Address</label>
+				</div>
+				<div class="form-group-item">
+					<select class="form-control" id="shippingAddress">
+						<option>New Address</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group-autofit">
+				<div class="form-group-item">
+					<input class="form-control" placeholder="Email" type="email">
+				</div>
+				<div class="form-group-item">
+					<input class="form-control" placeholder="(000)000-0000" type="tel">
+				</div>
+			</div>
+
+			<div class="form-group-autofit">
+				<div class="form-group-item">
+					<input class="form-control" placeholder="First Name" type="text">
+				</div>
+				<div class="form-group-item">
+					<input class="form-control" placeholder="Last Name" type="text">
+				</div>
+			</div>
+
+			<div class="form-group-autofit">
+				<div class="form-group-item">
+					<input class="form-control" placeholder="Shipping Address" type="text">
+				</div>
+				<div class="form-group-item">
+					<select class="form-control">
+						<option>United States</option>
+						<option>Spain</option>
+						<option>Brazil</option>
+						<option>Hungary</option>
+						<option>Ireland</option>
+						<option>China</option>
+						<option>Japan</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<button class="btn btn-link btn-sm" type="button">
+					<span class="inline-item inline-item-before">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
+						</svg>
+					</span>Add Address Line
+				</button>
+			</div>
+
+			<div class="form-group-autofit">
+				<div class="form-group-item">
+					<input class="form-control" placeholder="City" type="text">
+				</div>
+				<div class="form-group-item">
+					<select class="form-control">
+						<option>CA</option>
+						<option>OR</option>
+						<option>WA</option>
+						<option>NV</option>
+						<option>AZ</option>
+						<option>UT</option>
+						<option>WY</option>
+					</select>
+				</div>
+				<div class="form-group-item">
+					<input class="form-control" placeholder="Zip" type="text">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<p>You can set a max-width on a `.form-group-item` or several and the remaining will expand to fill the space.</p>
+
+		<div class="sheet">
+			<div class="form-group-autofit">
+				<div class="form-group-item">
+					<input class="form-control" placeholder="City" type="text">
+				</div>
+				<div class="form-group-item" style="max-width:100px;">
+					<select class="form-control">
+						<option>CA</option>
+						<option>OR</option>
+						<option>WA</option>
+						<option>NV</option>
+						<option>AZ</option>
+						<option>UT</option>
+						<option>WY</option>
+					</select>
+				</div>
+				<div class="form-group-item" style="max-width: 150px;">
+					<input class="form-control" placeholder="Zip" type="text">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<p>There is also support for help text and labels. The only thing that isn't supported are labels that break to new lines.</p>
+
+		<div class="sheet">
+			<div class="form-group-autofit">
+				<div class="form-group-item form-group-item-label-spacer">
+					<input class="form-control" placeholder="City" type="text">
+					<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
+				</div>
+				<div class="form-group-item" style="max-width:100px;">
+					<label for="stateSelect">
+						<span class="text-truncate-inline">
+							<span class="text-truncate">State</span>
+						</span>
+					</label>
+					<select class="form-control" id="stateSelect">
+						<option>CA</option>
+						<option>OR</option>
+						<option>WA</option>
+						<option>NV</option>
+						<option>AZ</option>
+						<option>UT</option>
+						<option>WY</option>
+					</select>
+				</div>
+				<div class="form-group-item form-group-item-label-spacer" style="max-width: 150px;">
+					<input class="form-control" placeholder="Zip" type="text">
+					<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<p>Horizontal Forms are easier to create with the `form-group-autofit` pattern, just wrap your label in `form-group-item form-group-item-label` and set a max-width on them.</p>
+
+		<div class="sheet">
+			<div class="form-group-autofit">
+				<div class="form-group-item form-group-item-label" style="max-width: 120px;">
+					<label for="horizontalFormDemoFirstName1">First Name</label>
+				</div>
+				<div class="form-group-item">
+					<input class="form-control" id="horizontalFormDemoFirstName1" placeholder="First Name" type="text">
+					<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
+				</div>
+			</div>
+			<div class="form-group-autofit">
+				<div class="form-group-item form-group-item-label" style="max-width: 120px;">
+					<label for="horizontalFormDemoLastName1">Last Name</label>
+				</div>
+				<div class="form-group-item">
+					<input class="form-control" id="horizontalFormDemoLastName1" placeholder="Last Name" type="text">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<p>Horizontal Forms demo. A copy of <a href="https://dribbble.com/shots/1311154-Checkout/attachments/183692" target="_blank">https://dribbble.com/shots/1311154-Checkout/attachments/183692</a> using Clay components with a little custom css below.</p>
+		<code><pre>.demo-horizontal-form .form-group-item-label {
+	max-width: 110px;
+}
+
+@media (min-width: 576px) {
+	.demo-horizontal-form .form-group-item-label label {
+			margin-left: auto;
+	}
+}
+
+.demo-horizontal-form .multi-step-indicator {
+	display: inline-flex;
+	width: auto;
+}
+
+.demo-horizontal-form .multi-step-icon {
+	display: inline-flex;
+	line-height: 1;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	width: auto;
+}
+
+.demo-horizontal-form .custom-radio .form-text {
+	padding-left: 1.5rem;
+}</pre></code>
+		<style>
+			.demo-horizontal-form .form-group-item-label {
+				max-width: 110px;
+			}
+
+			@media (min-width: 576px) {
+				.demo-horizontal-form .form-group-item-label label {
+						margin-left: auto;
+				}
+			}
+
+			.demo-horizontal-form .multi-step-indicator {
+				display: inline-flex;
+				width: auto;
+			}
+
+			.demo-horizontal-form .multi-step-icon {
+				display: inline-flex;
+				line-height: 1;
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+				width: auto;
+			}
+
+			.demo-horizontal-form .custom-radio .form-text {
+				padding-left: 1.5rem;
+			}
+		</style>
+		<div class="sheet demo-horizontal-form">
+			<div class="autofit-float autofit-row autofit-row-center">
+				<div class="autofit-col">
+					<h2 class="sheet-title">Checkout</h2>
+				</div>
+				<div class="autofit-col autofit-col-expand">
+					<ol class="multi-step-nav">
+						<li class="active multi-step-item multi-step-item-expand">
+							<div class="multi-step-divider"></div>
+							<div class="multi-step-indicator">
+								<a class="multi-step-icon" href="#1">Shipping</a>
+							</div>
+						</li>
+						<li class="multi-step-item multi-step-item-expand">
+							<div class="multi-step-divider"></div>
+							<div class="multi-step-indicator">
+								<a class="multi-step-icon" href="#1">Billing</a>
+							</div>
+						</li>
+						<li class="multi-step-item multi-step-item-expand">
+							<div class="multi-step-divider"></div>
+							<div class="multi-step-indicator">
+								<a class="multi-step-icon" href="#1">Review</a>
+							</div>
+						</li>
+						<li class="multi-step-item">
+							<div class="multi-step-divider"></div>
+							<div class="multi-step-indicator">
+								<a class="multi-step-icon" href="#1">Reciept</a>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<h3 class="sheet-subtitle">Shipping Address</h3>
+					<div class="form-group-autofit">
+						<div class="form-group-item form-group-item-label">
+							<label for="horizontalFirstName">First Name</label>
+						</div>
+						<div class="form-group-item">
+							<input class="form-control" id="horizontalFirstName" placeholder="First Name" type="text">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item form-group-item-label">
+							<label for="horizontalLastName">Last Name</label>
+						</div>
+						<div class="form-group-item">
+							<input class="form-control" id="horizontalLastName" placeholder="Last Name" type="text">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item form-group-item-label">
+							<label for="horizontalCompany">Company</label>
+						</div>
+						<div class="form-group-item">
+							<input class="form-control" id="horizontalCompany" placeholder="Company" type="text">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item form-group-item-label">
+							<label for="horizontalPhone">Phone</label>
+						</div>
+						<div class="form-group-item">
+							<input class="form-control" id="horizontalPhone" placeholder="Phone" type="tel">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item form-group-item-label">
+							<label for="horizontalEmail">Email</label>
+						</div>
+						<div class="form-group-item">
+							<input class="form-control" id="horizontalEmail" placeholder="Email" type="email">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item form-group-item-label">
+							<label for="horizontalAddress1">Address 1</label>
+						</div>
+						<div class="form-group-item">
+							<input class="form-control" id="horizontalAddress1" placeholder="Address 1" type="text">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item form-group-item-label">
+							<label for="horizontalAddress2">Address 2</label>
+						</div>
+						<div class="form-group-item">
+							<input class="form-control" id="horizontalAddress2" placeholder="Address 2" type="text">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item form-group-item-label">
+							<label for="horizontalCity">City</label>
+						</div>
+						<div class="form-group-item">
+							<input class="form-control" id="horizontalCity" placeholder="City" type="text">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item form-group-item-label">
+							<label for="horizontalState">State</label>
+						</div>
+						<div class="form-group-item">
+							<input class="form-control" id="horizontalState" placeholder="State" type="text">
+						</div>
+						<div class="form-group-item form-group-item-label form-group-item-shrink">
+							<label for="horizontalZip">Zip</label>
+						</div>
+						<div class="form-group-item">
+							<input class="form-control" id="horizontalZip" placeholder="Zip" type="text">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h3 class="sheet-subtitle">Shipping Service</h3>
+					<div class="form-group">
+						<div class="custom-control custom-radio">
+							<label>
+								<input checked="" class="custom-control-input" id="radio1" name="radio" type="radio">
+								<span class="custom-control-label">
+									<span class="custom-control-label-text">Standard</span>
+								</span>
+							</label>
+							<div class="form-text">14 Days - $1.99</div>
+							<div class="form-text">Get it by August 15th</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="custom-control custom-radio">
+							<label>
+								<input class="custom-control-input" id="radio2" name="radio" type="radio">
+								<span class="custom-control-label">
+									<span class="custom-control-label-text">Expedited</span>
+								</span>
+							</label>
+							<div class="form-text">7 Days - $6.99</div>
+							<div class="form-text">Get it by August 10th</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="custom-control custom-radio">
+							<label>
+								<input class="custom-control-input" id="radio2" name="radio" type="radio">
+								<span class="custom-control-label">
+									<span class="custom-control-label-text">Express</span>
+								</span>
+							</label>
+							<div class="form-text">3 Days - $16.99</div>
+							<div class="form-text">Get it by August 3rd</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sheet-footer">
+				<div class="btn-group">
+					<div class="btn-group-item">
+						<button class="btn btn-primary" type="button">Proceed to Billing</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<p>A copy of <a href="https://dribbble.com/shots/1739412-Billing-info/attachments/281142" target="_blank">https://dribbble.com/shots/1739412-Billing-info/attachments/281142</a> using Clay Components and some additional CSS below.</p>
+
+		<code><pre>.demo-form-2 .card-type-asset .card-body {
+	text-align: center;
+}
+
+.demo-form-2 .card-type-asset .form-check-input {
+	opacity: 0;
+}
+
+.demo-form-2 .card-type-asset .sticker-outside {
+	display: none;
+}
+
+.demo-form-2 .card-type-asset .form-check-input:checked ~ .card .sticker-outside {
+	display: block;
+}
+
+.demo-form-2 .sheet-section h3 {
+	margin-bottom: 3rem;
+}</pre></code>
+
+		<style>
+			.demo-form-2 .card-type-asset .card-body {
+				text-align: center;
+			}
+
+			.demo-form-2 .card-type-asset .form-check-input {
+				opacity: 0;
+			}
+
+			.demo-form-2 .card-type-asset .sticker-outside {
+				display: none;
+			}
+
+			.demo-form-2 .card-type-asset .form-check-input:checked ~ .card .sticker-outside {
+				display: block;
+			}
+
+			.demo-form-2 .sheet-section h3 {
+				margin-bottom: 3rem;
+			}
+		</style>
+
+		<div class="sheet demo-form-2">
+			<div class="sheet-header">
+				<h1>Payment</h1>
+			</div>
+
+			<div class="sheet-section">
+				<h3>Choose Payment Method Below</h3>
+
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card-type-asset form-check form-check-card form-check-top-left">
+							<label class="form-check-label">
+								<input class="form-check-input" checked name="cardRadios" type="radio" value="cardOption1">
+								<div class="card">
+									<div class="card-body">
+										<span class="sticker sticker-lg sticker-primary sticker-outside rounded-circle sticker-top-right">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+											</svg>
+										</span>
+
+										<span class="sticker sticker-light sticker-xl">CC</span>
+										<div class="component-title">PAY WITH CREDIT CARD</div>
+									</div>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card-type-asset form-check form-check-card form-check-top-left">
+							<label class="form-check-label">
+								<input class="form-check-input" name="cardRadios" type="radio" value="cardOption1">
+								<div class="card">
+									<div class="card-body">
+										<span class="sticker sticker-lg sticker-primary sticker-outside rounded-circle sticker-top-right">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+											</svg>
+										</span>
+										<span class="sticker sticker-light sticker-xl">PP</span>
+										<div class="component-title">PAY WITH PAYPAL</div>
+									</div>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card-type-asset form-check form-check-card form-check-top-left">
+							<label class="form-check-label">
+								<input class="form-check-input" name="cardRadios" type="radio" value="cardOption1">
+								<div class="card">
+									<div class="card-body">
+										<span class="sticker sticker-lg sticker-primary sticker-outside rounded-circle sticker-top-right">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+											</svg>
+										</span>
+										<span class="sticker sticker-light sticker-xl">AP</span>
+										<div class="component-title">AMAZON PAYMENTS</div>
+									</div>
+								</div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<h3>
+						<span class="autofit-float autofit-row autofit-row-center autofit-padded-no-gutters">
+							<span class="autofit-col">
+								<span class="sticker sticker-primary rounded-circle">1</span>
+							</span>
+							<span class="autofit-col autofit-col-expand">Billing Info</span>
+						</span>
+					</h3>
+					<div class="form-group-autofit">
+						<div class="form-group-item">
+							<label>Full Name</label>
+							<input class="form-control" type="text">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item">
+							<label>Billing Address</label>
+							<input class="form-control" type="text">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item">
+							<label>City</label>
+							<input class="form-control" type="text">
+						</div>
+						<div class="form-group-item">
+							<label>Zip Code</label>
+							<input class="form-control" type="text">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item">
+							<label>Country</label>
+							<select class="form-control">
+								<option>Spain</option>
+								<option>Sweden</option>
+								<option>United States</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h3>
+						<span class="autofit-float autofit-row autofit-row-center autofit-padded-no-gutters">
+							<span class="autofit-col">
+								<span class="sticker sticker-primary rounded-circle">2</span>
+							</span>
+							<span class="autofit-col autofit-col-expand">
+								Credit Card Info
+							</span>
+						</span>
+					</h3>
+					<div class="form-group-autofit">
+						<div class="form-group-item">
+							<label>Cardholder's Name</label>
+							<input class="form-control" type="text">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item">
+							<label>Card Number</label>
+							<input class="form-control" type="text">
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item">
+							<label>Exp. Month</label>
+							<select class="form-control">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+							</select>
+						</div>
+						<div class="form-group-item">
+							<label>Exp. Year</label>
+							<select class="form-control">
+								<option>2018</option>
+								<option>2019</option>
+								<option>2020</option>
+								<option>2021</option>
+								<option>2022</option>
+								<option>2023</option>
+								<option>2024</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group-autofit">
+						<div class="form-group-item">
+							<label>CVC Number</label>
+							<input class="form-control" type="text">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sheet-footer">
+				<div class="autofit-float autofit-row autofit-padded-no-gutters">
+					<div class="autofit-col autofit-col-expand">
+						<div class="autofit-section">
+							<button class="btn btn-secondary" type="button">Return to Store</button>
+						</div>
+					</div>
+					<div  class="autofit-col">
+						<button class="btn btn-outline-secondary btn-outline-borderless" type="button">Back to Shipping</button>
+					</div>
+					<div  class="autofit-col">
+						<button class="btn btn-primary" type="button">Proceed</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="alert alert-info">
+	Place the Sass variables at the top of /clay/src/scss/atlas/_variables.scss before compiling Clay to change the styles of the form above to match.
+</div>
+
+<code><pre>$font-import-url: 'https://fonts.googleapis.com/css?family=Barlow' !default;
+
+$font-family-sans-serif: 'Barlow', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$primary: #069ddf !default;
+$secondary: #999999 !default;
+$success: #287D3D !default;
+$info: #2E5AAC !default;
+$warning: #B95000 !default;
+$danger: #DA1414 !default;
+$light: #F1F2F5 !default;
+$dark: #272834 !default;
+
+$body-bg: #FFF !default;
+$body-color: #333 !default;
+$text-muted: lighten(saturate(adjust-hue($body-color, -1), 0.22), 51.96) !default;
+
+$component-active-bg: #069ddf !default;
+
+// Card
+
+$card-box-shadow: 0 0 0 2px #e6e6e6 !default;
+$form-check-card-checked-box-shadow: 0 0 0 2px $component-active-bg !default;
+
+// Button
+
+$btn-border-radius: 5000px !default;
+$btn-font-size: 1.125rem !default;
+$btn-padding-x: 1.5rem !default;
+$btn-padding-y: 0.59375rem !default;
+
+$btn-secondary: (
+	bg: #FFF,
+	border-color: #e6e6e6,
+	color: $secondary,
+	hover-bg: #FFF,
+	hover-border-color: #e6e6e6,
+	hover-color: $body-color,
+	focus-box-shadow: 0 0 0 2px rgba(#e6e6e6, 0.5),
+	focus-color: $body-color,
+	disabled-bg: #FFF,
+	disabled-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
+	disabled-color: $secondary,
+	active-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
+	active-color: $body-color,
+	active-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61),
+	active-box-shadow: none,
+	loading-animation: null
+) !default;
+
+$btn-outline-secondary: (
+	bg: null,
+	border-color: #e6e6e6,
+	color: $body-color,
+	hover-bg: #FFF,
+	hover-border-color: transparent,
+	hover-color: map-get($btn-secondary, hover-color),
+	focus-bg: map-get($btn-secondary, focus-bg),
+	focus-border-color: transparent,
+	focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
+	focus-color: map-get($btn-secondary, focus-color),
+	disabled-bg: transparent,
+	disabled-border-color: $secondary,
+	disabled-color: $secondary,
+	active-bg: rgba(0, 0, 0, 0.04),
+	active-border-color: transparent,
+	active-box-shadow: map-get($btn-secondary, active-box-shadow),
+	active-color: map-get($btn-secondary, active-color)
+) !default;
+
+// Inputs
+
+$input-border-top-width: 0.125rem !default;
+$input-border-right-width: 0.125rem !default;
+$input-border-bottom-width: 0.125rem !default;
+$input-border-left-width: 0.125rem !default;
+$input-border-width: 0.125rem !default;
+$input-border-color: #e6e6e6 !default;
+
+$input-label-color: #5d5d5d !default;
+
+$input-bg: #FFF !default;
+
+$input-height: 3rem !default;
+
+$input-focus-bg: #FFF !default;
+$input-focus-border-color: $component-active-bg !default;
+
+$input-select-bg: #FAFAFA !default;
+
+$input-select-bg-position: right 0.75em center !default;
+$input-select-bg-size: 0.75em auto !default;
+
+$input-select-icon-color: $secondary !default;
+$input-select-icon: clay-icon(angle-down, $input-select-icon-color) !default;
+
+$input-select-icon-focus-color: $input-select-icon-color !default;
+$input-select-icon-focus: clay-icon(angle-down, $input-select-icon-focus-color) !default;
+
+$input-select-icon-disabled-color: $text-muted !default;
+$input-select-icon-disabled: clay-icon(angle-down, $input-select-icon-disabled-color) !default;
+
+// Custom Input
+
+$custom-control-indicator-border-color: $secondary !default;
+
+// Sticker
+
+$sticker-border-style: solid !default;
+$sticker-border-width: 0.125rem !default;
+
+$sticker-primary-bg: #FFF !default;
+$sticker-primary-border-color: $primary !default;
+
+$sticker-secondary-bg: #FFF !default;
+$sticker-secondary-border-color: $secondary !default;
+
+$sticker-info-bg: #FFF !default;
+$sticker-info-border-color: $info !default;
+
+$sticker-success-bg: #FFF !default;
+$sticker-success-border-color: $success !default;
+
+$sticker-warning-bg: #FFF !default;
+$sticker-warning-border-color: $warning !default;
+
+$sticker-danger-bg: #FFF !default;
+$sticker-danger-border-color: $danger !default;
+
+$sticker-light-bg: #FFF !default;
+$sticker-light-border-color: $light !default;
+
+$sticker-dark-bg: #FFF !default;
+$sticker-dark-border-color: $dark !default;
+
+$sheet-border-color: #e6e6e6 !default;</pre></code>

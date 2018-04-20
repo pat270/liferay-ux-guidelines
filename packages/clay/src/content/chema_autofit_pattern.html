@@ -1,0 +1,161 @@
+---
+title: Autofit Pattern
+section: Chema Demo
+---
+
+<div class="clay-site-row-spacer">
+	<h3>Autofit Pattern</h3>
+
+	<p>Liferay has finally dropped support for IE9 which gives us full access to flexbox. One of the more interesting patterns we have developed is the Autofit Pattern. It is now easier to make content expand to fill remaining space and vertically align content without having to resort to floats, clunky grid columns, or margin/padding hacks.</p>
+
+	<p>The classes you need to use are `.autofit-row`, `.autofit-col`, and `.autofit-col .autofit-col-expand`. In the example below we use this pattern with the help of `.component-title` and `.btn .btn-sm`. The font size and weight on `.component-title` can be changed and alignment with the pencil icon will remain the same.</p>
+
+	<div class="card">
+		<div class="card-body">
+			<div class="autofit-row autofit-padded">
+				<div class="autofit-col autofit-col-expand">
+					<h3 class="component-title">Blog Entry Example Number One with ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWord</h3>
+				</div>
+				<div class="autofit-col">
+					<button class="btn btn-primary btn-sm" type="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#pencil" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer">
+	<h3>Autofit Helpers</h3>
+
+	<p>Use the class combo `autofit-float autofit-padded autofit-row` on the parent element to mimic floating content when the screen size is too small and to add some space between items.</p>
+
+	<p>One catch to `.autofit-col` is the use of <code>flex-direction: column</code> which turn all direct descendants into block level elements. If you want to display items inline, such as labels or buttons, you will need to wrap them in a `div`. We created a special class `.autofit-section` for items inside `.autofit-col`.</p>
+
+	<div class="card">
+		<div class="card-body">
+			<div class="autofit-float autofit-row autofit-padded">
+				<div class="autofit-col autofit-col-expand">
+					<div class="autofit-section">
+						<button class="btn btn-outline-primary btn-outline-borderless btn-sm" type="button">View in Context</button>
+					</div>
+				</div>
+				<div class="autofit-col autofit-col-expand">
+					<div class="autofit-section">
+						<button class="btn btn-primary btn-sm" type="button">View in Context</button>
+					</div>
+				</div>
+				<div class="autofit-col autofit-col-expand">
+					<div class="autofit-section">
+						<button class="btn btn-primary btn-sm" type="button">View in Context</button>
+					</div>
+				</div>
+				<div class="autofit-col">
+					<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+						<span class="inline-item inline-item-before">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#thumbs-up" />
+							</svg>
+						</span>Like (8)
+					</button>
+				</div>
+				<div class="autofit-col">
+					<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+						<span class="inline-item inline-item-before">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-flag-empty">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#flag-empty" />
+							</svg>
+						</span>Flag
+					</button>
+				</div>
+				<div class="autofit-col">
+					<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+						<span class="inline-item inline-item-before">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#share" />
+							</svg>
+						</span>Share
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer">
+	<h3>Asset Publisher Layout</h3>
+
+	<div class="card">
+		<div class="card-body">
+			<div class="autofit-padded autofit-row">
+				<div class="autofit-col autofit-col-expand">
+					<h4 class="component-title">ASSET PUBLISHER</h4>
+				</div>
+				<div class="autofit-col">
+					<button class="btn btn-outline-primary btn-outline-borderless btn-sm" type="button">
+						<span class="inline-item inline-item-before">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle" />
+							</svg>
+						</span>Subscribe
+					</button>
+				</div>
+			</div>
+
+			<div class="autofit-padded autofit-row">
+				<div class="autofit-col autofit-col-expand">
+					<h4 class="component-title">Knowledge Base Article One</h4>
+				</div>
+				<div class="autofit-col">
+					<button class="btn btn-outline-primary btn-outline-borderless btn-sm" type="button">
+						<span class="inline-item">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#pencil" />
+							</svg>
+						</span>
+					</button>
+				</div>
+			</div>
+
+			<p>Lorem ipsum dolor sit amet, duo volumus quaerendum ne, et quot debitis nam. Errem similique ei his. Sea illum electram neglegentur in, est ea vidit persecuti, nam stet doctus ut. Ius iisque delicatissimi cu, homero forensibus an per. Mea ornatus consequuntur ut, sea choro inermis vivendo in. Eum ea primis nemore reprehendunt.</p>
+
+			<div class="autofit-float autofit-row autofit-padded">
+				<div class="autofit-col autofit-col-expand">
+					<div class="autofit-section">
+						<button class="btn btn-outline-primary btn-outline-borderless btn-sm" type="button">View in Context</button>
+					</div>
+				</div>
+				<div class="autofit-col">
+					<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+						<span class="inline-item inline-item-before">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#thumbs-up" />
+							</svg>
+						</span>Like (8)
+					</button>
+				</div>
+				<div class="autofit-col">
+					<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+						<span class="inline-item inline-item-before">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-flag-empty">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#flag-empty" />
+							</svg>
+						</span>Flag
+					</button>
+				</div>
+				<div class="autofit-col">
+					<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+						<span class="inline-item inline-item-before">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#share" />
+							</svg>
+						</span>Share
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
