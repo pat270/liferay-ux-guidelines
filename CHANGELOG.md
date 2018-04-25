@@ -1,3 +1,38 @@
+### v1.0.26 - November 27, 2017
+* Update: (Fixes [#379](https://github.com/liferay/clay/issues/379)) Glyphicon Font path should point to the right directory
+* Misc: Don't need to patch Bootstrap Variable file anymore
+
+### v1.0.25 - October 5, 2017
+* Fix: Management Bar Collapse can't click form elements in dropdown
+* Update: Table move `border-collapse: collapse` and `border-spacing: 0` to `.table` and restore default values for `table`
+* Site: Management Bar Demo page can't fully scroll site pages
+* Site: Use rootPath instead of relative path for images and icons
+
+
+### v1.0.24 - August 4, 2017
+* New: Lexicon Icons autosize, custom-size, order-arrow, and pages-tree
+* Update: Deprecate `$brand-*-*`, `$state-*-*`, `$inverse-*-*`, and `$box-shadow-default-*` will be removed in V2
+* Site: Add aria-hidden="true" to all icons
+
+### v1.0.23 - July 21, 2017
+* New: Lexicon Icons envelope-open and envelope-closed
+* Update: Navbar `$navbar-link-active-bottom-border-width` should be based on `$navbar-border-bottom-width`
+* Update: Atlas Navbar use variable `$navbar-margin-bottom` instead of hard coding value
+
+### v1.0.22 - June 29, 2017
+* New: Nav Nested added `$nav-nested-link-active-bg`, `$nav-nested-link-active-color` and active states
+* Update: Nav added `word-break: wrap-word;` to nav-links
+* Update: Estonia and Thai flag sizing
+* Site: Navs demo added active states to Nested Nav
+
+### v1.0.21 - June 27, 2017
+* New: Add Estonia and Thai flags
+* Site: Remove unused images
+
+### v1.0.20 - June 14, 2017
+* Fix: side-navigation.js Simple Sidenav should add open class to data-content in mobile
+* Update: `.aspect-ratio-center.aspect-ratio-middle` should center and vertically align
+
 ### v1.0.19 - April 3, 2017
 * New: Added Lexicon SVG Icons `add-role.svg` and `remove-role.svg`
 

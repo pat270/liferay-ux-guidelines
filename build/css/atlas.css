@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.19
+* Lexicon 1.0.26
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -303,8 +303,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("../fonts/glyphicons-halflings-regular.eot");
+  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 .glyphicon {
@@ -4786,7 +4786,7 @@ tbody.collapse.in {
 .navbar {
   position: relative;
   min-height: 48px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   border: 1px solid transparent;
 }
 
@@ -7878,6 +7878,11 @@ button.close {
   top: 0;
 }
 
+.aspect-ratio-center.aspect-ratio-middle img {
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .aspect-ratio-3-to-2 {
   padding-bottom: 66.66666667%;
 }
@@ -10116,6 +10121,7 @@ button.list-group-heading {
   display: block;
   padding: 9px 16px;
   position: relative;
+  word-wrap: break-word;
 }
 
 .nav > li > a:focus {
@@ -10296,6 +10302,13 @@ button.list-group-heading {
 
 .nav-nested-margins > li .nav > li {
   margin-left: 15px;
+}
+
+.nav-nested > .active > a,
+.nav-nested .nav > .active > a,
+.nav-nested-margins > .active > a,
+.nav-nested-margins .nav > .active > a {
+  color: #40a4ec;
 }
 
 .nav-pills a[aria-expanded="true"], .nav-pills a[aria-expanded="true"]:hover, .nav-pills a[aria-expanded="true"]:focus {
@@ -10620,7 +10633,6 @@ button.list-group-heading {
 
 .navbar {
   border-width: 0 0 1px 0;
-  margin-bottom: 0;
   min-height: 48px;
 }
 
@@ -11361,6 +11373,10 @@ button.list-group-heading {
   .management-bar-collapse.in {
     overflow-y: visible;
   }
+}
+
+.management-bar-collapse .dropdown-backdrop {
+  position: relative;
 }
 
 .management-bar-nav {
@@ -12587,8 +12603,18 @@ button.list-group-heading {
   background-color: #F5984C;
 }
 
+table {
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
 th {
   height: 20px;
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .table > thead tr td:first-child > .checkbox,
