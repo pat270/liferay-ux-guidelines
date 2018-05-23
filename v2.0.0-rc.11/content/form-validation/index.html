@@ -25,7 +25,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-rc.10</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-rc.11</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -144,8 +144,6 @@
 <li class=""><a class="nav-title" href="../../content/sheet">Sheet</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
 </li>
@@ -648,6 +646,114 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3 id="input-group-password-validation-states"><a class="heading-anchor" href="#input-group-password-validation-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Input Group Password Validation States</h3>
+
+		<div class="sheet">
+			<div class="form-group has-error">
+				<label for="passwordFieldError">Password Field Error</label>
+				<div class="input-group input-group-password">
+					<div class="input-group-item">
+						<input aria-label="Password Error" class="form-control input-group-inset input-group-inset-after" id="passwordFieldError" type="password" value="password">
+						<div class="input-group-inset-item input-group-inset-item-after">
+							<button class="btn btn-unstyled" type="button">
+								<span class="input-password-label">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
+										<use xlink:href="../../images/icons/icons.svg#hidden">
+									</svg>
+								</span>
+								<span class="input-text-label">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+										<use xlink:href="../../images/icons/icons.svg#view">
+									</svg>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="form-feedback-group">
+					<div class="form-feedback-item">
+						<span class="form-feedback-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+								<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+							</svg>
+						</span>
+						The password is wrong.
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group has-warning">
+				<label for="passwordFieldWarning">Password Field Warning</label>
+				<div class="input-group input-group-password">
+					<div class="input-group-item">
+						<input aria-label="Password Warning" class="form-control input-group-inset input-group-inset-after" id="passwordFieldWarning" type="password" value="my">
+						<div class="input-group-inset-item input-group-inset-item-after">
+							<button class="btn btn-unstyled" type="button">
+								<span class="input-password-label">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
+										<use xlink:href="../../images/icons/icons.svg#hidden">
+									</svg>
+								</span>
+								<span class="input-text-label">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+										<use xlink:href="../../images/icons/icons.svg#view">
+									</svg>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="form-feedback-group">
+					<div class="form-feedback-item">
+						<span class="form-feedback-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+								<use xlink:href="../../images/icons/icons.svg#warning-full">
+							</svg>
+						</span>
+						You are getting closer keep trying!
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group has-success">
+				<label for="passwordFieldSuccess">Password Field Success</label>
+				<div class="input-group input-group-password">
+					<div class="input-group-item">
+						<input aria-label="Password Success" class="form-control input-group-inset input-group-inset-after" id="passwordFieldSuccess" type="password" value="my-seekret">
+						<div class="input-group-inset-item input-group-inset-item-after">
+							<button class="btn btn-unstyled" type="button">
+								<span class="input-password-label">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
+										<use xlink:href="../../images/icons/icons.svg#hidden">
+									</svg>
+								</span>
+								<span class="input-text-label">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+										<use xlink:href="../../images/icons/icons.svg#view">
+									</svg>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="form-feedback-group">
+					<div class="form-feedback-item">
+						<span class="form-feedback-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+								<use xlink:href="../../images/icons/icons.svg#check-circle-full">
+							</svg>
+						</span>
+						The password is correct!
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
 		<h3 id="input-validation-states-html5"><a class="heading-anchor" href="#input-validation-states-html5"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Input Validation States (HTML5)</h3>
 
 		<blockquote class="blockquote">
@@ -820,6 +926,20 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	$('.input-group-password .btn').on('click', function(event) {
+		var input = $(this).closest('.input-group-password').find('.form-control');
+		var inputType = input.attr('type');
+
+		if (inputType === 'password') {
+			input.attr('type', 'text');
+		}
+		else {
+			input.attr('type', 'password');
+		}
+	});
+</script>
 	</div>
 
 		</section>
