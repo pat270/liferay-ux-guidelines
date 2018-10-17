@@ -25,7 +25,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.0.3</span></h4>
+				<h4 class="title"><a href="../..">Clay</a> <span class="label label-primary label-sm lexicon-version">v2.3.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -203,6 +203,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/test-subnav-tbar">Subnav Tbar</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/test-table-valign">Table Valign</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/test-table-view-template-info-panel">Table View Template (Info Panel)</a>
@@ -272,7 +274,7 @@
 							<span class="heading-text">Sheet Subtitle 4 with Autofit Float</span>
 						</span>
 						<span class="autofit-col">
-							<button class="btn btn-secondary btn-sm" type="button">Add</button>
+							<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
 						</span>
 						<span class="autofit-col">
 							<button class="btn btn-secondary btn-sm" type="button">Remove</button>
@@ -282,7 +284,7 @@
 				<h4 class="sheet-tertiary-title">Sheet Tertiary Title</h4>
 				<div class="sheet-text">Sheet Subtitle and Sheet Tertiary Title are contained inside a sheet-section.</div>
 			</div>
-			<div class="sheet-footer">
+			<div class="sheet-footer sheet-footer-btn-block-sm-down">
 				<div class="btn-group">
 					<div class="btn-group-item">
 						<button class="btn btn-primary" type="button">Primary</button>
@@ -314,8 +316,34 @@
 				<h4 class="sheet-tertiary-title">Sheet Tertiary Title</h4>
 				<div class="sheet-text">Sheet Subtitle and Sheet Tertiary Title are contained inside a sheet-section.</div>
 			</div>
-			<div class="sheet-footer">
-				<div class="btn-group-item">
+			<div class="sheet-footer sheet-footer-btn-block-sm-down">
+				<div class="btn-group">
+					<div class="btn-group-item">
+						<button class="btn btn-primary" type="button">Primary</button>
+					</div>
+					<div class="btn-group-item">
+						<button class="btn btn-secondary" type="button">Secondary</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="sheet-footer-btn-block-sm-down"><a class="heading-anchor" href="#sheet-footer-btn-block-sm-down"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sheet Footer Btn Block Sm Down</h3>
+
+		<blockquote class="blockquote">
+			Use <code>.sheet-footer-btn-block-sm-down</code> with <code>.sheet-footer</code> to make <code>.btn</code> inside <code>.sheet-footer</code> to become a block level button at screen sizes 767px and below.
+		</blockquote>
+
+		<div class="sheet sheet-lg">
+			<div class="sheet-header">
+				<h2 class="sheet-title">Sheet Title</h2>
+			</div>
+			<div class="sheet-footer sheet-footer-btn-block-sm-down">
+				<div class="btn-group">
 					<div class="btn-group-item">
 						<button class="btn btn-primary" type="button">Primary</button>
 					</div>
