@@ -1,6 +1,7 @@
 var clayVersions = [
 	'Select Version',
 	'2.14.2',
+	'2.14.0',
 	'2.10.0',
 	'2.9.0',
 	'2.8.3',
