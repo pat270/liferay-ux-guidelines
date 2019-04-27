@@ -4,11 +4,15 @@
 	<meta charset="UTF-8" />
 	<title>Clay - Versions</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>html,body{height:100%;}body{display:flex;align-items:center;justify-content:center;margin:0;}</style>
+	<link rel="stylesheet" href="main.css" />
 	<script src="./site-js/version-list.js"></script>
 </head>
 <body>
-	<select class="form-control" id="clayVersionList"></select>
+	<div class="clay-version-list-container">
+		<div class="clay-version-list-title">Clay CSS</div>
+		<div>Select Version</div>
+		<select id="clayVersionList"></select>
+	</div>
 
 	<script>
 		localStorage.removeItem('nate.lexiconHref');
