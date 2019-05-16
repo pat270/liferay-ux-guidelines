@@ -1,7 +1,7 @@
 /**
 * Clay 2.3.4
 *
-* Copyright 2018, Liferay, Inc.
+* Copyright 2019, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
@@ -24,7 +24,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @-ms-viewport {

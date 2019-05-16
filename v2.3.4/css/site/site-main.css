@@ -1,7 +1,7 @@
 /**
 * Clay 2.3.4
 *
-* Copyright 2018, Liferay, Inc.
+* Copyright 2019, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
@@ -806,6 +806,25 @@ body.sidenav-transition {
 .lx-site-test-assorted-sidebar .sidebar {
   float: left;
   width: 50%;
+}
+
+.my-button-variant {
+  background-color: #C142A0;
+  color: #FFF;
+}
+
+.my-button-variant:hover {
+  background-color: #AC388E;
+  color: #FFF;
+}
+
+.my-button-variant:focus, .my-button-variant.focus {
+  background-color: #AC388E;
+}
+
+.my-button-variant:not([disabled]):not(.disabled):active, .my-button-variant:not([disabled]):not(.disabled).active,
+.show > .my-button-variant.dropdown-toggle {
+  background-color: #9D3381;
 }
 
 /*# sourceMappingURL=site-main.css.map */
