@@ -26704,6 +26704,29 @@ body.sidenav-transition {
   width: 50%;
 }
 
+.my-button-variant {
+  background-color: #C142A0;
+  border-width: 0;
+  color: #FFF;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 12px;
+}
+
+.my-button-variant:hover {
+  background-color: #AC388E;
+  color: #FFF;
+}
+
+.my-button-variant:not([disabled]):not(.disabled):active, .my-button-variant:not([disabled]):not(.disabled).active,
+.show > .my-button-variant.dropdown-toggle {
+  background-color: #9D3381;
+}
+
 #claySiteCSS {
   content: 'clay-atlas';
   display: none;
