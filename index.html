@@ -15,8 +15,10 @@
 	</div>
 
 	<script>
-		localStorage.removeItem('nate.lexiconHref');
-		localStorage.removeItem('nate.lexiconSiteHref');
+		if (localStorageAvailable()) {
+			localStorage.removeItem('nate.lexiconHref');
+			localStorage.removeItem('nate.lexiconSiteHref');
+		}
 	</script>
 </body>
 </html>

@@ -1,3 +1,15 @@
+function localStorageAvailable() {
+	var lsTest = 'lsTest';
+	try {
+		localStorage.setItem(lsTest, lsTest);
+		localStorage.removeItem(lsTest);
+		return true;
+	}
+	catch(e) {
+		return false;
+	}
+}
+
 var clayVersions = [
 	'Select Version',
 	'2.14.2',
@@ -14,28 +26,6 @@ var clayVersions = [
 	'2.3.4',
 	'2.1.12',
 	'2.0.3',
-	'2.0.0-rc.11',
-	'2.0.0-rc.10',
-	'2.0.0-rc.4',
-	'2.0.0-rc.3',
-	'2.0.0-rc.2',
-	'2.0.0-rc.1',
-	'2.0.0-rc.0',
-	'2.0.0-beta.8',
-	'2.0.0-beta.6',
-	'2.0.0-beta.5',
-	'2.0.0-beta.4',
-	'2.0.0-beta.3',
-	'2.0.0-beta.2',
-	'2.0.0-beta.1',
-	'2.0.0-alpha.11',
-	'2.0.0-alpha.10',
-	'2.0.0-alpha.9',
-	'2.0.0-alpha.8',
-	'2.0.0-alpha.7',
-	'2.0.0-alpha.6',
-	'2.0.0-alpha.5',
-	'2.0.0-alpha.4',
 ];
 
 document.addEventListener('DOMContentLoaded', function(event) {
@@ -44,14 +34,39 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	for (var i = 0; i < clayVersions.length; i++) {
 		var optionEl = document.createElement('option');
 		var optionElText = document.createTextNode(clayVersions[i]);
+		var additionalText = '';
+
+		optionEl.setAttribute('data-version', clayVersions[i]);
+
+		if (clayVersions[i] === '2.1.12') {
+			additionalText =  ' (7.1.0 GA1)';
+		}
+		else if (clayVersions[i] === '2.3.4') {
+			additionalText =  ' (7.1.1 GA2)';
+		}
+		else if (clayVersions[i] === '2.4.1') {
+			additionalText =  ' (7.1.2 GA3)';
+		}
+		else if (clayVersions[i] === '2.9.0') {
+			additionalText = ' (7.1.3 GA4)';
+		}
+		else if (clayVersions[i] === '2.14.0') {
+			additionalText = ' (7.2.0 B3)';
+		}
+
+		optionElText.nodeValue = clayVersions[i] + additionalText;
 
 		optionEl.appendChild(optionElText);
 		clayVersionList.appendChild(optionEl);
 	}
 
 	clayVersionList.addEventListener('change', function(event) {
-		var selectedText = this.options[this.options.selectedIndex].text;
+		var version = this.options[this.options.selectedIndex].getAttribute('data-version');
 
-		window.location.href = './v' + selectedText;
+		if (localStorageAvailable()) {
+			localStorage.setItem('nate.lexiconHref', window.location.origin + '/lexicon/v' + version + '/css/site/site-atlas-font-awesome.css');
+		}
+
+		window.location.href = './v' + version;
 	});
 });
