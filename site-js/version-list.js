@@ -28,6 +28,15 @@ var clayVersions = [
 	'2.0.3',
 ];
 
+var portalClayVersions = {
+	'2.1.12': '(7.1.0 GA1)',
+	'2.3.4': '(7.1.1 GA2)',
+	'2.4.1': '(7.1.2 GA3)',
+	'2.9.0': '(7.1.3 GA4)',
+	'2.14.0': '(7.2.0 B3)',
+	'2.14.2': '(7.2.0 RC2)',
+};
+
 document.addEventListener('DOMContentLoaded', function(event) {
 	var clayVersionList = document.getElementById('clayVersionList');
 
@@ -38,20 +47,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 		optionEl.setAttribute('data-version', clayVersions[i]);
 
-		if (clayVersions[i] === '2.1.12') {
-			additionalText =  ' (7.1.0 GA1)';
-		}
-		else if (clayVersions[i] === '2.3.4') {
-			additionalText =  ' (7.1.1 GA2)';
-		}
-		else if (clayVersions[i] === '2.4.1') {
-			additionalText =  ' (7.1.2 GA3)';
-		}
-		else if (clayVersions[i] === '2.9.0') {
-			additionalText = ' (7.1.3 GA4)';
-		}
-		else if (clayVersions[i] === '2.14.0') {
-			additionalText = ' (7.2.0 B3)';
+		if (portalClayVersions[clayVersions[i]]) {
+			additionalText = ' ' + portalClayVersions[clayVersions[i]];
 		}
 
 		optionElText.nodeValue = clayVersions[i] + additionalText;
