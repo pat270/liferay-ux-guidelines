@@ -12,6 +12,7 @@ function localStorageAvailable() {
 
 var clayVersions = [
 	'Select Version',
+	'2.16.1',
 	'2.15.0',
 	'2.14.2',
 	'2.14.0',
