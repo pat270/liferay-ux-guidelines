@@ -12,6 +12,7 @@ function localStorageAvailable() {
 
 var clayVersions = [
 	'Select Version',
+	'2.15.0',
 	'2.14.2',
 	'2.14.0',
 	'2.13.0',
@@ -29,6 +30,7 @@ var clayVersions = [
 ];
 
 var portalClayVersions = {
+	'2.15.1': '(7.2.0 GA1)',
 	'2.1.12': '(7.1.0 GA1)',
 	'2.3.4': '(7.1.1 GA2)',
 	'2.4.1': '(7.1.2 GA3)',
