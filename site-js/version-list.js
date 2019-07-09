@@ -12,6 +12,7 @@ function localStorageAvailable() {
 
 var clayVersions = [
 	'Select Version',
+	'2.16.2',
 	'2.15.1',
 	'2.15.0',
 	'2.14.2',
@@ -32,12 +33,12 @@ var clayVersions = [
 
 var portalClayVersions = {
 	'2.15.1': '(7.2.0 GA1)',
-	'2.1.12': '(7.1.0 GA1)',
-	'2.3.4': '(7.1.1 GA2)',
-	'2.4.1': '(7.1.2 GA3)',
-	'2.9.0': '(7.1.3 GA4)',
-	'2.14.0': '(7.2.0 B3)',
 	'2.14.2': '(7.2.0 RC2)',
+	'2.14.0': '(7.2.0 B3)',
+	'2.9.0': '(7.1.3 GA4)',
+	'2.4.1': '(7.1.2 GA3)',
+	'2.3.4': '(7.1.1 GA2)',
+	'2.1.12': '(7.1.0 GA1)',
 };
 
 document.addEventListener('DOMContentLoaded', function(event) {
