@@ -1,0 +1,790 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Clay - a3-text-input</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../css/site/site-main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../../js/popper.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container-fluid">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
+				<button class="animated-toggle btn btn-primary d-md-none hidden-sm-up" id="claySiteMobileNavigationToggle" type="button">
+					<span class="docs-icon-bar docs-icon-bar-1"></span>
+					<span class="docs-icon-bar docs-icon-bar-2"></span>
+					<span class="docs-icon-bar docs-icon-bar-3"></span>
+				</button>
+
+				<h4 class="title"><a href="../../..">Clay CSS</a> <span class="label label-primary lexicon-version">v2.18.1</span></h4>
+
+				<button class="btn btn-primary btn-sm d-sm-none d-md-block" data-nav-hidden="false" id="siteNavToggle" type="button">Hide Nav</button>
+
+<div class="dropdown" id="siteConfig">
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+			<use xlink:href="../../images/icons/icons.svg#cog"></use>
+		</svg>
+	</button>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+						<span class="custom-control-label">
+							<span class="custom-control-label-text">Show Atlas</span>
+						</span>
+					</label>
+				</div>
+			</div>
+			<div class="dropdown-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+						<span class="custom-control-label">
+							<span class="custom-control-label-text">Show Site CSS</span>
+						</span>
+					</label>
+				</div>
+			</div>
+
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
+</div>
+			</div>
+		</header>
+
+		<section class="container-fluid main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
+			
+
+		<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../">Home</a>
+</li>
+<li class=""><span class="nav-title">API</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/api-mixins">Clay CSS Mixins</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Colors</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/colors">Colors</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/card-interactive">Card Interactive</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/cards">Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns-autocomplete">Dropdowns (Autocomplete)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns-drill-down">Dropdowns (Drill Down)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-autocomplete">Form Elements (Autocomplete)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-time">Form Elements (Clay Time)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-date-picker">Form Elements (Date Picker)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-multiselect">Form Elements (Multi Select)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-range">Form Elements (Range)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-group">Form Group</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/grid">Grid</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-aspect-ratio">Images (Aspect Ratios)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/links">Links</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/menu-bar-vertical">Menubar (Vertical)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/modals">Modals</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-pills">Nav Pills</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-underline">Nav Underline</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/application-bar">Navbar (Application Bar)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/management-bar">Navbar (Management Bar)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navigation-bar">Navbar (Navigation Bar)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/panels">Panels</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sheet">Sheet</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tbar">Tbar (Toolbar)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (JS)</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Elements</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/typography">Typography</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Extending Components</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/test-card-custom-fields-view">Card Custom Fields View</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-card-type-template">Card Type Template Use Case</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-card-view-template">Card View Template</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-card-view-template-info-panel">Card View Template (Info Panel)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-upload-documents">Documents Upload</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-form-group-sm">Form Group Sm</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-form-hierarchy">Form Hierarchy</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-labels">Labels</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-list-view-template">List View Template</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-list-view-template-info-panel">List View Template (Info Panel)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-localizable-input-field">Localizable Input Field</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-subnav-tbar">Subnav Tbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-table-custom-field-list">Table Custom Field List</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-table-valign">Table Valign</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-table-view-template">Table View Template</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-table-view-template-info-panel">Table View Template (Info Panel)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-toggle-switch-old">Toggle Switch (Old)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-users-and-organizations">Users and Organizations</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-users-and-organizations-user-card">Users and Organizations (User Card)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/test-users-and-organizations-form-vertical-navigation">Users and Organizations Form Vertical Navigation</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/a1-getting-started">a1-getting-started</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/a2-buttons">a2-buttons</a>
+</li>
+<li class="active"><a class="nav-title" href="../../content/a3-text-input">a3-text-input</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/a4-checkbox-radio">a4-checkbox-radio</a>
+</li>
+<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">GitHub</a>
+</ul>
+	</div>
+</nav>
+
+	<div class="" id="mainContent">
+		<h1 class="page-title mt-5" id="beginContent" tabindex="-1">
+			a3-text-input
+
+			
+		</h1>
+
+		<h1 id="text-input">Text Input</h1>
+<p>This recipe will modify the input class, <code>.form-control</code>, in Clay CSS to match Material Design&#x2019;s Filled Text Field shown in <a href="https://material.io/components/text-fields/">https://material.io/components/text-fields/</a>. The Material Design site uses several HTML elements with JavaScript to create the style. We will try to duplicate it using only the <code>input</code> element.</p>
+<p>We won&#x2019;t be able to duplicate floating input labels reliably without changing the markup so it won&#x2019;t be covered here.</p>
+<p>A list of references for this recipe:</p>
+<ul>
+<li><a href="https://material.io/components/text-fields/">https://material.io/components/text-fields/</a></li>
+<li><a href="https://github.com/liferay/clay/blob/0568f0a1ffb82b0bc85321b10cb32ff5f68e2cc1/packages/clay-css/src/scss/mixins/_forms.scss#L83">clay-form-control-variant</a></li>
+</ul>
+<h2 id="form-control-input-">Form Control (Input)</h2>
+<p>The simplified Material Design styles for the default state are listed below:</p>
+<pre><code>.mdc-text-field__input {
+    border-bottom: 1px solid;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .009375em;
+    padding: 20px 16px 6px;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: rgba(0,0,0,.87);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    border-bottom-color: rgba(0,0,0,.42);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) {
+    background-color: #f5f5f5;
+}
+
+.mdc-text-field {
+    border-radius: 4px 4px 0 0;
+    height: 56px;
+}
+
+.mdc-line-ripple {
+    height: 2px;
+    transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1),opacity 180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mdc-text-field .mdc-line-ripple {
+    background-color: #6200ee;
+}
+
+.mdc-text-field::before {
+    transition: opacity 15ms linear,background-color 15ms linear;
+    z-index: 1;
+}
+</code></pre><p>We have the styles we need to update the default state of <code>form-control</code> in Clay CSS. HTML inputs are generally vertically centered by default with the exception of <code>textarea</code>, <code>select[multiple]</code>, and <code>select[size]</code>. Setting the height should cover most use cases and <code>$input-padding-y</code> should not need to be updated.</p>
+<p>In this case, Material Design sets a large value for padding-top to make space for floating labels. We will skip this for now. Setting <code>$input-padding-y</code> to 20px will cut off text on our <code>select</code> input we will update case by case as necessary.</p>
+<p>_/src/css/_clay_variables.scss_</p>
+<pre><code>$input-height: 3.5rem;
+
+$input-bg: $gray-100;
+$input-border-bottom-width: 0.0625rem;
+$input-border-left-width: 0;
+$input-border-right-width: 0;
+$input-border-top-width: 0;
+$input-border-color: rgba($black, 0.42);
+$input-border-radius: 0.25rem 0.25rem 0 0;
+$input-box-shadow: none;
+$input-color: rgba($black, 0.87);
+$input-padding-x: 1rem;
+</code></pre><p>Clay CSS doesn&#x2019;t have a variable to modify letter-spacing in <code>form-control</code>. We will need to update <code>_clay_custom.scss</code>. We can go a step further and add a <code>$input-letter-spacing</code> variable.</p>
+<p>We don&#x2019;t need to worry about namespacing the variable here because it follows the Bootstrap and Clay CSS naming pattern. If this is added in the future, this is exactly what it will do.</p>
+<p>_/src/css/_clay_variables.scss_</p>
+<pre><code>$input-letter-spacing: 0.009375em;
+</code></pre><p>_/src/css/_clay_custom.scss_</p>
+<pre><code>.form-control {
+    letter-spacing: $input-letter-spacing;
+}
+</code></pre><p>Material Design applies several transitions when state changes on the input. We can set them using the <code>$input-transition</code> variable. We will use background CSS properties to apply the ripple effect later.</p>
+<pre><code>$input-transition: background-color 15ms linear, background-position 180ms cubic-bezier(0.4, 0, 0.2, 1), background-size 180ms cubic-bezier(0.4, 0, 0.2, 1), border-color 180ms cubic-bezier(0.4, 0, 0.2, 1);
+</code></pre><h3 id="form-control-hover">Form Control Hover</h3>
+<p>Material Design&#x2019;s input hover styles are below:</p>
+<pre><code>.mdc-text-field:hover::before {
+    opacity: .04;
+}
+
+.mdc-text-field::before {
+    background-color: rgba(0,0,0,.87);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input:hover {
+    border-bottom-color: rgba(0,0,0,.87);
+}
+</code></pre><p>Clay CSS doesn&#x2019;t provide any variables for setting the hover state. We can leverage the mixin <a href="https://github.com/liferay/clay/blob/0568f0a1ffb82b0bc85321b10cb32ff5f68e2cc1/packages/clay-css/src/scss/mixins/_forms.scss#L83">clay-form-control-variant</a> to declare our styles. This will make it easier to redeclare focus and disabled states because the hover styles will win due to specificity. We can name the variable <code>$input</code>.</p>
+<p>_/src/css/_clay_variables.scss_</p>
+<pre><code>$input: (
+    hover-bg: $gray-200,
+    hover-border-color: rgba($black, 0.87),
+);
+</code></pre><p>_/src/css/_clay_custom.scss_</p>
+<pre><code>.form-control {
+    letter-spacing: $input-letter-spacing;
+
+    @include clay-form-control-variant($input);
+}
+</code></pre><h3 id="form-control-focus">Form Control Focus</h3>
+<p>Material Design&#x2019;s input focus styles are below:</p>
+<pre><code>.mdc-text-field.mdc-ripple-upgraded--background-focused::before, .mdc-text-field:not(.mdc-ripple-upgraded):focus::before {
+    opacity: .12;
+    transition-duration: 75ms;
+}
+
+.mdc-text-field::before, .mdc-text-field::after {
+    background-color: rgba(0,0,0,.87);
+}
+</code></pre><p>Since we added the selector <code>.form-control:hover</code> in the previous example, we will need to redeclare background-color and border-color for focus and disabled styles. We will also add our ripple effect using background properties. We don&#x2019;t need to redeclare <code>focus-box-shadow</code> because we didn&#x2019;t overwrite the box-shadow property in our hover state.</p>
+<p>Unfortunately, <code>clay-form-control-variant</code> doesn&#x2019;t have the option of passing in <code>focus-bg-size</code>. We will write that one manually.</p>
+<p>_/src/css/_clay_variables.scss_</p>
+<pre><code>$input-focus-bg: $gray-300;
+$input-focus-border-color: transparent;
+$input-focus-box-shadow: none;
+
+$input: (
+    bg-position: 53% calc(100% + #{$input-border-bottom-width}),
+    bg-repeat: no-repeat,
+    bg-size: 50% 2px,
+    hover-bg: $gray-200,
+    hover-border-color: rgba($black, 0.87),
+    focus-bg: $input-focus-bg,
+    focus-bg-image: linear-gradient($primary-a700 100%, transparent 0%),
+    focus-border-color: $input-focus-border-color,
+);
+</code></pre><p>_/src/css/_clay_custom.scss_</p>
+<pre><code>.form-control {
+    letter-spacing: $input-letter-spacing;
+
+    @include clay-form-control-variant($input);
+
+    &amp;:focus,
+    &amp;.focus {
+        background-size: 100% 2px;
+    }
+}
+</code></pre><h3 id="form-control-disabled">Form Control Disabled</h3>
+<p>Material Design&#x2019;s input disabled styles are below:</p>
+<pre><code>.mdc-text-field--disabled {
+    background-color: #fafafa;
+    border-bottom: none;
+    pointer-events: none;
+}
+
+.mdc-text-field--disabled .mdc-text-field__input {
+    color: rgba(0,0,0,.37);
+}
+
+.mdc-text-field--disabled .mdc-text-field__input {
+    border-bottom-color: rgba(0,0,0,.06);
+}
+</code></pre><p>Our <code>.form-control:hover</code> styles will overwrite these when hovering over disabled inputs. We will need to output these in <code>_clay_custom.scss</code> via the <code>clay-form-control-variant</code> mixin.</p>
+<p>_/src/css/_clay_variables.scss_</p>
+<pre><code>$input-disabled-bg: $gray-50;
+$input-disabled-border-color: rgba($black, 0.06);
+$input-disabled-color: rgba($black, 0.37);
+
+$input: (
+    bg-position: 53% calc(100% + #{$input-border-bottom-width}),
+    bg-repeat: no-repeat,
+    bg-size: 50% 2px,
+    hover-bg: $gray-200,
+    hover-border-color: rgba($black, 0.87),
+    focus-bg: $input-focus-bg,
+    focus-bg-image: linear-gradient($primary-a700 100%, transparent 0%),
+    focus-border-color: $input-focus-border-color,
+    disabled-bg: $input-disabled-bg,
+    disabled-border-color: $input-disabled-border-color,
+    disabled-color: $input-disabled-color,
+);
+</code></pre><p>_/src/css/_clay_custom.scss_</p>
+<pre><code>.form-control {
+    letter-spacing: $input-letter-spacing;
+
+    @include clay-form-control-variant($input);
+
+    &amp;:focus,
+    &amp;.focus {
+        background-size: 100% 2px;
+    }
+}
+</code></pre><h3 id="form-control-readonly">Form Control Readonly</h3>
+<p>The Material Design site has no readonly styles, but there is some documentation for it.</p>
+<blockquote>
+<p>Read-only text fields display pre-filled text that the user cannot edit. A read-only text field is styled the same as a regular text field and is clearly labeled as read-only.</p>
+</blockquote>
+<p>Clay CSS updated <code>.form-control[readonly]</code> to use the <code>clay-form-control-variant</code> mixin in 2.18.2. In 2.18.1, we only have the variables below available:</p>
+<pre><code>$input-readonly-bg: null !default;
+$input-readonly-focus-bg: null !default;
+$input-readonly-border-color: null !default;
+$input-readonly-focus-border-color: null !default;
+$input-readonly-color: null !default;
+$input-readonly-focus-color: null !default;
+$input-readonly-cursor: null !default;
+</code></pre><p>We can copy what was done in <a href="https://github.com/liferay/clay/blob/210065f4d98b02f217570611312b600b5902c4a4/packages/clay-css/src/scss/components/_forms.scss#L377">2.18.2</a> so our theme will be future proofed. We can disregard the variables above. They will remain in the project to keep backward compatibility for older versions.</p>
+<p>_/src/css/_clay_variables.scss_</p>
+<pre><code>$input-readonly: (
+    bg: $input-bg,
+    border-color: $input-border-color,
+    hover-bg: $input-bg,
+    hover-border-color: $input-border-color,
+    focus-bg: $input-bg,
+);
+</code></pre><p>_/src/css/_clay_custom.scss_</p>
+<pre><code>// This needs to be removed once upgraded to 2.18.2
+
+.form-control[readonly] {
+    @include clay-form-control-variant($input-readonly);
+}
+</code></pre><h2 id="input-sizing">Input Sizing</h2>
+<h3 id="form-control-sm">Form Control Sm</h3>
+<p>Material Design has dense text fields that should be 40dp tall. We will just use 40px here.</p>
+<pre><code>$input-border-radius-sm: 0.25rem 0.25rem 0 0;
+$input-height-sm: 2.5rem;
+$input-padding-x-sm: 1rem;
+</code></pre><h3 id="form-control-lg">Form Control Lg</h3>
+<p>There is no large text field equivalent, lets use 80px.</p>
+<pre><code>$input-border-radius-lg: 0.25rem 0.25rem 0 0;
+$input-height-lg: 5rem;
+$input-padding-x-lg: 1.25rem;
+</code></pre><h2 id="select">Select</h2>
+<p>We can copy text field with trailing icon here. The first thing we should do is change the icon to match. Clay CSS comes with several Sass functions that help with converting an SVG to a background-image. One function is <a href="https://github.com/liferay/clay/blob/0568f0a1ffb82b0bc85321b10cb32ff5f68e2cc1/packages/clay-css/src/scss/functions/_global-functions.scss#L179">clay-icon</a>. It takes a Lexicon Icon name and color as parameters, then it returns a data uri to be used in background-image.</p>
+<p>The <code>_global-functions.scss</code> partial is imported right after <code>_clay_variables.scss</code> in DXP. We will have to import it at the top of <code>_clay_variables.scss</code> to have access to them.</p>
+<p>One thing to note about the select is there is no ripple effect on focus, we will have to get it to apply with multiple background-images. There is also no variable in <code>$input-select-*</code> that corresponds to background-size. We will have to copy the selector and overwrite in <code>_clay_custom.scss</code>.</p>
+<p>_/src/css/_clay_variables.scss_</p>
+<pre><code>@import &quot;clay/functions/_global-functions&quot;;
+
+$input-select-icon: clay-icon(caret-bottom, $gray-600), none;
+$input-select-bg-position: right $input-padding-x center, map-get($input, bg-position);
+$input-select-bg-size: 1rem, map-get($input, bg-size);
+$input-select-padding-right: 2.5rem;
+
+$input-select-icon-focus: clay-icon(caret-bottom, $gray-600), map-get($input, focus-bg-image);
+
+$input-select-icon-disabled: clay-icon(caret-bottom, $input-disabled-color), none;
+</code></pre><p>_/src/css/_clay_custom.scss_</p>
+<pre><code>select.form-control:not([multiple]):not([size]),
+.form-control-select {
+    &amp;:focus,
+    &amp;.focus {
+        background-size: 1rem, 100% 2px;
+    }
+}
+</code></pre><h2 id="input-outline">Input Outline</h2>
+<p>Clay CSS only has one style of text input. To create Material Design&#x2019;s Outline Input in <a href="https://material.io/components/text-fields/">https://material.io/components/text-fields/</a>, we will need to create a modifier we can add to <code>.form-control</code>. The other option is to create a totally separate component like <code>.mdc-outline-input</code> without relying the <code>form-control</code> class.</p>
+<p>We will go the modifier route since it might be easier to apply if you are using DXP taglibs or Clay Components.</p>
+<p>Material Design&#x2019;s Outline Input default styles simplified:</p>
+<pre><code>.mdc-text-field--outlined .mdc-text-field__input {
+    background-color: transparent;
+    padding: 12px 16px 14px;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: rgba(0,0,0,.87);
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading, .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch, .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+    border-color: rgba(0,0,0,.38);
+}
+
+.mdc-notched-outline__leading, .mdc-notched-outline__notch, .mdc-notched-outline__trailing {
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+}
+
+.mdc-notched-outline__trailing {
+    border-left: none;
+    border-right: 1px solid;
+}
+
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading {
+    border-radius: 4px 0 0 4px;
+}
+
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing {
+    border-radius: 0 4px 4px 0;
+}
+</code></pre><p>We will create a class <code>.mdc-form-control-outline</code> that will be used with <code>.form-control</code> to create our outline variant. The markup should look like <code>&lt;input class=&quot;form-control mdc-form-control-outline&quot; type=&quot;text&quot; /&gt;</code>. We can use the mixin <a href="https://github.com/liferay/clay/blob/2.x/packages/clay-css/src/scss/mixins/_forms.scss#L83">clay-form-control-variant</a> to create our component.</p>
+<p>We are namespacing the class with <code>mdc-</code> just to be safe. In the future, Bootstrap or the Clay Team may implement something with the name <code>form-control-outline</code> which might cause conflicts.</p>
+<p>_/src/css/_clay_variables.scss_</p>
+<pre><code>$mdc-input-outline: (
+    bg: $white,
+    border-radius: 4px,
+    border-width: 1px,
+    transition: none,
+    hover-bg: $white,
+    focus-bg: $white,
+    focus-border-color: $primary-a700,
+    focus-box-shadow: inset 0 0 0 1px $primary-a700,
+    disabled-bg: $white,
+    disabled-border-color: $input-disabled-border-color,
+    disabled-color: $input-disabled-color,
+);
+</code></pre><p>_/src/css/_clay_custom.scss_</p>
+<pre><code>.mdc-form-control-outline {
+    @include clay-form-control-variant($mdc-input-outline);
+}
+</code></pre><h2 id="conclusion">Conclusion</h2>
+<p>What the input section should look like:</p>
+<p>_/src/css/_clay_variables.scss_</p>
+<pre><code>@import &quot;clay/functions/_global-functions&quot;;
+
+...
+
+$input-height: 3.5rem;
+
+$input-bg: $gray-100;
+$input-border-bottom-width: 0.0625rem;
+$input-border-left-width: 0;
+$input-border-right-width: 0;
+$input-border-top-width: 0;
+$input-border-color: rgba($black, 0.42);
+$input-border-radius: 0.25rem 0.25rem 0 0;
+$input-box-shadow: none;
+$input-color: rgba($black, 0.87);
+$input-letter-spacing: 0.009375em;
+$input-padding-x: 1rem;
+
+$input-transition: background-color 15ms linear, background-position 180ms cubic-bezier(0.4, 0, 0.2, 1), background-size 180ms cubic-bezier(0.4, 0, 0.2, 1), border-color 180ms cubic-bezier(0.4, 0, 0.2, 1);
+
+$input-focus-bg: $gray-300;
+$input-focus-border-color: transparent;
+$input-focus-box-shadow: none;
+
+$input-disabled-bg: $gray-50;
+$input-disabled-border-color: rgba($black, 0.06);
+$input-disabled-color: rgba($black, 0.37);
+
+$input: (
+    bg-position: 53% calc(100% + #{$input-border-bottom-width}),
+    bg-repeat: no-repeat,
+    bg-size: 50% 2px,
+    hover-bg: $gray-200,
+    hover-border-color: rgba($black, 0.87),
+    focus-bg: $input-focus-bg,
+    focus-bg-image: linear-gradient($primary-a700 100%, transparent 0%),
+    focus-border-color: $input-focus-border-color,
+    disabled-bg: $input-disabled-bg,
+    disabled-border-color: $input-disabled-border-color,
+    disabled-color: $input-disabled-color,
+);
+
+$input-readonly: (
+    bg: $input-bg,
+    border-color: $input-border-color,
+    hover-bg: $input-bg,
+    hover-border-color: $input-border-color,
+    focus-bg: $input-bg,
+);
+
+$input-border-radius-sm: 0.25rem 0.25rem 0 0;
+$input-height-sm: 2.5rem;
+$input-padding-x-sm: 1rem;
+
+$input-border-radius-lg: 0.25rem 0.25rem 0 0;
+$input-height-lg: 5rem;
+$input-padding-x-lg: 1.25rem;
+
+$input-select-icon: clay-icon(caret-bottom, $gray-600), none;
+$input-select-bg-position: right $input-padding-x center, map-get($input, bg-position);
+$input-select-bg-size: 1rem, map-get($input, bg-size);
+$input-select-padding-right: 2.5rem;
+
+$input-select-icon-focus: clay-icon(caret-bottom, $gray-600), map-get($input, focus-bg-image);
+
+$input-select-icon-disabled: clay-icon(caret-bottom, $input-disabled-color), none;
+
+$mdc-input-outline: (
+    bg: $white,
+    border-radius: 4px,
+    border-width: 1px,
+    transition: none,
+    hover-bg: $white,
+    focus-bg: $white,
+    focus-border-color: $primary-a700,
+    focus-box-shadow: inset 0 0 0 1px $primary-a700,
+    disabled-bg: $white,
+    disabled-border-color: $input-disabled-border-color,
+    disabled-color: $input-disabled-color,
+);
+</code></pre><p>_/src/css/_clay_custom.scss_</p>
+<pre><code>.form-control {
+    letter-spacing: $input-letter-spacing;
+
+    @include clay-form-control-variant($input);
+
+    &amp;:focus,
+    &amp;.focus {
+        background-size: 100% 2px,
+    }
+}
+
+select.form-control:not([multiple]):not([size]),
+.form-control-select {
+    &amp;:focus,
+    &amp;.focus {
+        background-size: 1rem, 100% 2px;
+    }
+}
+
+.mdc-form-control-outline {
+    @include clay-form-control-variant($mdc-input-outline);
+}
+
+// This needs to be removed once upgraded to 2.18.2
+
+.form-control[readonly] {
+    @include clay-form-control-variant($input-readonly);
+}
+</code></pre>
+	</div>
+
+		</section>
+	</div>
+
+	<script src="../../js/site/toggle_css.js"></script>
+	<script src="../../js/svg4everybody.js" type="text/javascript"></script>
+
+	<script>
+		svg4everybody({
+			polyfill: true
+		});
+
+		(function () {
+			if (!localStorage.getItem('nate.lexiconHref')) {
+				var version = window.location.href.match(/\/v(.*)\/c/)[1];
+				localStorage.setItem('nate.lexiconHref', window.location.origin + '/lexicon/v' + version + '/css/site/site-atlas-font-awesome.css');
+			}
+		})();
+
+		$(function() {
+			var body = $('body');
+			var headerTopBar = $('#headerTopBar');
+
+			headerTopBar.find('#claySiteMobileNavigationToggle').on(
+				'click',
+				function(event) {
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
+
+					event.preventDefault();
+
+					mainNavContainer.on(
+						transitionEnd,
+						function(event) {
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
+
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
+						}
+					);
+
+					mainNavContainer.addClass('main-nav-transition');
+
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
+				}
+			);
+		});
+	</script>
+	</body>
+</html>
