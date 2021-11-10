@@ -1,0 +1,171 @@
+// table element
+
+$c-table-base: () !default;
+$c-table-base: map-merge(
+	(
+		border-collapse: collapse,
+	),
+	$c-table-base
+);
+
+// th
+
+$c-th-base: () !default;
+$c-th-base: map-merge(
+	(
+		height: 56px,
+		text-align: left,
+	),
+	$c-th-base
+);
+
+// .table-responsive
+
+$table-responsive-margin-bottom: 1.5rem !default;
+
+// .table
+
+$table-bg: null !default;
+$table-border-color: $gray-100 !default;
+$table-border-width: 0 !default;
+$table-color: $black !default;
+$table-font-size: 1rem !default;
+$table-margin-bottom: 0 !default;
+
+// tr.table-hover
+
+$table-hover-bg: $primary-l3 !default;
+$table-hover-color: $black !default;
+
+// tr.table-active
+
+$table-active-bg: $primary-l2 !default;
+
+// tr.table-disabled
+
+$table-disabled-bg: $white !default;
+$table-disabled-color: #acacac !default;
+$table-disabled-cursor: $disabled-cursor !default;
+$table-disabled-pointer-events: none !default;
+
+// .table-striped
+
+$table-accent-bg: $brand-primary-l5 !default;
+
+$table-striped-order: odd !default;
+
+$table-head-color: $gray-800 !default;
+$table-head-font-size: 0.875rem !default;
+$table-head-font-weight: $font-weight-bold !default;
+$table-head-height: 56px !default;
+
+// .table-list
+
+$table-list-border-color: $gray-100 !default;
+$table-list-border-x-width: 0 !default;
+$table-list-border-y-width: 0 !default;
+
+$c-table-list: () !default;
+$c-table-list: map-merge(
+	(
+		border-collapse: separate,
+		border-style: solid,
+		border-width: $table-list-border-y-width $table-list-border-x-width,
+		border-radius: 8px,
+		color: $black,
+		font-size: 1rem,
+		margin-bottom: $table-list-border-y-width,
+		margin-top: $c-unset,
+	),
+	$c-table-list
+);
+
+$table-list-accent-bg: $gray-100 !default;
+$table-list-hover-bg: clay-lighten($component-active-bg, 44.9) !default;
+$table-list-active-bg: clay-lighten($component-active-bg, 44.9) !default;
+
+$table-list-disabled-color: $gray-500 !default;
+
+$table-list-divider-padding-x: 0.75rem !default; // 12px
+$table-list-divider-padding-y: 0.4375rem !default; // 7px
+
+// .table-list thead
+
+$table-list-head-bg: $white !default;
+$table-list-head-font-size: 0.875rem !default;
+$table-list-head-font-weight: $font-weight-bold !default;
+$table-list-head-height: 56px !default;
+$table-list-head-vertical-alignment: middle !default;
+
+// .table-list thead th a
+
+$table-list-head-link: () !default;
+$table-list-head-link: map-deep-merge((
+	color: inherit,
+	hover: (
+		color: $black,
+	),
+), $table-list-head-link);
+
+// Table List Title
+
+$table-list-title: () !default;
+$table-list-title: map-deep-merge(
+	(
+		color: $c-unset,
+		font-size: $c-unset,
+		line-height: 1.45,
+	),
+	$table-list-title
+);
+
+$table-list-title-link: () !default;
+$table-list-title-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $c-unset,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$table-list-title-link
+);
+
+// Table List Link
+
+$table-list-link: () !default;
+$table-list-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$table-list-link
+);
+
+// Table List Action Link
+
+$table-list-action-link: () !default;
+$table-list-action-link: map-deep-merge(
+	(
+		color: $gray-600,
+		font-size: 1rem,
+		transition: #{color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out},
+		hover-bg: rgba(0, 0, 0, 0.02),
+		hover-color: $gray-900,
+		focus-bg: rgba(0, 0, 0, 0.02),
+		focus-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+		active-bg: rgba(0, 0, 0, 0.04),
+	),
+	$table-list-action-link
+);

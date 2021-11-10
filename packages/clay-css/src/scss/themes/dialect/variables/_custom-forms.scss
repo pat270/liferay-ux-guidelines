@@ -1,0 +1,331 @@
+// Custom Form
+
+$custom-forms-transition: background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out !default;
+
+// Custom Control Indicator
+
+$custom-control-indicator-size: 1rem !default;
+
+$custom-control-indicator-position-top: 0.25rem !default;
+
+// .custom-control
+
+$custom-control-gutter: 0.5rem !default;
+$custom-control-spacer-x: 1rem !default;
+
+$custom-control: () !default;
+$custom-control: map-deep-merge(
+	(
+		cursor: $c-unset,
+		display: block,
+		line-height: 1,
+		margin-bottom: 0.5rem,
+		margin-top: $c-unset,
+		min-height:  $custom-control-indicator-size + ($custom-control-indicator-position-top * 2),
+		position: relative,
+		text-align: left,
+		label: (
+			display: inline-block,
+			margin-left: 0,
+			position: relative,
+		),
+	),
+	$custom-control
+);
+
+// .custom-control-label
+
+$custom-control-label: () !default;
+$custom-control-label: map-deep-merge(
+	(
+		color: $c-unset,
+		cursor: pointer,
+		font-size: 0.8125rem,
+		font-weight: $font-weight-bold,
+		line-height: map-get($custom-control, min-height),
+		margin-bottom: 0,
+		position: static,
+		vertical-align: top,
+		before: (
+			background-color: $white,
+			border-color: $primary,
+			border-style: solid,
+			border-width: 0.0625rem,
+			box-shadow: $c-unset,
+			content: '',
+			display: block,
+			float: left,
+			font-size: $custom-control-indicator-size,
+			height: $custom-control-indicator-size,
+			left: 0,
+			position: relative,
+			top: $custom-control-indicator-position-top,
+			transition: clay-enable-transitions($custom-forms-transition),
+			width: $custom-control-indicator-size,
+			z-index: 2,
+		),
+		after: (
+			background: no-repeat 50% / 50% 50%,
+			border-radius: 100px,
+			content: '',
+			display: block,
+			height: $custom-control-indicator-size,
+			left: 0,
+			position: absolute,
+			top: $custom-control-indicator-position-top,
+			transition: $custom-forms-transition,
+			width: $custom-control-indicator-size,
+			z-index: 1,
+		),
+	),
+	$custom-control-label
+);
+
+$custom-control-label-text: () !default;
+$custom-control-label-text: map-deep-merge(
+	(
+		padding-left: 0.75rem,
+	),
+	$custom-control-label-text
+);
+
+$custom-control-label-text-small: () !default;
+$custom-control-label-text-small: map-deep-merge(
+	(
+		font-size: 100%,
+	),
+	$custom-control-label-text-small
+);
+
+// .custom-control-input
+
+$custom-control-input: () !default;
+$custom-control-input: map-deep-merge(
+	(
+		cursor: $link-cursor,
+		height: 1.5rem,
+		left: 0,
+		opacity: 0,
+		position: absolute,
+		top: 0,
+		width: 100%,
+		z-index: 3,
+		hover: (
+			custom-control-label: (
+				before: (
+					border-color: $primary-d1,
+				),
+				after: (
+ 					background-color: rgba($primary, 0.07),
+ 					transform: scale(2.5),
+				),
+			),
+		),
+		focus: (
+			custom-control-label: (
+				before: (
+					border-color: $primary-d1,
+					box-shadow: $c-unset,
+				),
+				after: (
+					background-color: rgba($primary, 0.07),
+					transform: scale(2.5),
+				),
+			),
+		),
+		active: (
+			custom-control-label: (
+				before: (
+					background-color: $white,
+					border-color: $primary-d2,
+					box-shadow: $c-unset,
+					color: $component-active-color,
+				),
+				after: (
+					background-color: rgba($primary, 0.1),
+				),
+			),
+		),
+		disabled: (
+			custom-control-label: (
+				color: $c-unset,
+				cursor: $disabled-cursor,
+				before: (
+					background-color: $white,
+					border-color: $primary-l1,
+					box-shadow: none,
+				),
+				after: (
+					content: normal,
+				),
+			),
+		),
+		checked: (
+			custom-control-label: (
+				before: (
+					background-color: $primary,
+					border-color: $primary,
+					box-shadow: $c-unset,
+					color: $white,
+				),
+			),
+			hover: (
+				custom-control-label: (
+					before: (
+						background-color: $primary-d1,
+						border-color: transparent,
+					),
+				),
+			),
+			active: (
+				custom-control-label: (
+					before: (
+						background-color: $primary-d2,
+						border-color: transparent,
+					),
+				),
+			),
+			disabled: (
+				cursor: $disabled-cursor,
+				custom-control-label: (
+					before: (
+						background-color: $white,
+						box-shadow: none,
+					),
+				),
+			),
+		),
+	),
+	$custom-control-input
+);
+
+// Custom Control Primary
+
+$custom-control-primary-label-text: () !default;
+$custom-control-primary-label-text: map-deep-merge(
+	(
+		font-weight: $font-weight-bold,
+	),
+	$custom-control-primary-label-text
+);
+
+// .custom-checkbox
+
+$custom-checkbox: () !default;
+$custom-checkbox: map-deep-merge(
+	(
+		custom-control-input: (
+			custom-control-label: (
+				before: (
+					border-radius: clay-enable-rounded(0.125rem),
+				),
+			),
+			checked: (
+				custom-control-label: (
+					before: (
+						background-image: clay-icon(check-small, $white),
+						background-size: 100% 100%,
+					),
+					after: (
+						background-image: $c-unset,
+						background-size: $c-unset,
+					),
+				),
+				disabled: (
+					custom-control-label: (
+						before: (
+							background-color: $primary-l1,
+							border-color: $primary-l1,
+						),
+					),
+				),
+			),
+			indeterminate: (
+				custom-control-label: (
+					before: (
+						background-color: $component-active-bg,
+						background-image: clay-icon(hr, $white),
+						background-size: 100% 100%,
+						border-color: $primary-d2,
+						box-shadow: $c-unset,
+					),
+					after: (
+						background-image: $c-unset,
+						background-size: $c-unset,
+					),
+				),
+				hover: (
+					custom-control-label: (
+						before: (
+							background-color: $primary-d1,
+							border-color: transparent,
+						),
+					),
+				),
+				active: (
+					custom-control-label: (
+						before: (
+							background-color: $primary-d2,
+							border-color: transparent,
+						),
+					),
+				),
+				disabled: (
+					custom-control-label: (
+						before: (
+							background-color: $primary-l1,
+							border-color: $primary-l1,
+						),
+					),
+				),
+			),
+		),
+	),
+	$custom-checkbox
+);
+
+// .custom-radio
+
+$custom-radio: () !default;
+$custom-radio: map-deep-merge(
+	(
+		custom-control-input: (
+			custom-control-label: (
+				before: (
+					border-radius: 50%,
+				),
+			),
+			disabled: (
+				custom-control-label: (
+					before: (
+						border-color: $primary-l1,
+					),
+				),
+			),
+			checked: (
+				custom-control-label: (
+					before: (
+						background-image: clay-icon(circle, $white),
+						background-position: center,
+						background-repeat: no-repeat,
+						background-size: 8px 8px,
+					),
+					after: (
+						background-image: $c-unset,
+						background-size: $c-unset,
+					),
+				),
+				disabled: (
+					custom-control-label: (
+						before: (
+							background-color: $primary-l1,
+							border-color: $primary-l1,
+						),
+					),
+				),
+			),
+		),
+	),
+	$custom-radio
+);

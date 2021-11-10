@@ -1,0 +1,231 @@
+$badge-padding-x: 0 !default;
+$badge-padding-y: 0 !default;
+
+$badge: () !default;
+$badge: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded(10rem),
+		font-size: 0.8125rem,
+		font-weight: $font-weight-bold,
+		line-height: 1.1,
+		min-height: 8px,
+		min-width: 8px,
+		padding-bottom: $badge-padding-y,
+		padding-left: $badge-padding-x,
+		padding-right: $badge-padding-x,
+		padding-top: $badge-padding-y,
+		empty: (
+			display: $c-unset,
+		),
+		badge-item: (
+			padding: 0.25rem,
+		),
+	),
+	$badge
+);
+
+// .badge-item-before, .badge-item-after
+
+$badge-item-spacer-x: 0 !default;
+
+// .badge-pill
+
+$badge-pill-border-radius: $border-radius !default;
+$badge-pill-padding-x: 0.25rem !default; // 4px
+
+// .badge-primary
+
+$badge-primary: () !default;
+$badge-primary: map-deep-merge(
+	(
+		background-color: $primary,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $primary,
+				color: $white,
+			),
+			focus: (
+				background-color: $primary,
+				box-shadow: $c-unset,
+				color: $white,
+			),
+		),
+	),
+	$badge-primary
+);
+
+// .badge-secondary
+
+$badge-secondary: () !default;
+$badge-secondary: map-deep-merge(
+	(
+		background-color: $secondary-l3,
+		color: $gray-900,
+		href: (
+			hover: (
+				background-color: $secondary-l3,
+				color: $gray-900,
+			),
+			focus: (
+				background-color: $secondary-l3,
+				box-shadow: $c-unset,
+				color: $gray-900,
+			),
+		),
+		link: (
+			color: $gray-900,
+		),
+	),
+	$badge-secondary
+);
+
+// .badge-success
+
+$badge-success: () !default;
+$badge-success: map-deep-merge(
+	(
+		background-color: $success,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $success,
+				color: $white,
+			),
+			focus: (
+				background-color: $success,
+				box-shadow: $c-unset,
+				color: $white,
+			),
+		),
+	),
+	$badge-success
+);
+
+// .badge-info
+
+$badge-info: () !default;
+$badge-info: map-deep-merge(
+	(
+		background-color: $info,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $info,
+				color: $white,
+			),
+			focus: (
+				background-color: $info,
+				box-shadow: $c-unset,
+				color: $white,
+			),
+		),
+	),
+	$badge-info
+);
+
+// .badge-warning
+
+$badge-warning: () !default;
+$badge-warning: map-deep-merge(
+	(
+		background-color: $warning,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $warning,
+				color: $white,
+			),
+			focus: (
+				background-color: $warning,
+				box-shadow: $c-unset,
+				color: $white,
+			),
+		),
+	),
+	$badge-warning
+);
+
+// .badge-danger
+
+$badge-danger: () !default;
+$badge-danger: map-deep-merge(
+	(
+		background-color: $danger,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $danger,
+				color: $white,
+			),
+			focus: (
+				background-color: $danger,
+				box-shadow: $c-unset,
+				color: $white,
+			),
+		),
+	),
+	$badge-danger
+);
+
+// .badge-light
+
+$badge-light: () !default;
+$badge-light: map-deep-merge(
+	(
+		background-color: $light,
+		color: $gray-900,
+		href: (
+			hover: (
+				background-color: $light,
+				color: $gray-900,
+			),
+			focus: (
+				background-color: $light,
+				box-shadow: $c-unset,
+				color: $gray-900,
+			),
+		),
+		link: (
+			color: $gray-900,
+		),
+	),
+	$badge-light
+);
+
+// .badge-dark
+
+$badge-dark: () !default;
+$badge-dark: map-deep-merge(
+	(
+		background-color: $dark,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $dark,
+				color: $white,
+			),
+			focus: (
+				background-color: $dark,
+				box-shadow: $c-unset,
+				color: $white,
+			),
+		),
+	),
+	$badge-dark
+);
+
+$badge-palette: () !default;
+$badge-palette: map-deep-merge(
+	(
+		primary: $badge-primary,
+		secondary: $badge-secondary,
+		success: $badge-success,
+		info: $badge-info,
+		warning: $badge-warning,
+		danger: $badge-danger,
+		light: $badge-light,
+		dark: $badge-dark,
+	),
+	$badge-palette
+);

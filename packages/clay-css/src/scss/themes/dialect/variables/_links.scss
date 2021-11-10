@@ -1,0 +1,382 @@
+// .link-underlined in _components.scss
+
+$link-underlined: () !default;
+$link-underlined: map-deep-merge((
+	text-decoration: underline,
+	hover: (
+		text-decoration: underline,
+	),
+	single-link: (
+		text-decoration-line: underline,
+		text-decoration-skip-ink: none,
+		text-decoration-thickness: 2px,
+		text-underline-offset: 5px,
+		hover: (
+			text-decoration-line: underline,
+			text-decoration-skip-ink: none,
+			text-decoration-thickness: 2px,
+			text-underline-offset: 5px,
+		),
+	),
+),$link-underlined);
+
+// .link-lg in _components.scss
+
+$link-lg: () !default;
+$link-lg: map-deep-merge((
+	font-size: 1.25rem,
+	line-height: 1.75rem,
+	lexicon-icon: (
+		font-size: 0.75rem,
+	),
+	link-underlined: (
+		single-link: (
+			text-underline-offset: 7px,
+			hover: (
+				text-underline-offset: 7px,
+			),
+		),
+	),
+), $link-lg);
+
+$link-sm: () !default;
+$link-sm: map-deep-merge((
+	font-size: 0.875rem,
+	line-height: 1.25rem,
+	lexicon-icon: (
+		font-size: 0.5rem,
+	),
+	link-underlined: (
+		single-link: (
+			text-underline-offset: 4px,
+			hover: (
+				text-underline-offset: 4px,
+			),
+		),
+	),
+), $link-sm);
+
+// .single-link
+
+$single-link-font-weight: $font-weight-bold !default;
+
+$component-link: () !default;
+$component-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $gray-600,
+		transition: box-shadow 0.15s ease-in-out,
+		hover: (
+			color: clay-darken($gray-600, 15%),
+		),
+		focus: (
+			color: clay-darken($gray-600, 15%),
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+	),
+	$component-link
+);
+
+$link-primary: () !default;
+$link-primary: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $primary,
+		display: inline-block,
+		font-size: 1rem,
+		font-weight: $c-unset,
+		transition: box-shadow 0.15s ease-in-out,
+		hover: (
+			color: $primary-d1,
+		),
+		focus: (
+			color: $primary-d1,
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+		active: (
+			color: $primary-d2,
+		),
+		disabled: (
+			color: $primary-l1,
+		),
+		lexicon-icon: (
+			font-size: 0.625rem,
+		),
+	),
+	$link-primary
+);
+
+$link-secondary: () !default;
+$link-secondary: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $secondary-d2,
+		display: inline-block,
+		font-size: 1rem,
+		transition: box-shadow 0.15s ease-in-out,
+		hover: (
+			color: $secondary-d1,
+		),
+		focus: (
+			color: $secondary-d1,
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+		active: (
+			color: $secondary,
+		),
+		disabled: (
+			color: $secondary-l1,
+		),
+	),
+	$link-secondary
+);
+
+// Link Outline
+
+$link-outline: () !default;
+$link-outline: map-deep-merge(
+	(
+		align-items: center,
+		background-color: transparent,
+		border-color: transparent,
+		border-radius: 6px,
+		border-style: solid,
+		border-width: 1px,
+		display: inline-flex,
+		font-size: 1rem,
+		font-weight: $font-weight-bold,
+		justify-content: center,
+		line-height: $c-unset,
+		padding-bottom: 0.75rem,
+		padding-left: 0.4375rem,
+		padding-right: 0.4375rem,
+		padding-top: 0.75rem,
+		transition: #{color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+			border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out},
+		vertical-align: middle,
+		hover: (
+			text-decoration: none,
+		),
+		disabled-active: (
+			pointer-events: none,
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$link-outline
+);
+
+$link-outline-primary: () !default;
+$link-outline-primary: map-deep-merge(
+	(
+		border-color: $primary,
+		color: $primary,
+		hover: (
+			background-color: $primary-l3,
+			color: $primary,
+		),
+		focus: (
+			background-color: $primary-l3,
+			box-shadow: $component-focus-box-shadow,
+			color: $primary,
+			outline: 0,
+		),
+		btn-focus-box-shadow: $component-focus-box-shadow,
+		btn-focus-outline: 0,
+		active: (
+			background-color:
+				clay-lighten(clay-desaturate($primary, 42.05), 41.76),
+			color: $primary,
+		),
+		disabled: (
+			background-color: transparent,
+			box-shadow: none,
+			color: $primary,
+			cursor: $disabled-cursor,
+			opacity: 0.65,
+		),
+	),
+	$link-outline-primary
+);
+
+$link-outline-secondary: () !default;
+$link-outline-secondary: map-deep-merge(
+	(
+		border-color: $secondary-l2,
+		color: $secondary,
+		hover: (
+			background-color: rgba($gray-900, 0.03),
+			color: $gray-900,
+		),
+		focus: (
+			background-color: rgba($gray-900, 0.03),
+			box-shadow: $component-focus-box-shadow,
+			color: $gray-900,
+			outline: 0,
+		),
+		btn-focus-box-shadow: $component-focus-box-shadow,
+		btn-focus-outline: 0,
+		active: (
+			background-color: rgba($gray-900, 0.06),
+			color: $gray-900,
+		),
+		disabled: (
+			background-color: transparent,
+			box-shadow: none,
+			color: $secondary,
+			cursor: $disabled-cursor,
+			opacity: 0.65,
+		),
+	),
+	$link-outline-secondary
+);
+
+// Link Monospaced
+
+/// @deprecated as of v3.4.0 use the Sass map `$link-monospaced` instead
+
+$link-monospaced-size: $btn-monospaced-size-sm !default;
+
+$link-monospaced: () !default;
+$link-monospaced: map-deep-merge(
+	(
+		align-items: center,
+		display: inline-flex,
+		height: $link-monospaced-size,
+		justify-content: center,
+		overflow: hidden,
+		padding-bottom: 0,
+		padding-left: 0,
+		padding-right: 0,
+		padding-top: 0,
+		vertical-align: middle,
+		width: $link-monospaced-size,
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$link-monospaced
+);
+
+// Component Title
+
+$component-title: () !default;
+$component-title: map-deep-merge(
+	(
+		color: $gray-900,
+		font-size: 1rem,
+		font-weight: $headings-font-weight,
+		line-height: 1.25,
+		margin-bottom:
+			calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2),
+		margin-top: calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2),
+	),
+	$component-title
+);
+
+$component-title-link: () !default;
+$component-title-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $gray-900,
+		transition: box-shadow 0.15s ease-in-out,
+		hover: (
+			color: clay-darken($gray-900, 15%),
+		),
+		focus: (
+			color: clay-darken($gray-900, 15%),
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+	),
+	$component-title-link
+);
+
+// Component Subtitle
+
+$component-subtitle: () !default;
+$component-subtitle: map-deep-merge(
+	(
+		color: $gray-600,
+		margin-bottom: 0,
+		font-weight: $font-weight-semi-bold,
+		line-height: 1.45,
+	),
+	$component-subtitle
+);
+
+$component-subtitle-link: () !default;
+$component-subtitle-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $gray-600,
+		transition: box-shadow 0.15s ease-in-out,
+		hover: (
+			color: $gray-900,
+		),
+		focus: (
+			color: $gray-900,
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+	),
+	$component-subtitle-link
+);
+
+// Component Action
+
+$component-action: () !default;
+$component-action: map-deep-merge(
+	(
+		align-items: center,
+		background-color: transparent,
+		border-color: transparent,
+		border-radius: $border-radius-sm,
+		border-width: 0,
+		color: $gray-500,
+		display: inline-flex,
+		font-size: 1rem,
+		height: 1.5rem,
+		justify-content: center,
+		overflow: hidden,
+		padding: 0,
+		transition: #{color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+			border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out},
+		vertical-align: middle,
+		width: 1.5rem,
+		hover: (
+			background-color: $c-unset,
+			color: $gray-700,
+		),
+		focus: (
+			background-color: $c-unset,
+			box-shadow: $component-focus-box-shadow,
+			color: $gray-700,
+			outline: 0,
+		),
+		btn-focus-box-shadow: $c-unset,
+		btn-focus-outline: $c-unset,
+		active: (
+			background-color: $c-unset,
+			color: $gray-900,
+		),
+		disabled: (
+			background-color: transparent,
+			box-shadow: none,
+			color: $gray-500,
+			cursor: $disabled-cursor,
+			opacity: 0.65,
+		),
+		disabled-active: (
+			pointer-events: none,
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$component-action
+);

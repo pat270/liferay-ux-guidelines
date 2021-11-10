@@ -1,0 +1,56 @@
+$breadcrumb-bg: transparent !default;
+$breadcrumb-border-radius: $border-radius !default;
+$breadcrumb-font-size: 0.8125rem !default; // 13px
+$breadcrumb-font-weight: $font-weight-normal !default;
+$breadcrumb-margin-bottom: 0 !default;
+$breadcrumb-padding-x: 0.125rem !default; // 2px
+$breadcrumb-padding-y: 0.59375rem !default;
+
+// Breadcrumb Item
+
+$breadcrumb-item-padding: 0 !default;
+
+$breadcrumb-active-color: $gray-900 !default;
+$breadcrumb-active-font-weight: $font-weight-semi-bold !default;
+
+// Breadcrumb Text Truncate
+
+$breadcrumb-text-truncate-icon-spacer-x: 0.875rem !default;
+$breadcrumb-text-truncate-max-width: 18.75rem -
+	$breadcrumb-text-truncate-icon-spacer-x !default;
+$breadcrumb-text-truncate-max-width-mobile: 9.375rem -
+	$breadcrumb-text-truncate-icon-spacer-x !default;
+
+// Breadcrumb Link
+
+$breadcrumb-link: () !default;
+$breadcrumb-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $gray-700,
+		display: inline-block,
+		line-height: 1.25rem,
+		text-decoration: $link-decoration,
+		text-transform: $c-unset,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-700,
+		hover-text-decoration: $link-hover-decoration,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-color: $gray-700,
+		focus-outline: 0,
+		focus-text-decoration: $link-hover-decoration,
+	),
+	$breadcrumb-link
+);
+
+// Breadcrumb Divider
+
+$breadcrumb-divider: quote('/') !default;
+
+$breadcrumb-divider-color: $gray-700 !default;
+$breadcrumb-divider-font-family: null !default;
+$breadcrumb-divider-font-weight: null !default;
+
+$breadcrumb-divider-svg-icon: false !default;
+$breadcrumb-divider-svg-icon-height: 0.6em !default;
+$breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height !default;

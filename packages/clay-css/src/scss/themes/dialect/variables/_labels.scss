@@ -1,0 +1,953 @@
+$label-padding-x: 0.25rem !default;
+$label-padding-y: 0.125rem !default;
+
+$label: () !default;
+$label: map-deep-merge(
+	(
+		border-color: $c-unset,
+		border-radius: clay-enable-rounded($border-radius-xs),
+		border-style: solid,
+		border-width: 0.0625rem,
+		color: $c-unset,
+		display: inline-flex,
+		font-size: 0.6875rem,
+		font-weight: $font-weight-bold,
+		height: $c-unset,
+		line-height: 0.875rem,
+		margin-bottom: 0.125rem,
+		margin-right: 0.25rem,
+		margin-top: 0.125rem,
+		max-width: 100%,
+		outline: 0,
+		padding-bottom: $label-padding-y,
+		padding-left: $label-padding-x,
+		padding-right: $label-padding-x,
+		padding-top: $label-padding-y,
+		text-transform: $c-unset,
+		transition: box-shadow 0.15s ease-in-out,
+		white-space: inherit,
+		word-wrap: break-word,
+		disabled: (
+			box-shadow: none,
+		),
+		href: (
+			cursor: $link-cursor,
+			text-decoration: none,
+			hover: (
+				text-decoration: none,
+			),
+			focus: (
+				box-shadow: $component-focus-box-shadow,
+				text-decoration: $c-unset,
+			),
+			disabled: (
+				box-shadow: none,
+				cursor: $disabled-cursor,
+				opacity: 0.54,
+				active: (
+					pointer-events: none,
+				),
+			),
+		),
+		link: (
+			color: inherit,
+			display: inline-block,
+			text-decoration: none,
+			hover: (
+				color: inherit,
+				text-decoration: underline,
+			),
+			focus: (
+				color: inherit,
+				text-decoration: $c-unset,
+			),
+		),
+		c-inner: (
+			margin-bottom: math-sign($label-padding-y),
+			margin-left: math-sign($label-padding-x),
+			margin-right: math-sign($label-padding-x),
+			margin-top: math-sign($label-padding-y),
+			max-width: none,
+		),
+		sticker: (
+			border-radius: $rounded-circle-border-radius,
+			height: 0.875em,
+			line-height: 0.875em,
+			width: 0.875em,
+		),
+		sticker-overlay: (
+			border-radius: $rounded-circle-border-radius,
+		),
+	),
+	$label
+);
+
+$label-dismissible: () !default;
+$label-dismissible: map-merge(
+	(
+		text-transform: $c-unset,
+	),
+	$label-dismissible
+);
+
+// .label-item
+
+$label-item: () !default;
+$label-item: map-deep-merge(
+	(
+		display: flex,
+		flex-direction: column,
+		flex-shrink: 0,
+		justify-content: center,
+		margin-bottom: $c-unset,
+		margin-top: $c-unset,
+		min-height: 0,
+		position: relative,
+		link: (
+			display: inline-flex,
+		),
+		btn-unstyled: (
+			color: inherit,
+			display: inline-flex,
+		),
+		close: (
+			border-radius: 1px,
+			color: inherit,
+			display: inline-flex,
+			font-size: 1rem,
+			height: auto,
+			margin-bottom: -1px,
+			margin-top: -1px,
+			opacity: 1,
+			width: auto,
+			hover: (
+				color: inherit,
+				opacity: 1,
+			),
+			focus: (
+				opacity: 1,
+			),
+			disabled: (
+				color: inherit,
+				opacity: 1,
+			),
+			lexicon-icon: (
+				font-size: inherit,
+				margin-bottom: 0,
+				margin-top: 0,
+			),
+		),
+		lexicon-icon: (
+			font-size: 0.6875rem,
+			height: $c-unset,
+			margin-bottom: $c-unset,
+			margin-top: 1px,
+			opacity: 0.7,
+			width: $c-unset,
+		),
+		text-truncate-inline: (
+			display: inline-flex,
+		),
+	),
+	$label-item
+);
+
+// .label-item-expand
+
+$label-item-expand: () !default;
+$label-item-expand: map-deep-merge(
+	(
+		flex-grow: 1,
+		flex-shrink: 1,
+		min-width: 1rem,
+		word-wrap: break-word,
+		link: (
+			flex-direction: column,
+		),
+	),
+	$label-item-expand
+);
+
+// .label-item-before
+
+$label-item-before: () !default;
+$label-item-before: map-merge(
+	(
+		margin-right: 0.5em,
+	),
+	$label-item-before
+);
+
+// .label-item-after
+
+$label-item-after: () !default;
+$label-item-after: map-merge(
+	(
+		margin-left: 0.5em,
+	),
+	$label-item-after
+);
+
+// Label Sizes
+
+$label-lg: () !default;
+$label-lg: map-deep-merge(
+	(
+		font-size: 0.8125rem,
+		height: auto,
+		min-height: 1.5rem,
+		padding-bottom: 0.25rem,
+		padding-left: 0.5rem,
+		padding-right: 0.5rem,
+		padding-top: 0.25rem,
+		label-item: (
+			margin-bottom: -0.0625rem,
+			margin-top: -0.0625rem,
+		),
+		lexicon-icon: (
+			font-size: 0.8125rem,
+			height: 1em,
+			width: 1em,
+		),
+		sticker: (
+			height: 0.875rem,
+			line-height: 0.875rem,
+			width: 0.875rem,
+		),
+	),
+	$label-lg
+);
+
+$label-sizes: () !default;
+$label-sizes: map-deep-merge(
+	(
+		'label-chip-sm': (
+			border-radius: 100px,
+			font-size: 0.875rem,
+			font-weight: $font-weight-semi-bold,
+			padding-bottom: 0.375rem,
+			padding-left: 0.75rem,
+			padding-right: 0.75rem,
+			padding-top: 0.375rem,
+		),
+		'label-chip': (
+			border-radius: 100px,
+			font-size: 1rem,
+			font-weight: $font-weight-semi-bold,
+			line-height: 1,
+			padding-bottom: 0.5625rem,
+			padding-left: 1rem,
+			padding-right: 1rem,
+			padding-top: 0.5625rem,
+		),
+		'label-chip-lg': (
+			border-radius: 100px,
+			font-size: 1.125rem,
+			line-height: 1,
+			padding-bottom: 0.75rem,
+			padding-left: 1.25rem,
+			padding-right: 1.25rem,
+			padding-top: 0.75rem,
+		),
+		'label-lg': $label-lg,
+	),
+	$label-sizes
+);
+
+// Label Variants
+
+// .label-primary
+
+$label-primary: () !default;
+$label-primary: map-deep-merge(
+	(
+		background-color: $primary,
+		border-color: transparent,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $primary-d1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			focus: (
+				border-color: $c-unset,
+				color: $c-unset,
+			),
+			active: (
+				background-color: $primary-d2,
+				border-color: $c-unset,
+				color: $white,
+			),
+			disabled: (
+				background-color: $primary-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+		),
+		link: (
+			color: $c-unset,
+			hover: (
+				color: $c-unset,
+			),
+		),
+		close: (
+			hover: (
+				color: $white,
+			),
+			focus: (
+				color: $white,
+			),
+		),
+	),
+	$label-primary
+);
+
+// .label-secondary
+
+$label-secondary: () !default;
+$label-secondary: map-deep-merge(
+	(
+		background-color: $gray-600,
+		border-color: transparent,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $gray-700,
+				border-color: $c-unset,
+				color: $white,
+			),
+			focus: (
+				background-color: $gray-700,
+				border-color: $c-unset,
+				color: $white,
+			),
+			active: (
+				background-color: $gray-800,
+				border-color: $c-unset,
+				color: $white,
+			),
+			disabled: (
+				background-color: $gray-400,
+				border-color: $c-unset,
+				color: $white,
+			),
+		),
+		link: (
+			color: $c-unset,
+			hover: (
+				color: $white,
+			),
+		),
+		close: (
+			hover: (
+				color: $white,
+			),
+			focus: (
+				color: $white,
+			),
+		),
+	),
+	$label-secondary
+);
+
+// .label-success
+
+$label-success: () !default;
+$label-success: map-deep-merge(
+	(
+		background-color: $success,
+		border-color: transparent,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $success-d1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			focus: (
+				background-color: $success-d1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			active: (
+				background-color: $success-d2,
+				border-color: $c-unset,
+				color: $white,
+			),
+			disabled: (
+				background-color: $success-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+		),
+	),
+	$label-success
+);
+
+// .label-info
+
+$label-info: () !default;
+$label-info: map-deep-merge(
+	(
+		background-color: $info,
+		border-color: transparent,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $info-d1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			focus: (
+				background-color: $info-d1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			active: (
+				background-color: $info-d2,
+				border-color: $c-unset,
+				color: $white,
+			),
+			disabled: (
+				background-color: $info-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+		),
+	),
+	$label-info
+);
+
+// .label-warning
+
+$label-warning: () !default;
+$label-warning: map-deep-merge(
+	(
+		background-color: $warning,
+		border-color: transparent,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $warning-d1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			focus: (
+				background-color: $warning-d1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			active: (
+				background-color: $warning-d2,
+				border-color: $c-unset,
+				color: $white,
+			),
+			disabled: (
+				background-color: $warning-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+		),
+	),
+	$label-warning
+);
+
+// .label-danger
+
+$label-danger: () !default;
+$label-danger: map-deep-merge(
+	(
+		background-color: $danger,
+		border-color: transparent,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $danger-d1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			focus: (
+				background-color: $danger-d1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			active: (
+				background-color: $danger-d2,
+				border-color: $c-unset,
+				color: $white,
+			),
+			disabled: (
+				background-color: $danger-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+		),
+	),
+	$label-danger
+);
+
+$label-light: () !default;
+$label-light: map-deep-merge(
+	(
+		enabled: false,
+		background-color: $c-unset,
+		border-color: $light,
+		color: $light,
+		href: (
+			hover: (
+				border-color: $light-d1,
+				color: $light-d1,
+			),
+			focus: (
+				border-color: $c-unset,
+				color: $c-unset,
+			),
+		),
+	),
+	$label-light
+);
+
+// .label-dark
+
+$label-dark: () !default;
+$label-dark: map-deep-merge(
+	(
+		enabled: false,
+		background-color: $c-unset,
+		border-color: $dark,
+		color: $dark,
+		href: (
+			hover: (
+				border-color: $dark-d1,
+				color: $dark-d1,
+			),
+			focus: (
+				border-color: $c-unset,
+				color: $c-unset,
+			),
+		),
+	),
+	$label-dark
+);
+
+// Label Inverse Variants
+
+$label-inverse-primary: () !default;
+$label-inverse-primary: map-deep-merge(
+	(
+		background-color: $primary-l2,
+		border-color: transparent,
+		color: $primary,
+		href: (
+			hover: (
+				background-color: $primary-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			focus: (
+				background-color: $primary-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+		),
+		link: (
+			hover: (
+				color: $c-unset,
+			),
+		),
+		close: (
+			hover: (
+				color: $c-unset,
+			),
+		),
+	),
+	$label-inverse-primary
+);
+
+$label-inverse-secondary: () !default;
+$label-inverse-secondary: map-deep-merge(
+	(
+		background-color: $gray-200,
+		border-color: transparent,
+		color: $gray-700,
+		href: (
+			hover: (
+				background-color: $gray-300,
+				border-color: $c-unset,
+				color: $gray-800,
+			),
+			focus: (
+				background-color: $gray-300,
+				border-color: $c-unset,
+				color: $gray-800,
+			),
+		),
+		link: (
+			hover: (
+				color: $c-unset,
+			),
+		),
+		close: (
+			hover: (
+				color: $c-unset,
+			),
+		),
+	),
+	$label-inverse-secondary
+);
+
+$label-inverse-success: () !default;
+$label-inverse-success: map-deep-merge(
+	(
+		background-color: $success-l2,
+		border-color: transparent,
+		color: $success,
+		href: (
+			hover: (
+				background-color: $success-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			focus: (
+				background-color: $success-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+		),
+		link: (
+			hover: (
+				color: null,
+			),
+		),
+		close: (
+			hover: (
+				color: null,
+			),
+		),
+	),
+	$label-inverse-success
+);
+
+$label-inverse-info: () !default;
+$label-inverse-info: map-deep-merge(
+	(
+		background-color: $info-l2,
+		border-color: transparent,
+		color: $info,
+		href: (
+			hover: (
+				background-color: $info-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			focus: (
+				background-color: $info-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+		),
+		link: (
+			hover: (
+				color: $c-unset,
+			),
+		),
+		close: (
+			hover: (
+				color: $c-unset,
+			),
+		),
+	),
+	$label-inverse-info
+);
+
+$label-inverse-warning: () !default;
+$label-inverse-warning: map-deep-merge(
+	(
+		background-color: $warning-l2,
+		border-color: transparent,
+		color: $warning,
+		href: (
+			hover: (
+				background-color: $warning-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			focus: (
+				background-color: $warning-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+		),
+		link: (
+			hover: (
+				color: $c-unset,
+			),
+		),
+		close: (
+			hover: (
+				color: $c-unset,
+			),
+		),
+	),
+	$label-inverse-warning
+);
+
+$label-inverse-danger: () !default;
+$label-inverse-danger: map-deep-merge(
+	(
+		background-color: $danger-l2,
+		border-color: transparent,
+		color: $danger,
+		href: (
+			hover: (
+				background-color: $danger-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			focus: (
+				background-color: $danger-l1,
+				border-color: $c-unset,
+				color: $white,
+			),
+		),
+		link: (
+			hover: (
+				color: $c-unset,
+			),
+		),
+		close: (
+			hover: (
+				color: $c-unset,
+			),
+		),
+	),
+	$label-inverse-danger
+);
+
+$label-inverse-light: () !default;
+$label-inverse-light: map-deep-merge(
+	(
+		enabled: false,
+		background-color: $light,
+		border-color: transparent,
+		color: $dark,
+		href: (
+			hover: (
+				background-color: $light-d1,
+				border-color: $c-unset,
+				color: $dark,
+			),
+			focus: (
+				background-color: $c-unset,
+				border-color: $c-unset,
+				color: $c-unset,
+			),
+		),
+		link: (
+			hover: (
+				color: null,
+			),
+		),
+		close: (
+			hover: (
+				color: null,
+			),
+		),
+	),
+	$label-inverse-light
+);
+
+$label-inverse-dark: () !default;
+$label-inverse-dark: map-deep-merge(
+	(
+		enabled: false,
+		background-color: $dark,
+		border-color: transparent,
+		color: $white,
+		href: (
+			hover: (
+				background-color: $dark-d1,
+				border-color: $c-unset,
+				color: $white,
+			),
+			focus: (
+				background-color: $c-unset,
+				border-color: $c-unset,
+				color: $c-unset,
+			),
+		),
+		link: (
+			hover: (
+				color: null,
+			),
+		),
+		close: (
+			hover: (
+				color: null,
+			),
+		),
+	),
+	$label-inverse-dark
+);
+
+$label-palette: () !default;
+$label-palette: map-deep-merge(
+	(
+		primary: $label-primary,
+		secondary: $label-secondary,
+		success: $label-success,
+		info: $label-info,
+		warning: $label-warning,
+		danger: $label-danger,
+		dark: $label-dark,
+		light: $label-light,
+		inverse-primary: $label-inverse-primary,
+		inverse-secondary: $label-inverse-secondary,
+		inverse-success: $label-inverse-success,
+		inverse-info: $label-inverse-info,
+		inverse-warning: $label-inverse-warning,
+		inverse-danger: $label-inverse-danger,
+		inverse-light: $label-inverse-light,
+		inverse-dark: $label-inverse-dark,
+		outline-primary: (
+			background-color: $white,
+			border-color: $primary,
+			color: $primary,
+			href: (
+				hover: (
+					border-color: $primary-d1,
+					color: $primary-d1,
+				),
+				focus: (
+					border-color: $primary-d1,
+					color: $primary-d1,
+				),
+				active: (
+					border-color: $primary-d2,
+					color: $primary-d2,
+				),
+				disabled: (
+					border-color: $primary-l1,
+					color: $primary-l1,
+				),
+			),
+		),
+		outline-secondary: (
+			background-color: $white,
+			border-color: $secondary,
+			color: $secondary,
+			href: (
+				hover: (
+					border-color: $secondary-d1,
+					color: $secondary-d1,
+				),
+				focus: (
+					border-color: $secondary-d1,
+					color: $secondary-d1,
+				),
+				active: (
+					border-color: $secondary-d2,
+					color: $secondary-d2,
+				),
+				disabled: (
+					border-color: $secondary-l1,
+					color: $secondary-l1,
+				),
+			),
+		),
+		outline-success: (
+			background-color: $white,
+			border-color: $success,
+			color: $success,
+			href: (
+				hover: (
+					border-color: $success-d1,
+					color: $success-d1,
+				),
+				focus: (
+					border-color: $success-d1,
+					color: $success-d1,
+				),
+				active: (
+					border-color: $success-d2,
+					color: $success-d2,
+				),
+				disabled: (
+					border-color: $success-l1,
+					color: $success-l1,
+				),
+			),
+		),
+		outline-info: (
+			background-color: $white,
+			border-color: $info,
+			color: $info,
+			href: (
+				hover: (
+					border-color: $info-d1,
+					color: $info-d1,
+				),
+				focus: (
+					border-color: $info-d1,
+					color: $info-d1,
+				),
+				active: (
+					border-color: $info-d2,
+					color: $info-d2,
+				),
+				disabled: (
+					border-color: $info-l1,
+					color: $info-l1,
+				),
+			),
+		),
+		outline-warning: (
+			background-color: $white,
+			border-color: $warning,
+			color: $warning,
+			href: (
+				hover: (
+					border-color: $warning-d1,
+					color: $warning-d1,
+				),
+				focus: (
+					border-color: $warning-d1,
+					color: $warning-d1,
+				),
+				active: (
+					border-color: $warning-d2,
+					color: $warning-d2,
+				),
+				disabled: (
+					border-color: $warning-l1,
+					color: $warning-l1,
+				),
+			),
+		),
+		outline-danger: (
+			background-color: $white,
+			border-color: $danger,
+			color: $danger,
+			href: (
+				hover: (
+					border-color: $danger-d1,
+					color: $danger-d1,
+				),
+				focus: (
+					border-color: $danger-d1,
+					color: $danger-d1,
+				),
+				active: (
+					border-color: $danger-d2,
+					color: $danger-d2,
+				),
+				disabled: (
+					border-color: $danger-l1,
+					color: $danger-l1,
+				),
+			),
+		),
+	),
+	$label-palette
+);

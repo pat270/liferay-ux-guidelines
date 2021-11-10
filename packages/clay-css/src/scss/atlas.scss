@@ -4,6 +4,8 @@
 
 // INSERT CUSTOM VARS
 
+@import 'themes/dialect/_variables.scss';
+
 @import 'atlas/_variables';
 
 @import '_variables';
@@ -11,5 +13,7 @@
 @import '_mixins';
 
 @import '_components';
+
+@import 'themes/dialect/_components.scss';
 
 // INSERT CUSTOM EXTENSIONS

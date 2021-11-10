@@ -1,0 +1,677 @@
+// Icons
+
+.dialect-icon {
+	display: inline-block;
+	fill: currentColor;
+	height: 1em;
+	margin-top: -0.1em;
+	vertical-align: middle;
+	width: 1em;
+}
+
+// Buttons
+
+.btn-inverted {
+	--btn-primary-background-color: #{$white};
+	--btn-primary-color: #{$primary};
+	--btn-primary-hover-background-color: #{$white};
+	--btn-primary-hover-color: #{$primary-d1};
+	--btn-primary-active-background-color: #{$white};
+	--btn-primary-active-color: #{$primary-d2};
+	--btn-primary-disabled-background-color: #{$white};
+	--btn-primary-disabled-color: #{$primary-l1};
+
+	--btn-secondary-background-color: transparent;
+	--btn-secondary-border-color: #{$white};
+	--btn-secondary-color: #{$white};
+	--btn-secondary-hover-background-color: #{rgba($white, 0.1)};
+	--btn-secondary-hover-border-color: #{$white};
+	--btn-secondary-hover-color: #{$white};
+	--btn-secondary-active-background-color: #{rgba($white, 0.2)};
+	--btn-secondary-active-border-color: #{$white};
+	--btn-secondary-active-color: #{$white};
+	--btn-secondary-disabled-background-color: transparent;
+	--btn-secondary-disabled-border-color: #{rgba($white, 0.501961)};
+	--btn-secondary-disabled-color: #{rgba($white, 0.501961)};
+
+	--btn-info-background-color: #{$white};
+	--btn-info-color: #{$info};
+	--btn-info-hover-background-color: #{$white};
+	--btn-info-hover-color: #{$info-d1};
+	--btn-info-active-background-color: #{$white};
+	--btn-info-active-color: #{$info-d2};
+	--btn-info-disabled-background-color: #{$white};
+	--btn-info-disabled-color: #{$info-l1};
+
+	--btn-success-background-color: #{$white};
+	--btn-success-color: #{$success};
+	--btn-success-hover-background-color: #{$white};
+	--btn-success-hover-color: #{$success-d1};
+	--btn-success-active-background-color: #{$white};
+	--btn-success-active-color: #{$success-d2};
+	--btn-success-disabled-background-color: #{$white};
+	--btn-success-disabled-color: #{$success-l1};
+
+	--btn-warning-background-color: #{$white};
+	--btn-warning-color: #{$warning};
+	--btn-warning-hover-background-color: #{$white};
+	--btn-warning-hover-color: #{$warning-d1};
+	--btn-warning-active-background-color: #{$white};
+	--btn-warning-active-color: #{$warning-d2};
+	--btn-warning-disabled-background-color: #{$white};
+	--btn-warning-disabled-color: #{$warning-l1};
+
+	--btn-danger-background-color: #{$white};
+	--btn-danger-color: #{$danger};
+	--btn-danger-hover-background-color: #{$white};
+	--btn-danger-hover-color: #{$danger-d1};
+	--btn-danger-active-background-color: #{$white};
+	--btn-danger-active-color: #{$danger-d2};
+	--btn-danger-disabled-background-color: #{$white};
+	--btn-danger-disabled-color: #{$danger-l1};
+
+	--btn-outline-primary-background-color: transparent;
+	--btn-outline-primary-border-color: #{$white};
+	--btn-outline-primary-color: #{$white};
+	--btn-outline-primary-hover-background-color: #{rgba($white, 0.1)};
+	--btn-outline-primary-hover-border-color: #{$white};
+	--btn-outline-primary-hover-color: #{$white};
+	--btn-outline-primary-active-background-color: #{rgba($white, 0.2)};
+	--btn-outline-primary-active-border-color: #{$white};
+	--btn-outline-primary-active-color: #{$white};
+	--btn-outline-primary-disabled-background-color: transparent;
+	--btn-outline-primary-disabled-border-color: #{rgba($white, 0.501961)};
+	--btn-outline-primary-disabled-color: #{rgba($white, 0.501961)};
+
+	--btn-outline-secondary-background-color: transparent;
+	--btn-outline-secondary-border-color: #{$white};
+	--btn-outline-secondary-color: #{$white};
+	--btn-outline-secondary-hover-background-color: #{rgba($white, 0.1)};
+	--btn-outline-secondary-hover-border-color: #{$white};
+	--btn-outline-secondary-hover-color: #{$white};
+	--btn-outline-secondary-active-background-color: #{rgba($white, 0.2)};
+	--btn-outline-secondary-active-border-color: #{$white};
+	--btn-outline-secondary-active-color: #{$white};
+	--btn-outline-secondary-disabled-background-color: transparent;
+	--btn-outline-secondary-disabled-border-color: #{rgba($white, 0.501961)};
+	--btn-outline-secondary-disabled-color: #{rgba($white, 0.501961)};
+
+	--btn-outline-info-background-color: transparent;
+	--btn-outline-info-border-color: #{$white};
+	--btn-outline-info-color: #{$white};
+	--btn-outline-info-hover-background-color: #{rgba($white, 0.1)};
+	--btn-outline-info-hover-border-color: #{$white};
+	--btn-outline-info-hover-color: #{$white};
+	--btn-outline-info-active-background-color: #{rgba($white, 0.2)};
+	--btn-outline-info-active-border-color: #{$white};
+	--btn-outline-info-active-color: #{$white};
+	--btn-outline-info-disabled-background-color: transparent;
+	--btn-outline-info-disabled-border-color: #{rgba($white, 0.501961)};
+	--btn-outline-info-disabled-color: #{rgba($white, 0.501961)};
+
+	--btn-outline-success-background-color: transparent;
+	--btn-outline-success-border-color: #{$white};
+	--btn-outline-success-color: #{$white};
+	--btn-outline-success-hover-background-color: #{rgba($white, 0.1)};
+	--btn-outline-success-hover-border-color: #{$white};
+	--btn-outline-success-hover-color: #{$white};
+	--btn-outline-success-active-background-color: #{rgba($white, 0.2)};
+	--btn-outline-success-active-border-color: #{$white};
+	--btn-outline-success-active-color: #{$white};
+	--btn-outline-success-disabled-background-color: transparent;
+	--btn-outline-success-disabled-border-color: #{rgba($white, 0.501961)};
+	--btn-outline-success-disabled-color: #{rgba($white, 0.501961)};
+
+	--btn-outline-warning-background-color: transparent;
+	--btn-outline-warning-border-color: #{$white};
+	--btn-outline-warning-color: #{$white};
+	--btn-outline-warning-hover-background-color: #{rgba($white, 0.1)};
+	--btn-outline-warning-hover-border-color: #{$white};
+	--btn-outline-warning-hover-color: #{$white};
+	--btn-outline-warning-active-background-color: #{rgba($white, 0.2)};
+	--btn-outline-warning-active-border-color: #{$white};
+	--btn-outline-warning-active-color: #{$white};
+	--btn-outline-warning-disabled-background-color: transparent;
+	--btn-outline-warning-disabled-border-color: #{rgba($white, 0.501961)};
+	--btn-outline-warning-disabled-color: #{rgba($white, 0.501961)};
+
+	--btn-outline-danger-background-color: transparent;
+	--btn-outline-danger-border-color: #{$white};
+	--btn-outline-danger-color: #{$white};
+	--btn-outline-danger-hover-background-color: #{rgba($white, 0.1)};
+	--btn-outline-danger-hover-border-color: #{$white};
+	--btn-outline-danger-hover-color: #{$white};
+	--btn-outline-danger-active-background-color: #{rgba($white, 0.2)};
+	--btn-outline-danger-active-border-color: #{$white};
+	--btn-outline-danger-active-color: #{$white};
+	--btn-outline-danger-disabled-background-color: transparent;
+	--btn-outline-danger-disabled-border-color: #{rgba($white, 0.501961)};
+	--btn-outline-danger-disabled-color: #{rgba($white, 0.501961)};
+}
+
+.btn-borderless,
+.btn-borderless:disabled,
+.btn-borderless.disabled {
+	border-color: transparent;
+}
+
+.btn.rounded-pill {
+	box-shadow: $elevation-tight-4;
+}
+
+// Form
+
+.form-legend .reference-mark {
+	@include clay-css(
+		map-get($input-label, reference-mark)
+	);
+}
+
+// Form Condensed JS
+
+.form-condensed {
+	label:not(.form-control-label),
+	.form-control-label-text {
+		background-color: $gray-100;
+		cursor: auto;
+		margin-bottom: 0;
+		margin-left: calc(0.75rem - #{map-get($input, border-width)});
+		opacity: 0.4;
+		padding-left: 0.25rem;
+		padding-right: 0.25rem;
+		position: absolute;
+		top: 0.75rem;
+		transition: font-size 0.15s ease-in-out, top 0.15s ease-in-out, margin 0.15s ease-in-out;
+
+		~ .form-control {
+			&::placeholder {
+				opacity: 0;
+			}
+		}
+	}
+
+	.form-control {
+		background-color: $gray-100;
+		border-color: transparent;
+
+		&:focus,
+		&.focus,
+		&:focus ~ .input-group-inset-item,
+		&.focus ~ .input-group-inset-item {
+			background-color: $white;
+			border-color: $primary;
+		}
+	}
+
+	.input-group-inset-item {
+		background-color: $gray-100;
+		border-color: transparent;
+	}
+
+	select.form-control {
+		color: transparent;
+	}
+
+	&.filled,
+	.filled {
+		.form-control,
+		.input-group-inset-item {
+			background-color: $white;
+			border-color: $gray-500;
+		}
+
+		select.form-control,
+		.form-control-select {
+			color: $black;
+		}
+
+		label:not(.form-control-label),
+		.form-control-label-text {
+			background-color: $white;
+			color: $black;
+			font-size: 0.8125rem;
+			opacity: 1;
+			top: -9px;
+		}
+	}
+
+	&.focus,
+	.focus {
+		.form-control,
+		.input-group-inset-item {
+			background-color: $white;
+			border-color: $primary;
+		}
+
+		select.form-control,
+		.form-control-select {
+			color: $black;
+		}
+
+		label:not(.form-control-label),
+		.form-control-label-text {
+			background-color: $white;
+			color: $primary;
+			font-size: 0.8125rem;
+			opacity: 1;
+			top: -9px;
+			z-index: 2;
+		}
+	}
+}
+
+// Custom Boolean
+
+.custom-boolean {
+	.btn {
+		box-shadow: none;
+	}
+
+	.btn-link {
+		@include clay-button-variant(
+			(
+				color: $gray-600,
+				font-weight: $font-weight-normal,
+				padding-left: 0.25rem,
+				padding-right: 0.25rem,
+				text-decoration: underline,
+			)
+		);
+	}
+
+	.btn-outline-primary {
+		min-width: 104px;
+	}
+
+	.custom-control-input {
+		height: 100%;
+
+		&:hover {
+			~ .btn-outline-primary {
+				@include clay-button-variant(map-get($btn-outline-primary, hover));
+			}
+
+			~ .btn-link {
+				@include clay-button-variant(
+					(
+						text-decoration: none,
+					)
+				);
+			}
+		}
+
+		&:focus {
+			~ .btn-outline-primary {
+				@include clay-button-variant(map-get($btn-outline-primary, focus));
+			}
+		}
+
+		&:active {
+			~ .btn-outline-primary {
+				@include clay-button-variant(map-get($btn-outline-primary, active));
+			}
+		}
+
+		&[disabled],
+		&:disabled {
+			~ .btn-outline-primary {
+				@include clay-button-variant(map-get($btn-outline-primary, disabled));
+			}
+		}
+
+		&:checked {
+			~ .btn-outline-primary {
+				background-color: $primary;
+				color: $white;
+			}
+		}
+	}
+}
+
+// Alerts
+
+.alert-indicator-start.alert.alert-fluid .alert-indicator {
+	margin-left: -48px;
+	margin-top: -4px;
+	top: auto;
+}
+
+// Link
+
+.link-underlined {
+	@include clay-link($link-underlined);
+
+	&.single-link {
+		@include clay-link(map-get($link-underlined, single-link));
+	}
+}
+
+.link-lg {
+	@include clay-link($link-lg);
+
+	&.link-underlined.single-link {
+		@include clay-link(map-deep-get($link-lg, link-underlined, single-link));
+	}
+
+	.dialect-icon {
+		font-size: 1.125rem;
+	}
+}
+
+.link-sm {
+	@include clay-link($link-sm);
+
+	&.link-underlined.single-link {
+		@include clay-link(map-deep-get($link-sm, link-underlined, single-link));
+	}
+
+	.dialect-icon {
+		font-size: 0.75rem;
+	}
+}
+
+// Label / Chips
+
+%label-chip-thick {
+	border-width: 0.125rem;
+}
+
+%label-chip-thick-label-chip-sm {
+	padding-bottom: 0.3125rem;
+	padding-top: 0.3125rem;
+}
+
+%label-chip-thick-label-chip {
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+%label-chip-thick-label-chip-lg {
+	padding-bottom: 0.6875rem;
+	padding-top: 0.6875rem;
+}
+
+.label-chip-thick {
+	@extend %label-chip-thick !optional;
+
+	&.label-chip-sm {
+		@extend %label-chip-thick-label-chip-sm !optional;
+	}
+
+	&.label-chip {
+		@extend %label-chip-thick-label-chip !optional;
+	}
+
+	&.label-chip-lg {
+		@extend %label-chip-thick-label-chip-lg !optional;
+	}
+}
+
+// Card
+
+.card {
+	font-size: 0.8125rem;
+}
+
+.image-card.card-horizontal {
+	.card {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	.card-item-first {
+		border-radius: 8px 0 0 8px;
+	}
+
+	.aspect-ratio {
+		flex-shrink: 0;
+		min-height: 0;
+		padding-bottom: 0;
+		width: 40%;
+	}
+
+	.card-body {
+		flex-grow: 1;
+		flex-shrink: 1;
+		min-width: 3.125rem;
+		word-wrap: break-word;
+	}
+}
+
+.custom-control-card.form-check-card {
+	@include clay-form-check-card-variant($custom-control-form-check-card);
+}
+
+// Dropdown
+
+.dropdown-menu-right::before {
+	left: auto;
+	right: $dialect-dropdown-arrow-offset;
+}
+
+// Popovers
+
+.popover-indicator-start {
+	.popover-body {
+		padding-left: 48px;
+	}
+
+	.popover-indicator {
+		align-items: center;
+		color: var(--popover-indicator-color, $gray-500);
+		display: flex;
+		font-size: 17px;
+		height: 24px;
+		justify-content: center;
+		margin-left: -32px;
+		position: absolute;
+		width: 24px;
+
+		.dialect-icon {
+			margin-top: 0;
+		}
+	}
+}
+
+.popover-dismissible {
+	.popover-body {
+		padding-right: 48px;
+	}
+
+	.close {
+		color: var(--popover-close-color, $gray-500);
+		font-size: 13px;
+		height: 24px;
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
+		width: 24px;
+
+		.dialect-icon {
+			margin-top: 0;
+		}
+	}
+}
+
+.popover-inverse {
+	--popover-background-color: #{$gray-900};
+	--popover-border-color: transparent;
+	--popover-body-color: #{$white};
+	--popover-arrow-color: #{$gray-900};
+	--popover-arrow-outer-color: #{$gray-900};
+	--popover-bottom-arrow-color: #{$gray-900};
+	--popover-left-arrow-color: #{$gray-900};
+	--popover-right-arrow-color: #{$gray-900};
+	--popover-top-arrow-color: #{$gray-900};
+	--popover-close-color: #{$white};
+	--popover-indicator-color: #{$white};
+}
+
+// Stickers
+
+.sticker-notification-top-right {
+	&::before {
+		background-color: $accent-1;
+		border-radius: 50%;
+		content: '';
+		display: block;
+		height: 6px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 6px;
+		z-index: 1;
+	}
+
+	&.sticker-2xl::before {
+		height: 14px;
+		width: 14px;
+	}
+
+	&.sticker-xl::before {
+		height: 10px;
+		width: 10px;
+	}
+
+	&.sticker-lg::before {
+		height: 8px;
+		width: 8px;
+	}
+
+	&.sticker-sm::before {
+		height: 5px;
+		width: 5px;
+	}
+}
+
+.sticker-indicator-bottom-right {
+	&::after {
+		background-color: $primary;
+		background-image: clay-icon(pencil, $white);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 8px 8px;
+		border-radius: 50%;
+		bottom: -5px;
+		content: '';
+		display: block;
+		height: 16px;
+		position: absolute;
+		right: -5px;
+		width: 16px;
+		z-index: 1;
+	}
+
+	&.sticker-2xl::after {
+		bottom: 0;
+		right: 0;
+	}
+
+	&.sticker-xl::after {
+		bottom: 0;
+		right: 0;
+	}
+
+	&.sticker-lg::after {
+		bottom: -3px;
+		right: -3px;
+	}
+
+	&.sticker-sm::after {
+		bottom: -7px;
+		right: -7px;
+	}
+}
+
+// Tabs
+
+.vertical-tabs {
+	display: flex;
+
+	.nav-tabs {
+		display: block;
+
+		.nav-link {
+			border-width: 0 0 0 1px;
+			padding: 0.65625rem 1rem;
+
+			&::after {
+				border-radius: 0;
+				bottom: auto;
+				height: 1.5rem;
+				left: 0;
+				margin-top: -0.6875rem;
+				right: auto;
+				top: 50%;
+				width: 0.1875rem;
+			}
+
+			.inline-item-before {
+				margin-right: 0.75rem;
+			}
+
+			.inline-item-after {
+				margin-left: 0.75rem;
+			}
+		}
+
+		+ .tab-content .tab-pane {
+			padding: 0;
+		}
+	}
+}
+
+.horizontal-segment {
+	border-radius: 2rem;
+	background-color: $gray-100;
+	border: 1px solid $gray-300;
+	display: inline-flex;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+
+	.nav-link {
+		@include clay-link(
+			(
+				border-radius: 24px,
+				border-width: 0,
+				color: $gray-600,
+				margin: 0.1875rem,
+				padding-bottom: 0.375rem,
+				padding-top: 0.375rem,
+				after: (
+					content: normal,
+				),
+				hover: (
+					color: $primary-d1,
+				),
+				active: (
+					color: $primary-d2,
+				),
+				active-class: (
+					background-color: $primary-d2,
+					box-shadow: $elevation-tight-2,
+					color: $white,
+				),
+				disabled: (
+					color: $gray-400,
+				),
+			)
+		);
+	}
+}
+
+// Toggles
+
+.toggle-switch-alt {
+	@include clay-toggle-switch-variant($toggle-switch-alt);
+}
+
+.toggle-group {
+	.form-legend {
+		margin-bottom: 1.5rem;
+	}
+
+	.toggle-switch {
+		margin-bottom: 0;
+	}
+}

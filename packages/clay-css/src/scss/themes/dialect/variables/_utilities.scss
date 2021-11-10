@@ -1,0 +1,377 @@
+// .c-inner
+
+$c-inner: () !default;
+$c-inner: map-deep-merge(
+	(
+		align-items: inherit,
+		display: inherit,
+		flex-direction: inherit,
+		height: inherit,
+		justify-content: inherit,
+		line-height: inherit,
+		max-width: inherit,
+		min-width: inherit,
+		outline: 0,
+		overflow: inherit,
+		padding-bottom: inherit,
+		padding-left: inherit,
+		padding-right: inherit,
+		padding-top: inherit,
+		text-decoration: inherit,
+		text-overflow: inherit,
+		width: inherit,
+	),
+	$c-inner
+);
+
+// Inline Item
+
+$inline-item-lexicon-icon-margin-top: -0.2em !default;
+$inline-item-spacer-x: 0.25rem !default;
+
+$inline-item-loading-animation-font-size: 1.25em !default;
+
+$bg-theme-colors: () !default;
+$bg-theme-colors: map-deep-merge(
+	(
+		'accent-1': (
+			background-color: $accent-1 !important,
+			hover: (
+				background-color: clay-darken($accent-1, 10%) !important,
+			),
+		),
+		'accent-1-lighten': (
+			background-color: $accent-1-lighten !important,
+			hover: (
+				background-color: clay-darken($accent-1-lighten, 10%) !important,
+			),
+		),
+		'accent-2': (
+			background-color: $accent-2 !important,
+			hover: (
+				background-color: clay-darken($accent-2, 10%) !important,
+			),
+		),
+		'accent-2-lighten': (
+			background-color: $accent-2-lighten !important,
+			hover: (
+				background-color: clay-darken($accent-2-lighten, 10%) !important,
+			),
+		),
+		'accent-3': (
+			background-color: $accent-3 !important,
+			hover: (
+				background-color: clay-darken($accent-3, 10%) !important,
+			),
+		),
+		'accent-3-lighten': (
+			background-color: $accent-3-lighten !important,
+			hover: (
+				background-color: clay-darken($accent-3-lighten, 10%) !important,
+			),
+		),
+		'accent-4': (
+			background-color: $accent-4 !important,
+			hover: (
+				background-color: clay-darken($accent-4, 10%) !important,
+			),
+		),
+		'accent-4-lighten': (
+			background-color: $accent-4-lighten !important,
+			hover: (
+				background-color: clay-darken($accent-4-lighten, 10%) !important,
+			),
+		),
+		'accent-5': (
+			background-color: $accent-5 !important,
+			hover: (
+				background-color: clay-darken($accent-5, 10%) !important,
+			),
+		),
+		'accent-5-lighten': (
+			background-color: $accent-5-lighten !important,
+			hover: (
+				background-color: clay-darken($accent-5-lighten, 10%) !important,
+			),
+		),
+		'accent-6': (
+			background-color: $accent-6 !important,
+			hover: (
+				background-color: clay-darken($accent-6, 10%) !important,
+			),
+		),
+		'accent-6-lighten': (
+			background-color: $accent-6-lighten !important,
+			hover: (
+				background-color: clay-darken($accent-6-lighten, 10%) !important,
+			),
+		),
+		'primary': (
+			background-color: $primary !important,
+			hover: (
+				background-color: $primary-d1 !important,
+			),
+		),
+		'secondary': (
+			background-color: $secondary-d2 !important,
+			hover: (
+				background-color: $secondary-d1 !important,
+			),
+		),
+		'success': (
+			background-color: $success !important,
+			hover: (
+				background-color: $success-d1 !important,
+			),
+		),
+		'info': (
+			background-color: $info !important,
+			hover: (
+				background-color: $info-d1 !important,
+			),
+		),
+		'warning': (
+			background-color: $warning !important,
+			hover: (
+				background-color: $warning-d1 !important,
+			),
+		),
+		'danger': (
+			background-color: $danger !important,
+			hover: (
+				background-color: $danger-d1 !important,
+			),
+		),
+		'light': (
+			background-color: $light !important,
+			hover: (
+				background-color: $light-d1 !important,
+			),
+		),
+		'dark': (
+			background-color: $dark !important,
+			hover: (
+				background-color: $dark-d1 !important,
+			),
+		),
+		'white': (
+			background-color: $white !important,
+		),
+		'transparent': (
+			background-color: transparent !important,
+		),
+	),
+	$bg-theme-colors
+);
+
+$border-theme-colors: () !default;
+$border-theme-colors: map-deep-merge(
+	(
+		'accent-1': (
+			border-color: $accent-1 !important,
+		),
+		'accent-1-lighten': (
+			border-color: $accent-1-lighten !important,
+		),
+		'accent-2': (
+			border-color: $accent-2 !important,
+		),
+		'accent-2-lighten': (
+			border-color: $accent-2-lighten !important,
+		),
+		'accent-3': (
+			border-color: $accent-3 !important,
+		),
+		'accent-3-lighten': (
+			border-color: $accent-3-lighten !important,
+		),
+		'accent-4': (
+			border-color: $accent-4 !important,
+		),
+		'accent-4-lighten': (
+			border-color: $accent-4-lighten !important,
+		),
+		'accent-5': (
+			border-color: $accent-5 !important,
+		),
+		'accent-5-lighten': (
+			border-color: $accent-5-lighten !important,
+		),
+		'accent-6': (
+			border-color: $accent-6 !important,
+		),
+		'accent-6-lighten': (
+			border-color: $accent-6-lighten !important,
+		),
+		'primary': (
+			border-color: $primary !important,
+		),
+		'secondary': (
+			border-color: $secondary !important,
+		),
+		'success': (
+			border-color: $success !important,
+		),
+		'info': (
+			border-color: $info !important,
+		),
+		'warning': (
+			border-color: $warning !important,
+		),
+		'danger': (
+			border-color: $danger !important,
+		),
+		'light': (
+			border-color: $light !important,
+		),
+		'dark': (
+			border-color: $dark !important,
+		),
+		'white': (
+			border-color: $white !important,
+		),
+		'transparent': (
+			border-color: transparent !important,
+		),
+	),
+	$border-theme-colors
+);
+
+$text-theme-colors: () !default;
+$text-theme-colors: map-deep-merge(
+	(
+		'accent-1': (
+			color: $accent-1 !important,
+			hover: (
+				color: clay-darken($accent-1, 10%) !important,
+			),
+		),
+		'accent-1-lighten': (
+			color: $accent-1-lighten !important,
+			hover: (
+				color: clay-darken($accent-1-lighten, 10%) !important,
+			),
+		),
+		'accent-2': (
+			color: $accent-2 !important,
+			hover: (
+				color: clay-darken($accent-2, 10%) !important,
+			),
+		),
+		'accent-2-lighten': (
+			color: $accent-2-lighten !important,
+			hover: (
+				color: clay-darken($accent-2-lighten, 10%) !important,
+			),
+		),
+		'accent-3': (
+			color: $accent-3 !important,
+			hover: (
+				color: clay-darken($accent-3, 10%) !important,
+			),
+		),
+		'accent-3-lighten': (
+			color: $accent-3-lighten !important,
+			hover: (
+				color: clay-darken($accent-3-lighten, 10%) !important,
+			),
+		),
+		'accent-4': (
+			color: $accent-4 !important,
+			hover: (
+				color: clay-darken($accent-4, 10%) !important,
+			),
+		),
+		'accent-4-lighten': (
+			color: $accent-4-lighten !important,
+			hover: (
+				color: clay-darken($accent-4-lighten, 10%) !important,
+			),
+		),
+		'accent-5': (
+			color: $accent-5 !important,
+			hover: (
+				color: clay-darken($accent-5, 10%) !important,
+			),
+		),
+		'accent-5-lighten': (
+			color: $accent-5-lighten !important,
+			hover: (
+				color: clay-darken($accent-5-lighten, 10%) !important,
+			),
+		),
+		'accent-6': (
+			color: $accent-6 !important,
+			hover: (
+				color: clay-darken($accent-6, 10%) !important,
+			),
+		),
+		'accent-6-lighten': (
+			color: $accent-6-lighten !important,
+			hover: (
+				color: clay-darken($accent-6-lighten, 10%) !important,
+			),
+		),
+		'primary': (
+			color: $primary !important,
+			hover: (
+				color: $primary-d2 !important,
+			),
+		),
+		'secondary': (
+			color: $secondary-d2 !important,
+			hover: (
+				color: $secondary-d1 !important,
+			),
+		),
+		'success': (
+			color: $success !important,
+			hover: (
+				color: $success-d1 !important,
+			),
+		),
+		'info': (
+			color: $info !important,
+			hover: (
+				color: $info-d1 !important,
+			),
+		),
+		'warning': (
+			color: $warning !important,
+			hover: (
+				color: $warning-d1 !important,
+			),
+		),
+		'danger': (
+			color: $danger !important,
+			hover: (
+				color: $danger-d1 !important,
+			),
+		),
+		'light': (
+			color: $light !important,
+			hover: (
+				color: $light-d1 !important,
+			),
+		),
+		'dark': (
+			color: $dark !important,
+			hover: (
+				color: $dark-d1 !important,
+			),
+		),
+		'body': (
+			color: $body-color !important,
+		),
+		'muted': (
+			color: $text-muted !important,
+		),
+		'black-50': (
+			color: rgba($black, 0.5) !important,
+		),
+		'white-50': (
+			color: rgba($white, 0.5) !important,
+		),
+	),
+	$text-theme-colors
+);

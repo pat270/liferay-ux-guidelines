@@ -1,0 +1,217 @@
+// Input Group
+
+$input-group-addon-bg: $gray-100 !default;
+$input-group-addon-border-color: $input-border-color !default;
+$input-group-addon-color: $gray-700 !default;
+$input-group-addon-font-weight: $font-weight-semi-bold !default;
+$input-group-addon-min-width: 2.5rem !default; // 40px
+$input-group-addon-padding-x: 0.75rem !default; // 12px
+$input-group-addon-padding-y: map-get($input, padding-left) !default;
+
+// Input Group Secondary
+
+$input-group-secondary-addon-bg: $white !default;
+$input-group-secondary-addon-border-color: $input-border-color !default;
+$input-group-secondary-addon-border-width: 0.0625rem !default; // 1px
+$input-group-secondary-addon-color: $gray-600 !default;
+
+// Input Group Item
+
+$input-group-item-margin-left: 0.5rem !default;
+
+// Input Group Inset
+
+$input-group-inset-item-color: $input-group-addon-color !default;
+$input-group-inset-item-padding-left: 5px !default;
+$input-group-inset-item-padding-right: 5px !default;
+
+$input-group-inset-item-btn: () !default;
+$input-group-inset-item-btn: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		height: 75%,
+		justify-content: center,
+		line-height: 1,
+		margin-left: 0.1875rem,
+		margin-right: 0.1875rem,
+		padding-bottom: 0,
+		padding-left: 0.5rem,
+		padding-right: 0.5rem,
+		padding-top: 0,
+		c-inner: (
+			align-items: center,
+			display: flex,
+			height: 100%,
+			justify-content: center,
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$input-group-inset-item-btn
+);
+
+$input-group-inset-item-btn-monospaced: () !default;
+$input-group-inset-item-btn-monospaced: map-deep-merge(
+	(
+		font-size: 1rem,
+		height: 2rem,
+		margin-bottom: math-sign($input-border-bottom-width),
+		margin-top: math-sign($input-border-top-width),
+		padding: 0,
+		width: 2rem,
+	),
+	$input-group-inset-item-btn-monospaced
+);
+
+$input-group-inset-form-file-btn: () !default;
+$input-group-inset-form-file-btn: map-deep-merge(
+	(
+		height: 100%,
+	),
+	$input-group-inset-form-file-btn
+);
+
+// Input Group Lg
+
+$input-group-addon-min-width-lg: 3rem !default; // 48px
+$input-group-addon-padding-x-lg: 1rem !default;
+$input-group-addon-padding-y-lg: null !default;
+
+$input-group-lg-item-btn: () !default; // .input-group-lg .input-group-item
+$input-group-lg-item-btn: map-deep-merge(
+	(
+		breakpoint-down: null,
+		font-size: map-get($btn-lg, font-size),
+		inline-item-font-size: map-deep-get($btn-lg, inline-item, font-size),
+		section-font-size: map-deep-get($btn-lg, btn-section, font-size),
+		font-size-mobile: map-deep-get($btn-lg, mobile, font-size),
+		padding-bottom-mobile: map-deep-get($btn-lg, mobile, padding-bottom),
+		padding-left-mobile: map-deep-get($btn-lg, mobile, padding-left),
+		padding-right-mobile: map-deep-get($btn-lg, mobile, padding-right),
+		padding-top-mobile: map-deep-get($btn-lg, mobile, padding-top),
+	),
+	$input-group-lg-item-btn
+);
+
+$input-group-lg-item-btn-monospaced: () !default;
+$input-group-lg-item-btn-monospaced: map-deep-merge(
+	(
+		breakpoint-down: null,
+		height: map-get($btn-monospaced-lg, height),
+		line-height: 1,
+		padding-bottom: map-get($btn-monospaced-lg, padding-bottom),
+		padding-left: map-get($btn-monospaced-lg, padding-left),
+		padding-right: map-get($btn-monospaced-lg, padding-right),
+		padding-top: map-get($btn-monospaced-lg, padding-top),
+		width: map-get($btn-monospaced-lg, width),
+		height-mobile: map-deep-get($btn-monospaced-lg, mobile, height),
+		width-mobile: map-deep-get($btn-monospaced-lg, mobile, height),
+	),
+	$input-group-lg-item-btn-monospaced
+);
+
+$input-group-lg-inset-item-btn: () !default;
+
+$input-group-lg-inset-item-btn-monospaced: () !default;
+
+$input-group-lg-inset-item-form-file-btn: () !default;
+$input-group-lg-inset-item-form-file-btn: map-deep-merge(
+	(
+		breakpoint-down: null,
+		height: 100%,
+		line-height: 1,
+		padding-bottom: 0,
+		padding-left: 0.75rem,
+		padding-right: 0.75rem,
+		padding-top: 0,
+	),
+	$input-group-lg-inset-item-form-file-btn
+);
+
+// Input Group Sm
+
+$input-group-addon-min-width-sm: 2rem !default; // 32px
+$input-group-addon-padding-x-sm: 0.75rem !default;
+$input-group-addon-padding-y-sm: null !default;
+
+$input-group-sm-item-btn: () !default;
+$input-group-sm-item-btn: map-deep-merge(
+	(
+		font-size: map-get($btn-sm, font-size),
+		inline-item-font-size: map-deep-get($btn-sm, inline-item, font-size),
+		section-font-size: map-deep-get($btn-sm, btn-section, font-size),
+		font-size-mobile: map-deep-get($btn-sm, mobile, font-size),
+		padding-bottom-mobile: map-deep-get($btn-sm, mobile, padding-bottom),
+		padding-left-mobile: map-deep-get($btn-sm, mobile, padding-left),
+		padding-right-mobile: map-deep-get($btn-sm, mobile, padding-right),
+		padding-top-mobile: map-deep-get($btn-sm, mobile, padding-top),
+	),
+	$input-group-sm-item-btn
+);
+
+$input-group-sm-item-btn-monospaced: () !default;
+$input-group-sm-item-btn-monospaced: map-deep-merge(
+	(
+		height: map-get($btn-monospaced-sm, height),
+		line-height: 1,
+		padding-bottom: map-get($btn-monospaced-sm, padding-bottom),
+		padding-left: map-get($btn-monospaced-sm, padding-left),
+		padding-right: map-get($btn-monospaced-sm, padding-right),
+		padding-top: map-get($btn-monospaced-sm, padding-top),
+		width: map-get($btn-monospaced-sm, width),
+		height-mobile: map-deep-get($btn-monospaced-sm, mobile, height),
+		width-mobile: map-deep-get($btn-monospaced-sm, mobile, width),
+	),
+	$input-group-sm-item-btn-monospaced
+);
+
+$input-group-sm-inset-item-btn: () !default;
+$input-group-sm-inset-item-btn: map-deep-merge(
+	(
+		line-height: 1,
+		padding-bottom: 0,
+		padding-left: 0.5rem,
+		padding-right: 0.5rem,
+		padding-top: 0,
+	),
+	$input-group-sm-inset-item-btn
+);
+
+$input-group-sm-inset-item-btn-monospaced: () !default;
+$input-group-sm-inset-item-btn-monospaced: map-deep-merge(
+	(
+		height: 1.5rem,
+		margin-left: 0.25rem,
+		margin-right: 0.25rem,
+		width: 1.5rem,
+	),
+	$input-group-sm-inset-item-btn-monospaced
+);
+
+$input-group-sm-inset-item-form-file-btn: () !default;
+$input-group-sm-inset-item-form-file-btn: map-deep-merge(
+	(
+		height: 100%,
+		line-height: 1,
+		padding-bottom: 0,
+		padding-left: 0.5rem,
+		padding-right: 0.5rem,
+		padding-top: 0,
+	),
+	$input-group-sm-inset-item-form-file-btn
+);
+
+// Input Group Stacked
+
+$input-group-stacked-sm-down: () !default;
+$input-group-stacked-sm-down: map-deep-merge(
+	(
+		breakpoint: sm,
+		item-margin-bottom: 0.5rem,
+		item-margin-left: 0,
+		shrink-margin-right: 0.5rem,
+	),
+	$input-group-stacked-sm-down
+);

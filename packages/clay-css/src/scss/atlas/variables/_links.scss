@@ -16,6 +16,8 @@ $link-primary: () !default;
 $link-primary: map-deep-merge(
 	(
 		border-radius: 1px,
+		font-size: 1rem,
+		font-weight: $font-weight-bold,
 		transition: box-shadow 0.15s ease-in-out,
 		focus: (
 			color: clay-darken($primary, 15%),

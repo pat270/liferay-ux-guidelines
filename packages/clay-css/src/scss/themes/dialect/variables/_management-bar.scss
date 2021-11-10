@@ -1,0 +1,168 @@
+$management-bar-base: () !default;
+$management-bar-base: map-deep-merge(
+	(
+		border-color: transparent,
+		border-style: solid,
+		navbar-nav: (
+			nav-link: (
+				border-radius: $border-radius-xs,
+				outline: 0,
+				transition: box-shadow 0.15s ease-in-out,
+				focus: (
+					box-shadow: $component-focus-box-shadow,
+				),
+				disabled: (
+					box-shadow: none,
+				),
+			),
+			nav-btn: (
+				border-radius: $border-radius-xs,
+			),
+		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
+	),
+	$management-bar-base
+);
+
+$management-bar-size: () !default;
+$management-bar-size: map-deep-merge(
+	(
+		scaling-navbar: true,
+		border-bottom-width: 0.0625rem,
+		font-size: 0.875rem,
+		height: 3.75rem,
+		min-height: 3.75rem,
+		padding-x: 0,
+		padding-y: 0,
+		height-mobile: 3rem,
+		min-height-mobile: 3rem,
+		btn-monospaced-font-size: 1rem,
+		btn-monospaced-size: 2.25rem,
+		link-height: 2.25rem,
+		link-height-mobile: 2.25rem,
+		link-margin-x: 0.5rem,
+		link-margin-x-mobile: 0.25rem,
+		link-padding-x-mobile: 0.25rem,
+		form-control-height-mobile: 2rem,
+		toggler-margin-x: 0.875rem,
+		active-border-bottom-width: 0.25rem,
+		nav-item-dropdown-margin-top: 0,
+	),
+	$management-bar-size
+);
+
+$management-bar-light: () !default;
+$management-bar-light: map-deep-merge(
+	(
+		background-color: $white,
+		container-fluid: (
+			justify-content: flex-start,
+		),
+		navbar-brand: (
+			color: $primary-d2,
+		),
+		navbar-nav: (
+			nav-link: (
+				color: $primary,
+				font-weight: $font-weight-semi-bold,
+				hover: (
+					background-color: $c-unset,
+					color: $primary-d1,
+				),
+				focus: (
+					background-color: $c-unset,
+					color: $primary-d1,
+				),
+				active: (
+					background-color: $c-unset,
+					color: $primary-d2,
+				),
+				disabled: (
+					background-color: transparent,
+					color: $primary-l1,
+					opacity: 1,
+				),
+			),
+			nav-btn: (
+				background-color: $white,
+				border-color: $primary,
+				color: $primary,
+				hover: (
+					border-color: $primary-d1,
+					color: $primary-d1,
+				),
+				active: (
+					border-color: $primary-d2,
+					color: $primary-d2,
+				),
+			),
+			nav-btn-monospaced: (
+				background-color: $white,
+				border-color: $primary,
+				color: $primary,
+				hover: (
+					border-color: $primary-d1,
+					color: $primary-d1,
+				),
+				active: (
+					border-color: $primary-d2,
+					color: $primary-d2,
+				),
+			),
+		),
+		navbar-form: (
+			margin-right: auto,
+			max-width: 320px,
+			form-control: (
+				background-color: $gray-100,
+				border-color: $gray-100,
+				placeholder: (
+					color: $black,
+				),
+			),
+		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
+	),
+	$management-bar-light
+);
+
+$management-bar-primary: () !default;
+$management-bar-primary: map-deep-merge(
+	(
+		background-color: $primary-l3,
+		border-color: transparent,
+		color: $black,
+		navbar-nav: (
+			nav-link: (
+					border-radius: $c-unset,
+					color: $primary,
+					font-weight: $font-weight-semi-bold,
+				hover: (
+					background-color: $c-unset,
+					color: $primary-d1,
+				),
+				focus: (
+					background-color: $c-unset,
+					color: $primary-d1,
+				),
+				active: (
+					background-color: $c-unset,
+					color: $primary-d2,
+				),
+				disabled: (
+					background-color: transparent,
+					color: $primary-l1,
+					opacity: 1,
+				),
+			),
+			nav-btn: (
+				color: $primary,
+			),
+		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
+	),
+	$management-bar-primary
+);

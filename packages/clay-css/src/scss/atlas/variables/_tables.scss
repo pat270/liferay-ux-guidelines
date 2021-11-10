@@ -146,6 +146,10 @@ $table-list-active-bg: $table-list-hover-bg !default;
 $table-list-disabled-color: $gray-500 !default;
 
 $table-list-head-bg: $white !default;
+$table-list-head-font-size: 0.875rem !default;
+$table-list-head-font-weight: $font-weight-bold !default;
+$table-list-head-height: 56px !default;
+$table-list-head-vertical-alignment: middle !default;
 
 $table-list-divider-padding-x: 0.75rem !default; // 12px
 $table-list-divider-padding-y: 0.4375rem !default; // 7px

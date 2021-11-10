@@ -1,0 +1,393 @@
+$nav-font-size: 1rem !default;
+
+$nav-link-padding-x: 1rem !default;
+$nav-link-padding-y: 0.5375rem !default;
+
+$nav-link-disabled-color: $gray-500 !default;
+$nav-link-disabled-cursor: $disabled-cursor !default;
+
+$nav-link: () !default;
+$nav-link: map-deep-merge(
+	(
+		display: block,
+		padding-bottom: $nav-link-padding-y,
+		padding-left: $nav-link-padding-x,
+		padding-right: $nav-link-padding-x,
+		padding-top: $nav-link-padding-y,
+		position: relative,
+		hover: (
+			text-decoration: none,
+		),
+		focus: (
+			text-decoration: none,
+			z-index: 1,
+		),
+		disabled: (
+			box-shadow: none,
+			color: $gray-400,
+			cursor: $disabled-cursor,
+			active: (
+				pointer-events: none,
+			),
+		),
+	),
+	$nav-link
+);
+
+$nav-link-btn-unstyled: () !default;
+$nav-link-btn-unstyled: map-deep-merge(
+	(
+		width: 100%,
+		focus: (
+			box-shadow: 0 0 0 0.125rem $white#{','} 0 0 0 0.25rem $primary-l1,
+		),
+		disabled-opacity: 1,
+		c-inner: (
+			width: auto,
+		),
+	),
+	$nav-link-btn-unstyled
+);
+
+$nav-item-monospaced-size: 2rem !default; // 32px
+
+/// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
+$nav-btn-margin-x: 0.25rem !default; // 4px
+
+/// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
+$nav-btn-margin-y: (
+		($line-height-base * $font-size-base) + ($nav-link-padding-y * 2) -
+			$nav-item-monospaced-size
+	) * 0.5 !default;
+
+/// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
+$nav-btn-padding-x: map-get($btn-sm, padding-left) !default;
+
+/// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
+$nav-btn-padding-y: 0 !default;
+
+$nav-btn: () !default;
+$nav-btn: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		height: $nav-item-monospaced-size,
+		justify-content: center,
+		line-height: $line-height-base,
+		margin: $nav-btn-margin-y $nav-btn-margin-x,
+		min-width: $nav-item-monospaced-size,
+		padding: $nav-btn-padding-y $nav-btn-padding-x,
+		position: relative,
+		text-align: center,
+		width: auto,
+		focus: (
+			z-index: 1,
+		),
+		disabled: (
+			opacity: 1,
+		),
+		c-inner: (
+			margin-bottom: 0,
+			margin-left: math-sign($nav-btn-padding-x),
+			margin-right: math-sign($nav-btn-padding-x),
+			margin-top: math-sign(map-get($btn, border-width)),
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$nav-btn
+);
+
+$nav-btn-monospaced: () !default;
+$nav-btn-monospaced: map-deep-merge(
+	(
+		padding: 0,
+		c-inner: (
+			margin-left: math-sign(map-get($btn, border-width)),
+			margin-right: math-sign(map-get($btn, border-width)),
+		),
+	),
+	$nav-btn-monospaced
+);
+
+$nav-link-monospaced: () !default;
+$nav-link-monospaced: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		height: $nav-item-monospaced-size,
+		justify-content: center,
+		margin: $nav-btn-margin-y $nav-btn-margin-x,
+		min-width: $nav-item-monospaced-size,
+		padding: 0,
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$nav-link-monospaced
+);
+
+$nav-divider-color: $gray-200 !default;
+$nav-divider-margin-y: $spacer * 0.5 !default;
+
+$nav-form-padding-bottom: 0 !default;
+$nav-form-padding-left: $nav-link-padding-x !default;
+$nav-form-padding-right: $nav-link-padding-x !default;
+$nav-form-padding-top: 0 !default;
+
+// Nav Stacked
+
+$nav-stacked-nav-form-padding-bottom: $nav-link-padding-y !default;
+$nav-stacked-nav-form-padding-left: 0.5rem !default;
+$nav-stacked-nav-form-padding-right: 0.5rem !default;
+$nav-stacked-nav-form-padding-top: $nav-link-padding-y !default;
+
+// Nav Nested
+
+$nav-nested-margins-spacer-x: $nav-link-padding-x !default;
+$nav-nested-spacer-x: $nav-link-padding-x !default;
+
+// Nav Tabs
+
+$nav-tabs-font-size: 1rem !default;
+
+// Nav Tabs Link
+
+$nav-tabs-border-color: $gray-300 !default;
+$nav-tabs-border-width: 0 !default;
+$nav-tabs-border-radius: 1px !default;
+
+$nav-tabs-link-color: $gray-600 !default;
+$nav-tabs-link-padding-x: null !default;
+$nav-tabs-link-padding-y: 0.28125rem !default; // 4.5px
+
+$nav-tabs-link-hover-border-color: transparent !default;
+
+$nav-tabs-link-active-bg: $white !default;
+$nav-tabs-link-active-border-color: transparent transparent $white !default;
+$nav-tabs-link-active-color: $gray-900 !default;
+
+$nav-tabs-link: () !default;
+$nav-tabs-link: map-deep-merge(
+	(
+		border-color: $gray-300,
+		border-style: solid,
+		border-width: 0 0 1px 0,
+		border-radius: 1px,
+		color: $gray-700,
+		font-weight: $font-weight-semi-bold,
+		line-height: $c-unset,
+		padding-bottom: 0.6875rem,
+		padding-left: 1rem,
+		padding-right: 1rem,
+		padding-top: 0.4375rem,
+		transition: box-shadow 0.15s ease-in-out,
+		white-space: nowrap,
+		after: (
+			background-color: transparent,
+			border-radius: 2px,
+			bottom: -1px,
+			content: '',
+			display: block,
+			height: 0.25rem,
+			left: 0,
+			position: absolute,
+			right: 0,
+		),
+		hover: (
+			border-color: $gray-300,
+			color: $primary-d1,
+			after: (
+				background-color: $primary-d1,
+			),
+		),
+		focus: (
+			border-color: $gray-300,
+			box-shadow: $component-focus-box-shadow,
+			color: $c-unset,
+			outline: 0,
+		),
+		active: (
+			background-color: $c-unset,
+			border-color: $c-unset,
+			color: $primary-d2,
+			after: (
+				background-color: $primary-d2,
+			),
+		),
+		active-class: (
+			border-color: $gray-300,
+			color: $primary-d2,
+			after: (
+				background-color: $primary-d2,
+			),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: $gray-300,
+			box-shadow: none,
+			color: $gray-400,
+			after: (
+				background-color: transparent,
+			),
+		),
+		inline-item: (
+			font-size: 0.875rem,
+			margin-top: -0.2em,
+			opacity: 0.6,
+		),
+		inline-item-before: (
+			margin-right: 0.375rem,
+		),
+		inline-item-after: (
+			margin-left: 0.375rem,
+		),
+	),
+	$nav-tabs-link
+);
+
+// Nav Tabs Link Show
+
+$nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
+$nav-tabs-link-show-bg: transparent !default;
+$nav-tabs-link-show-border-color: transparent transparent $nav-tabs-border-color
+	transparent !default;
+
+$nav-tabs-link-show: () !default;
+$nav-tabs-link-show: map-deep-merge(
+	(
+		background-color: $c-unset,
+		border-color: $c-unset,
+		color: $c-unset,
+	),
+	$nav-tabs-link-show
+);
+
+// Nav Tabs Tab Pane
+
+$nav-tabs-tab-pane-bg: $white !default;
+$nav-tabs-tab-pane-border-radius: 4px !default;
+$nav-tabs-tab-pane-padding: 2rem 1rem !default;
+
+// Nav Pills
+
+/// @deprecated as of v3.x with no replacement
+
+$nav-pills-border-radius: $border-radius !default;
+
+/// @deprecated as of v3.x with no replacement
+
+$nav-pills-link-active-bg: $component-active-bg !default;
+
+/// @deprecated as of v3.x with no replacement
+
+$nav-pills-link-active-color: $component-active-color !default;
+
+// Nav Underline
+
+$nav-underline-font-size: null !default;
+
+$nav-underline-link-highlight-palette: null !default;
+
+$nav-underline-link-color: $gray-600 !default;
+$nav-underline-link-padding-x: null !default;
+$nav-underline-link-padding-y: null !default;
+
+$nav-underline-link-hover-color: null !default;
+
+$nav-underline-link-active-color: $gray-900 !default;
+
+$nav-underline-link-disabled-color: $nav-link-disabled-color !default;
+
+$nav-underline-link: () !default;
+$nav-underline-link: map-deep-merge(
+	(
+		border-color: $gray-300,
+		border-radius: 1px,
+		border-style: solid,
+		border-width: 0 0 1px 0,
+		color: $gray-700,
+		font-weight: $font-weight-semi-bold,
+		line-height: $c-unset,
+		padding-bottom: 0.6875rem,
+		padding-left: 1rem,
+		padding-right: 1rem,
+		padding-top: 0.4375rem,
+		transition: box-shadow 0.15s ease-in-out,
+		white-space: nowrap,
+		after: (
+			background-color: transparent,
+			border-radius: 2px,
+			bottom: -1px,
+			content: '',
+			display: block,
+			height: 0.25rem,
+			left: 0,
+			position: absolute,
+			right: 0,
+		),
+		hover: (
+			border-color: $gray-300,
+			color: $primary-d1,
+			after: (
+				background-color: $primary-d1,
+			),
+		),
+		focus: (
+			border-color: $gray-300,
+			box-shadow: $c-unset,
+			color: $c-unset,
+			outline: 0,
+		),
+		active: (
+			color: $primary-d2,
+			after: (
+				background-color: $primary-d2,
+			),
+		),
+		active-class: (
+			border-color: $gray-300,
+			color: $primary-d2,
+			after: (
+				background-color: $primary-d2,
+			),
+		),
+		disabled: (
+			border-color: $gray-300,
+			box-shadow: none,
+			color: $gray-400,
+			after: (
+				background-color: transparent,
+			),
+		),
+	),
+	$nav-underline-link
+);
+
+$nav-underline-link-show: () !default;
+$nav-underline-link-show: map-deep-merge(
+	(
+		color: $nav-underline-link-active-color,
+	),
+	$nav-underline-link-show
+);
+
+// Nav Underline Link Highlight
+
+$nav-underline-link-highlight-content: null !default;
+$nav-underline-link-highlight-height: null !default;
+$nav-underline-link-highlight-bottom: -1px !default;
+$nav-underline-link-highlight-left: 0 !default;
+$nav-underline-link-highlight-right: 0 !default;
+$nav-underline-link-highlight-top: null !default;
+
+$nav-underline-link-active-highlight: $primary-d2 !default;
+$nav-underline-link-active-content: '' !default;
+$nav-underline-link-active-highlight-height: 0.25rem !default;
+
+$nav-underline-link-disabled-highlight: null !default;
