@@ -1033,6 +1033,9 @@ $dropdown-menu-palette: map-deep-merge(
 					top: 0.5rem,
 				),
 			),
+			inline-scroller: (
+				max-height: 432px,
+			),
 		),
 	),
 	$dropdown-menu-palette
