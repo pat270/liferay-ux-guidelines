@@ -531,7 +531,7 @@ export function Picker<T>({
 								<Button
 									aria-hidden="true"
 									aria-label="Scroll to top"
-									className="dropdown-item text-4 text-center"
+									className="dropdown-item dropdown-item-scroll dropdown-item-scroll-up"
 									displayType="unstyled"
 									onClick={() => {
 										const list = collection.getItems();
@@ -572,7 +572,7 @@ export function Picker<T>({
 								<Button
 									aria-hidden="true"
 									aria-label="Scroll to bottom"
-									className="dropdown-item text-4 text-center"
+									className="dropdown-item dropdown-item-scroll dropdown-item-scroll-down"
 									displayType="unstyled"
 									onClick={() => {
 										const list = collection.getItems();
