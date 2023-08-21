@@ -1168,6 +1168,8 @@
 					}
 				}
 			}
+
+			@include clay-generate-media-breakpoints($map);
 		}
 	}
 }

@@ -213,6 +213,10 @@
 						@include clay-css($breakpoint-up);
 					} @else if ($mixin == 'clay-button-variant') {
 						@include clay-button-variant($breakpoint-up);
+					} @else if ($mixin == 'clay-form-control-variant') {
+						@include clay-form-control-variant($breakpoint-up);
+					} @else if ($mixin == 'clay-select-variant') {
+						@include clay-select-variant($breakpoint-up);
 					} @else if ($mixin == 'clay-input-group-variant') {
 						@include clay-input-group-variant($breakpoint-up);
 					} @else if ($mixin == 'clay-input-group-text-variant') {
@@ -237,6 +241,10 @@
 						@include clay-css($breakpoint-down);
 					} @else if ($mixin == 'clay-button-variant') {
 						@include clay-button-variant($breakpoint-down);
+					} @else if ($mixin == 'clay-form-control-variant') {
+						@include clay-form-control-variant($breakpoint-down);
+					} @else if ($mixin == 'clay-select-variant') {
+						@include clay-select-variant($breakpoint-down);
 					} @else if ($mixin == 'clay-input-group-variant') {
 						@include clay-input-group-variant($breakpoint-down);
 					} @else if ($mixin == 'clay-input-group-text-variant') {
