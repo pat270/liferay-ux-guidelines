@@ -56,6 +56,11 @@ type Props = {
 	sortable?: boolean;
 
 	/**
+	 * Sets the `aria-label` on the sort button. The default is "Sort Column".
+	 */
+	sortAriaLabel?: string;
+
+	/**
 	 * Aligns horizontally contents inside the Cell.
 	 */
 	textAlign?: 'center' | 'end' | 'start';
@@ -93,6 +98,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			index,
 			keyValue,
 			sortable,
+			sortAriaLabel = 'Sort Column',
 			textAlign,
 			textValue,
 			truncate,
@@ -245,7 +251,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 						</Layout.ContentCol>
 						<Layout.ContentCol>
 							<button
-								aria-label="Sort Column"
+								aria-label={sortAriaLabel}
 								className="component-action"
 								type="button"
 							>
