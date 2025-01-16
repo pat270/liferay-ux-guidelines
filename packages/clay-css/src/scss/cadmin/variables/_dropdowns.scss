@@ -163,6 +163,7 @@ $cadmin-dropdown-item-base: map-deep-merge(
 			line-height: $cadmin-dropdown-font-size * $cadmin-line-height-base,
 		),
 		'&.autofit-row': (
+			align-items: center,
 			padding-left: calc(#{$cadmin-dropdown-item-padding-x} - 4px),
 			padding-right: calc(#{$cadmin-dropdown-item-padding-x} - 4px),
 			autofit-col: (
@@ -171,6 +172,7 @@ $cadmin-dropdown-item-base: map-deep-merge(
 			),
 		),
 		autofit-row: (
+			align-items: center,
 			margin-left: -4px,
 			margin-right: -4px,
 			width: auto,

@@ -217,6 +217,7 @@ $dropdown-item-base: map-deep-merge(
 			line-height: calc(#{$dropdown-font-size} * #{$line-height-base}),
 		),
 		'&.autofit-row': (
+			align-items: center,
 			padding-left: calc(#{$dropdown-item-padding-x} - 0.25rem),
 			padding-right: calc(#{$dropdown-item-padding-x} - 0.25rem),
 			autofit-col: (
@@ -225,6 +226,7 @@ $dropdown-item-base: map-deep-merge(
 			),
 		),
 		autofit-row: (
+			align-items: center,
 			margin-left: -0.25rem,
 			margin-right: -0.25rem,
 			width: auto,
