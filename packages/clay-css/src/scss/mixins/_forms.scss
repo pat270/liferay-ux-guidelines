@@ -800,19 +800,6 @@
 						map-get($map, bg-size),
 						map-get($map, background-size)
 					),
-				color:
-					setter(
-						map-get($map, color),
-						if(
-							variable-exists(input-color),
-							$input-color,
-							if(
-								variable-exists(cadmin-input-color),
-								$cadmin-input-color,
-								null
-							)
-						)
-					),
 			)
 		);
 
@@ -1042,6 +1029,10 @@
 						@include clay-css(map-get($disabled-option, checked));
 					}
 				}
+			}
+
+			&:not(select) {
+				@include clay-css(map-get($map, '&:not(select)'));
 			}
 
 			option {
